@@ -1,0 +1,2048 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eco Modular — Relatório de Fechamento Mês 1</title>
+<style>
+@font-face {
+  font-family: 'JUST Sans';
+  src: url('file:///Users/phedroborges/Library/CloudStorage/GoogleDrive-phedro@vizantu.com.br/Drives compartilhados/Ecomodular/Marca/Fonte/just-sans-clean-modern-minimal-geometric-typeface-2026-03-23-03-40-47-utc/Web Fonts/JUST Sans ExBold.woff2') format('woff2'),
+       url('file:///Users/phedroborges/Library/CloudStorage/GoogleDrive-phedro@vizantu.com.br/Drives compartilhados/Ecomodular/Marca/Fonte/just-sans-clean-modern-minimal-geometric-typeface-2026-03-23-03-40-47-utc/Web Fonts/JUST Sans ExBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JUST Sans';
+  src: url('file:///Users/phedroborges/Library/CloudStorage/GoogleDrive-phedro@vizantu.com.br/Drives compartilhados/Ecomodular/Marca/Fonte/just-sans-clean-modern-minimal-geometric-typeface-2026-03-23-03-40-47-utc/Web Fonts/JUST Sans Bold.woff2') format('woff2'),
+       url('file:///Users/phedroborges/Library/CloudStorage/GoogleDrive-phedro@vizantu.com.br/Drives compartilhados/Ecomodular/Marca/Fonte/just-sans-clean-modern-minimal-geometric-typeface-2026-03-23-03-40-47-utc/Web Fonts/JUST Sans Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JUST Sans';
+  src: url('file:///Users/phedroborges/Library/CloudStorage/GoogleDrive-phedro@vizantu.com.br/Drives compartilhados/Ecomodular/Marca/Fonte/just-sans-clean-modern-minimal-geometric-typeface-2026-03-23-03-40-47-utc/Web Fonts/JUST Sans SemiBold.woff2') format('woff2'),
+       url('file:///Users/phedroborges/Library/CloudStorage/GoogleDrive-phedro@vizantu.com.br/Drives compartilhados/Ecomodular/Marca/Fonte/just-sans-clean-modern-minimal-geometric-typeface-2026-03-23-03-40-47-utc/Web Fonts/JUST Sans SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JUST Sans';
+  src: url('file:///Users/phedroborges/Library/CloudStorage/GoogleDrive-phedro@vizantu.com.br/Drives compartilhados/Ecomodular/Marca/Fonte/just-sans-clean-modern-minimal-geometric-typeface-2026-03-23-03-40-47-utc/Web Fonts/JUST Sans Medium.woff2') format('woff2'),
+       url('file:///Users/phedroborges/Library/CloudStorage/GoogleDrive-phedro@vizantu.com.br/Drives compartilhados/Ecomodular/Marca/Fonte/just-sans-clean-modern-minimal-geometric-typeface-2026-03-23-03-40-47-utc/Web Fonts/JUST Sans Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JUST Sans';
+  src: url('file:///Users/phedroborges/Library/CloudStorage/GoogleDrive-phedro@vizantu.com.br/Drives compartilhados/Ecomodular/Marca/Fonte/just-sans-clean-modern-minimal-geometric-typeface-2026-03-23-03-40-47-utc/Web Fonts/JUST Sans Regular.woff2') format('woff2'),
+       url('file:///Users/phedroborges/Library/CloudStorage/GoogleDrive-phedro@vizantu.com.br/Drives compartilhados/Ecomodular/Marca/Fonte/just-sans-clean-modern-minimal-geometric-typeface-2026-03-23-03-40-47-utc/Web Fonts/JUST Sans Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JUST Sans';
+  src: url('file:///Users/phedroborges/Library/CloudStorage/GoogleDrive-phedro@vizantu.com.br/Drives compartilhados/Ecomodular/Marca/Fonte/just-sans-clean-modern-minimal-geometric-typeface-2026-03-23-03-40-47-utc/Web Fonts/JUST Sans Light.woff2') format('woff2'),
+       url('file:///Users/phedroborges/Library/CloudStorage/GoogleDrive-phedro@vizantu.com.br/Drives compartilhados/Ecomodular/Marca/Fonte/just-sans-clean-modern-minimal-geometric-typeface-2026-03-23-03-40-47-utc/Web Fonts/JUST Sans Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --green: #6AAE3C;
+  --green-dark: #4E8A27;
+  --green-light: #EEF7E4;
+  --green-mid: #D2EDBB;
+  --dark: #2B2B2B;
+  --gray-700: #444444;
+  --gray-500: #767676;
+  --gray-300: #C4C4C4;
+  --gray-100: #F5F5F5;
+  --gray-50: #FAFAFA;
+  --white: #FFFFFF;
+  --font: 'JUST Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font);
+  background: var(--gray-50);
+  color: var(--dark);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* ── COVER ─────────────────────────────────────────── */
+.cover {
+  background: var(--dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 60px 80px;
+  position: relative;
+  overflow: hidden;
+}
+.cover::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 6px;
+  background: var(--green);
+}
+.cover::after {
+  content: '';
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(106,174,60,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cover-logo {
+  height: 52px;
+  width: auto;
+  filter: none;
+}
+
+.cover-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 0 40px;
+}
+
+.cover-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 24px;
+}
+
+.cover-title {
+  font-size: clamp(48px, 6vw, 80px);
+  font-weight: 800;
+  line-height: 1.05;
+  color: var(--white);
+  letter-spacing: -1px;
+  margin-bottom: 32px;
+}
+.cover-title span { color: var(--green); }
+
+.cover-desc {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.55);
+  max-width: 520px;
+  line-height: 1.7;
+}
+
+.cover-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.cover-meta {
+  display: flex;
+  gap: 48px;
+}
+.cover-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.cover-meta-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+}
+.cover-meta-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.8);
+}
+
+.cover-vizantu {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 1px;
+}
+
+/* ── LAYOUT ─────────────────────────────────────────── */
+.page { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+
+section { padding: 80px 0; }
+section + section { border-top: 1px solid #E8E8E8; }
+
+.section-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 12px;
+}
+.section-title {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 800;
+  color: var(--dark);
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+}
+.section-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--gray-500);
+  max-width: 580px;
+  line-height: 1.7;
+  margin-bottom: 56px;
+}
+
+/* ── STRATEGY ─────────────────────────────────────── */
+.strategy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.strategy-card {
+  background: var(--white);
+  border: 1px solid #E8E8E8;
+  border-radius: 16px;
+  padding: 32px;
+  transition: box-shadow 0.2s;
+}
+.strategy-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.06); }
+.strategy-card.full { grid-column: 1 / -1; background: var(--green-light); border-color: var(--green-mid); }
+.strategy-number {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--green);
+  margin-bottom: 12px;
+}
+.strategy-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.strategy-card-text {
+  font-size: 14px;
+  color: var(--gray-500);
+  line-height: 1.7;
+}
+.strategy-card.full .strategy-card-title { color: var(--green-dark); font-size: 20px; }
+.strategy-card.full .strategy-card-text { color: var(--gray-700); }
+
+.funnel {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-top: 40px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+.funnel-step {
+  flex: 1;
+  min-width: 160px;
+  background: var(--white);
+  border: 1px solid #E8E8E8;
+  border-radius: 12px;
+  padding: 20px 16px;
+  text-align: center;
+  position: relative;
+}
+.funnel-step:not(:last-child)::after {
+  content: '→';
+  position: absolute;
+  right: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: var(--green);
+  z-index: 1;
+}
+.funnel-step + .funnel-step { margin-left: 16px; }
+.funnel-icon { font-size: 28px; margin-bottom: 8px; }
+.funnel-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--dark);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+.funnel-desc { font-size: 12px; color: var(--gray-500); line-height: 1.4; }
+.funnel-step.active { background: var(--green-light); border-color: var(--green-mid); }
+.funnel-step.active .funnel-label { color: var(--green-dark); }
+
+/* ── TIMELINE ─────────────────────────────────────── */
+.timeline-bg { background: var(--dark); padding: 80px 0; }
+.timeline-bg .section-eyebrow { color: var(--green); }
+.timeline-bg .section-title { color: var(--white); }
+.timeline-bg .section-subtitle { color: rgba(255,255,255,0.45); }
+
+.timeline {
+  position: relative;
+  padding-left: 0;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 120px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--green) 0%, rgba(106,174,60,0.15) 100%);
+}
+
+.tl-item {
+  display: flex;
+  gap: 0;
+  margin-bottom: 12px;
+  position: relative;
+}
+.tl-date {
+  width: 120px;
+  flex-shrink: 0;
+  padding-right: 24px;
+  text-align: right;
+  padding-top: 12px;
+}
+.tl-date-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+.tl-date-sub {
+  font-size: 10px;
+  color: rgba(255,255,255,0.25);
+  font-weight: 400;
+}
+.tl-dot-wrap {
+  width: 24px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 14px;
+}
+.tl-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--green);
+  border: 2px solid var(--dark);
+  box-shadow: 0 0 0 3px rgba(106,174,60,0.3);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+.tl-dot.launch {
+  width: 16px;
+  height: 16px;
+  background: var(--green);
+  box-shadow: 0 0 0 4px rgba(106,174,60,0.4);
+}
+.tl-dot.milestone {
+  background: var(--white);
+  border-color: var(--green);
+}
+
+.tl-content {
+  flex: 1;
+  padding: 8px 0 8px 20px;
+}
+.tl-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 16px 20px;
+  transition: background 0.2s;
+}
+.tl-card:hover { background: rgba(255,255,255,0.08); }
+.tl-card.launch-card {
+  background: rgba(106,174,60,0.12);
+  border-color: rgba(106,174,60,0.3);
+}
+.tl-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+.tl-badge {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: rgba(106,174,60,0.2);
+  color: var(--green);
+}
+.tl-badge.launch-badge {
+  background: var(--green);
+  color: var(--white);
+}
+.tl-badge.content-badge {
+  background: rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.5);
+}
+.tl-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.3;
+}
+.tl-card-desc {
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+  line-height: 1.5;
+  margin-top: 2px;
+}
+.tl-deliveries {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+.tl-delivery-pill {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+  padding: 3px 10px;
+}
+.tl-group { margin-bottom: 4px; }
+
+/* ── DELIVERIES ───────────────────────────────────── */
+.deliveries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.delivery-card {
+  background: var(--white);
+  border: 1px solid #E8E8E8;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.delivery-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+  transform: translateY(-2px);
+}
+.delivery-card.featured {
+  border-color: var(--green);
+  background: var(--green-light);
+}
+.delivery-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--green-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+.delivery-card.featured .delivery-icon {
+  background: rgba(106,174,60,0.2);
+}
+.delivery-tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--green);
+}
+.delivery-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--dark);
+  line-height: 1.3;
+}
+.delivery-objective {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: -4px;
+}
+.delivery-text {
+  font-size: 13px;
+  color: var(--gray-500);
+  line-height: 1.6;
+}
+.delivery-result {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--green-light);
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-top: auto;
+}
+.delivery-card.featured .delivery-result {
+  background: rgba(106,174,60,0.15);
+}
+.delivery-result-icon { font-size: 14px; }
+.delivery-result-text { font-size: 12px; font-weight: 600; color: var(--green-dark); }
+
+.category-header {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--green-light);
+  margin-bottom: 4px;
+}
+.category-title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--green-dark);
+}
+.category-count {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--green);
+  background: var(--green-light);
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+/* ── KPIs ─────────────────────────────────────────── */
+.kpi-banner {
+  background: var(--dark);
+  border-radius: 20px;
+  padding: 48px;
+  margin-bottom: 56px;
+}
+.kpi-banner-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 8px;
+}
+.kpi-banner-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 32px;
+}
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.kpi-card {
+  background: rgba(255,255,255,0.04);
+  padding: 24px 20px;
+  text-align: center;
+}
+.kpi-card.highlight {
+  background: rgba(106,174,60,0.15);
+}
+.kpi-value {
+  font-size: clamp(24px, 2.5vw, 36px);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.kpi-card.highlight .kpi-value { color: var(--green); }
+.kpi-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+}
+.kpi-sub {
+  font-size: 10px;
+  color: rgba(255,255,255,0.2);
+  margin-top: 4px;
+}
+
+/* ── CAMPAIGN TABLES ──────────────────────────────── */
+.campaign-section-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
+  padding: 28px 32px;
+  background: var(--white);
+  border: 1px solid #E8E8E8;
+  border-radius: 16px;
+}
+.campaign-section-info {}
+.campaign-section-name {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 6px;
+}
+.campaign-section-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+.campaign-section-desc {
+  font-size: 13px;
+  color: var(--gray-500);
+  max-width: 440px;
+}
+.campaign-section-total {
+  text-align: right;
+  flex-shrink: 0;
+}
+.campaign-total-value {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--dark);
+  line-height: 1;
+}
+.campaign-total-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}
+.campaign-total-budget {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-300);
+  margin-top: 8px;
+}
+
+.criativo-row {
+  background: var(--white);
+  border: 1px solid #E8E8E8;
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin-bottom: 16px;
+  transition: box-shadow 0.2s;
+}
+.criativo-row:hover { box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
+.criativo-row.winner {
+  border-color: var(--green);
+  background: var(--green-light);
+}
+
+.criativo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.criativo-name-wrap { display: flex; align-items: center; gap: 12px; }
+.criativo-winner-badge {
+  background: var(--green);
+  color: var(--white);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+.criativo-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--dark);
+}
+.criativo-cost {
+  text-align: right;
+}
+.criativo-cost-value {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--dark);
+}
+.criativo-row.winner .criativo-cost-value { color: var(--green-dark); }
+.criativo-cost-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.criativo-metrics {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.criativo-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.criativo-metric-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dark);
+}
+.criativo-metric-label {
+  font-size: 11px;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.bar-wrap {
+  margin-top: 12px;
+}
+.bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--gray-500);
+  margin-bottom: 6px;
+}
+.bar-track {
+  height: 8px;
+  background: var(--gray-100);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  background: var(--green);
+  transition: width 0.6s ease;
+}
+.criativo-row.winner .bar-fill { background: var(--green-dark); }
+
+/* ── FEATURED CREATIVE ────────────────────────────── */
+.featured-section {
+  background: var(--dark);
+  border-radius: 24px;
+  padding: 48px;
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.featured-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--green);
+}
+.featured-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--green);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.featured-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+.featured-desc {
+  font-size: 15px;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 32px;
+  max-width: 520px;
+  line-height: 1.6;
+}
+.featured-stats {
+  display: flex;
+  gap: 48px;
+  margin-bottom: 32px;
+}
+.featured-stat {}
+.featured-stat-value {
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--green);
+  line-height: 1;
+}
+.featured-stat-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}
+.featured-insight {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 20px 24px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.7;
+}
+.featured-insight strong { color: var(--white); font-weight: 600; }
+
+/* ── RANKING ──────────────────────────────────────── */
+.ranking {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.rank-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 24px;
+  background: var(--white);
+  border: 1px solid #E8E8E8;
+  border-radius: 12px;
+}
+.rank-pos {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+.rank-pos.p1 { background: var(--green); color: var(--white); }
+.rank-pos.p2 { background: var(--gray-100); color: var(--gray-500); }
+.rank-pos.p3 { background: var(--gray-100); color: var(--gray-500); }
+.rank-info { flex: 1; }
+.rank-name { font-size: 14px; font-weight: 700; color: var(--dark); margin-bottom: 2px; }
+.rank-camp { font-size: 11px; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.5px; }
+.rank-bar-wrap { flex: 1; }
+.rank-metric { text-align: right; }
+.rank-value { font-size: 20px; font-weight: 800; color: var(--dark); }
+.rank-item:first-child .rank-value { color: var(--green); }
+.rank-label { font-size: 11px; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* ── OPEN QUESTION ────────────────────────────────── */
+.open-question {
+  background: var(--green);
+  border-radius: 24px;
+  padding: 56px 64px;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+.open-question::before {
+  content: '?';
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 200px;
+  font-weight: 800;
+  color: rgba(255,255,255,0.08);
+  line-height: 1;
+  pointer-events: none;
+}
+.oq-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 16px;
+}
+.oq-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 24px;
+  max-width: 560px;
+}
+.oq-desc {
+  font-size: 16px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.7;
+  max-width: 540px;
+  margin-bottom: 40px;
+}
+.oq-questions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.oq-question {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 16px 20px;
+  max-width: 540px;
+}
+.oq-question-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--white);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.oq-question-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--white);
+  line-height: 1.5;
+}
+
+/* ── NEXT STEPS ───────────────────────────────────── */
+.next-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.next-card {
+  background: var(--white);
+  border: 1px solid #E8E8E8;
+  border-radius: 16px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: box-shadow 0.2s;
+}
+.next-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.06); }
+.next-icon { font-size: 28px; }
+.next-title { font-size: 16px; font-weight: 700; color: var(--dark); }
+.next-text { font-size: 13px; color: var(--gray-500); line-height: 1.6; }
+.next-tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--green);
+  background: var(--green-light);
+  padding: 3px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 4px;
+  align-self: flex-start;
+}
+
+/* ── FOOTER ───────────────────────────────────────── */
+.report-footer {
+  background: var(--dark);
+  padding: 40px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-left { display: flex; align-items: center; gap: 24px; }
+.footer-logo { height: 28px; filter: brightness(0) invert(1) opacity(0.6); }
+.footer-sep { width: 1px; height: 32px; background: rgba(255,255,255,0.1); }
+.footer-text { font-size: 12px; color: rgba(255,255,255,0.3); font-weight: 400; }
+.footer-right { font-size: 11px; color: rgba(255,255,255,0.2); font-weight: 500; letter-spacing: 1px; text-transform: uppercase; }
+
+/* ── UTILS ────────────────────────────────────────── */
+.mb-8 { margin-bottom: 8px; }
+.mb-16 { margin-bottom: 16px; }
+.mb-24 { margin-bottom: 24px; }
+.mb-32 { margin-bottom: 32px; }
+.mb-48 { margin-bottom: 48px; }
+.divider { height: 1px; background: #E8E8E8; margin: 40px 0; }
+
+@media (max-width: 900px) {
+  .cover { padding: 40px 32px; }
+  .page { padding: 0 24px; }
+  .kpi-grid { grid-template-columns: repeat(3, 1fr); }
+  .deliveries-grid { grid-template-columns: 1fr 1fr; }
+  .criativo-metrics { grid-template-columns: repeat(3, 1fr); }
+  .next-grid { grid-template-columns: 1fr 1fr; }
+  .strategy-grid { grid-template-columns: 1fr; }
+  .featured-stats { gap: 24px; flex-wrap: wrap; }
+  .campaign-section-header { flex-direction: column; }
+  .report-footer { flex-direction: column; gap: 16px; text-align: center; }
+  .timeline::before { left: 80px; }
+  .tl-date { width: 80px; }
+  .funnel { flex-direction: column; }
+  .funnel-step:not(:last-child)::after { content: '↓'; right: auto; left: 50%; top: auto; bottom: -18px; transform: translateX(-50%); }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════ COVER -->
+<div class="cover">
+  <div class="cover-logo-text">
+    <span style="color:#6AAE3C; font-weight:800; font-size:22px; letter-spacing:-0.5px;">ECO</span><span style="color:rgba(255,255,255,0.9); font-weight:800; font-size:22px; letter-spacing:-0.5px;">MODULAR</span>
+    <span style="display:block; font-size:10px; font-weight:600; letter-spacing:3px; color:rgba(255,255,255,0.3); margin-top:3px;">TIJOLOS ECOLÓGICOS</span>
+  </div>
+
+  <div class="cover-body">
+    <p class="cover-eyebrow">Relatório de Gestão de Marca</p>
+    <h1 class="cover-title">
+      Um mês construindo<br>
+      a <span>presença digital</span><br>
+      da Eco Modular.
+    </h1>
+    <p class="cover-desc">
+      Estratégia, entregas, campanhas e resultados — tudo que foi feito de abril a maio de 2026, com os números reais da campanha.
+    </p>
+  </div>
+
+  <div class="cover-footer">
+    <div class="cover-meta">
+      <div class="cover-meta-item">
+        <span class="cover-meta-label">Período</span>
+        <span class="cover-meta-value">Abr – Mai 2026</span>
+      </div>
+      <div class="cover-meta-item">
+        <span class="cover-meta-label">Tipo</span>
+        <span class="cover-meta-value">Fechamento Mês 1</span>
+      </div>
+      <div class="cover-meta-item">
+        <span class="cover-meta-label">Foco geo.</span>
+        <span class="cover-meta-value">Mineiros, GO e região</span>
+      </div>
+    </div>
+    <span class="cover-vizantu">Elaborado por Vizantu</span>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ STRATEGY -->
+<div class="page">
+<section>
+  <p class="section-eyebrow">A lógica por trás de tudo</p>
+  <h2 class="section-title">Por que fizemos o que fizemos</h2>
+  <p class="section-subtitle">Antes de mostrar os números, é importante entender a estratégia que guiou cada decisão de produção e campanha no Mês 1.</p>
+
+  <div class="strategy-grid">
+    <div class="strategy-card full">
+      <p class="strategy-number">DESAFIO</p>
+      <h3 class="strategy-card-title">A Eco Modular tinha produto, processo e prova — mas não tinha presença digital.</h3>
+      <p class="strategy-card-text">O tijolo ecológico é tecnicamente superior ao convencional, mas sem presença digital, ninguém em Mineiros sabia quem fabricava isso aqui. O Instagram estava parado, não havia criativos profissionais, e o Brayan — engenheiro responsável e maior ativo de credibilidade da marca — não tinha nenhuma câmera apontada para ele. A missão do Mês 1 foi simples: construir do zero a presença da Eco Modular e começar a converter atenção em contato.</p>
+    </div>
+
+    <div class="strategy-card">
+      <p class="strategy-number">DECISÃO 01</p>
+      <h3 class="strategy-card-title">Resultado visual antes de qualquer argumento</h3>
+      <p class="strategy-card-text">O tijolo ecológico à vista é o produto vendendo a si mesmo. A estratégia foi mostrar primeiro o acabamento — paredes bonitas, sem reboco — para parar o scroll antes de qualquer narração. Só então apresentar o processo e a credibilidade técnica.</p>
+    </div>
+
+    <div class="strategy-card">
+      <p class="strategy-number">DECISÃO 02</p>
+      <h3 class="strategy-card-title">Brayan como âncora de autoridade técnica</h3>
+      <p class="strategy-card-text">Num mercado onde todo mundo promete, um engenheiro civil com CREA falando "não é promessa, é documento" é um argumento difícil de rebater. Posicionamos Brayan como o rosto técnico da marca — em câmera, segurando o laudo.</p>
+    </div>
+
+    <div class="strategy-card">
+      <p class="strategy-number">DECISÃO 03</p>
+      <h3 class="strategy-card-title">Complexo São Bento como prova de escala</h3>
+      <p class="strategy-card-text">Quem é de Mineiros conhece o Complexo São Bento. Usar essa obra como prova social foi uma escolha calculada: transformar algo que a cidade já viu em evidência de que a Eco Modular constrói em escala real, não só casas residenciais.</p>
+    </div>
+
+    <div class="strategy-card">
+      <p class="strategy-number">DECISÃO 04</p>
+      <h3 class="strategy-card-title">Três fases de campanha — frio, educação e remarketing</h3>
+      <p class="strategy-card-text">O público de Mineiros que ainda não conhecia a Eco Modular precisava ser apresentado, educado e reimpactado. Cada campanha teve uma função diferente no funil: atrair, educar e converter quem já tinha sinalizado interesse.</p>
+    </div>
+  </div>
+
+  <div class="funnel" style="margin-top: 40px; gap: 0;">
+    <div class="funnel-step">
+      <div class="funnel-icon">👁️</div>
+      <div class="funnel-label">Descoberta</div>
+      <div class="funnel-desc">Quem nunca ouviu falar da Eco Modular — frio total</div>
+    </div>
+    <div class="funnel-step active" style="margin-left:16px;">
+      <div class="funnel-icon">🎓</div>
+      <div class="funnel-label">Educação</div>
+      <div class="funnel-desc">Vídeo educativo, processo, benefícios, diferenciais</div>
+    </div>
+    <div class="funnel-step" style="margin-left:16px;">
+      <div class="funnel-icon">🏗️</div>
+      <div class="funnel-label">Confiança</div>
+      <div class="funnel-desc">Depoimento real, case de obra, credibilidade técnica</div>
+    </div>
+    <div class="funnel-step active" style="margin-left:16px;">
+      <div class="funnel-icon">💬</div>
+      <div class="funnel-label">Conversão</div>
+      <div class="funnel-desc">Conversa iniciada no WhatsApp para orçamento</div>
+    </div>
+    <div class="funnel-step" style="margin-left:16px;">
+      <div class="funnel-icon">🏠</div>
+      <div class="funnel-label">Venda</div>
+      <div class="funnel-desc">Orçamento → fechamento → obra entregue</div>
+    </div>
+  </div>
+</section>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ TIMELINE -->
+<div class="timeline-bg">
+  <div class="page">
+    <p class="section-eyebrow">Do planejamento à execução</p>
+    <h2 class="section-title">Timeline de entregas</h2>
+    <p class="section-subtitle" style="color:rgba(255,255,255,0.45);">Cada item foi entregue com roteiro, objetivo e conexão clara com a estratégia. Aqui está a ordem cronológica completa.</p>
+
+    <div class="timeline">
+
+      <!-- MARÇO 20-22 -->
+      <div class="tl-group">
+        <div class="tl-item">
+          <div class="tl-date">
+            <div class="tl-date-label">Mar 20</div>
+            <div class="tl-date-sub">Pré-produção</div>
+          </div>
+          <div class="tl-dot-wrap"><div class="tl-dot milestone"></div></div>
+          <div class="tl-content">
+            <div class="tl-card">
+              <div class="tl-card-header">
+                <span class="tl-badge content-badge">PREPARAÇÃO</span>
+              </div>
+              <div class="tl-card-title">Seleção de fotos de obras + confirmação de captação com Brayan</div>
+              <div class="tl-card-desc">Curadoria do acervo de obras para criativos. Confirmação do dia de gravação na fábrica com o engenheiro responsável.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MARÇO 22 -->
+      <div class="tl-group">
+        <div class="tl-item">
+          <div class="tl-date">
+            <div class="tl-date-label">Mar 22</div>
+          </div>
+          <div class="tl-dot-wrap"><div class="tl-dot milestone"></div></div>
+          <div class="tl-content">
+            <div class="tl-card">
+              <div class="tl-card-header">
+                <span class="tl-badge content-badge">PREPARAÇÃO</span>
+              </div>
+              <div class="tl-card-title">Seleção do cliente para o Vídeo 3 — Case de Depoimento</div>
+              <div class="tl-card-desc">Identificação e confirmação do cliente para gravar depoimento real na obra entregue.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MARÇO 28 -->
+      <div class="tl-group">
+        <div class="tl-item">
+          <div class="tl-date">
+            <div class="tl-date-label">Mar 28</div>
+            <div class="tl-date-sub">Setup</div>
+          </div>
+          <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+          <div class="tl-content">
+            <div class="tl-card">
+              <div class="tl-card-header">
+                <span class="tl-badge">INSTAGRAM</span>
+              </div>
+              <div class="tl-card-title">Setup completo do Instagram — Bio, 6 Destaques e 3 Posts Fixados</div>
+              <div class="tl-card-desc">10 itens entregues: bio, link e 6 capas de destaques (Obras, Produtos, Por que Eco?, FAQ, A Fábrica, Depoimentos) + 3 posts fixados (Institucional, Prova Social e CTA).</div>
+              <div class="tl-deliveries">
+                <span class="tl-delivery-pill">Bio</span>
+                <span class="tl-delivery-pill">Destaque Obras</span>
+                <span class="tl-delivery-pill">Destaque Produtos</span>
+                <span class="tl-delivery-pill">Destaque Por que Eco?</span>
+                <span class="tl-delivery-pill">Destaque FAQ</span>
+                <span class="tl-delivery-pill">Destaque Fábrica</span>
+                <span class="tl-delivery-pill">Destaque Depoimentos</span>
+                <span class="tl-delivery-pill">Fixado 1 — Institucional</span>
+                <span class="tl-delivery-pill">Fixado 2 — São Bento</span>
+                <span class="tl-delivery-pill">Fixado 3 — CTA WhatsApp</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ABRIL 2 -->
+      <div class="tl-group">
+        <div class="tl-item">
+          <div class="tl-date">
+            <div class="tl-date-label">Abr 02</div>
+            <div class="tl-date-sub">Campanha</div>
+          </div>
+          <div class="tl-dot-wrap"><div class="tl-dot launch"></div></div>
+          <div class="tl-content">
+            <div class="tl-card launch-card">
+              <div class="tl-card-header">
+                <span class="tl-badge launch-badge">🚀 CAMPANHA ATIVADA</span>
+              </div>
+              <div class="tl-card-title">Campanha 1 — Tráfego Frio | Objetivo: Mensagens no WhatsApp</div>
+              <div class="tl-card-desc">Criativos: Vídeo 1 (Institucional) + Estático 1 (Visual/Resultado). Público: Pessoa física 30–55 anos, Mineiros e região, interesses em construção e casa própria.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ABRIL 3 -->
+      <div class="tl-group">
+        <div class="tl-item">
+          <div class="tl-date">
+            <div class="tl-date-label">Abr 03</div>
+          </div>
+          <div class="tl-dot-wrap"><div class="tl-dot launch"></div></div>
+          <div class="tl-content">
+            <div class="tl-card launch-card">
+              <div class="tl-card-header">
+                <span class="tl-badge launch-badge">🚀 CAMPANHA ATIVADA</span>
+              </div>
+              <div class="tl-card-title">Campanha 2 — Reconhecimento | Objetivo: Visitas ao Perfil</div>
+              <div class="tl-card-desc">Criativos: Vídeo 2 (Por que construir) + Estático 2 (Credibilidade Técnica). Objetivo de gerar autoridade, novos seguidores e ThruPlays.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ABRIL 4 -->
+      <div class="tl-group">
+        <div class="tl-item">
+          <div class="tl-date">
+            <div class="tl-date-label">Abr 04</div>
+          </div>
+          <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+          <div class="tl-content">
+            <div class="tl-card">
+              <div class="tl-card-header">
+                <span class="tl-badge">VÍDEO</span>
+              </div>
+              <div class="tl-card-title">Vídeo 1 — Institucional com Storytelling (90–120s)</div>
+              <div class="tl-card-desc">Principal criativo da campanha. Estrutura: resultado visual → fábrica → Brayan (CREA, NBR) → Complexo São Bento → benefícios em números → CTA. Primeiro vídeo com Brayan em câmera como âncora técnica.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ABRIL 4 — POST BENEFITS -->
+      <div class="tl-group">
+        <div class="tl-item">
+          <div class="tl-date">
+            <div class="tl-date-label">Abr 04</div>
+          </div>
+          <div class="tl-dot-wrap"><div class="tl-dot milestone"></div></div>
+          <div class="tl-content">
+            <div class="tl-card">
+              <div class="tl-card-header">
+                <span class="tl-badge content-badge">ORGÂNICO</span>
+              </div>
+              <div class="tl-card-title">Post Estático — Benefícios do Tijolo Ecológico</div>
+              <div class="tl-card-desc">Card com 6 benefícios em destaque: sem reboco, 25% economia, 30% mais rápido, sem quebra, NBR, engenheiro responsável. Objetivo: salvamentos e educação de topo de funil.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ABRIL 7 -->
+      <div class="tl-group">
+        <div class="tl-item">
+          <div class="tl-date">
+            <div class="tl-date-label">Abr 07</div>
+          </div>
+          <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+          <div class="tl-content">
+            <div class="tl-card">
+              <div class="tl-card-header">
+                <span class="tl-badge">VÍDEO</span>
+              </div>
+              <div class="tl-card-title">Vídeo 3 — Case de Obra com Depoimento Real (75–90s)</div>
+              <div class="tl-card-desc">Criativo de remarketing. Depoimento espontâneo do cliente + B-roll da obra entregue. Pensado para reimpactar quem já conhecia a Eco Modular e ainda não tinha convertido.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ABRIL 12 -->
+      <div class="tl-group">
+        <div class="tl-item">
+          <div class="tl-date">
+            <div class="tl-date-label">Abr 12</div>
+          </div>
+          <div class="tl-dot-wrap"><div class="tl-dot milestone"></div></div>
+          <div class="tl-content">
+            <div class="tl-card">
+              <div class="tl-card-header">
+                <span class="tl-badge content-badge">CAMPANHA PAGA</span>
+              </div>
+              <div class="tl-card-title">Criativo Estático 1 — Visual / Resultado</div>
+              <div class="tl-card-desc">Estático emocional. Foco no resultado final da obra — parede com tijolo à vista, acabamento bonito. Roda nos formatos Feed e Stories como suporte ao Vídeo 1.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ABRIL 15 -->
+      <div class="tl-group">
+        <div class="tl-item">
+          <div class="tl-date">
+            <div class="tl-date-label">Abr 15</div>
+            <div class="tl-date-sub">Remarketing</div>
+          </div>
+          <div class="tl-dot-wrap"><div class="tl-dot launch"></div></div>
+          <div class="tl-content">
+            <div class="tl-card launch-card">
+              <div class="tl-card-header">
+                <span class="tl-badge launch-badge">🚀 CAMPANHA ATIVADA</span>
+              </div>
+              <div class="tl-card-title">Campanha 3 — Remarketing | Objetivo: Mensagens no WhatsApp</div>
+              <div class="tl-card-desc">Criativo: Vídeo 3 (Depoimento). Público: quem assistiu 50%+ dos vídeos 1 e 2, visitou o perfil nos últimos 30 dias e interagiu com publicações.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ABRIL 16 -->
+      <div class="tl-group">
+        <div class="tl-item">
+          <div class="tl-date">
+            <div class="tl-date-label">Abr 16</div>
+          </div>
+          <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+          <div class="tl-content">
+            <div class="tl-card">
+              <div class="tl-card-header">
+                <span class="tl-badge">VÍDEO</span>
+              </div>
+              <div class="tl-card-title">Vídeo — Como Funciona a Fábrica (60–90s)</div>
+              <div class="tl-card-desc">Do solo ao tijolo: seleção granulométrica → CPV-ARI → dosagem por laudo → multiprocessador → prensa 12,5 toneladas → 14 dias de cura. Objetivo: credibilidade técnica e orgulho de processo.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ABRIL 19 -->
+      <div class="tl-group">
+        <div class="tl-item">
+          <div class="tl-date">
+            <div class="tl-date-label">Abr 19</div>
+          </div>
+          <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+          <div class="tl-content">
+            <div class="tl-card">
+              <div class="tl-card-header">
+                <span class="tl-badge">VÍDEO</span>
+              </div>
+              <div class="tl-card-title">Vídeo 2 — Por Que Construir com Tijolo Ecológico (60–75s)</div>
+              <div class="tl-card-desc">Abertura em silêncio por 7 segundos — só imagem e música para parar o scroll. Depois: tijolo à vista, economia, sem quebra de parede, Brayan em câmera. Educativo e direto ao ponto.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ABRIL 24 -->
+      <div class="tl-group">
+        <div class="tl-item">
+          <div class="tl-date">
+            <div class="tl-date-label">Abr 24</div>
+          </div>
+          <div class="tl-dot-wrap"><div class="tl-dot milestone"></div></div>
+          <div class="tl-content">
+            <div class="tl-card">
+              <div class="tl-card-header">
+                <span class="tl-badge content-badge">ORGÂNICO</span>
+              </div>
+              <div class="tl-card-title">Post Estático — Case com Fotos de Obra</div>
+              <div class="tl-card-desc">Sequência de fotos reais de uma obra entregue com tijolo à vista. Copy de prova social, posição no feed como âncora de confiança.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ABRIL 26 -->
+      <div class="tl-group">
+        <div class="tl-item">
+          <div class="tl-date">
+            <div class="tl-date-label">Abr 26</div>
+          </div>
+          <div class="tl-dot-wrap"><div class="tl-dot milestone"></div></div>
+          <div class="tl-content">
+            <div class="tl-card">
+              <div class="tl-card-header">
+                <span class="tl-badge content-badge">CAMPANHA PAGA</span>
+              </div>
+              <div class="tl-card-title">Criativo Estático 2 — Credibilidade Técnica</div>
+              <div class="tl-card-desc">Estático técnico. Foco no laudo NBR com badge de certificação. "Esse é o tijolo que tem laudo pra provar que é robusto." Roda em Feed e Stories como suporte ao Vídeo 2.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /timeline -->
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ DELIVERIES DETAIL -->
+<div class="page">
+<section>
+  <p class="section-eyebrow">O que foi construído</p>
+  <h2 class="section-title">Cada entrega, seu objetivo</h2>
+  <p class="section-subtitle">22 itens entregues ao longo do mês — cada um com propósito definido na estratégia.</p>
+
+  <div class="deliveries-grid">
+
+    <div class="category-header">
+      <span class="category-title">Setup e Presença</span>
+      <span class="category-count">10 entregas</span>
+    </div>
+
+    <div class="delivery-card">
+      <div class="delivery-icon">📋</div>
+      <span class="delivery-tag">Instagram</span>
+      <div class="delivery-name">Bio + Link do WhatsApp</div>
+      <p class="delivery-objective">Objetivo</p>
+      <p class="delivery-text">Apresentar a marca em uma linha: quem é, onde está e como entrar em contato. CTA direto para o WhatsApp.</p>
+      <div class="delivery-result">
+        <span class="delivery-result-icon">✓</span>
+        <span class="delivery-result-text">Perfil pronto para receber tráfego pago</span>
+      </div>
+    </div>
+
+    <div class="delivery-card">
+      <div class="delivery-icon">🖼️</div>
+      <span class="delivery-tag">Instagram</span>
+      <div class="delivery-name">6 Destaques com Capas</div>
+      <p class="delivery-objective">Objetivo</p>
+      <p class="delivery-text">Obras, Produtos, Por que Eco?, FAQ, A Fábrica e Depoimentos — cada destaque é uma porta de entrada para um tipo de visitante diferente.</p>
+      <div class="delivery-result">
+        <span class="delivery-result-icon">✓</span>
+        <span class="delivery-result-text">Perfil organizado como vitrine de credibilidade</span>
+      </div>
+    </div>
+
+    <div class="delivery-card">
+      <div class="delivery-icon">📌</div>
+      <span class="delivery-tag">Instagram</span>
+      <div class="delivery-name">3 Posts Fixados no Topo</div>
+      <p class="delivery-objective">Objetivo</p>
+      <p class="delivery-text">Institucional (fábrica), Prova Social (São Bento) e CTA direto. Quem chega ao perfil vê as três coisas mais importantes antes de qualquer outra coisa.</p>
+      <div class="delivery-result">
+        <span class="delivery-result-icon">✓</span>
+        <span class="delivery-result-text">Estrutura que converte o primeiro acesso</span>
+      </div>
+    </div>
+
+    <div class="category-header">
+      <span class="category-title">Conteúdo Orgânico</span>
+      <span class="category-count">6 entregas</span>
+    </div>
+
+    <div class="delivery-card featured">
+      <div class="delivery-icon">🎬</div>
+      <span class="delivery-tag">Vídeo Principal</span>
+      <div class="delivery-name">Vídeo 1 — Institucional com Storytelling</div>
+      <p class="delivery-objective">Objetivo</p>
+      <p class="delivery-text">Apresentar a Eco Modular com autoridade, emoção e prova real. Resultado visual → processo → Brayan em câmera → São Bento → benefícios → CTA.</p>
+      <div class="delivery-result">
+        <span class="delivery-result-icon">📊</span>
+        <span class="delivery-result-text">858 visitas ao perfil + 11 conversas geradas</span>
+      </div>
+    </div>
+
+    <div class="delivery-card featured">
+      <div class="delivery-icon">🎬</div>
+      <span class="delivery-tag">Melhor Criativo</span>
+      <div class="delivery-name">Vídeo 2 — Por Que Construir com Tijolo Ecológico</div>
+      <p class="delivery-objective">Objetivo</p>
+      <p class="delivery-text">Educativo e direto. Abertura em silêncio para parar o scroll. Benefícios concretos em números. Brayan confirma a qualidade técnica.</p>
+      <div class="delivery-result">
+        <span class="delivery-result-icon">🏆</span>
+        <span class="delivery-result-text">43 conversas — criativo de maior conversão do mês</span>
+      </div>
+    </div>
+
+    <div class="delivery-card">
+      <div class="delivery-icon">🎬</div>
+      <span class="delivery-tag">Remarketing</span>
+      <div class="delivery-name">Vídeo 3 — Depoimento Real de Cliente</div>
+      <p class="delivery-objective">Objetivo</p>
+      <p class="delivery-text">O empurrão final para quem já viu a marca mas não converteu. Depoimento espontâneo — sem roteiro, sem ensaio — mais B-roll da obra entregue.</p>
+      <div class="delivery-result">
+        <span class="delivery-result-icon">📊</span>
+        <span class="delivery-result-text">7 conversas de alta intenção via remarketing</span>
+      </div>
+    </div>
+
+    <div class="delivery-card">
+      <div class="delivery-icon">🏭</div>
+      <span class="delivery-tag">Educativo</span>
+      <div class="delivery-name">Vídeo — Como Funciona a Fábrica</div>
+      <p class="delivery-objective">Objetivo</p>
+      <p class="delivery-text">Do solo ao tijolo: mostrar que o processo é industrial, rigoroso e documentado. 12,5 toneladas de pressão, 14 dias de cura, laudo por lote.</p>
+      <div class="delivery-result">
+        <span class="delivery-result-icon">✓</span>
+        <span class="delivery-result-text">Credibilidade técnica como diferencial competitivo</span>
+      </div>
+    </div>
+
+    <div class="delivery-card">
+      <div class="delivery-icon">🖼️</div>
+      <span class="delivery-tag">Orgânico</span>
+      <div class="delivery-name">Post — Benefícios do Tijolo Ecológico</div>
+      <p class="delivery-objective">Objetivo</p>
+      <p class="delivery-text">Card de salvamento com 6 benefícios visuais: sem reboco, 25% economia, 30% mais rápido, sem quebra, NBR, engenheiro responsável.</p>
+      <div class="delivery-result">
+        <span class="delivery-result-icon">✓</span>
+        <span class="delivery-result-text">Conteúdo educativo para topo de funil</span>
+      </div>
+    </div>
+
+    <div class="delivery-card">
+      <div class="delivery-icon">🏠</div>
+      <span class="delivery-tag">Orgânico</span>
+      <div class="delivery-name">Post — Case com Fotos de Obra</div>
+      <p class="delivery-objective">Objetivo</p>
+      <p class="delivery-text">Obra real entregue em sequência fotográfica. O tijolo à vista como prova de que o resultado existe e é bonito — não só na fábrica, mas na casa do cliente.</p>
+      <div class="delivery-result">
+        <span class="delivery-result-icon">✓</span>
+        <span class="delivery-result-text">Prova social visual no feed</span>
+      </div>
+    </div>
+
+    <div class="category-header">
+      <span class="category-title">Criativos de Campanha</span>
+      <span class="category-count">2 entregas + 3 campanhas</span>
+    </div>
+
+    <div class="delivery-card">
+      <div class="delivery-icon">🎯</div>
+      <span class="delivery-tag">Meta Ads</span>
+      <div class="delivery-name">Estático 1 — Visual / Resultado</div>
+      <p class="delivery-objective">Objetivo</p>
+      <p class="delivery-text">Emocional: foto de obra finalizada como gancho. Suporte ao Vídeo 1 no funil de tráfego frio — quem viu o vídeo, vê o estático reforçando o resultado.</p>
+      <div class="delivery-result">
+        <span class="delivery-result-icon">✓</span>
+        <span class="delivery-result-text">Feed + Stories — campanha ativa desde 02/04</span>
+      </div>
+    </div>
+
+    <div class="delivery-card">
+      <div class="delivery-icon">🎯</div>
+      <span class="delivery-tag">Meta Ads</span>
+      <div class="delivery-name">Estático 2 — Credibilidade Técnica</div>
+      <p class="delivery-objective">Objetivo</p>
+      <p class="delivery-text">Técnico: close no tijolo + badge NBR + "laudado pra provar que é robusto." Suporte ao Vídeo 2 — para quem ainda não converteu após o educativo.</p>
+      <div class="delivery-result">
+        <span class="delivery-result-icon">✓</span>
+        <span class="delivery-result-text">Feed + Stories — campanha ativa desde 03/04</span>
+      </div>
+    </div>
+
+    <div class="delivery-card featured">
+      <div class="delivery-icon">⚙️</div>
+      <span class="delivery-tag">Estrutura Paga</span>
+      <div class="delivery-name">3 Campanhas no Meta Ads Configuradas</div>
+      <p class="delivery-objective">Objetivo</p>
+      <p class="delivery-text">Tráfego Frio (02/04), Reconhecimento (03/04) e Remarketing (15/04). Públicos segmentados, rastreamento de mensagem iniciada, posicionamentos manuais.</p>
+      <div class="delivery-result">
+        <span class="delivery-result-icon">📊</span>
+        <span class="delivery-result-text">61 conversas no WhatsApp geradas no período</span>
+      </div>
+    </div>
+
+  </div><!-- /deliveries-grid -->
+</section>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ NUMBERS -->
+<div class="page">
+<section>
+  <p class="section-eyebrow">Dados das campanhas</p>
+  <h2 class="section-title">Os números do mês</h2>
+  <p class="section-subtitle">Período: 01/04 – 15/05/2026 · Mineiros, GO e região · Meta Ads</p>
+
+  <!-- KPI BANNER -->
+  <div class="kpi-banner">
+    <p class="kpi-banner-eyebrow">Resumo consolidado — duas campanhas</p>
+    <p class="kpi-banner-title">O que chegou a Mineiros em 45 dias</p>
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-value">~62 mil</div>
+        <div class="kpi-label">Pessoas alcançadas</div>
+        <div class="kpi-sub">Mineiros e região</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value">139 mil</div>
+        <div class="kpi-label">Impressões totais</div>
+        <div class="kpi-sub">Feed, Stories e Reels</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value">5.067</div>
+        <div class="kpi-label">Vídeos assistidos ao final</div>
+        <div class="kpi-sub">ThruPlays</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value">1.712</div>
+        <div class="kpi-label">Visitas ao perfil</div>
+        <div class="kpi-sub">@ecomodular.tijolos</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value">162</div>
+        <div class="kpi-label">Novos seguidores</div>
+        <div class="kpi-sub">Gerados pelas campanhas</div>
+      </div>
+      <div class="kpi-card highlight">
+        <div class="kpi-value">61</div>
+        <div class="kpi-label">Conversas no WhatsApp</div>
+        <div class="kpi-sub">R$ 9,47 por conversa</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CAMPANHA 1: RECONHECIMENTO -->
+  <div class="campaign-section-header mb-32">
+    <div class="campaign-section-info">
+      <p class="campaign-section-name">Campanha de Reconhecimento</p>
+      <h3 class="campaign-section-title">Visitas ao Perfil + Novos Seguidores</h3>
+      <p class="campaign-section-desc">Objetivo: construir audiência qualificada para o perfil da Eco Modular. Cada visita é uma pessoa de Mineiros que conheceu a marca e foi ver mais.</p>
+    </div>
+    <div class="campaign-section-total">
+      <div class="campaign-total-value">1.712</div>
+      <div class="campaign-total-label">Visitas geradas</div>
+      <div class="campaign-total-budget">~R$ 555 investidos · 162 seguidores novos</div>
+    </div>
+  </div>
+
+  <!-- CRIATIVO: HISTÓRIA -->
+  <div class="criativo-row">
+    <div class="criativo-header">
+      <div class="criativo-name-wrap">
+        <div class="criativo-name">#1 CRIATIVO | HISTÓRIA — Vídeo Institucional</div>
+      </div>
+      <div class="criativo-cost">
+        <div class="criativo-cost-value">R$ 0,35</div>
+        <div class="criativo-cost-label">por visita ao perfil</div>
+      </div>
+    </div>
+    <div class="criativo-metrics">
+      <div class="criativo-metric">
+        <div class="criativo-metric-value">24.190</div>
+        <div class="criativo-metric-label">Alcance</div>
+      </div>
+      <div class="criativo-metric">
+        <div class="criativo-metric-value">50.993</div>
+        <div class="criativo-metric-label">Impressões</div>
+      </div>
+      <div class="criativo-metric">
+        <div class="criativo-metric-value">2,1×</div>
+        <div class="criativo-metric-label">Frequência</div>
+      </div>
+      <div class="criativo-metric">
+        <div class="criativo-metric-value">2.783</div>
+        <div class="criativo-metric-label">ThruPlays</div>
+      </div>
+      <div class="criativo-metric">
+        <div class="criativo-metric-value">115</div>
+        <div class="criativo-metric-label">Novos Seguidores</div>
+      </div>
+    </div>
+    <div class="bar-wrap">
+      <div class="bar-label"><span>858 visitas ao perfil</span><span>71% do total de reconhecimento</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:71%"></div></div>
+    </div>
+  </div>
+
+  <!-- CRIATIVO: DEPOIMENTO -->
+  <div class="criativo-row mb-48">
+    <div class="criativo-header">
+      <div class="criativo-name-wrap">
+        <div class="criativo-name">#1 CRIATIVO | DEPOIMENTO — Case de Obra</div>
+      </div>
+      <div class="criativo-cost">
+        <div class="criativo-cost-value">R$ 0,30</div>
+        <div class="criativo-cost-label">por visita ao perfil</div>
+      </div>
+    </div>
+    <div class="criativo-metrics">
+      <div class="criativo-metric">
+        <div class="criativo-metric-value">22.492</div>
+        <div class="criativo-metric-label">Alcance</div>
+      </div>
+      <div class="criativo-metric">
+        <div class="criativo-metric-value">45.120</div>
+        <div class="criativo-metric-label">Impressões</div>
+      </div>
+      <div class="criativo-metric">
+        <div class="criativo-metric-value">2,0×</div>
+        <div class="criativo-metric-label">Frequência</div>
+      </div>
+      <div class="criativo-metric">
+        <div class="criativo-metric-value">2.284</div>
+        <div class="criativo-metric-label">ThruPlays</div>
+      </div>
+      <div class="criativo-metric">
+        <div class="criativo-metric-value">47</div>
+        <div class="criativo-metric-label">Novos Seguidores</div>
+      </div>
+    </div>
+    <div class="bar-wrap">
+      <div class="bar-label"><span>854 visitas ao perfil</span><span>29% do total de reconhecimento</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:29%"></div></div>
+    </div>
+  </div>
+
+  <!-- CAMPANHA 2: VENDAS -->
+  <div class="campaign-section-header mb-32">
+    <div class="campaign-section-info">
+      <p class="campaign-section-name">Campanha de Vendas</p>
+      <h3 class="campaign-section-title">Conversas Iniciadas no WhatsApp</h3>
+      <p class="campaign-section-desc">Objetivo: gerar contatos diretos com potencial de virar orçamento. Cada conversa é uma pessoa que clicou, abriu o WhatsApp e iniciou o contato.</p>
+    </div>
+    <div class="campaign-section-total">
+      <div class="campaign-total-value">61</div>
+      <div class="campaign-total-label">Conversas iniciadas</div>
+      <div class="campaign-total-budget">~R$ 578 investidos · R$ 9,47 médio/conversa</div>
+    </div>
+  </div>
+
+  <!-- CRIATIVO WINNER: POR QUE CONSTRUIR -->
+  <div class="criativo-row winner">
+    <div class="criativo-header">
+      <div class="criativo-name-wrap">
+        <span class="criativo-winner-badge">🏆 MELHOR CRIATIVO</span>
+        <div class="criativo-name">#2 CRIATIVO | POR QUE CONSTRUIR COM TIJOLO ECOLÓGICO</div>
+      </div>
+      <div class="criativo-cost">
+        <div class="criativo-cost-value">R$ 8,17</div>
+        <div class="criativo-cost-label">por conversa</div>
+      </div>
+    </div>
+    <div class="criativo-metrics">
+      <div class="criativo-metric">
+        <div class="criativo-metric-value">10.019</div>
+        <div class="criativo-metric-label">Alcance</div>
+      </div>
+      <div class="criativo-metric">
+        <div class="criativo-metric-value">27.324</div>
+        <div class="criativo-metric-label">Impressões</div>
+      </div>
+      <div class="criativo-metric">
+        <div class="criativo-metric-value">2,7×</div>
+        <div class="criativo-metric-label">Frequência</div>
+      </div>
+      <div class="criativo-metric">
+        <div class="criativo-metric-value">5.785</div>
+        <div class="criativo-metric-label">Engajamentos</div>
+      </div>
+      <div class="criativo-metric">
+        <div class="criativo-metric-value">43</div>
+        <div class="criativo-metric-label">Conversas</div>
+      </div>
+    </div>
+    <div class="bar-wrap">
+      <div class="bar-label"><span>43 conversas — 70% do total de vendas</span><span>Menor custo por conversa</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+    </div>
+  </div>
+
+  <!-- CRIATIVO: HISTÓRIA -->
+  <div class="criativo-row">
+    <div class="criativo-header">
+      <div class="criativo-name-wrap">
+        <div class="criativo-name">#1 CRIATIVO | HISTÓRIA — Vídeo Institucional</div>
+      </div>
+      <div class="criativo-cost">
+        <div class="criativo-cost-value">R$ 11,95</div>
+        <div class="criativo-cost-label">por conversa</div>
+      </div>
+    </div>
+    <div class="criativo-metrics">
+      <div class="criativo-metric">
+        <div class="criativo-metric-value">3.586</div>
+        <div class="criativo-metric-label">Alcance</div>
+      </div>
+      <div class="criativo-metric">
+        <div class="criativo-metric-value">9.451</div>
+        <div class="criativo-metric-label">Impressões</div>
+      </div>
+      <div class="criativo-metric">
+        <div class="criativo-metric-value">2,6×</div>
+        <div class="criativo-metric-label">Frequência</div>
+      </div>
+      <div class="criativo-metric">
+        <div class="criativo-metric-value">2.090</div>
+        <div class="criativo-metric-label">Engajamentos</div>
+      </div>
+      <div class="criativo-metric">
+        <div class="criativo-metric-value">11</div>
+        <div class="criativo-metric-label">Conversas</div>
+      </div>
+    </div>
+    <div class="bar-wrap">
+      <div class="bar-label"><span>11 conversas — 18% do total</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:26%"></div></div>
+    </div>
+  </div>
+
+  <!-- CRIATIVO: DEPOIMENTO 3.1 -->
+  <div class="criativo-row">
+    <div class="criativo-header">
+      <div class="criativo-name-wrap">
+        <div class="criativo-name">#3 CRIATIVO | DEPOIMENTO 3.1 — Remarketing</div>
+      </div>
+      <div class="criativo-cost">
+        <div class="criativo-cost-value">R$ 13,56</div>
+        <div class="criativo-cost-label">por conversa</div>
+      </div>
+    </div>
+    <div class="criativo-metrics">
+      <div class="criativo-metric">
+        <div class="criativo-metric-value">2.170</div>
+        <div class="criativo-metric-label">Alcance</div>
+      </div>
+      <div class="criativo-metric">
+        <div class="criativo-metric-value">5.988</div>
+        <div class="criativo-metric-label">Impressões</div>
+      </div>
+      <div class="criativo-metric">
+        <div class="criativo-metric-value">2,8×</div>
+        <div class="criativo-metric-label">Frequência</div>
+      </div>
+      <div class="criativo-metric">
+        <div class="criativo-metric-value">1.244</div>
+        <div class="criativo-metric-label">Engajamentos</div>
+      </div>
+      <div class="criativo-metric">
+        <div class="criativo-metric-value">7</div>
+        <div class="criativo-metric-label">Conversas</div>
+      </div>
+    </div>
+    <div class="bar-wrap">
+      <div class="bar-label"><span>7 conversas — 12% do total · audiência menor (remarketing)</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:16%"></div></div>
+    </div>
+  </div>
+
+</section>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ BEST CREATIVE -->
+<div class="page">
+<section>
+  <p class="section-eyebrow">O que mais converteu</p>
+  <h2 class="section-title">Criativo em destaque</h2>
+  <p class="section-subtitle">Um criativo foi responsável por 70% de todas as conversas no WhatsApp. Entender o porquê é o que orienta o Mês 2.</p>
+
+  <div class="featured-section mb-24">
+    <span class="featured-badge">🏆 Criativo do Mês</span>
+    <h3 class="featured-title">"Por Que Construir com<br>Tijolo Ecológico"</h3>
+    <p class="featured-desc">Vídeo educativo de 60–75 segundos. Abertura em silêncio por 7 segundos — só imagem do tijolo à vista para parar o scroll — seguida de argumentos técnicos e concretos.</p>
+    <div class="featured-stats">
+      <div class="featured-stat">
+        <div class="featured-stat-value">43</div>
+        <div class="featured-stat-label">Conversas geradas</div>
+      </div>
+      <div class="featured-stat">
+        <div class="featured-stat-value">R$ 8,17</div>
+        <div class="featured-stat-label">Por conversa</div>
+      </div>
+      <div class="featured-stat">
+        <div class="featured-stat-value">70%</div>
+        <div class="featured-stat-label">Do total de vendas</div>
+      </div>
+      <div class="featured-stat">
+        <div class="featured-stat-value">10.019</div>
+        <div class="featured-stat-label">Alcance</div>
+      </div>
+    </div>
+    <div class="featured-insight">
+      <strong>Por que funcionou:</strong> o público de Mineiros que está pensando em construir não precisa de emoção — precisa de argumento. Esse vídeo entregou primeiro o resultado (parede à vista), depois a economia em números, depois a prova técnica (sem quebra de parede, Brayan em câmera). É o formato que mais respeita a inteligência do comprador de tijolo: mostra o porquê antes de pedir o contato.
+    </div>
+  </div>
+
+  <!-- RANKING -->
+  <h3 style="font-size:18px; font-weight:700; color:var(--dark); margin-bottom:20px;">Ranking completo — conversas no WhatsApp</h3>
+  <div class="ranking">
+    <div class="rank-item">
+      <div class="rank-pos p1">1</div>
+      <div class="rank-info">
+        <div class="rank-name">#2 Por Que Construir com Tijolo Ecológico</div>
+        <div class="rank-camp">Campanha de Vendas · Vídeo Educativo</div>
+      </div>
+      <div class="rank-bar-wrap">
+        <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+      </div>
+      <div class="rank-metric">
+        <div class="rank-value">43</div>
+        <div class="rank-label">conversas · R$ 8,17</div>
+      </div>
+    </div>
+    <div class="rank-item">
+      <div class="rank-pos p2">2</div>
+      <div class="rank-info">
+        <div class="rank-name">#1 Vídeo Institucional com Storytelling</div>
+        <div class="rank-camp">Campanha de Vendas · Vídeo Institucional</div>
+      </div>
+      <div class="rank-bar-wrap">
+        <div class="bar-track"><div class="bar-fill" style="width:26%"></div></div>
+      </div>
+      <div class="rank-metric">
+        <div class="rank-value">11</div>
+        <div class="rank-label">conversas · R$ 11,95</div>
+      </div>
+    </div>
+    <div class="rank-item">
+      <div class="rank-pos p3">3</div>
+      <div class="rank-info">
+        <div class="rank-name">#3 Depoimento 3.1 — Case de Obra</div>
+        <div class="rank-camp">Campanha de Vendas · Remarketing</div>
+      </div>
+      <div class="rank-bar-wrap">
+        <div class="bar-track"><div class="bar-fill" style="width:16%"></div></div>
+      </div>
+      <div class="rank-metric">
+        <div class="rank-value">7</div>
+        <div class="rank-label">conversas · R$ 13,56</div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ OPEN QUESTION -->
+<div class="page">
+<section style="padding-bottom: 0;">
+  <div class="open-question">
+    <p class="oq-eyebrow">O que ainda não sabemos</p>
+    <h2 class="oq-title">61 conversas abertas.<br>Quantas viraram obra?</h2>
+    <p class="oq-desc">Os dados de campanha mostram tudo que aconteceu até o clique no WhatsApp. O que precisamos saber agora é o que aconteceu depois — porque esse número define o ROI real do Mês 1 e orienta todas as decisões do Mês 2.</p>
+    <div class="oq-questions">
+      <div class="oq-question">
+        <div class="oq-question-num">1</div>
+        <div class="oq-question-text">Quantas das 61 conversas evoluíram para solicitação de orçamento?</div>
+      </div>
+      <div class="oq-question">
+        <div class="oq-question-num">2</div>
+        <div class="oq-question-text">Quantos orçamentos foram fechados como venda?</div>
+      </div>
+      <div class="oq-question">
+        <div class="oq-question-num">3</div>
+        <div class="oq-question-text">Qual o volume médio pedido por venda (quantidade de tijolos / m²)?</div>
+      </div>
+      <div class="oq-question">
+        <div class="oq-question-num">4</div>
+        <div class="oq-question-text">Os contatos eram de Mineiros ou vieram de regiões vizinhas?</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEXT STEPS -->
+<section>
+  <p class="section-eyebrow">Indicações para o Mês 2</p>
+  <h2 class="section-title">O que os dados sugerem</h2>
+  <p class="section-subtitle">Com base nos resultados do Mês 1, as sinalizações iniciais para a próxima fase.</p>
+  <div class="next-grid">
+    <div class="next-card">
+      <div class="next-icon">📈</div>
+      <div class="next-title">Escalar o criativo #2</div>
+      <div class="next-text">O vídeo educativo "Por que construir" teve o melhor custo por conversa (R$ 8,17) e o maior volume. É o ativo mais forte que temos — merece mais budget no Mês 2.</div>
+      <span class="next-tag">Escalar</span>
+    </div>
+    <div class="next-card">
+      <div class="next-icon">🎬</div>
+      <div class="next-title">Testar o Vídeo da Fábrica em campanha</div>
+      <div class="next-text">O vídeo "Como funciona a fábrica" foi entregue como orgânico mas ainda não rodou em campanha paga. É um criativo de credibilidade técnica com alto potencial de diferenciação.</div>
+      <span class="next-tag">Testar</span>
+    </div>
+    <div class="next-card">
+      <div class="next-icon">🗺️</div>
+      <div class="next-title">Avaliar expansão de raio geográfico</div>
+      <div class="next-text">As campanhas focaram em Mineiros, mas podem ter resvalado na região. Com os dados de conversão em mãos, podemos decidir se vale abrir para cidades vizinhas no Mês 2.</div>
+      <span class="next-tag">Avaliar</span>
+    </div>
+    <div class="next-card">
+      <div class="next-icon">🔄</div>
+      <div class="next-title">Novos ângulos baseados nas conversas</div>
+      <div class="next-text">As objeções e perguntas que apareceram nas 61 conversas são a maior fonte de pauta para o Mês 2. Cada dúvida do cliente é um criativo em potencial.</div>
+      <span class="next-tag">Próximo</span>
+    </div>
+    <div class="next-card">
+      <div class="next-icon">📊</div>
+      <div class="next-title">Otimizar público com dados reais</div>
+      <div class="next-text">Agora que temos dados de quem clicou e converteu, podemos refinar os públicos e lookalikes com informação real — não mais estimativas de perfil.</div>
+      <span class="next-tag">Otimizar</span>
+    </div>
+    <div class="next-card">
+      <div class="next-icon">🏗️</div>
+      <div class="next-title">Continuar produzindo cases</div>
+      <div class="next-text">O depoimento real gerou conversas de alta intenção no remarketing. Cada obra entregue é uma oportunidade de novo case — e o banco de provas sociais precisa crescer.</div>
+      <span class="next-tag">Conteúdo</span>
+    </div>
+  </div>
+</section>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ FOOTER -->
+<div class="report-footer">
+  <div class="footer-left">
+    <span style="font-family:var(--font); font-weight:800; font-size:15px; letter-spacing:-0.3px;"><span style="color:#6AAE3C;">ECO</span><span style="color:rgba(255,255,255,0.5);">MODULAR</span></span>
+    <div class="footer-sep"></div>
+    <span class="footer-text">Relatório de Fechamento · Mês 1 · Maio 2026</span>
+  </div>
+  <span class="footer-right">Elaborado por Vizantu</span>
+</div>
+
+</body>
+</html>

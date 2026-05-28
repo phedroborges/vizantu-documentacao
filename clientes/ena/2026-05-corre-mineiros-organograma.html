@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Corre Mineiros 2026 — Organização do Stand ENA</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f0f4f8;
+      color: #1a2a3a;
+      padding: 32px 24px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    header h1 {
+      font-size: 26px;
+      font-weight: 800;
+      color: #0a4fa3;
+      letter-spacing: -0.5px;
+    }
+    header p {
+      font-size: 14px;
+      color: #5a7a9a;
+      margin-top: 6px;
+    }
+    .badge {
+      display: inline-block;
+      background: #0a4fa3;
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-top: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* SECTIONS */
+    .section {
+      margin-bottom: 48px;
+    }
+    .section-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #0a4fa3;
+      border-left: 5px solid #0a4fa3;
+      padding-left: 12px;
+      margin-bottom: 20px;
+    }
+
+    /* PERCURSO */
+    .percurso {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      overflow-x: auto;
+      padding: 20px 0;
+    }
+    .percurso-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 120px;
+    }
+    .percurso-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 900;
+    }
+    .percurso-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 8px;
+      max-width: 100px;
+    }
+    .percurso-sub {
+      font-size: 10px;
+      color: #5a7a9a;
+      text-align: center;
+      margin-top: 3px;
+      max-width: 110px;
+    }
+    .percurso-arrow {
+      font-size: 22px;
+      color: #b0c4d8;
+      min-width: 32px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .start { background: #22c55e; color: white; }
+    .km    { background: #0a4fa3; color: white; }
+    .end   { background: #f97316; color: white; }
+    .stand { background: #a855f7; color: white; }
+
+    /* STAND LAYOUT */
+    .stand-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      gap: 16px;
+    }
+    .stand-col {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .stand-col-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #5a7a9a;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+      margin-bottom: 4px;
+    }
+
+    /* CARDS */
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(10,79,163,0.08);
+      border-left: 5px solid #0a4fa3;
+    }
+    .card.verde    { border-left-color: #22c55e; }
+    .card.laranja  { border-left-color: #f97316; }
+    .card.roxo     { border-left-color: #a855f7; }
+    .card.amarelo  { border-left-color: #eab308; }
+    .card.rosa     { border-left-color: #ec4899; }
+    .card.teal     { border-left-color: #14b8a6; }
+    .card.cinza    { border-left-color: #94a3b8; }
+
+    .card-title {
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+    .card-desc {
+      font-size: 11px;
+      color: #5a7a9a;
+      line-height: 1.5;
+    }
+    .card-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 10px;
+      margin-top: 8px;
+      text-transform: uppercase;
+    }
+    .tag-blue   { background: #dbeafe; color: #1d4ed8; }
+    .tag-green  { background: #dcfce7; color: #15803d; }
+    .tag-orange { background: #ffedd5; color: #c2410c; }
+    .tag-purple { background: #f3e8ff; color: #7e22ce; }
+    .tag-yellow { background: #fef9c3; color: #854d0e; }
+    .tag-pink   { background: #fce7f3; color: #9d174d; }
+
+    /* STAND CENTRAL */
+    .stand-central {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 4px 16px rgba(10,79,163,0.12);
+      border: 3px solid #0a4fa3;
+      position: relative;
+    }
+    .stand-central-title {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 900;
+      color: #0a4fa3;
+      margin-bottom: 16px;
+      letter-spacing: -0.3px;
+    }
+    .stand-central-subtitle {
+      text-align: center;
+      font-size: 11px;
+      color: #94a3b8;
+      margin-bottom: 16px;
+    }
+
+    .tenda-visual {
+      background: linear-gradient(135deg, #0a4fa3 0%, #2563eb 50%, #3b82f6 100%);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      margin-bottom: 16px;
+    }
+    .tenda-visual .emoji { font-size: 36px; }
+    .tenda-visual h3 { font-size: 14px; font-weight: 800; margin-top: 8px; }
+    .tenda-visual p { font-size: 11px; opacity: 0.85; margin-top: 4px; }
+
+    .items-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .mini-card {
+      background: #f0f4f8;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 11px;
+      font-weight: 600;
+      color: #1a2a3a;
+      text-align: center;
+    }
+    .mini-card.done {
+      background: #dcfce7;
+      color: #15803d;
+    }
+    .mini-card.pending {
+      background: #fef3c7;
+      color: #92400e;
+    }
+    .mini-card.cancelled {
+      background: #fee2e2;
+      color: #991b1b;
+      text-decoration: line-through;
+    }
+
+    /* LEGENDA */
+    .legenda {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 24px;
+      padding: 16px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(10,79,163,0.06);
+    }
+    .legenda-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* RESPONSABILIDADES */
+    .resp-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .resp-card {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(10,79,163,0.08);
+    }
+    .resp-role {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #94a3b8;
+      margin-bottom: 6px;
+    }
+    .resp-name {
+      font-size: 14px;
+      font-weight: 800;
+      color: #0a4fa3;
+      margin-bottom: 8px;
+    }
+    .resp-tasks {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .resp-tasks li {
+      font-size: 11px;
+      color: #475569;
+      padding-left: 14px;
+      position: relative;
+    }
+    .resp-tasks li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: #0a4fa3;
+      font-weight: 700;
+    }
+
+    /* CHECKLIST */
+    .checklist {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .check-group {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(10,79,163,0.08);
+    }
+    .check-group-title {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #0a4fa3;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #dbeafe;
+    }
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 5px 0;
+      font-size: 12px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .check-item:last-child { border-bottom: none; }
+    .check-box {
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      border: 2px solid #cbd5e1;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .check-box.done { background: #22c55e; border-color: #22c55e; }
+    .check-box.cancelled { background: #ef4444; border-color: #ef4444; }
+    .check-text { line-height: 1.4; }
+    .check-text.done { color: #15803d; }
+    .check-text.cancelled { color: #94a3b8; text-decoration: line-through; }
+
+    @media print {
+      body { background: white; padding: 16px; }
+      .card, .stand-central, .resp-card, .check-group { box-shadow: none; border: 1px solid #e2e8f0; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Corre Mineiros 2026 — ENA</h1>
+  <p>Organização do Stand e Plano do Dia</p>
+  <span class="badge">07 de junho · Largada no Ipê Shopping</span>
+</header>
+
+<!-- PERCURSO -->
+<div class="section">
+  <div class="section-title">Percurso — Posicionamento de Banners</div>
+  <div class="percurso">
+    <div class="percurso-item">
+      <div class="percurso-icon start">🏁</div>
+      <div class="percurso-label">LARGADA</div>
+      <div class="percurso-sub">Ipê Shopping<br>Stand ENA</div>
+    </div>
+    <div class="percurso-arrow">→</div>
+    <div class="percurso-item">
+      <div class="percurso-icon km">2</div>
+      <div class="percurso-label">KM 2</div>
+      <div class="percurso-sub">"É NA corrida que aprendemos"</div>
+    </div>
+    <div class="percurso-arrow">→</div>
+    <div class="percurso-item">
+      <div class="percurso-icon km">3</div>
+      <div class="percurso-label">KM 3</div>
+      <div class="percurso-sub">"É NA corrida que nos encontramos"</div>
+    </div>
+    <div class="percurso-arrow">→</div>
+    <div class="percurso-item">
+      <div class="percurso-icon km">4</div>
+      <div class="percurso-label">KM 4</div>
+      <div class="percurso-sub">"É NA corrida que crescemos"</div>
+    </div>
+    <div class="percurso-arrow">→</div>
+    <div class="percurso-item">
+      <div class="percurso-icon end">🏆</div>
+      <div class="percurso-label">CHEGADA</div>
+      <div class="percurso-sub">+600 participantes</div>
+    </div>
+  </div>
+</div>
+
+<!-- STAND -->
+<div class="section">
+  <div class="section-title">Organização do Stand</div>
+  <div class="stand-grid">
+
+    <!-- COLUNA ESQUERDA: ATIVAÇÃO -->
+    <div class="stand-col">
+      <div class="stand-col-title">Ativação</div>
+
+      <div class="card amarelo">
+        <div class="card-title">🎵 Show da Escolinha de Violão</div>
+        <div class="card-desc">Apresentação antes da largada com as crianças do ENA. Músicas que inspiram e energizam os corredores.</div>
+        <span class="card-tag tag-yellow">Antes da corrida</span>
+      </div>
+
+      <div class="card laranja">
+        <div class="card-title">🎁 Sorteio</div>
+        <div class="card-desc">
+          <strong>Prêmio:</strong> Casaco ENA + kit completo<br>
+          (camiseta/cropped · meia · bermuda/calça · óculos · boné)<br><br>
+          <strong>Obs:</strong> Bruno entra com 50% do investimento — alinhar antes do dia.
+        </div>
+        <span class="card-tag tag-orange">Stand externo</span>
+      </div>
+
+      <div class="card verde">
+        <div class="card-title">🎒 Distribuição de Kits</div>
+        <div class="card-desc">
+          Kit de brindes para participantes:<br>
+          Bottons (3) · Caneta · Bloco de notas · Panfleto · Bolsa · Garrafa · Boné
+        </div>
+        <span class="card-tag tag-green">Para todos</span>
+      </div>
+    </div>
+
+    <!-- COLUNA CENTRAL: TENDA -->
+    <div class="stand-col">
+      <div class="stand-col-title">Tenda ENA</div>
+      <div class="stand-central">
+        <div class="stand-central-title">TENDA ENA</div>
+        <div class="stand-central-subtitle">Visual ENA aplicado na estrutura</div>
+
+        <div class="tenda-visual">
+          <div class="emoji">🏫</div>
+          <h3>Educandário Nascente do Araguaia</h3>
+          <p>Do berçário ao Ensino Médio · Mineiros/GO</p>
+        </div>
+
+        <div style="margin-bottom:14px;">
+          <div style="font-size:11px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Banners internos</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+            <div class="card" style="border-left-color:#0a4fa3;padding:10px;">
+              <div style="font-size:11px;font-weight:700;">📚 Ensino Integral</div>
+              <div style="font-size:10px;color:#5a7a9a;margin-top:3px;">Professor + Banner</div>
+            </div>
+            <div class="card" style="border-left-color:#22c55e;padding:10px;">
+              <div style="font-size:11px;font-weight:700;">🌅 Manhã de Saberes</div>
+              <div style="font-size:10px;color:#5a7a9a;margin-top:3px;">Professor + Banner</div>
+            </div>
+            <div class="card" style="border-left-color:#f97316;padding:10px;">
+              <div style="font-size:11px;font-weight:700;">🍼 Berçário</div>
+              <div style="font-size:10px;color:#5a7a9a;margin-top:3px;">Professor/Resp. + Banner</div>
+            </div>
+            <div class="card" style="border-left-color:#a855f7;padding:10px;">
+              <div style="font-size:11px;font-weight:700;">🌱 Projeto Viver</div>
+              <div style="font-size:10px;color:#5a7a9a;margin-top:3px;">Professor + Banner</div>
+            </div>
+            <div class="card" style="border-left-color:#ec4899;padding:10px;grid-column:1/-1;">
+              <div style="font-size:11px;font-weight:700;">⚽ Esportes</div>
+              <div style="font-size:10px;color:#5a7a9a;margin-top:3px;">Professor + Banner (futsal, vôlei, handebol, karatê...)</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:#f0f4f8;border-radius:10px;padding:12px;text-align:center;">
+          <div style="font-size:11px;font-weight:800;color:#0a4fa3;">BANNER DO MANIFESTO</div>
+          <div style="font-size:11px;color:#475569;margin-top:4px;">"É NA corrida que nos unimos"</div>
+          <div style="font-size:10px;color:#94a3b8;margin-top:3px;">Professor/Gestor ao lado para apresentar a escola</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COLUNA DIREITA: PROJETOS -->
+    <div class="stand-col">
+      <div class="stand-col-title">Projetos em destaque</div>
+
+      <div class="card" style="border-left-color:#0a4fa3;">
+        <div class="card-title">📚 Ensino Integral</div>
+        <div class="card-desc">Escola em tempo integral com acompanhamento pedagógico completo. Professor apresenta o modelo e tira dúvidas.</div>
+      </div>
+
+      <div class="card verde">
+        <div class="card-title">🌅 Manhã de Saberes</div>
+        <div class="card-desc">Atividades lúdicas e significativas que desenvolvem o potencial de cada aluno no período matutino.</div>
+      </div>
+
+      <div class="card laranja">
+        <div class="card-title">🍼 Berçário</div>
+        <div class="card-desc">Cuidado e educação desde os primeiros meses. Um dos maiores diferenciais do ENA para as famílias.</div>
+      </div>
+
+      <div class="card roxo">
+        <div class="card-title">🌱 Projeto Viver</div>
+        <div class="card-desc">Formação humana com foco em valores, saúde, bem-estar e cidadania. Manual próprio.</div>
+      </div>
+
+      <div class="card rosa">
+        <div class="card-title">⚽ Esportes</div>
+        <div class="card-desc">Futsal · Vôlei · Handebol · Karatê · Jazz · Ballet · Coral · Violão · Robótica · Teatro</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- CHECKLIST DE MATERIAIS -->
+<div class="section">
+  <div class="section-title">Checklist de Materiais</div>
+  <div class="checklist">
+
+    <div class="check-group">
+      <div class="check-group-title">Brindes (Kit)</div>
+      <div class="check-item">
+        <div class="check-box done"></div>
+        <div class="check-text done">Bottons — 3 modelos diferentes</div>
+      </div>
+      <div class="check-item">
+        <div class="check-box done"></div>
+        <div class="check-text done">Panfleto institucional ENA</div>
+      </div>
+      <div class="check-item">
+        <div class="check-box done"></div>
+        <div class="check-text done">Bolsa (normal e metalizada)</div>
+      </div>
+      <div class="check-item">
+        <div class="check-box done"></div>
+        <div class="check-text done">Garrafa personalizada</div>
+      </div>
+      <div class="check-item">
+        <div class="check-box done"></div>
+        <div class="check-text done">Boné personalizado</div>
+      </div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-text">Caneta personalizada</div>
+      </div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-text">Bloco de notas personalizado</div>
+      </div>
+      <div class="check-item">
+        <div class="check-box cancelled"></div>
+        <div class="check-text cancelled">Adesivos (ENA não vai fazer)</div>
+      </div>
+      <div class="check-item">
+        <div class="check-box cancelled"></div>
+        <div class="check-text cancelled">Camisetas (ENA não vai fazer)</div>
+      </div>
+    </div>
+
+    <div class="check-group">
+      <div class="check-group-title">Estrutura</div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-text">Arte da tenda (visual ENA)</div>
+      </div>
+      <div class="check-item">
+        <div class="check-box cancelled"></div>
+        <div class="check-text cancelled">Inflável (ENA não vai fazer)</div>
+      </div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-text">Banner manifesto "É NA corrida que nos unimos"</div>
+      </div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-text">3 banners de percurso (km 2, 3 e 4)</div>
+      </div>
+    </div>
+
+    <div class="check-group">
+      <div class="check-group-title">Banners dos Projetos (stand interno)</div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-text">Banner — Ensino Integral</div>
+      </div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-text">Banner — Manhã de Saberes</div>
+      </div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-text">Banner — Berçário</div>
+      </div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-text">Banner — Projeto Viver</div>
+      </div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-text">Banner — Esportes</div>
+      </div>
+    </div>
+
+    <div class="check-group">
+      <div class="check-group-title">Ativação e Sorteio</div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-text">Arte para comunicação do sorteio</div>
+      </div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-text">Definir itens do kit sorteio com a escola</div>
+      </div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-text">Confirmar participação de Bruno (50% sorteio)</div>
+      </div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-text">Confirmar escolinha de violão para o show</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- RESPONSABILIDADES NO DIA -->
+<div class="section">
+  <div class="section-title">Responsabilidades no Dia — Equipe ENA</div>
+  <div class="resp-grid">
+
+    <div class="resp-card">
+      <div class="resp-role">Professor / Gestor</div>
+      <div class="resp-name">Banner do Manifesto</div>
+      <ul class="resp-tasks">
+        <li>Ficar posicionado ao lado do banner do manifesto</li>
+        <li>Apresentar a escola para quem se aproximar</li>
+        <li>Dar visão geral do ENA (do berçário ao EM)</li>
+        <li>Indicar os outros professores para projetos específicos</li>
+      </ul>
+    </div>
+
+    <div class="resp-card">
+      <div class="resp-role">Professor</div>
+      <div class="resp-name">Ensino Integral</div>
+      <ul class="resp-tasks">
+        <li>Ficar ao lado do banner do Ensino Integral</li>
+        <li>Apresentar o modelo de escola em tempo integral</li>
+        <li>Tirar dúvidas de pais interessados</li>
+      </ul>
+    </div>
+
+    <div class="resp-card">
+      <div class="resp-role">Professor</div>
+      <div class="resp-name">Manhã de Saberes</div>
+      <ul class="resp-tasks">
+        <li>Ficar ao lado do banner da Manhã de Saberes</li>
+        <li>Apresentar as atividades do projeto</li>
+        <li>Mostrar como funciona a rotina dos alunos</li>
+      </ul>
+    </div>
+
+    <div class="resp-card">
+      <div class="resp-role">Professor / Responsável</div>
+      <div class="resp-name">Berçário</div>
+      <ul class="resp-tasks">
+        <li>Ficar ao lado do banner do Berçário</li>
+        <li>Apresentar a estrutura e cuidados oferecidos</li>
+        <li>Falar sobre o diferencial do ENA para bebês</li>
+      </ul>
+    </div>
+
+    <div class="resp-card">
+      <div class="resp-role">Professor</div>
+      <div class="resp-name">Projeto Viver</div>
+      <ul class="resp-tasks">
+        <li>Ficar ao lado do banner do Projeto Viver</li>
+        <li>Apresentar a proposta de formação humana</li>
+        <li>Falar sobre valores, saúde e cidadania</li>
+      </ul>
+    </div>
+
+    <div class="resp-card">
+      <div class="resp-role">Professor</div>
+      <div class="resp-name">Esportes</div>
+      <ul class="resp-tasks">
+        <li>Ficar ao lado do banner de Esportes</li>
+        <li>Apresentar as escolinhas esportivas disponíveis</li>
+        <li>Falar sobre os benefícios do esporte na infância</li>
+        <li>Dar informações de inscrição nas escolinhas</li>
+      </ul>
+    </div>
+
+    <div class="resp-card" style="border-left: 4px solid #eab308;">
+      <div class="resp-role">Escolinha de Violão</div>
+      <div class="resp-name">Show antes da largada</div>
+      <ul class="resp-tasks">
+        <li>Apresentação musical antes do início da corrida</li>
+        <li>Músicas inspiradoras e energizantes</li>
+        <li>Crianças do ENA como protagonistas</li>
+        <li>Posicionamento próximo à tenda/palco</li>
+      </ul>
+    </div>
+
+    <div class="resp-card" style="border-left: 4px solid #f97316;">
+      <div class="resp-role">Organização Geral</div>
+      <div class="resp-name">Sorteio + Kit</div>
+      <ul class="resp-tasks">
+        <li>Distribuição dos kits de brindes</li>
+        <li>Comunicação e gestão do sorteio</li>
+        <li>Coordenar participação de Bruno (50% do sorteio)</li>
+        <li>Recolher participantes para o sorteio</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- LEGENDA -->
+<div class="legenda">
+  <div style="font-size:12px;font-weight:700;color:#1a2a3a;width:100%;text-align:center;margin-bottom:8px;">LEGENDA</div>
+  <div class="legenda-item"><div class="dot" style="background:#22c55e;"></div> Concluído / Confirmado</div>
+  <div class="legenda-item"><div class="dot" style="background:#f97316;"></div> Pendente / A fazer</div>
+  <div class="legenda-item"><div class="dot" style="background:#ef4444;"></div> Cancelado / ENA não vai fazer</div>
+  <div class="legenda-item"><div class="dot" style="background:#eab308;"></div> A confirmar com a escola</div>
+  <div class="legenda-item"><div class="dot" style="background:#0a4fa3;"></div> Vizantu (criação)</div>
+</div>
+
+<div style="text-align:center;margin-top:32px;font-size:11px;color:#94a3b8;">
+  Gerado pela Vizantu · Corre Mineiros 2026 · ENA — Mineiros/GO
+</div>
+
+</body>
+</html>

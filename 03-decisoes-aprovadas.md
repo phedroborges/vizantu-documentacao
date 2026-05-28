@@ -1,0 +1,26 @@
+# Decisoes Aprovadas
+
+Status: ativo
+Atualizado em: 2026-05-18
+
+## Decisoes
+
+### 2026-05-07
+
+- Toda a conversa sobre a Vizantu deve ser documentada em arquivos `.md` na pasta `Documents`.
+- A estrutura inicial de documentacao foi criada em `/Users/phedroborges/Documents/vizantu-documentacao`.
+- A documentacao deve registrar:
+  - o que for aprendido sobre a Vizantu;
+  - o que for aprovado durante a conversa;
+  - POPs;
+  - automacoes;
+  - oportunidades de otimizacao.
+
+### 2026-05-18
+
+- POP-001 (Criação de tarefa no ClickUp) aprovado e documentado em `04-pops.md`.
+- Regras validadas por Phedro:
+  - LEGENDA(ORG) e LEGENDA(ADS): obrigatórias antes de mover para "aprovação da copy" (a legenda é parte da copy).
+  - LINK DO ARQUIVO: obrigatório assim que a pasta for criada — seja pelo recebimento de material do cliente ou pela criação pelo diretor de arte ao iniciar a demanda.
+  - Responsável: pode ser múltiplos — todos os envolvidos na demanda devem estar adicionados.
+  - Prioridade: usar apenas com urgência real de prazo, não como hábito.

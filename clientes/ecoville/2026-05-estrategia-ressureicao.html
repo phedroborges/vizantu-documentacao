@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estratégia Ressurreição — Ecoville Confresa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --violet:       #6435e7;
+      --violet-dim:   #9147ff;
+      --orange:       #FF7A5C;
+      --amber:        #FEB63D;
+      --pale-violet:  #C8B8FF;
+      --bg:           #0d0d0d;
+      --card:         #10101A;
+      --card-2:       #1C1B2E;
+      --border:       #2E2D44;
+      --muted:        #636180;
+      --fg:           #fdfdfd;
+      --fg-dim:       #B0AECA;
+      --error:        #e00505;
+      --success:      #00fe5d;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.5;
+    }
+
+    /* ═══════════════════════════════════════
+       SLIDE — base
+    ═══════════════════════════════════════ */
+    .slide {
+      min-height: 100vh;
+      padding: 72px 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slide-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .slide-title {
+      font-size: 56px;
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+    }
+
+    .slide-sub {
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--fg-dim);
+      margin-top: 16px;
+      max-width: 560px;
+      line-height: 1.6;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .chip-violet { background: rgba(100,53,231,.18); color: var(--pale-violet); }
+    .chip-orange { background: rgba(255,122,92,.15); color: var(--orange); }
+    .chip-amber  { background: rgba(254,182,61,.15); color: var(--amber); }
+    .chip-red    { background: rgba(224,5,5,.15);    color: #ff4444; }
+    .chip-green  { background: rgba(0,254,93,.12);   color: var(--success); }
+
+    /* ═══════════════════════════════════════
+       SLIDE 1 — CAPA
+    ═══════════════════════════════════════ */
+    .capa {
+      background: var(--bg);
+      justify-content: space-between;
+    }
+
+    .capa::before {
+      content: '';
+      position: absolute;
+      top: -200px; right: -200px;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(100,53,231,.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .capa-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .capa-logo {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .capa-date {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .capa-center {
+      text-align: center;
+      padding: 40px 0;
+    }
+
+    .capa-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--violet-dim);
+      margin-bottom: 24px;
+    }
+
+    .capa-titulo {
+      font-size: 120px;
+      font-weight: 900;
+      line-height: 0.9;
+      letter-spacing: -4px;
+      background: linear-gradient(135deg, #fff 30%, var(--pale-violet) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .capa-cliente {
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--fg-dim);
+      margin-top: 20px;
+      letter-spacing: 2px;
+    }
+
+    .capa-line {
+      width: 1px;
+      height: 48px;
+      background: var(--border);
+      margin: 32px auto;
+    }
+
+    .capa-desc {
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .capa-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .capa-chips {
+      display: flex;
+      gap: 8px;
+    }
+
+    .capa-slides {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* ═══════════════════════════════════════
+       SLIDE 2 — ALERTA
+    ═══════════════════════════════════════ */
+    .alerta {
+      background: var(--card);
+      border-top: 1px solid var(--border);
+    }
+
+    .alerta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .alerta-left {}
+
+    .alerta-numero {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--error);
+      margin-bottom: 20px;
+    }
+
+    .alerta-titulo {
+      font-size: 52px;
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+      margin-bottom: 24px;
+    }
+
+    .alerta-titulo span { color: var(--error); }
+
+    .alerta-texto {
+      font-size: 16px;
+      color: var(--fg-dim);
+      line-height: 1.75;
+    }
+
+    .alerta-right {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .stat-card {
+      background: var(--card-2);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 32px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .stat-card.danger { border-color: rgba(224,5,5,.4); }
+    .stat-card.warn   { border-color: rgba(254,182,61,.3); }
+
+    .stat-icon {
+      font-size: 32px;
+      flex-shrink: 0;
+    }
+
+    .stat-valor {
+      font-size: 32px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .stat-valor.red    { color: var(--error); }
+    .stat-valor.amber  { color: var(--amber); }
+
+    .stat-desc {
+      font-size: 13px;
+      color: var(--fg-dim);
+      margin-top: 4px;
+    }
+
+    /* ═══════════════════════════════════════
+       SLIDE 3 — VISÃO GERAL
+    ═══════════════════════════════════════ */
+    .visao {
+      background: var(--bg);
+    }
+
+    .visao-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .frentes-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    .frente-pill {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px 20px;
+      text-align: center;
+      transition: border-color .2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .frente-pill::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      border-radius: 20px 20px 0 0;
+    }
+
+    .fp1::before { background: var(--violet); }
+    .fp2::before { background: var(--orange); }
+    .fp3::before { background: var(--amber); }
+    .fp4::before { background: var(--pale-violet); }
+    .fp5::before { background: var(--success); }
+
+    .frente-num {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .frente-icon { font-size: 36px; margin-bottom: 16px; }
+
+    .frente-nome {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--fg);
+      line-height: 1.4;
+      margin-bottom: 12px;
+    }
+
+    .frente-resp {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .frente-urgente {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 3px 10px;
+      border-radius: 100px;
+      font-size: 10px;
+      font-weight: 700;
+      background: rgba(224,5,5,.15);
+      color: #ff4444;
+    }
+
+    /* ═══════════════════════════════════════
+       SLIDE N — FRENTE DETALHADA
+    ═══════════════════════════════════════ */
+    .frente-slide {
+      background: var(--card);
+      border-top: 1px solid var(--border);
+    }
+
+    .fs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .fs-left {}
+
+    .fs-numero {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .fs-titulo {
+      font-size: 44px;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+    }
+
+    .fs-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+
+    .fs-texto {
+      font-size: 15px;
+      color: var(--fg-dim);
+      line-height: 1.75;
+    }
+
+    .fs-texto strong { color: var(--fg); font-weight: 600; }
+
+    .fs-right {}
+
+    .fs-checklist-titulo {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .fs-check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      color: var(--fg-dim);
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .fs-check-item:last-child { border-bottom: none; }
+
+    .check-circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid var(--border);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ═══════════════════════════════════════
+       STORIES ESPECIAL
+    ═══════════════════════════════════════ */
+    .stories-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-top: 40px;
+    }
+
+    .story-card {
+      background: var(--card-2);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 16px;
+      text-align: center;
+    }
+
+    .story-hora {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--amber);
+      margin-bottom: 6px;
+    }
+
+    .story-tema {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .story-icon { font-size: 28px; margin-bottom: 12px; }
+
+    .story-desc {
+      font-size: 12px;
+      color: var(--fg-dim);
+      line-height: 1.6;
+    }
+
+    /* ═══════════════════════════════════════
+       FOLLOW-UP TABLE
+    ═══════════════════════════════════════ */
+    .fu-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    .fu-table th {
+      padding: 12px 20px;
+      text-align: left;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .fu-table td {
+      padding: 14px 20px;
+      font-size: 13px;
+      color: var(--fg-dim);
+      font-weight: 500;
+      border-bottom: 1px solid rgba(46,45,68,.5);
+    }
+
+    .fu-table tr:last-child td { border-bottom: none; }
+
+    .tag-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 700;
+      background: rgba(100,53,231,.2);
+      color: var(--pale-violet);
+    }
+
+    .tag-badge.t30 {
+      background: rgba(255,122,92,.2);
+      color: var(--orange);
+    }
+
+    /* ═══════════════════════════════════════
+       SLIDE — TIMELINE
+    ═══════════════════════════════════════ */
+    .timeline-slide {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+    }
+
+    .tl-header {
+      text-align: center;
+      margin-bottom: 72px;
+    }
+
+    .tl-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      position: relative;
+    }
+
+    .tl-row::before {
+      content: '';
+      position: absolute;
+      top: 32px;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .tl-item {
+      text-align: center;
+      padding-top: 80px;
+      position: relative;
+    }
+
+    .tl-dot {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 900;
+      z-index: 1;
+    }
+
+    .tl-dot.urgente { background: var(--violet); color: #fff; }
+    .tl-dot.normal  { background: var(--card-2); color: var(--fg-dim); border: 2px solid var(--border); }
+
+    .tl-prazo {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 10px;
+    }
+
+    .tl-nome {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--fg);
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+
+    .tl-resp {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* ═══════════════════════════════════════
+       RODAPÉ
+    ═══════════════════════════════════════ */
+    .rodape {
+      background: var(--card);
+      border-top: 1px solid var(--border);
+      padding: 40px 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .rodape-marca {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .rodape-info {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* accent line */
+    .accent-line {
+      display: block;
+      width: 40px;
+      height: 3px;
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+
+    @media print {
+      .slide { page-break-after: always; min-height: auto; }
+      body { background: white; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════ SLIDE 1 — CAPA ════════ -->
+<div class="slide capa">
+  <div class="capa-top">
+    <span class="capa-logo">Vizantu — Gestão de Marca</span>
+    <span class="capa-date">Maio 2026 · Confresa, MT</span>
+  </div>
+
+  <div class="capa-center">
+    <div class="capa-eyebrow">Plano Estratégico</div>
+    <div class="capa-titulo">Ressurreição</div>
+    <div class="capa-cliente">Ecoville Confresa</div>
+    <div class="capa-line"></div>
+    <div class="capa-desc">
+      5 frentes para retomar o crescimento, criar previsibilidade de receita e fazer a Ecoville virar referência de limpeza em Confresa.
+    </div>
+  </div>
+
+  <div class="capa-bottom">
+    <div class="capa-chips">
+      <span class="chip chip-red">Situação crítica</span>
+      <span class="chip chip-violet">5 frentes</span>
+      <span class="chip chip-amber">Meta 3×</span>
+    </div>
+    <span class="capa-slides">Ecoville Confresa · Confidencial</span>
+  </div>
+</div>
+
+<!-- ════════ SLIDE 2 — ALERTA ════════ -->
+<div class="slide alerta">
+  <div class="alerta-grid">
+    <div class="alerta-left">
+      <div class="alerta-numero">⚠ Diagnóstico</div>
+      <div class="alerta-titulo">Se nada<br/>mudar,<br/><span>a loja fecha.</span></div>
+      <div class="alerta-texto">
+        A Ecoville Confresa não registra lucro desde o primeiro dia de operação. O modelo atual não tem captação, não tem recorrência e depende de uma cidade que não tem o volume necessário para sustentar o negócio sozinha. Sem mudança estrutural, o encerramento é inevitável.
+      </div>
+    </div>
+
+    <div class="alerta-right">
+      <div class="stat-card danger">
+        <div class="stat-icon">📉</div>
+        <div>
+          <div class="stat-valor red">R$ 0</div>
+          <div class="stat-desc">de lucro desde a abertura da loja</div>
+        </div>
+      </div>
+      <div class="stat-card danger">
+        <div class="stat-icon">🔇</div>
+        <div>
+          <div class="stat-valor red">Zero</div>
+          <div class="stat-desc">fontes ativas de captação de clientes</div>
+        </div>
+      </div>
+      <div class="stat-card warn">
+        <div class="stat-icon">🏙️</div>
+        <div>
+          <div class="stat-valor amber">Pequena</div>
+          <div class="stat-desc">cidade com volume B2C insuficiente para o modelo atual</div>
+        </div>
+      </div>
+      <div class="stat-card warn">
+        <div class="stat-icon">🔄</div>
+        <div>
+          <div class="stat-valor amber">Nenhum</div>
+          <div class="stat-desc">cliente antigo foi reativado sistematicamente</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ SLIDE 3 — VISÃO GERAL ════════ -->
+<div class="slide visao">
+  <div class="visao-header">
+    <div class="slide-label">A resposta</div>
+    <div class="slide-title" style="font-size:48px; text-align:center;">5 frentes simultâneas</div>
+    <div class="slide-sub" style="text-align:center; margin: 12px auto 0;">
+      Cada frente resolve uma camada do problema. Juntas, criam o movimento que a loja precisa.
+    </div>
+  </div>
+
+  <div class="frentes-grid">
+    <div class="frente-pill fp1">
+      <div class="frente-num">Frente 01</div>
+      <div class="frente-icon">📣</div>
+      <div class="frente-nome">Tráfego Pago</div>
+      <div class="frente-resp">Phedro</div>
+      <div class="frente-urgente">Urgente</div>
+    </div>
+    <div class="frente-pill fp2">
+      <div class="frente-num">Frente 02</div>
+      <div class="frente-icon">🤝</div>
+      <div class="frente-nome">Contrato B2B com ROI</div>
+      <div class="frente-resp">Phedro + Vânia</div>
+      <div class="frente-urgente">Urgente</div>
+    </div>
+    <div class="frente-pill fp3">
+      <div class="frente-num">Frente 03</div>
+      <div class="frente-icon">📲</div>
+      <div class="frente-nome">Stories Diários</div>
+      <div class="frente-resp">Cynthhia</div>
+      <div class="frente-urgente">Começa hoje</div>
+    </div>
+    <div class="frente-pill fp4">
+      <div class="frente-num">Frente 04</div>
+      <div class="frente-icon">💬</div>
+      <div class="frente-nome">Follow-up de Clientes</div>
+      <div class="frente-resp">Cynthhia</div>
+      <div class="frente-urgente">Começa hoje</div>
+    </div>
+    <div class="frente-pill fp5">
+      <div class="frente-num">Frente 05</div>
+      <div class="frente-icon">🎓</div>
+      <div class="frente-nome">Treinamento Ecoville</div>
+      <div class="frente-resp">Phedro</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ SLIDE 4 — FRENTE 1: TRÁFEGO ════════ -->
+<div class="slide frente-slide">
+  <div class="fs-grid">
+    <div class="fs-left">
+      <div class="fs-numero" style="color: var(--violet);">Frente 01</div>
+      <span class="accent-line" style="background: var(--violet);"></span>
+      <div class="fs-titulo">Tráfego<br/>Pago</div>
+      <div class="fs-chips">
+        <span class="chip chip-red">Urgente · 29/05</span>
+        <span class="chip chip-violet">Meta Ads</span>
+        <span class="chip chip-violet">Instagram</span>
+      </div>
+      <div class="fs-texto">
+        Duas campanhas rodando em paralelo.<br/><br/>
+        <strong>Ajudinha</strong> — impulsionar os melhores posts que já existem. Sem criar nada novo. Resultado imediato em alcance e seguidores.<br/><br/>
+        <strong>Criativos de venda</strong> — peças nativas, disfarçadas de orgânico, focadas nos produtos que mais saem. Gancho no problema, não no produto. CTA único: <strong>WhatsApp</strong>. Pausar qualquer criativo acima de R$ 5,00 por conversa.
+      </div>
+    </div>
+    <div class="fs-right">
+      <div class="fs-checklist-titulo">O que precisa acontecer</div>
+      <div class="fs-check-item"><span class="check-circle"></span>Mapear os 3 melhores posts do Instagram</div>
+      <div class="fs-check-item"><span class="check-circle"></span>Subir campanha de engajamento (ajudinha)</div>
+      <div class="fs-check-item"><span class="check-circle"></span>Levantar os 3 produtos que mais saem na loja</div>
+      <div class="fs-check-item"><span class="check-circle"></span>Criar criativo 1 — produto campeão</div>
+      <div class="fs-check-item"><span class="check-circle"></span>Criar criativo 2 — produto campeão</div>
+      <div class="fs-check-item"><span class="check-circle"></span>Criar criativo 3 — produto campeão</div>
+      <div class="fs-check-item"><span class="check-circle"></span>Subir campanhas de conversão para WhatsApp</div>
+      <div class="fs-check-item"><span class="check-circle"></span>Monitorar e otimizar após 48h</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ SLIDE 5 — FRENTE 2: B2B ════════ -->
+<div class="slide frente-slide" style="background: var(--bg);">
+  <div class="fs-grid">
+    <div class="fs-left">
+      <div class="fs-numero" style="color: var(--orange);">Frente 02</div>
+      <span class="accent-line" style="background: var(--orange);"></span>
+      <div class="fs-titulo">Contrato<br/>B2B</div>
+      <div class="fs-chips">
+        <span class="chip chip-red">Urgente · 30/05</span>
+        <span class="chip chip-orange">Vânia + Phedro</span>
+      </div>
+      <div class="fs-texto">
+        O mercado B2B rejeita pelo preço de prateleira. Nossa resposta é <strong>mudar o que está sendo comparado</strong>: custo real de uso, não o valor da embalagem.<br/><br/>
+        Vânia visita empresas com uma proposta que mostra em números quanto a empresa gasta hoje vs quanto gastaria com Ecoville. <strong>Contrato de 3 meses</strong> — produtos + Treinamento inclusos — cria previsibilidade de receita.<br/><br/>
+        <strong>Meta:</strong> 2 contratos fechados no primeiro mês. Mínimo 3 visitas por semana.
+      </div>
+    </div>
+    <div class="fs-right">
+      <div class="fs-checklist-titulo">O que precisa acontecer</div>
+      <div class="fs-check-item"><span class="check-circle"></span>Mapear empresas-alvo em Confresa</div>
+      <div class="fs-check-item"><span class="check-circle"></span>Criar proposta com tabela comparativa de ROI</div>
+      <div class="fs-check-item"><span class="check-circle"></span>Definir preços e condições do contrato</div>
+      <div class="fs-check-item"><span class="check-circle"></span>Criar roteiro de abordagem para Vânia</div>
+      <div class="fs-check-item"><span class="check-circle"></span>Treinar Vânia antes das visitas</div>
+      <div class="fs-check-item"><span class="check-circle"></span>Iniciar visitas — mínimo 3/semana</div>
+      <div class="fs-check-item"><span class="check-circle"></span>1º contrato fechado</div>
+      <div class="fs-check-item"><span class="check-circle"></span>2º contrato fechado</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ SLIDE 6 — FRENTE 3: STORIES ════════ -->
+<div class="slide frente-slide" style="min-height: auto; padding-bottom: 80px;">
+  <div class="fs-numero" style="color: var(--amber);">Frente 03</div>
+  <span class="accent-line" style="background: var(--amber);"></span>
+  <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 60px; margin-bottom: 48px;">
+    <div>
+      <div class="fs-titulo" style="font-size: 44px;">Stories Diários<br/>da Cynthhia</div>
+    </div>
+    <div style="max-width: 420px; flex-shrink: 0;">
+      <div class="fs-chips" style="margin-top: 10px;">
+        <span class="chip chip-red">Começa hoje</span>
+        <span class="chip chip-amber">Cynthhia</span>
+        <span class="chip chip-violet">Instagram</span>
+      </div>
+      <div class="fs-texto">
+        5 stories por dia, horários fixos, tema definido. <strong>Sem improvisar</strong> — só seguir o roteiro. O que gravar aqui alimenta o grupo de WhatsApp e vira Reel sem regravar.
+      </div>
+    </div>
+  </div>
+
+  <div class="stories-row">
+    <div class="story-card">
+      <div class="story-hora">7h</div>
+      <div class="story-tema">Abertura</div>
+      <div class="story-icon">👋</div>
+      <div class="story-desc">Saudação com figurinha de reação. "Bom dia! Estou aqui esperando vocês."</div>
+    </div>
+    <div class="story-card">
+      <div class="story-hora">9h</div>
+      <div class="story-tema">1º Cliente</div>
+      <div class="story-icon">🛒</div>
+      <div class="story-desc">O que o 1º cliente comprou e para que serve — ou uma aposta se ainda não chegou.</div>
+    </div>
+    <div class="story-card">
+      <div class="story-hora">12h</div>
+      <div class="story-tema">Sem fechar</div>
+      <div class="story-icon">🕛</div>
+      <div class="story-desc">"Se esse é o único momento do seu dia, pode vir. Não fechamos para almoço."</div>
+    </div>
+    <div class="story-card">
+      <div class="story-hora">15h</div>
+      <div class="story-tema">Tarde</div>
+      <div class="story-icon">☀️</div>
+      <div class="story-desc">Cliente da tarde ou algo do universo da limpeza — dica, lançamento, case.</div>
+    </div>
+    <div class="story-card">
+      <div class="story-hora">18h</div>
+      <div class="story-tema">Até amanhã</div>
+      <div class="story-icon">🌙</div>
+      <div class="story-desc">Convite para amanhã com horário de funcionamento. Encerrar bem o dia.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ SLIDE 7 — FRENTE 4: FOLLOW-UP ════════ -->
+<div class="slide frente-slide" style="background: var(--bg); min-height: auto; padding-bottom: 80px;">
+  <div class="fs-grid" style="align-items: start;">
+    <div class="fs-left">
+      <div class="fs-numero" style="color: var(--pale-violet);">Frente 04</div>
+      <span class="accent-line" style="background: var(--pale-violet);"></span>
+      <div class="fs-titulo">Follow-up<br/>de Clientes</div>
+      <div class="fs-chips">
+        <span class="chip chip-red">Começa hoje</span>
+        <span class="chip chip-violet">Cynthhia</span>
+        <span class="chip chip-violet">WhatsApp</span>
+      </div>
+      <div class="fs-texto">
+        <strong>30 clientes reativados por dia</strong> até zerar a lista de quem já comprou desde a abertura.<br/><br/>
+        Cada contato recebe até 5 mensagens com intervalo de 24h. Sem resposta em 5 dias: <strong>Follow 30</strong> — silêncio por 30 dias e tentativa nova.<br/><br/>
+        Quem responde sai do fluxo e recebe tag do produto que consome — base para reativação recorrente.
+      </div>
+    </div>
+    <div class="fs-right">
+      <div class="fs-checklist-titulo">Sistema de tags</div>
+      <table class="fu-table">
+        <thead>
+          <tr>
+            <th>Tag</th>
+            <th>Quando aplicar</th>
+            <th>Próximo passo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="tag-badge">Follow 1</span></td>
+            <td>1º contato enviado</td>
+            <td>Aguardar 24h</td>
+          </tr>
+          <tr>
+            <td><span class="tag-badge">Follow 2</span></td>
+            <td>Sem resposta em 24h</td>
+            <td>Aguardar 24h</td>
+          </tr>
+          <tr>
+            <td><span class="tag-badge">Follow 3</span></td>
+            <td>Sem resposta em 24h</td>
+            <td>Aguardar 24h</td>
+          </tr>
+          <tr>
+            <td><span class="tag-badge">Follow 4</span></td>
+            <td>Sem resposta em 24h</td>
+            <td>Aguardar 24h</td>
+          </tr>
+          <tr>
+            <td><span class="tag-badge">Follow 5</span></td>
+            <td>Sem resposta em 24h</td>
+            <td>Aguardar 24h</td>
+          </tr>
+          <tr>
+            <td><span class="tag-badge t30">Follow 30</span></td>
+            <td>5 dias sem resposta</td>
+            <td>Reativar em 30 dias</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ SLIDE 8 — FRENTE 5: TREINAMENTO ════════ -->
+<div class="slide frente-slide">
+  <div class="fs-grid">
+    <div class="fs-left">
+      <div class="fs-numero" style="color: var(--success);">Frente 05</div>
+      <span class="accent-line" style="background: var(--success);"></span>
+      <div class="fs-titulo">Treinamento<br/>Ecoville</div>
+      <div class="fs-chips">
+        <span class="chip chip-green">Bônus do contrato B2B</span>
+        <span class="chip chip-amber">Phedro · 05/06</span>
+      </div>
+      <div class="fs-texto">
+        Entra como parte do contrato B2B e diferencia a Ecoville de qualquer fornecedor que só entrega e some.<br/><br/>
+        <strong>Entrega 1 — Dia 1:</strong> teoria e prática presencial. Como diluir, qual produto usar em qual superfície, erros comuns, prática supervisionada no local.<br/><br/>
+        <strong>Entrega 2 — Dia 30:</strong> retorno para análise. Percorrer as áreas, corrigir erros, entregar relatório de resultado. Serve como argumento para renovação.
+      </div>
+    </div>
+    <div class="fs-right">
+      <div class="fs-checklist-titulo">O que precisa acontecer</div>
+      <div class="fs-check-item"><span class="check-circle"></span>Escrever roteiro do treinamento — Entrega 1</div>
+      <div class="fs-check-item"><span class="check-circle"></span>Criar folha de referência de diluição por produto</div>
+      <div class="fs-check-item"><span class="check-circle"></span>Definir precificação standalone e no contrato</div>
+      <div class="fs-check-item"><span class="check-circle"></span>Incluir como item padrão da proposta B2B</div>
+      <div class="fs-check-item"><span class="check-circle"></span>Executar Treinamento Piloto 1</div>
+      <div class="fs-check-item"><span class="check-circle"></span>Executar Treinamento Piloto 2</div>
+      <div class="fs-check-item"><span class="check-circle"></span>Criar template do relatório de conclusão</div>
+      <div class="fs-check-item"><span class="check-circle"></span>Retorno Dia 30 — Pilotos 1 e 2</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ SLIDE 9 — TIMELINE ════════ -->
+<div class="slide timeline-slide">
+  <div class="tl-header">
+    <div class="slide-label">Ordem de execução</div>
+    <div class="slide-title" style="text-align:center; font-size:48px;">O que acontece e quando</div>
+  </div>
+
+  <div class="tl-row">
+    <div class="tl-item">
+      <div class="tl-dot urgente">1</div>
+      <div class="tl-prazo">Hoje</div>
+      <div class="tl-nome">Stories diários começam</div>
+      <div class="tl-resp">Cynthhia</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot urgente">2</div>
+      <div class="tl-prazo">Hoje</div>
+      <div class="tl-nome">Follow-up 30 clientes/dia</div>
+      <div class="tl-resp">Cynthhia</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot urgente">3</div>
+      <div class="tl-prazo">29/05</div>
+      <div class="tl-nome">Ajudinha + criativos de venda no ar</div>
+      <div class="tl-resp">Phedro</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot urgente">4</div>
+      <div class="tl-prazo">30/05</div>
+      <div class="tl-nome">Proposta B2B pronta + visitas começam</div>
+      <div class="tl-resp">Phedro + Vânia</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot normal">5</div>
+      <div class="tl-prazo">05/06</div>
+      <div class="tl-nome">Roteiro do Treinamento Ecoville pronto</div>
+      <div class="tl-resp">Phedro</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ RODAPÉ ════════ -->
+<div class="rodape">
+  <span class="rodape-marca">Vizantu — Gestão de Marca</span>
+  <span class="rodape-info">Estratégia Ressurreição · Ecoville Confresa · Maio 2026 · Confidencial</span>
+</div>
+
+</body>
+</html>
