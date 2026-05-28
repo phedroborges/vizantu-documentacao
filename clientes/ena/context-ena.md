@@ -42,10 +42,11 @@ A escola tem uma relação próxima com as famílias. A comunicação gira em to
 
 | Projeto | Descrição |
 |---------|-----------|
-| **Projeto Viver** | Projeto pedagógico com manual próprio. Tem banner e apresentação no feed. |
-| **Manhã de Saberes** | Projeto de enriquecimento matutino. Tem agenda própria. |
-| **Berçário** | Tem identidade visual própria e é divulgado como diferencial. |
-| **Ensino Integral** | Um dos pilares de divulgação da escola. |
+| **Projeto Viver** | Programa exclusivo da Educação Infantil (1 a 6 anos). Combina atividades lúdicas, emocionais e motoras. Atividades diárias: musicalização, recreação, brincadeiras livres. Semanais: culinária, jogos de linguagem, arte, contato com natureza, ciências experimentais. Funciona de segunda a sexta, das 7h às 11h, com horário flexível. Objetivo: desenvolver linguagem, cognição, sociabilidade e equilíbrio emocional. Frase síntese: *"A infância bem-cuidada é o alicerce de futuros brilhantes."* |
+| **Manhã de Saberes** | Programa matutino de enriquecimento — das 7h às 11h, segunda a sexta. Inclui apoio nas tarefas, leitura guiada, recreação orientada e hábitos saudáveis. Horário flexível para famílias. |
+| **Berçário** | Identidade visual própria (submarca). Atende bebês a partir de 3 meses. Período integral com equipe dedicada, técnico de enfermagem e espaços adaptados por faixa etária. Diferencial exclusivo — poucas escolas da cidade atendem desde bebês. |
+| **Ensino Integral** | Um dos pilares de divulgação. Frase: *"O dia inteiro formando corações e mentes."* |
+| **Ensino Bilíngue** | Parceria com a **Simple Education** — referência nacional em bilinguismo (200+ escolas, 50k+ alunos, 98% aprovação nas certificações Cambridge). Metodologia "Bilíngue de Verdade". Inglês integrado do Berçário ao Ensino Médio. |
 | **ENA Conecta** | Iniciativa/plataforma própria — tem logo desenvolvida pela Vizantu. |
 
 ---
@@ -67,6 +68,10 @@ Estas são as escolinhas divulgadas ativamente pela escola:
 - Jazz
 
 **Linha de comunicação das escolinhas:** "crianças sem telas" — o ENA valoriza experiências reais e ativas. Os conteúdos das escolinhas focam em alcance orgânico local com vídeos virais e formatos de campanha (POV, trends).
+
+**Diferenciais esportivos:** O ENA é a escola com mais títulos esportivos da região. Frase de posicionamento: *"O ENA vive o esporte."*
+
+**Área verde:** O ENA tem a maior área verde de Mineiros-GO. Inclui contato com animais e atividades ao ar livre integradas à rotina. Frase: *"Crianças que brincam na natureza se desenvolvem melhor."*
 
 ---
 
@@ -178,7 +183,15 @@ Estas são as escolinhas divulgadas ativamente pela escola:
 
 ---
 
-## 13. Observações operacionais
+## 13. Eventos e ações de marca
+
+| Evento | Detalhes |
+|--------|----------|
+| **Corre Mineiros 2026** | 07/06/2026. ENA tem stand com backdrop (3x2,50m), 2 wind banners (azul e laranja, só logo), 8 banners de diferenciais (1,20x0,80m) e sorteio de kit completo do corredor da marca **Lado de Fora** (outfit completo: meia a óculos, adaptado para homem ou mulher). Arte de comunicação do sorteio vai para Instagram e WhatsApp até 05/06. |
+
+---
+
+## 14. Observações operacionais
 
 - A escola tem **aplicativo próprio** — a Vizantu já adaptou o Manual do Aluno para o formato do app.
 - A escola usa **painel de LED** na cidade para divulgação de campanhas.
