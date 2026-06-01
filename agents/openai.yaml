@@ -1,0 +1,7 @@
+interface:
+  display_name: "Vizantu Documentacao"
+  short_description: "Operacao, clientes e POPs da Vizantu"
+  default_prompt: "Use $vizantu-documentacao para consultar ou atualizar a documentacao viva da Vizantu com base no contexto operacional e nos arquivos de clientes."
+
+policy:
+  allow_implicit_invocation: true
