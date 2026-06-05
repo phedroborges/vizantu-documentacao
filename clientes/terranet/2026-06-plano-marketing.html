@@ -1,1165 +1,951 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TerraNet — Plano Estratégico de Marketing | Jun–Jul 2026</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --green: #47A81A;
-      --green-dark: #327713;
-      --orange: #FF8001;
-      --slate: #394E45;
-      --black: #121212;
-      --white: #FFFFFF;
-      --gray: #F5F5F5;
-      --gray-mid: #E0E0E0;
-      --gray-text: #666666;
-    }
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>TerraNet — Plano Estratégico de Marketing | Jun–Jul 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --g:#47A81A; --gd:#327713; --o:#FF8001; --od:#cc6601;
+  --slate:#394E45; --blk:#121212; --wh:#fff;
+  --g10:rgba(71,168,26,.1); --g20:rgba(71,168,26,.2); --g30:rgba(71,168,26,.3);
+  --o10:rgba(255,128,1,.1); --o20:rgba(255,128,1,.2);
+  --w05:rgba(255,255,255,.05); --w10:rgba(255,255,255,.10); --w15:rgba(255,255,255,.15);
+  --w30:rgba(255,255,255,.30); --w50:rgba(255,255,255,.50); --w70:rgba(255,255,255,.70);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;height:100%;font-family:'Montserrat',sans-serif;background:#0a0a0a;overflow:hidden}
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+/* ── DECK ── */
+.deck{width:100%;height:100%;position:relative}
+.slide{position:absolute;inset:0;opacity:0;pointer-events:none;transition:opacity .4s ease;display:flex;flex-direction:column}
+.slide.active{opacity:1;pointer-events:all}
 
-    html, body {
-      width: 100%; height: 100%;
-      font-family: 'Montserrat', sans-serif;
-      background: var(--black);
-      overflow: hidden;
-    }
+/* ── PROGRESS ── */
+#pbar{position:fixed;top:0;left:0;height:4px;background:linear-gradient(90deg,var(--g),var(--o));transition:width .4s ease;z-index:1000}
+#pctr{position:fixed;bottom:32px;left:40px;font-size:13px;font-weight:700;letter-spacing:2px;color:var(--w30);z-index:999}
 
-    /* ─── SLIDE ENGINE ─── */
-    .deck { width: 100%; height: 100%; position: relative; }
+/* ── NAV ── */
+.nav{position:fixed;bottom:24px;right:36px;display:flex;gap:10px;z-index:999}
+.nb{width:48px;height:48px;border-radius:50%;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;transition:transform .2s}
+.nb.prev{background:var(--w10);color:var(--wh)}
+.nb.next{background:linear-gradient(135deg,var(--g),var(--gd));color:var(--wh);box-shadow:0 4px 18px rgba(71,168,26,.5)}
+.nb:hover{transform:scale(1.1)}
+.nb:disabled{opacity:.25;cursor:default;transform:none}
 
-    .slide {
-      position: absolute; inset: 0;
-      display: flex; flex-direction: column;
-      opacity: 0; pointer-events: none;
-      transition: opacity 0.45s ease;
-    }
-    .slide.active { opacity: 1; pointer-events: all; }
+/* ── LOGO ── */
+.logo-img{height:44px;object-fit:contain}
+.logo-img-sm{height:32px;object-fit:contain}
 
-    /* ─── PROGRESS BAR ─── */
-    #progress-bar {
-      position: fixed; top: 0; left: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--green), var(--orange));
-      transition: width 0.4s ease;
-      z-index: 1000;
-    }
+/* ── SHARED HEADER ── */
+.sh{padding:28px 52px 20px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--w10)}
+.sh-label{font-size:11px;font-weight:700;letter-spacing:3px;color:var(--g);text-transform:uppercase}
+.sh-label.orange{color:var(--o)}
 
-    /* ─── NAV ─── */
-    .nav {
-      position: fixed; bottom: 28px; right: 36px;
-      display: flex; gap: 10px; z-index: 999;
-    }
-    .nav-btn {
-      width: 42px; height: 42px; border-radius: 50%;
-      border: none; cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 18px; transition: all 0.2s;
-    }
-    .nav-btn.prev { background: rgba(255,255,255,0.12); color: #fff; }
-    .nav-btn.next {
-      background: linear-gradient(135deg, var(--green), var(--green-dark));
-      color: #fff; box-shadow: 0 4px 14px rgba(71,168,26,0.4);
-    }
-    .nav-btn:hover { transform: scale(1.08); }
-    .nav-btn:disabled { opacity: 0.3; cursor: default; transform: none; }
+/* ── SHARED BODY ── */
+.sb{flex:1;padding:32px 52px;display:flex;flex-direction:column;gap:24px;overflow:hidden}
 
-    /* ─── SLIDE COUNTER ─── */
-    #slide-counter {
-      position: fixed; bottom: 36px; left: 36px;
-      font-size: 11px; font-weight: 600; letter-spacing: 1.5px;
-      color: rgba(255,255,255,0.35); z-index: 999;
-    }
+/* ── SLIDE BG ── */
+.dark{background:var(--blk)}
+.dark2{background:#0d1a0d}
+.light{background:#f8f8f8}
+.green-dark{background:linear-gradient(135deg,#0d1a0d 0%,#122d12 100%)}
 
-    /* ─── LOGO MARK ─── */
-    .logo-mark {
-      display: inline-flex; align-items: center; gap: 8px;
-    }
-    .logo-t {
-      width: 32px; height: 32px;
-      background: linear-gradient(135deg, var(--green), var(--green-dark));
-      border-radius: 6px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 18px; font-weight: 900; color: white;
-    }
-    .logo-name {
-      font-size: 18px; font-weight: 800; color: var(--white);
-      letter-spacing: 0.5px;
-    }
-    .logo-name span { color: var(--orange); }
+/* ── HEADLINE ── */
+.h1{font-size:clamp(38px,4vw,58px);font-weight:900;line-height:1.05;letter-spacing:-1.5px}
+.h1 em{font-style:normal;background:linear-gradient(90deg,var(--g),var(--o));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.h1.white{color:var(--wh)}
+.h1.black{color:var(--blk)}
+.h2{font-size:clamp(24px,2.5vw,36px);font-weight:800;line-height:1.1;letter-spacing:-0.5px;color:var(--wh)}
+.h2 em{font-style:normal;color:var(--g)}
+.h2.dark{color:var(--blk)}
+.h2.dark em{color:var(--g)}
 
-    /* ─── SLIDE 1 — CAPA ─── */
-    #s1 {
-      background: var(--black);
-      align-items: center; justify-content: center;
-    }
-    #s1::before {
-      content: '';
-      position: absolute; inset: 0;
-      background:
-        radial-gradient(ellipse 80% 60% at 20% 50%, rgba(71,168,26,0.12) 0%, transparent 70%),
-        radial-gradient(ellipse 60% 80% at 80% 30%, rgba(255,128,1,0.08) 0%, transparent 70%);
-    }
-    .capa-inner {
-      position: relative; z-index: 1;
-      display: flex; flex-direction: column;
-      align-items: center; text-align: center; gap: 28px;
-    }
-    .capa-tag {
-      background: rgba(71,168,26,0.15); border: 1px solid rgba(71,168,26,0.35);
-      color: var(--green); font-size: 10px; font-weight: 700;
-      letter-spacing: 3px; padding: 6px 16px; border-radius: 100px;
-      text-transform: uppercase;
-    }
-    .capa-title {
-      font-size: clamp(36px, 5vw, 64px);
-      font-weight: 900; line-height: 1.05;
-      color: var(--white); letter-spacing: -1px;
-    }
-    .capa-title em {
-      font-style: normal;
-      background: linear-gradient(90deg, var(--green), var(--orange));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    }
-    .capa-sub {
-      font-size: 15px; font-weight: 400; color: rgba(255,255,255,0.5);
-      letter-spacing: 1px;
-    }
-    .capa-divider {
-      width: 48px; height: 3px;
-      background: linear-gradient(90deg, var(--green), var(--orange));
-      border-radius: 2px;
-    }
-    .capa-tagline {
-      font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.35);
-      letter-spacing: 2px; text-transform: uppercase;
-    }
+/* ── BODY TEXT ── */
+.bt{font-size:17px;font-weight:400;line-height:1.65;color:var(--w70)}
+.bt.dark{color:#444}
+.bt strong{color:var(--wh);font-weight:700}
+.bt.dark strong{color:var(--blk)}
+.bt.dark strong.g{color:var(--g)}
+.bt.dark strong.o{color:var(--o)}
 
-    /* ─── CONTENT SLIDES — WHITE ─── */
-    .slide-white {
-      background: var(--white);
-    }
-    .slide-header {
-      padding: 36px 56px 24px;
-      border-bottom: 1px solid var(--gray-mid);
-      display: flex; justify-content: space-between; align-items: center;
-    }
-    .slide-label {
-      font-size: 10px; font-weight: 700; letter-spacing: 3px;
-      color: var(--green); text-transform: uppercase;
-    }
-    .logo-mark-sm .logo-t { width: 24px; height: 24px; font-size: 14px; border-radius: 5px; }
-    .logo-mark-sm .logo-name { font-size: 14px; color: var(--black); }
-    .logo-mark-sm .logo-name span { color: var(--orange); }
+/* ── CARDS ── */
+.c2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.c3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+.c4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{background:var(--w05);border:1px solid var(--w10);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px}
+.card.light-card{background:#f0f0f0;border:1px solid #ddd}
+.card-ico{font-size:30px;line-height:1}
+.card-lbl{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--g)}
+.card-lbl.orange{color:var(--o)}
+.card-ttl{font-size:18px;font-weight:800;color:var(--wh);line-height:1.25}
+.card-ttl.dark{color:var(--blk)}
+.card-bod{font-size:15px;color:var(--w50);line-height:1.55}
+.card-bod.dark{color:#555}
+.card-big{font-size:52px;font-weight:900;line-height:1;color:var(--g)}
+.card-big.orange{color:var(--o)}
 
-    .slide-body {
-      flex: 1; padding: 40px 56px;
-      display: flex; flex-direction: column; gap: 28px;
-    }
-    .slide-headline {
-      font-size: clamp(22px, 3vw, 36px);
-      font-weight: 800; color: var(--black); line-height: 1.15;
-      letter-spacing: -0.5px;
-    }
-    .slide-headline em {
-      font-style: normal; color: var(--green);
-    }
-    .slide-headline .orange { color: var(--orange); }
+/* ── ACCENT BOX ── */
+.abox{background:var(--g10);border:1px solid var(--g30);border-radius:14px;padding:22px 28px}
+.abox.orange{background:var(--o10);border-color:var(--o20)}
 
-    /* ─── DARK SLIDES ─── */
-    .slide-dark {
-      background: var(--black);
-    }
-    .slide-dark .slide-label { color: var(--green); }
-    .slide-dark .logo-mark-sm .logo-name { color: var(--white); }
-    .slide-dark .slide-headline { color: var(--white); }
+/* ── LIST ITEMS ── */
+.li-list{display:flex;flex-direction:column;gap:12px}
+.li{display:flex;gap:14px;align-items:flex-start;padding:14px 18px;background:var(--w05);border-radius:10px;border-left:3px solid var(--g)}
+.li.orange{border-left-color:var(--o)}
+.li-dot{width:8px;height:8px;border-radius:50%;background:var(--g);flex-shrink:0;margin-top:6px}
+.li-dot.orange{background:var(--o)}
+.li-txt{font-size:16px;color:var(--w70);line-height:1.5}
+.li-txt strong{color:var(--wh);font-weight:700}
+.li-txt.dark{color:#444}
+.li-txt.dark strong{color:var(--blk)}
+.li-txt.dark strong.g{color:var(--g)}
 
-    /* ─── CARDS GRID ─── */
-    .cards-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-    .cards-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; }
-    .cards-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 16px; }
+/* ── 2-COL LAYOUT ── */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+.two.center{align-items:center}
 
-    .card {
-      background: var(--gray);
-      border-radius: 14px; padding: 24px;
-      border: 1px solid var(--gray-mid);
-      display: flex; flex-direction: column; gap: 10px;
-    }
-    .card-dark {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 14px; padding: 24px;
-      display: flex; flex-direction: column; gap: 10px;
-    }
-    .card-green {
-      background: linear-gradient(135deg, var(--green), var(--green-dark));
-      border: none; color: white;
-    }
-    .card-orange {
-      background: linear-gradient(135deg, var(--orange), #cc6600);
-      border: none; color: white;
-    }
-    .card-icon { font-size: 28px; }
-    .card-num {
-      font-size: 40px; font-weight: 900; line-height: 1;
-      color: var(--green);
-    }
-    .card-num.orange { color: var(--orange); }
-    .card-title {
-      font-size: 13px; font-weight: 700; color: var(--black);
-      text-transform: uppercase; letter-spacing: 1px;
-    }
-    .card-dark .card-title, .card-green .card-title, .card-orange .card-title {
-      color: rgba(255,255,255,0.8);
-    }
-    .card-body {
-      font-size: 13px; font-weight: 400; color: var(--gray-text);
-      line-height: 1.55;
-    }
-    .card-dark .card-body { color: rgba(255,255,255,0.55); }
-    .card-green .card-body, .card-orange .card-body { color: rgba(255,255,255,0.85); }
+/* ── BIG STAT ── */
+.stat{text-align:center}
+.stat-num{font-size:64px;font-weight:900;line-height:1;color:var(--g)}
+.stat-num.orange{color:var(--o)}
+.stat-lbl{font-size:14px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--w50);margin-top:6px}
+.stat-lbl.dark{color:#888}
 
-    /* ─── LIST ITEMS ─── */
-    .list-items { display: flex; flex-direction: column; gap: 12px; }
-    .list-item {
-      display: flex; align-items: flex-start; gap: 14px;
-      padding: 14px 18px;
-      background: var(--gray); border-radius: 10px;
-      border-left: 3px solid var(--green);
-    }
-    .list-item-dark {
-      background: rgba(255,255,255,0.05);
-      border-left: 3px solid var(--green);
-    }
-    .list-dot {
-      width: 8px; height: 8px; border-radius: 50%;
-      background: var(--green); flex-shrink: 0; margin-top: 5px;
-    }
-    .list-dot.orange { background: var(--orange); }
-    .li-text { font-size: 14px; color: var(--black); line-height: 1.5; }
-    .li-text strong { font-weight: 700; color: var(--green); }
-    .li-text .orange-strong { font-weight: 700; color: var(--orange); }
-    .list-item-dark .li-text { color: rgba(255,255,255,0.8); }
+/* ── PILL ── */
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{padding:7px 16px;border-radius:100px;font-size:13px;font-weight:700}
+.pill.g{background:var(--g10);color:var(--g)}
+.pill.o{background:var(--o10);color:var(--o)}
 
-    /* ─── PILL TAGS ─── */
-    .pills { display: flex; flex-wrap: wrap; gap: 8px; }
-    .pill {
-      padding: 6px 14px; border-radius: 100px;
-      font-size: 12px; font-weight: 600;
-    }
-    .pill-green { background: rgba(71,168,26,0.12); color: var(--green); }
-    .pill-orange { background: rgba(255,128,1,0.12); color: var(--orange); }
-    .pill-dark { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); }
+/* ── SECTION BREAKER ── */
+.section-slide{align-items:center;justify-content:center;position:relative;overflow:hidden}
+.section-slide::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 30% 50%,rgba(71,168,26,.12) 0%,transparent 70%)}
+.sec-inner{position:relative;z-index:1;text-align:center;padding:0 80px}
+.sec-bg-num{font-size:200px;font-weight:900;line-height:1;color:rgba(71,168,26,.06);letter-spacing:-10px;margin-bottom:-60px}
+.sec-title{font-size:clamp(44px,5.5vw,72px);font-weight:900;line-height:1.05;color:var(--wh);letter-spacing:-2px}
+.sec-title em{font-style:normal;color:var(--g)}
+.sec-sub{font-size:17px;color:var(--w50);margin-top:14px;letter-spacing:1px}
 
-    /* ─── HIGHLIGHT BOX ─── */
-    .highlight-box {
-      background: linear-gradient(135deg, rgba(71,168,26,0.08), rgba(255,128,1,0.06));
-      border: 1px solid rgba(71,168,26,0.2);
-      border-radius: 14px; padding: 24px 28px;
-    }
-    .highlight-box-dark {
-      background: rgba(71,168,26,0.1);
-      border: 1px solid rgba(71,168,26,0.25);
-      border-radius: 14px; padding: 24px 28px;
-    }
+/* ── FOOTER ── */
+.sfoot{padding:10px 52px;font-size:11px;letter-spacing:1px;text-align:right}
+.sfoot.dark-foot{color:var(--w30)}
+.sfoot.light-foot{color:#aaa}
 
-    /* ─── TIMELINE ─── */
-    .timeline { display: flex; gap: 0; align-items: stretch; }
-    .tl-item {
-      flex: 1; display: flex; flex-direction: column; align-items: center;
-      position: relative;
-    }
-    .tl-item:not(:last-child)::after {
-      content: '';
-      position: absolute; top: 20px; left: 50%; right: -50%;
-      height: 2px; background: var(--gray-mid);
-    }
-    .tl-dot {
-      width: 40px; height: 40px; border-radius: 50%;
-      background: var(--gray-mid);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 16px; position: relative; z-index: 1;
-      flex-shrink: 0;
-    }
-    .tl-dot.active { background: linear-gradient(135deg, var(--green), var(--green-dark)); }
-    .tl-dot.orange-dot { background: linear-gradient(135deg, var(--orange), #cc6600); }
-    .tl-content { padding: 12px 8px 0; text-align: center; }
-    .tl-date { font-size: 11px; font-weight: 700; color: var(--green); letter-spacing: 1px; }
-    .tl-title { font-size: 12px; font-weight: 600; color: var(--black); margin-top: 3px; line-height: 1.4; }
-    .tl-desc { font-size: 11px; color: var(--gray-text); margin-top: 2px; line-height: 1.4; }
+/* ── TIMELINE ── */
+.tl{display:flex;gap:0}
+.tl-i{flex:1;display:flex;flex-direction:column;align-items:center;position:relative}
+.tl-i:not(:last-child)::after{content:'';position:absolute;top:22px;left:50%;right:-50%;height:2px;background:var(--w10)}
+.tl-dot{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;position:relative;z-index:1;flex-shrink:0}
+.tl-dot.gn{background:linear-gradient(135deg,var(--g),var(--gd))}
+.tl-dot.on{background:linear-gradient(135deg,var(--o),var(--od))}
+.tl-dot.off{background:var(--w10)}
+.tl-txt{padding:12px 6px 0;text-align:center}
+.tl-date{font-size:12px;font-weight:700;color:var(--g);letter-spacing:1px}
+.tl-date.orange{color:var(--o)}
+.tl-name{font-size:14px;font-weight:700;color:var(--wh);margin-top:3px;line-height:1.3}
+.tl-desc{font-size:12px;color:var(--w50);margin-top:3px;line-height:1.4}
 
-    /* ─── TABLE ─── */
-    .data-table { width: 100%; border-collapse: collapse; }
-    .data-table th {
-      padding: 10px 16px; text-align: left;
-      font-size: 10px; font-weight: 700; letter-spacing: 2px;
-      color: var(--gray-text); text-transform: uppercase;
-      border-bottom: 2px solid var(--gray-mid);
-    }
-    .data-table td {
-      padding: 12px 16px; font-size: 13px; color: var(--black);
-      border-bottom: 1px solid var(--gray-mid);
-    }
-    .data-table tr:last-child td { border-bottom: none; }
-    .data-table .val { font-weight: 700; color: var(--green); }
-    .data-table .val.orange { color: var(--orange); }
+/* ── INVESTMENT TABLE ── */
+.inv-row{display:flex;align-items:center;gap:18px;padding:18px 22px;background:var(--w05);border-radius:12px;border:1px solid var(--w10)}
+.inv-row+.inv-row{margin-top:12px}
+.inv-ico{font-size:26px;flex-shrink:0}
+.inv-info{flex:1}
+.inv-lbl{font-size:12px;font-weight:700;letter-spacing:1.5px;color:var(--w30);text-transform:uppercase}
+.inv-val{font-size:26px;font-weight:900;color:var(--g);margin-top:2px}
+.inv-val.orange{color:var(--o)}
+.inv-det{font-size:14px;color:var(--w50);margin-top:3px}
+.inv-badge{padding:6px 14px;border-radius:8px;font-size:12px;font-weight:700;flex-shrink:0}
+.inv-badge.ok{background:var(--g10);color:var(--g)}
+.inv-badge.pend{background:var(--o10);color:var(--o)}
 
-    /* ─── FRENTE BADGE ─── */
-    .frente-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: var(--black); color: white;
-      padding: 6px 16px; border-radius: 100px;
-      font-size: 11px; font-weight: 700; letter-spacing: 1px;
-    }
-    .frente-badge .fb-num {
-      width: 20px; height: 20px; border-radius: 50%;
-      background: var(--green); color: white;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 10px; font-weight: 900;
-    }
+/* ── TIME BAR ── */
+.tbar-wrap{display:flex;align-items:center;gap:12px;margin-top:6px}
+.tbar-label{font-size:12px;color:var(--w30);width:70px;flex-shrink:0}
+.tbar{flex:1;height:8px;background:var(--w10);border-radius:4px;overflow:hidden}
+.tbar-fill{height:100%;border-radius:4px}
+.tbar-fill.g{background:linear-gradient(90deg,var(--g),var(--gd))}
+.tbar-fill.o{background:linear-gradient(90deg,var(--o),var(--od))}
+.tbar-dashed{flex:1;height:8px;background:repeating-linear-gradient(90deg,var(--g) 0,var(--g) 8px,transparent 8px,transparent 16px);border-radius:4px;opacity:.4}
 
-    /* ─── 2-COL LAYOUT ─── */
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
-    .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; align-items: start; }
+/* ── PERSON CARD ── */
+.pcard{background:var(--w05);border:1px solid var(--w10);border-radius:16px;padding:22px;text-align:center}
+.pavatar{width:60px;height:60px;border-radius:50%;margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;color:var(--wh)}
+.pname{font-size:17px;font-weight:800;color:var(--wh)}
+.prole{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--g);margin-top:4px}
+.ptasks{margin-top:14px;display:flex;flex-direction:column;gap:6px}
+.ptask{font-size:13px;color:var(--w50);padding:5px 10px;background:var(--w05);border-radius:6px;text-align:left}
 
-    /* ─── PERSON CARD ─── */
-    .person-card {
-      background: var(--gray); border-radius: 14px;
-      padding: 24px; text-align: center;
-      border: 1px solid var(--gray-mid);
-    }
-    .person-avatar {
-      width: 56px; height: 56px; border-radius: 50%;
-      margin: 0 auto 12px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 22px; font-weight: 900; color: white;
-    }
-    .person-name { font-size: 14px; font-weight: 700; color: var(--black); }
-    .person-role {
-      font-size: 11px; font-weight: 600; letter-spacing: 1px;
-      text-transform: uppercase; color: var(--green); margin-top: 4px;
-    }
-    .person-tasks {
-      margin-top: 12px; display: flex; flex-direction: column; gap: 5px;
-    }
-    .person-task {
-      font-size: 11px; color: var(--gray-text);
-      padding: 4px 8px; background: white; border-radius: 6px;
-      border: 1px solid var(--gray-mid);
-    }
+/* ── CALENDAR ── */
+.cal{width:100%;border-collapse:collapse}
+.cal th{padding:8px 6px;font-size:13px;font-weight:700;color:var(--w50);text-align:center;border-bottom:1px solid var(--w10)}
+.cal td{padding:6px;text-align:center;font-size:15px;font-weight:500;color:var(--w50);border-radius:8px;cursor:default;min-width:44px}
+.cal td.today{background:var(--g20);color:var(--g);font-weight:800;border:1px solid var(--g)}
+.cal td.event{background:var(--o10);color:var(--o);font-weight:700;position:relative}
+.cal td.event-g{background:var(--g10);color:var(--g);font-weight:700}
+.cal td.off-month{color:var(--w15)}
+.cal-event-dot{width:6px;height:6px;border-radius:50%;background:var(--o);margin:2px auto 0}
+.cal-event-dot.g{background:var(--g)}
+.cal-month-title{font-size:18px;font-weight:800;color:var(--wh);margin-bottom:10px;letter-spacing:.5px}
 
-    /* ─── BIG STAT ─── */
-    .big-stat { text-align: center; }
-    .big-stat-num { font-size: 56px; font-weight: 900; line-height: 1; color: var(--green); }
-    .big-stat-num.orange { color: var(--orange); }
-    .big-stat-label { font-size: 12px; font-weight: 600; color: var(--gray-text); margin-top: 6px; text-transform: uppercase; letter-spacing: 1px; }
+/* ── FRENTE CARD ── */
+.fc{background:var(--w05);border:1px solid var(--w10);border-radius:18px;padding:28px 24px;display:flex;flex-direction:column;gap:12px;transition:border-color .2s}
+.fc:hover{border-color:var(--g)}
+.fc-num{font-size:11px;font-weight:700;letter-spacing:3px;color:var(--g);text-transform:uppercase}
+.fc-title{font-size:20px;font-weight:800;color:var(--wh);line-height:1.2}
+.fc-desc{font-size:15px;color:var(--w50);line-height:1.55}
 
-    /* ─── DIVIDER SLIDE (Section Intro) ─── */
-    .section-slide {
-      background: var(--black);
-      align-items: center; justify-content: center;
-      position: relative; overflow: hidden;
-    }
-    .section-slide::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse 70% 60% at 30% 50%, rgba(71,168,26,0.1) 0%, transparent 60%);
-    }
-    .section-inner { position: relative; z-index: 1; text-align: center; }
-    .section-num {
-      font-size: 120px; font-weight: 900; line-height: 1;
-      color: rgba(255,255,255,0.04); letter-spacing: -5px;
-    }
-    .section-title-big {
-      font-size: clamp(32px, 4.5vw, 54px);
-      font-weight: 900; color: white; line-height: 1.1;
-      margin-top: -40px; letter-spacing: -1px;
-    }
-    .section-title-big em { font-style: normal; color: var(--green); }
-    .section-sub { font-size: 14px; color: rgba(255,255,255,0.4); margin-top: 12px; letter-spacing: 1px; }
+/* ── DIVIDER ── */
+.div-line{width:56px;height:4px;background:linear-gradient(90deg,var(--g),var(--o));border-radius:2px}
 
-    /* ─── INVESTMENT HIGHLIGHT ─── */
-    .inv-row {
-      display: flex; align-items: center; gap: 20px;
-      padding: 16px 20px; border-radius: 12px; background: var(--gray);
-      border: 1px solid var(--gray-mid);
-    }
-    .inv-row + .inv-row { margin-top: 12px; }
-    .inv-icon { font-size: 24px; flex-shrink: 0; }
-    .inv-info { flex: 1; }
-    .inv-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; color: var(--gray-text); text-transform: uppercase; }
-    .inv-value { font-size: 22px; font-weight: 800; color: var(--black); margin-top: 2px; }
-    .inv-value .green { color: var(--green); }
-    .inv-detail { font-size: 12px; color: var(--gray-text); margin-top: 2px; }
-    .inv-badge {
-      padding: 6px 12px; border-radius: 8px;
-      font-size: 11px; font-weight: 700;
-    }
-    .inv-badge.aprovar { background: rgba(255,128,1,0.12); color: var(--orange); }
-    .inv-badge.aprovado { background: rgba(71,168,26,0.12); color: var(--green); }
+/* ── COMPARISON CHART ── */
+.compare{display:flex;flex-direction:column;gap:14px}
+.cmp-row{display:flex;align-items:center;gap:14px}
+.cmp-label{font-size:15px;font-weight:600;color:var(--w70);width:200px;flex-shrink:0}
+.cmp-bar-wrap{flex:1;display:flex;gap:8px;align-items:center}
+.cmp-bar{height:36px;border-radius:8px;display:flex;align-items:center;padding:0 14px;font-size:14px;font-weight:700;color:var(--wh);transition:width .5s}
+.cmp-terra{background:linear-gradient(90deg,var(--g),var(--gd))}
+.cmp-conc{background:rgba(255,255,255,.15)}
 
-    /* ─── SLIDE 4: FRENTES OVERVIEW ─── */
-    .frente-card {
-      background: var(--gray); border-radius: 16px;
-      padding: 28px 24px; border: 1px solid var(--gray-mid);
-      display: flex; flex-direction: column; gap: 10px;
-      transition: border-color 0.2s;
-    }
-    .frente-card:hover { border-color: var(--green); }
-    .frente-num {
-      font-size: 11px; font-weight: 700; letter-spacing: 2px;
-      color: var(--green); text-transform: uppercase;
-    }
-    .frente-title { font-size: 16px; font-weight: 800; color: var(--black); line-height: 1.3; }
-    .frente-desc { font-size: 12px; color: var(--gray-text); line-height: 1.5; }
-
-    /* ─── FOOTER / WATERMARK ─── */
-    .slide-footer {
-      padding: 10px 56px;
-      font-size: 10px; color: var(--gray-text);
-      letter-spacing: 1px; text-align: right;
-    }
-    .slide-footer-dark {
-      padding: 10px 56px;
-      font-size: 10px; color: rgba(255,255,255,0.2);
-      letter-spacing: 1px; text-align: right;
-    }
-  </style>
+/* ── CAPA SPECIFIC ── */
+#s1{background:var(--blk);align-items:center;justify-content:center;position:relative;overflow:hidden}
+#s1::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 100% 80% at 15% 50%,rgba(71,168,26,.15) 0%,transparent 60%),radial-gradient(ellipse 70% 90% at 85% 20%,rgba(255,128,1,.08) 0%,transparent 60%)}
+.capa-inner{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:30px}
+.capa-tag{background:var(--g10);border:1px solid var(--g20);color:var(--g);font-size:11px;font-weight:700;letter-spacing:3px;padding:7px 18px;border-radius:100px;text-transform:uppercase}
+.capa-title{font-size:clamp(46px,5.5vw,72px);font-weight:900;color:var(--wh);line-height:1.0;letter-spacing:-2px}
+.capa-title em{font-style:normal;background:linear-gradient(90deg,var(--g),var(--o));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.capa-sub{font-size:18px;font-weight:400;color:var(--w50);letter-spacing:2px}
+.capa-tagline{font-size:14px;font-weight:500;color:var(--w30);letter-spacing:3px;text-transform:uppercase}
+</style>
 </head>
 <body>
 
-<div id="progress-bar" style="width:7.69%"></div>
-<div id="slide-counter">01 / 13</div>
+<div id="pbar" style="width:7.7%"></div>
+<div id="pctr">01 / 13</div>
 <nav class="nav">
-  <button class="nav-btn prev" id="btn-prev" onclick="changeSlide(-1)" disabled>←</button>
-  <button class="nav-btn next" id="btn-next" onclick="changeSlide(1)">→</button>
+  <button class="nb prev" id="btnp" onclick="go(-1)" disabled>←</button>
+  <button class="nb next" id="btnn" onclick="go(1)">→</button>
 </nav>
 
 <div class="deck">
 
-  <!-- ═══════════════════════════════════════════════
-       SLIDE 1 — CAPA
-  ═══════════════════════════════════════════════ -->
-  <section class="slide active" id="s1">
-    <div class="capa-inner">
-      <div class="logo-mark">
-        <div class="logo-t">T</div>
-        <div class="logo-name">Terra<span>Net</span></div>
-      </div>
-      <div class="capa-divider"></div>
-      <p class="capa-tag">Confidencial — Uso Interno</p>
-      <h1 class="capa-title">
-        Plano Estratégico<br/>
-        de <em>Marketing</em>
-      </h1>
-      <p class="capa-sub">Junho — Julho 2026</p>
-      <div class="capa-divider"></div>
-      <p class="capa-tagline">Conexão sem Fronteiras</p>
-    </div>
-    <p class="slide-footer-dark">Vizantu Gestão de Marca · 2026</p>
-  </section>
+<!-- ═══ S1 — CAPA ═══ -->
+<section class="slide dark active" id="s1">
+  <div class="capa-inner">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAQ4CAYAAADo08FDAAAACXBIWXMAAAsSAAALEgHS3X78AAAgAElEQVR4nOzd71Ec17bG4eVT5zvKQJydANwIhCMQjkA4AuMIPIrgyhF4FIFRBHfIABJYFyK4EIHuh2nVkX30hxm6Z/eseZ4qVanKNLzlYihJv+ndP3z8+DEAAAAAAAAA2H//6D0AAAAAAAAAgHEIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAA" alt="TerraNet" class="logo-img" style="height:64px">
+    <div class="div-line"></div>
+    <p class="capa-tag">Confidencial — Uso Interno</p>
+    <h1 class="capa-title">Plano Estratégico<br/>de <em>Marketing</em></h1>
+    <p class="capa-sub">Junho — Julho 2026</p>
+    <div class="div-line"></div>
+    <p class="capa-tagline">Conexão sem Fronteiras</p>
+  </div>
+  <p class="sfoot dark-foot">Vizantu Gestão de Marca · 2026</p>
+</section>
 
-  <!-- ═══════════════════════════════════════════════
-       SLIDE 2 — CONTEXTO ATUAL
-  ═══════════════════════════════════════════════ -->
-  <section class="slide slide-white" id="s2">
-    <div class="slide-header">
-      <span class="slide-label">Contexto Atual</span>
-      <div class="logo-mark logo-mark-sm">
-        <div class="logo-t">T</div>
-        <div class="logo-name">Terra<span>Net</span></div>
+<!-- ═══ S2 — CONTEXTO ═══ -->
+<section class="slide dark" id="s2">
+  <div class="sh">
+    <span class="sh-label">Contexto Atual</span>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAQ4CAYAAADo08FDAAAACXBIWXMAAAsSAAALEgHS3X78AAAgAElEQVR4nOzd71Ec17bG4eVT5zvKQJydANwIhCMQjkA4AuMIPIrgyhF4FIFRBHfIABJYFyK4EIHuh2nVkX30hxm6Z/eseZ4qVanKNLzlYihJv+ndP3z8+DEAAAAAAAAA2H//6D0AAAAAAAAAgHEIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQ" alt="TerraNet" class="logo-img-sm">
+  </div>
+  <div class="sb">
+    <h2 class="h2">O que está <em>acontecendo</em> no mercado agora</h2>
+    <div class="c2" style="flex:1">
+      <div class="card">
+        <div class="card-ico">📊</div>
+        <div class="card-lbl">Orgânico</div>
+        <div class="card-ttl">Instagram em crescimento gradual</div>
+        <div class="card-bod">Conteúdo de agro educativo e institucional. Sorteio Dia das Mães executado com sucesso. Tráfego pago ainda em velocidade baixa.</div>
+        <div class="pills"><span class="pill g">Positivo</span></div>
+      </div>
+      <div class="card" style="border-color:rgba(231,76,60,.3)">
+        <div class="card-ico">⚠️</div>
+        <div class="card-lbl" style="color:#e74c3c">Lacuna B2C</div>
+        <div class="card-ttl">Varejo descoberto</div>
+        <div class="card-bod">Foco anterior no agro deixou o cliente residencial CPF sem atendimento ativo. Estância e Perolândia com infraestrutura pronta mas captação baixa.</div>
+        <div class="pills"><span class="pill o">Urgente</span></div>
+      </div>
+      <div class="card" style="border-color:rgba(231,76,60,.3)">
+        <div class="card-ico">🆚</div>
+        <div class="card-lbl" style="color:#e74c3c">Concorrência</div>
+        <div class="card-ttl">TBM avançando em Perolândia</div>
+        <div class="card-bod">Agente local fixo: vende, instala e faz suporte. Placas espalhadas pela cidade. Chip mobile R$9,90 já rodando. Campanha de Copa ativa.</div>
+        <div class="pills"><span class="pill o">Atenção</span></div>
+      </div>
+      <div class="card" style="border-color:rgba(231,76,60,.25)">
+        <div class="card-ico">🛰️</div>
+        <div class="card-lbl" style="color:#e74c3c">Starlink</div>
+        <div class="card-ttl">Cliente fiel, difícil de retomar</div>
+        <div class="card-bod">Quem migrou para Starlink e ficou satisfeito não troca. Foco em quem ainda não decidiu e clientes insatisfeitos com concorrentes locais.</div>
+        <div class="pills"><span class="pill o">Cuidado</span></div>
       </div>
     </div>
-    <div class="slide-body">
-      <h2 class="slide-headline">O que está <em>acontecendo</em><br/>no mercado agora</h2>
-      <div class="cards-2" style="flex:1">
-        <div class="card" style="border-left: 3px solid var(--green);">
-          <div class="card-icon">📊</div>
-          <div class="card-title">Tráfego orgânico</div>
-          <div class="card-body">Instagram em aceleração gradual. Conteúdo com posicionamento de agro educativo e institucional. Sorteio Dia das Mães executado com sucesso em maio.</div>
-        </div>
-        <div class="card" style="border-left: 3px solid #e53935;">
-          <div class="card-icon">⚠️</div>
-          <div class="card-title">Lacuna no varejo B2C</div>
-          <div class="card-body">Foco anterior no agro de precisão deixou o cliente residencial (CPF) descoberto. Estância e Perolândia com portas abertas na infraestrutura mas baixa captação ativa.</div>
-        </div>
-        <div class="card" style="border-left: 3px solid #e53935;">
-          <div class="card-icon">🆚</div>
-          <div class="card-title">TBM avançando em Perolândia</div>
-          <div class="card-body">Concorrente com agente local fixo: vende, instala e faz suporte. Placas espalhadas pela cidade, presença nos grupos locais. Estratégia de guerrilha bem executada.</div>
-        </div>
-        <div class="card" style="border-left: 3px solid #FF8001;">
-          <div class="card-icon">🛰️</div>
-          <div class="card-title">Starlink — cliente difícil de retomar</div>
-          <div class="card-body">Clientes que migraram para Starlink estão satisfeitos e resistentes à mudança. Foco em novos clientes e base insatisfeita com concorrentes locais.</div>
-        </div>
-      </div>
-      <div class="highlight-box">
-        <p style="font-size:13px; color: var(--slate); font-weight:600;">
-          ✅ <strong style="color:var(--green)">Oportunidade real:</strong> estrutura pronta em Estância e Perolândia. Concorrência local com falhas. Clientes buscando a TerraNet de forma independente.
-        </p>
-      </div>
+    <div class="abox">
+      <p style="font-size:17px;color:var(--wh);font-weight:600">✅ <strong>Oportunidade real:</strong> <span style="color:var(--w70);font-weight:400">estrutura pronta em Estância e Perolândia. Concorrência local com falhas. Clientes buscando a TerraNet de forma independente.</span></p>
     </div>
-    <div class="slide-footer">TerraNet · Plano Estratégico Jun–Jul 2026</div>
-  </section>
+  </div>
+  <p class="sfoot dark-foot">TerraNet · Plano de Marketing Jun–Jul 2026</p>
+</section>
 
-  <!-- ═══════════════════════════════════════════════
-       SLIDE 3 — DECISÃO ESTRATÉGICA
-  ═══════════════════════════════════════════════ -->
-  <section class="slide section-slide" id="s3">
-    <div class="section-inner">
-      <p class="section-num">01</p>
-      <h2 class="section-title-big">A <em>virada</em><br/>estratégica</h2>
-      <p class="section-sub">O redirecionamento decidido na reunião de 02/06/2026</p>
-    </div>
-    <p class="slide-footer-dark">TerraNet · Plano Estratégico Jun–Jul 2026</p>
-  </section>
+<!-- ═══ S3 — DECISÃO ESTRATÉGICA ═══ -->
+<section class="slide dark section-slide" id="s3">
+  <div class="sec-inner">
+    <div class="sec-bg-num">01</div>
+    <h2 class="sec-title">A <em>virada</em><br/>estratégica</h2>
+    <p class="sec-sub">O redirecionamento decidido na reunião de 02/06/2026</p>
+  </div>
+  <p class="sfoot dark-foot">TerraNet · Plano de Marketing Jun–Jul 2026</p>
+</section>
 
-  <!-- ═══════════════════════════════════════════════
-       SLIDE 4 — DECISÃO DETALHADA
-  ═══════════════════════════════════════════════ -->
-  <section class="slide slide-white" id="s4">
-    <div class="slide-header">
-      <span class="slide-label">Decisão Estratégica</span>
-      <div class="logo-mark logo-mark-sm">
-        <div class="logo-t">T</div>
-        <div class="logo-name">Terra<span>Net</span></div>
-      </div>
-    </div>
-    <div class="slide-body">
-      <h2 class="slide-headline"><em>Foco imediato:</em> cliente CPF<br/>Estância e Perolândia</h2>
-      <div class="two-col" style="flex:1; align-items:center;">
-        <div class="list-items">
-          <div class="list-item">
-            <div class="list-dot"></div>
-            <div class="li-text"><strong>Captação B2C agressiva</strong> nas duas cidades com campanha paga e promoção competitiva de entrada</div>
-          </div>
-          <div class="list-item">
-            <div class="list-dot"></div>
-            <div class="li-text"><strong>Agro não abandona</strong> — conteúdo educativo continua, mas o foco de aquisição muda para varejo por 2 meses</div>
-          </div>
-          <div class="list-item">
-            <div class="list-dot orange"></div>
-            <div class="li-text"><span class="orange-strong">Premissa central:</span> encher a base com clientes satisfeitos. Cliente satisfeito é o melhor vendedor</div>
-          </div>
-          <div class="list-item">
-            <div class="list-dot"></div>
-            <div class="li-text"><strong>Sazonalidade a favor:</strong> Copa do Mundo + São João = ganchos perfeitos para campanha de captação em junho</div>
-          </div>
+<!-- ═══ S4 — DECISÃO DETALHADA ═══ -->
+<section class="slide dark" id="s4">
+  <div class="sh">
+    <span class="sh-label">Decisão Estratégica</span>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAQ4CAYAAADo08FDAAAACXBIWXMAAAsSAAALEgHS3X78AAAgAElEQVR4nOzd71Ec17bG4eVT5zvKQJydANwIhCMQjkA4AuMIPIrgyhF4FIFRBHfIABJYFyK4EIHuh2nVkX30hxm6Z/eseZ4qVanKNLzlYihJv+ndP3z8+DEAAAAAAAAA2H//6D0AAAAAAAAAgHEIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQ" alt="TerraNet" class="logo-img-sm">
+  </div>
+  <div class="sb">
+    <h2 class="h2">Foco imediato: <em>cliente CPF</em><br/>Estância e Perolândia</h2>
+    <div class="two center" style="flex:1">
+      <div class="li-list">
+        <div class="li">
+          <div class="li-dot"></div>
+          <div class="li-txt"><strong>Captação B2C agressiva</strong> nas duas cidades com campanha paga e promoção competitiva de entrada nos próximos 2 meses</div>
         </div>
-        <div style="display:flex; flex-direction:column; gap:16px; align-items:center;">
-          <div style="text-align:center; padding: 36px; background: var(--gray); border-radius:20px; border: 2px solid var(--green);">
-            <div class="big-stat-num">2</div>
-            <div class="big-stat-label">cidades foco<br/>Estância + Perolândia</div>
-          </div>
-          <div style="text-align:center; padding: 24px 36px; background: var(--gray); border-radius:20px; border: 1px solid var(--gray-mid);">
-            <div class="big-stat-num orange" style="font-size:40px;">B2C</div>
-            <div class="big-stat-label">cliente residencial<br/>prioridade imediata</div>
-          </div>
+        <div class="li">
+          <div class="li-dot"></div>
+          <div class="li-txt"><strong>Agro não abandona</strong> — conteúdo educativo continua publicando, mas o foco de aquisição muda para varejo</div>
+        </div>
+        <div class="li orange">
+          <div class="li-dot orange"></div>
+          <div class="li-txt"><strong style="color:var(--o)">Premissa central:</strong> encher a base com clientes satisfeitos. O melhor vendedor é um cliente feliz</div>
+        </div>
+        <div class="li">
+          <div class="li-dot"></div>
+          <div class="li-txt"><strong>Sazonalidade a favor:</strong> Copa do Mundo + São João = ganchos ideais para converter em junho e julho</div>
         </div>
       </div>
+      <!-- SVG Visual: B2B → B2C pivot -->
+      <div style="display:flex;flex-direction:column;gap:20px;align-items:center">
+        <svg width="320" height="200" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+          <!-- B2B box -->
+          <rect x="10" y="60" width="120" height="80" rx="12" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+          <text x="70" y="95" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-family="Montserrat,sans-serif" font-size="11" font-weight="700" letter-spacing="2">FOCO ANTERIOR</text>
+          <text x="70" y="118" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-family="Montserrat,sans-serif" font-size="20" font-weight="900">B2B Agro</text>
+          <!-- Arrow -->
+          <line x1="140" y1="100" x2="178" y2="100" stroke="#47A81A" stroke-width="3" stroke-dasharray="6,3"/>
+          <polygon points="178,94 192,100 178,106" fill="#47A81A"/>
+          <!-- B2C box -->
+          <rect x="192" y="50" width="118" height="100" rx="12" fill="rgba(71,168,26,0.15)" stroke="rgba(71,168,26,0.5)" stroke-width="2"/>
+          <text x="251" y="88" text-anchor="middle" fill="#47A81A" font-family="Montserrat,sans-serif" font-size="11" font-weight="700" letter-spacing="2">FOCO ATUAL</text>
+          <text x="251" y="116" text-anchor="middle" fill="#fff" font-family="Montserrat,sans-serif" font-size="22" font-weight="900">B2C CPF</text>
+          <text x="251" y="138" text-anchor="middle" fill="rgba(255,128,1,0.8)" font-family="Montserrat,sans-serif" font-size="12" font-weight="700">Estância · Perolândia</text>
+          <!-- pulse ring -->
+          <circle cx="251" cy="100" r="58" fill="none" stroke="#47A81A" stroke-width="1" opacity="0.2"/>
+        </svg>
+        <div style="display:flex;gap:16px">
+          <div class="stat">
+            <div class="stat-num">2</div>
+            <div class="stat-lbl">cidades<br/>foco</div>
+          </div>
+          <div style="width:1px;background:var(--w10)"></div>
+          <div class="stat">
+            <div class="stat-num orange">2</div>
+            <div class="stat-lbl">meses de<br/>campanha</div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="slide-footer">TerraNet · Plano Estratégico Jun–Jul 2026</div>
-  </section>
+  </div>
+  <p class="sfoot dark-foot">TerraNet · Plano de Marketing Jun–Jul 2026</p>
+</section>
 
-  <!-- ═══════════════════════════════════════════════
-       SLIDE 5 — AS 4 FRENTES (OVERVIEW)
-  ═══════════════════════════════════════════════ -->
-  <section class="slide slide-white" id="s5">
-    <div class="slide-header">
-      <span class="slide-label">Plano de Ação</span>
-      <div class="logo-mark logo-mark-sm">
-        <div class="logo-t">T</div>
-        <div class="logo-name">Terra<span>Net</span></div>
+<!-- ═══ S5 — 4 FRENTES ═══ -->
+<section class="slide dark" id="s5">
+  <div class="sh">
+    <span class="sh-label">Plano de Ação</span>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAQ4CAYAAADo08FDAAAACXBIWXMAAAsSAAALEgHS3X78AAAgAElEQVR4nOzd71Ec17bG4eVT5zvKQJydANwIhCMQjkA4AuMIPIrgyhF4FIFRBHfIABJYFyK4EIHuh2nVkX30hxm6Z/eseZ4qVanKNLzlYihJv+ndP3z8+DEAAAAAAAAA2H//6D0AAAAAAAAAgHEIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQ" alt="TerraNet" class="logo-img-sm">
+  </div>
+  <div class="sb">
+    <h2 class="h2">As <em>4 frentes</em> de ação</h2>
+    <!-- SVG connections diagram -->
+    <div style="display:flex;justify-content:center;margin:-8px 0 4px">
+      <svg width="640" height="60" viewBox="0 0 640 60" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="80" cy="30" r="24" fill="#47A81A" opacity=".15" stroke="#47A81A" stroke-width="1.5"/>
+        <text x="80" y="35" text-anchor="middle" fill="#47A81A" font-family="Montserrat" font-size="14" font-weight="900">01</text>
+        <line x1="105" y1="30" x2="235" y2="30" stroke="rgba(71,168,26,.3)" stroke-width="1.5" stroke-dasharray="4,3"/>
+        <circle cx="260" cy="30" r="24" fill="#47A81A" opacity=".15" stroke="#47A81A" stroke-width="1.5"/>
+        <text x="260" y="35" text-anchor="middle" fill="#47A81A" font-family="Montserrat" font-size="14" font-weight="900">02</text>
+        <line x1="285" y1="30" x2="355" y2="30" stroke="rgba(71,168,26,.3)" stroke-width="1.5" stroke-dasharray="4,3"/>
+        <circle cx="380" cy="30" r="24" fill="#FF8001" opacity=".12" stroke="#FF8001" stroke-width="1.5"/>
+        <text x="380" y="35" text-anchor="middle" fill="#FF8001" font-family="Montserrat" font-size="14" font-weight="900">03</text>
+        <line x1="405" y1="30" x2="530" y2="30" stroke="rgba(255,128,1,.3)" stroke-width="1.5" stroke-dasharray="4,3"/>
+        <circle cx="555" cy="30" r="24" fill="#FF8001" opacity=".12" stroke="#FF8001" stroke-width="1.5"/>
+        <text x="555" y="35" text-anchor="middle" fill="#FF8001" font-family="Montserrat" font-size="14" font-weight="900">04</text>
+      </svg>
+    </div>
+    <div class="c4" style="flex:1">
+      <div class="fc">
+        <div class="fc-num">Frente 01</div>
+        <div class="fc-title">Campanha B2C — Captação</div>
+        <div class="fc-desc">Promoção + tráfego pago focado em Estância e Perolândia. Copa e São João como ganchos de conversão.</div>
+        <div class="pills"><span class="pill g">Meta Ads</span><span class="pill o">R$89,90</span></div>
+      </div>
+      <div class="fc">
+        <div class="fc-num">Frente 02</div>
+        <div class="fc-title">Diferencial Técnico — Copa</div>
+        <div class="fc-desc">CDN YouTube/Globo em Rio Verde = latência quase zero. Demonstração em vídeo vs concorrência.</div>
+        <div class="pills"><span class="pill g">Vídeo demo</span><span class="pill g">Latência</span></div>
+      </div>
+      <div class="fc" style="border-color:rgba(255,128,1,.2)">
+        <div class="fc-num" style="color:var(--o)">Frente 03</div>
+        <div class="fc-title">Programa de Parceiros</div>
+        <div class="fc-desc">Transformar clientes em promotores de vendas. Indicou, ganhou. Modelo "Parceiro TerraNet".</div>
+        <div class="pills"><span class="pill o">Indicação</span><span class="pill o">Bônus</span></div>
+      </div>
+      <div class="fc" style="border-color:rgba(255,128,1,.2)">
+        <div class="fc-num" style="color:var(--o)">Frente 04</div>
+        <div class="fc-title">Presença de Marca</div>
+        <div class="fc-desc">Adesivos nos drops. Parceria com bares Copa. Visita Granja Naro. Decoração interna festa junina.</div>
+        <div class="pills"><span class="pill o">Guerrilha</span><span class="pill o">Campo</span></div>
       </div>
     </div>
-    <div class="slide-body">
-      <h2 class="slide-headline">As <em>4 frentes</em> de ação</h2>
-      <div class="cards-2" style="flex:1">
-        <div class="frente-card">
-          <div class="frente-num">Frente 01</div>
-          <div class="frente-title">Campanha B2C — Captação<br/>Estância & Perolândia</div>
-          <div class="frente-desc">Promoção de entrada + tráfego pago focado nas duas cidades. Copa e São João como ganchos de conversão.</div>
-          <div class="pills" style="margin-top:4px">
-            <span class="pill pill-green">Meta Ads</span>
-            <span class="pill pill-orange">R$89,90</span>
-            <span class="pill pill-green">24 dias</span>
-          </div>
-        </div>
-        <div class="frente-card">
-          <div class="frente-num">Frente 02</div>
-          <div class="frente-title">Diferencial Técnico —<br/>Copa do Mundo</div>
-          <div class="frente-desc">CDN do YouTube e Globo em Rio Verde = latência quase zero. Demonstração em vídeo comparando com concorrência.</div>
-          <div class="pills" style="margin-top:4px">
-            <span class="pill pill-green">Vídeo demo</span>
-            <span class="pill pill-orange">Baixa latência</span>
-          </div>
-        </div>
-        <div class="frente-card">
-          <div class="frente-num">Frente 03</div>
-          <div class="frente-title">Programa de Parceiros —<br/>Promotores Locais</div>
-          <div class="frente-desc">Transformar clientes em promotores de vendas. Indicou, ganhou 1 mensalidade. Modelo "Parceiro TerraNet".</div>
-          <div class="pills" style="margin-top:4px">
-            <span class="pill pill-green">Indicação</span>
-            <span class="pill pill-green">Remuneração</span>
-          </div>
-        </div>
-        <div class="frente-card">
-          <div class="frente-num">Frente 04</div>
-          <div class="frente-title">Presença de Marca —<br/>Baixo Custo</div>
-          <div class="frente-desc">Adesivos nos drops e pontos de rede. Parceria com bares para Copa. Visita Granja Naro para conteúdo real.</div>
-          <div class="pills" style="margin-top:4px">
-            <span class="pill pill-green">Placas/Drops</span>
-            <span class="pill pill-orange">Copa Wi-Fi</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="slide-footer">TerraNet · Plano Estratégico Jun–Jul 2026</div>
-  </section>
+  </div>
+  <p class="sfoot dark-foot">TerraNet · Plano de Marketing Jun–Jul 2026</p>
+</section>
 
-  <!-- ═══════════════════════════════════════════════
-       SLIDE 6 — FRENTE 01: CAMPANHA B2C
-  ═══════════════════════════════════════════════ -->
-  <section class="slide slide-white" id="s6">
-    <div class="slide-header">
-      <span class="slide-label">Frente 01 — Campanha B2C</span>
-      <div class="logo-mark logo-mark-sm">
-        <div class="logo-t">T</div>
-        <div class="logo-name">Terra<span>Net</span></div>
-      </div>
-    </div>
-    <div class="slide-body">
-      <h2 class="slide-headline">Captação agressiva em<br/><em>Estância</em> e <em>Perolândia</em></h2>
-      <div class="two-col" style="flex:1">
-        <div style="display:flex; flex-direction:column; gap:14px;">
-          <div class="highlight-box" style="text-align:center">
-            <div style="font-size:48px; font-weight:900; color:var(--green)">R$89,90</div>
-            <div style="font-size:13px; color:var(--gray-text); margin-top:4px">preço promocional — primeiros meses</div>
-            <div style="font-size:11px; color:var(--orange); font-weight:600; margin-top:6px">a confirmar com diretoria no dia 08/06</div>
-          </div>
-          <div class="list-items">
-            <div class="list-item">
-              <div class="list-dot orange"></div>
-              <div class="li-text"><span class="orange-strong">Copa do Mundo</span> — gancho: assistir sem delay, CDN local</div>
-            </div>
-            <div class="list-item">
-              <div class="list-dot orange"></div>
-              <div class="li-text"><span class="orange-strong">São João</span> — ação sazonalestrelando a identidade regional</div>
-            </div>
-          </div>
+<!-- ═══ S6 — CAMPANHA B2C ═══ -->
+<section class="slide dark" id="s6">
+  <div class="sh">
+    <span class="sh-label">Frente 01 — Campanha B2C</span>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAQ4CAYAAADo08FDAAAACXBIWXMAAAsSAAALEgHS3X78AAAgAElEQVR4nOzd71Ec17bG4eVT5zvKQJydANwIhCMQjkA4AuMIPIrgyhF4FIFRBHfIABJYFyK4EIHuh2nVkX30hxm6Z/eseZ4qVanKNLzlYihJv+ndP3z8+DEAAAAAAAAA2H//6D0AAAAAAAAAgHEIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQ" alt="TerraNet" class="logo-img-sm">
+  </div>
+  <div class="sb">
+    <h2 class="h2">Captação agressiva em <em>Estância</em> e <em>Perolândia</em></h2>
+    <div class="two center" style="flex:1">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <!-- Price highlight -->
+        <div class="abox" style="text-align:center;padding:28px">
+          <div style="font-size:72px;font-weight:900;line-height:1;color:var(--g)">R$89,90</div>
+          <div style="font-size:16px;color:var(--w50);margin-top:6px">preço promocional — primeiros meses</div>
+          <div style="font-size:13px;color:var(--o);font-weight:700;margin-top:8px">⟶ confirmar com diretoria no dia 08/06</div>
         </div>
-        <div style="display:flex; flex-direction:column; gap:14px;">
-          <div class="card" style="border:2px solid var(--green);">
-            <div class="card-num">24</div>
-            <div class="card-title">Dias de tráfego pago</div>
-            <div class="card-body">Seg a Sex · Pausa no final de semana conforme atendimento comercial</div>
+        <div class="li-list">
+          <div class="li orange">
+            <div class="li-dot orange"></div>
+            <div class="li-txt"><strong style="color:var(--o)">Copa do Mundo</strong> — "assista o gol antes do vizinho". CDN local, delay quase zero</div>
           </div>
-          <div class="card" style="border:2px solid var(--orange);">
-            <div class="card-num orange">R$2.400</div>
-            <div class="card-title">Investimento estimado</div>
-            <div class="card-body">R$100/dia × 24 dias · Meta Ads focado em Estância e Perolândia</div>
-          </div>
-          <div style="font-size: 12px; color: var(--gray-text); padding: 0 4px;">
-            ⚡ Teste de hipótese: se não vier cliente com preço competitivo, o problema é visibilidade — não preço.
+          <div class="li orange">
+            <div class="li-dot orange"></div>
+            <div class="li-txt"><strong style="color:var(--o)">São João</strong> — ação sazonal com identidade regional. Festa, promoção, celebração local</div>
           </div>
         </div>
       </div>
+      <!-- SVG budget breakdown -->
+      <div style="display:flex;flex-direction:column;gap:18px;align-items:center">
+        <svg width="280" height="200" viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg">
+          <!-- Budget circle -->
+          <circle cx="140" cy="100" r="80" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="16"/>
+          <circle cx="140" cy="100" r="80" fill="none" stroke="#47A81A" stroke-width="16" stroke-dasharray="251 251" stroke-dashoffset="0" transform="rotate(-90 140 100)" opacity=".8"/>
+          <!-- Labels -->
+          <text x="140" y="88" text-anchor="middle" fill="#fff" font-family="Montserrat" font-size="13" font-weight="600" opacity=".5">Mês 1</text>
+          <text x="140" y="112" text-anchor="middle" fill="#47A81A" font-family="Montserrat" font-size="30" font-weight="900">R$1k</text>
+          <text x="140" y="132" text-anchor="middle" fill="rgba(255,255,255,.4)" font-family="Montserrat" font-size="12">tráfego inicial</text>
+          <!-- dots indicating growth -->
+          <circle cx="50" cy="170" r="6" fill="#47A81A" opacity=".5"/>
+          <circle cx="70" cy="170" r="8" fill="#47A81A" opacity=".7"/>
+          <circle cx="94" cy="170" r="10" fill="#47A81A"/>
+          <text x="115" y="175" fill="rgba(255,128,1,.8)" font-family="Montserrat" font-size="12" font-weight="700">cresce com resultado</text>
+        </svg>
+        <div style="display:flex;gap:20px">
+          <div class="stat">
+            <div class="stat-num" style="font-size:48px">24</div>
+            <div class="stat-lbl">dias úteis<br/>campanha</div>
+          </div>
+          <div style="width:1px;background:var(--w10)"></div>
+          <div class="stat">
+            <div class="stat-num orange" style="font-size:48px">2</div>
+            <div class="stat-lbl">cidades<br/>focadas</div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="slide-footer">TerraNet · Plano Estratégico Jun–Jul 2026</div>
-  </section>
+  </div>
+  <p class="sfoot dark-foot">TerraNet · Plano de Marketing Jun–Jul 2026</p>
+</section>
 
-  <!-- ═══════════════════════════════════════════════
-       SLIDE 7 — FRENTE 02: DIFERENCIAL COPA
-  ═══════════════════════════════════════════════ -->
-  <section class="slide slide-white" id="s7">
-    <div class="slide-header">
-      <span class="slide-label">Frente 02 — Diferencial Técnico</span>
-      <div class="logo-mark logo-mark-sm">
-        <div class="logo-t">T</div>
-        <div class="logo-name">Terra<span>Net</span></div>
-      </div>
-    </div>
-    <div class="slide-body">
-      <h2 class="slide-headline">Assista o gol<br/><em>antes do vizinho</em></h2>
-      <div class="two-col" style="flex:1">
-        <div class="list-items">
-          <div class="list-item">
-            <div class="list-dot"></div>
-            <div class="li-text"><strong>CDN do YouTube e Globo Play</strong> instalados em Rio Verde. Dados não precisam ir até São Paulo — saem daqui.</div>
-          </div>
-          <div class="list-item">
-            <div class="list-dot"></div>
-            <div class="li-text"><strong>Delay quase zero</strong> vs concorrência. A Globo também migrou para o YouTube — transmissão em milissegundos.</div>
-          </div>
-          <div class="list-item">
-            <div class="list-dot orange"></div>
-            <div class="li-text"><span class="orange-strong">Conteúdo planejado:</span> vídeo com teste de ping ao vivo comparando TerraNet × concorrente. Quem chega primeiro no gol?</div>
-          </div>
-          <div class="list-item">
-            <div class="list-dot orange"></div>
-            <div class="li-text"><span class="orange-strong">Ideia de campanha:</span> poste foto com camisa do Brasil marcando @terranetoficial — ganhe bonificação. Parceria com estabelecimentos locais.</div>
-          </div>
+<!-- ═══ S7 — DIFERENCIAL COPA ═══ -->
+<section class="slide dark" id="s7">
+  <div class="sh">
+    <span class="sh-label">Frente 02 — Diferencial Técnico</span>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAQ4CAYAAADo08FDAAAACXBIWXMAAAsSAAALEgHS3X78AAAgAElEQVR4nOzd71Ec17bG4eVT5zvKQJydANwIhCMQjkA4AuMIPIrgyhF4FIFRBHfIABJYFyK4EIHuh2nVkX30hxm6Z/eseZ4qVanKNLzlYihJv+ndP3z8+DEAAAAAAAAA2H//6D0AAAAAAAAAgHEIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQ" alt="TerraNet" class="logo-img-sm">
+  </div>
+  <div class="sb">
+    <h2 class="h2">Assista o gol <em>antes do vizinho</em></h2>
+    <div class="two center" style="flex:1">
+      <div class="li-list">
+        <div class="li">
+          <div class="li-dot"></div>
+          <div class="li-txt"><strong>CDN do YouTube e Globo Play</strong> instalados em Rio Verde. Dados saem daqui — não precisam ir a São Paulo.</div>
         </div>
-        <div style="display:flex; flex-direction:column; gap:14px; align-items:center; justify-content:center;">
-          <div class="highlight-box" style="text-align:center; padding:32px;">
-            <div style="font-size:48px">⚡</div>
-            <div style="font-size:32px; font-weight:900; color:var(--green); margin-top:8px">Latência<br/>quase zero</div>
-            <div style="font-size:12px; color:var(--gray-text); margin-top:8px">TerraNet — CDN local Rio Verde</div>
-          </div>
-          <div style="font-size:12px; color:var(--gray-text); text-align:center; line-height:1.6">
-            🎯 Primeiro jogo do Brasil:<br/><strong style="color:var(--black)">13 de Junho</strong><br/>Conteúdo precisa estar pronto antes.
-          </div>
+        <div class="li">
+          <div class="li-dot"></div>
+          <div class="li-txt"><strong>Delay quase zero</strong> vs concorrência. Globo migrou para YouTube — transmissão em milissegundos. Real-time.</div>
+        </div>
+        <div class="li orange">
+          <div class="li-dot orange"></div>
+          <div class="li-txt"><strong style="color:var(--o)">Conteúdo planejado:</strong> vídeo com teste de ping ao vivo. TerraNet × concorrente. Quem vê o gol primeiro?</div>
+        </div>
+        <div class="li orange">
+          <div class="li-dot orange"></div>
+          <div class="li-txt"><strong style="color:var(--o)">Campanha engajamento:</strong> foto com camisa do Brasil marcando @terranetoficial = bonificação.</div>
+        </div>
+        <div class="abox orange">
+          <p style="font-size:16px;color:var(--wh);font-weight:600">⚽ <strong style="color:var(--o)">1º jogo do Brasil: 13/06</strong><br/><span style="font-weight:400;color:var(--w70)">Conteúdo precisa estar no ar antes desta data.</span></p>
         </div>
       </div>
+      <!-- SVG: delay comparison -->
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <svg width="310" height="220" viewBox="0 0 310 220" xmlns="http://www.w3.org/2000/svg">
+          <!-- Title -->
+          <text x="155" y="22" text-anchor="middle" fill="rgba(255,255,255,.4)" font-family="Montserrat" font-size="11" font-weight="700" letter-spacing="2">COMPARATIVO DE LATÊNCIA</text>
+          <!-- TerraNet bar -->
+          <rect x="10" y="42" width="200" height="40" rx="8" fill="#47A81A" opacity=".85"/>
+          <text x="22" y="67" fill="#fff" font-family="Montserrat" font-size="14" font-weight="800">TerraNet</text>
+          <text x="218" y="67" fill="#47A81A" font-family="Montserrat" font-size="14" font-weight="900">~5ms</text>
+          <!-- CDN label -->
+          <rect x="152" y="38" width="54" height="18" rx="4" fill="rgba(71,168,26,.3)"/>
+          <text x="179" y="51" text-anchor="middle" fill="#fff" font-family="Montserrat" font-size="9" font-weight="700">CDN LOCAL</text>
+          <!-- Concorrente bar -->
+          <rect x="10" y="104" width="280" height="40" rx="8" fill="rgba(255,255,255,.12)"/>
+          <text x="22" y="129" fill="rgba(255,255,255,.6)" font-family="Montserrat" font-size="14" font-weight="700">Concorrente</text>
+          <text x="298" y="129" text-anchor="end" fill="rgba(255,255,255,.5)" font-family="Montserrat" font-size="14" font-weight="700">~3–5s</text>
+          <!-- icon check -->
+          <circle cx="155" cy="175" r="28" fill="rgba(71,168,26,.15)" stroke="#47A81A" stroke-width="1.5"/>
+          <text x="155" y="183" text-anchor="middle" fill="#47A81A" font-family="Montserrat" font-size="28">⚡</text>
+        </svg>
+        <div class="abox" style="text-align:center;padding:16px 20px">
+          <p style="font-size:20px;font-weight:900;color:var(--g)">Latência quase zero</p>
+          <p style="font-size:14px;color:var(--w50);margin-top:4px">via CDN Google · Rio Verde</p>
+        </div>
+      </div>
     </div>
-    <div class="slide-footer">TerraNet · Plano Estratégico Jun–Jul 2026</div>
-  </section>
+  </div>
+  <p class="sfoot dark-foot">TerraNet · Plano de Marketing Jun–Jul 2026</p>
+</section>
 
-  <!-- ═══════════════════════════════════════════════
-       SLIDE 8 — FRENTE 03: PROGRAMA DE PARCEIROS
-  ═══════════════════════════════════════════════ -->
-  <section class="slide slide-white" id="s8">
-    <div class="slide-header">
-      <span class="slide-label">Frente 03 — Programa de Parceiros</span>
-      <div class="logo-mark logo-mark-sm">
-        <div class="logo-t">T</div>
-        <div class="logo-name">Terra<span>Net</span></div>
-      </div>
-    </div>
-    <div class="slide-body">
-      <h2 class="slide-headline">Transformar clientes<br/>em <em>promotores de vendas</em></h2>
-      <div class="two-col" style="flex:1">
-        <div style="display:flex; flex-direction:column; gap:14px;">
-          <div class="highlight-box">
-            <p style="font-size:13px; font-weight:700; color:var(--black); margin-bottom:8px">Como funciona</p>
-            <p style="font-size:13px; color:var(--gray-text); line-height:1.6">
-              Cliente indica um amigo. Amigo instala e permanece ativo. Indicador recebe <strong style="color:var(--green)">1 mensalidade inteira</strong> como bônus.<br/><br/>
-              Para parceiros mais ativos: bônus progressivo a cada 3 meses de retenção do indicado.
-            </p>
-          </div>
-          <div class="list-items">
-            <div class="list-item">
-              <div class="list-dot"></div>
-              <div class="li-text"><strong>Nome estratégico:</strong> "Parceiro TerraNet" — não "indique e ganhe". Evita associação com pirâmide.</div>
-            </div>
-            <div class="list-item">
-              <div class="list-dot orange"></div>
-              <div class="li-text"><span class="orange-strong">Perfil ideal:</span> pessoas bem-relacionadas na cidade, que conheçam vizinhos e comerciantes.</div>
-            </div>
-          </div>
+<!-- ═══ S8 — PARCEIROS ═══ -->
+<section class="slide dark" id="s8">
+  <div class="sh">
+    <span class="sh-label orange">Frente 03 — Programa de Parceiros</span>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAQ4CAYAAADo08FDAAAACXBIWXMAAAsSAAALEgHS3X78AAAgAElEQVR4nOzd71Ec17bG4eVT5zvKQJydANwIhCMQjkA4AuMIPIrgyhF4FIFRBHfIABJYFyK4EIHuh2nVkX30hxm6Z/eseZ4qVanKNLzlYihJv+ndP3z8+DEAAAAAAAAA2H//6D0AAAAAAAAAgHEIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQ" alt="TerraNet" class="logo-img-sm">
+  </div>
+  <div class="sb">
+    <h2 class="h2">Transformar clientes em <em>promotores de vendas</em></h2>
+    <div class="two center" style="flex:1">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div class="abox orange">
+          <p style="font-size:18px;font-weight:700;color:var(--wh);margin-bottom:10px">Como funciona</p>
+          <p style="font-size:16px;color:var(--w70);line-height:1.6">Cliente indica um amigo. Amigo instala e permanece ativo. Indicador recebe <strong style="color:var(--o)">1 mensalidade inteira</strong> como bônus.</p>
         </div>
-        <div style="display:flex; flex-direction:column; gap:14px;">
-          <div class="card" style="border:2px solid var(--green);">
-            <div class="card-icon">🤝</div>
-            <div class="card-title">Por que funciona</div>
-            <div class="card-body">A mãe da Ianka vendeu R$800 nos grupos de WhatsApp. Cidades pequenas têm redes de confiança. O melhor vendedor é quem já usa e confia.</div>
+        <div class="li-list">
+          <div class="li">
+            <div class="li-dot"></div>
+            <div class="li-txt"><strong>Nome estratégico:</strong> "Parceiro TerraNet" — evita associação com pirâmide ou "indique e ganhe"</div>
           </div>
-          <div class="card" style="border:1px solid var(--gray-mid);">
-            <div class="card-icon">📋</div>
-            <div class="card-title">Próximo passo</div>
-            <div class="card-body">Definir estrutura do programa e formalizar na reunião do dia 08. Selecionar 2–3 pessoas em Perolândia para piloto.</div>
+          <div class="li">
+            <div class="li-dot"></div>
+            <div class="li-txt"><strong>Perfil ideal:</strong> pessoas bem-relacionadas na cidade que conhecem vizinhos e comerciantes</div>
+          </div>
+          <div class="li orange">
+            <div class="li-dot orange"></div>
+            <div class="li-txt"><strong style="color:var(--o)">Caso real:</strong> mãe da Ianka vendeu R$800 em um dia pelos grupos de WhatsApp. É possível.</div>
           </div>
         </div>
       </div>
+      <!-- SVG: chain diagram -->
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px">
+        <svg width="300" height="220" viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg">
+          <!-- Person 1 -->
+          <circle cx="150" cy="36" r="28" fill="rgba(71,168,26,.2)" stroke="#47A81A" stroke-width="2"/>
+          <text x="150" y="42" text-anchor="middle" fill="#fff" font-size="18">👤</text>
+          <text x="150" y="78" text-anchor="middle" fill="rgba(255,255,255,.6)" font-family="Montserrat" font-size="12" font-weight="700">PARCEIRO</text>
+          <!-- arrows down -->
+          <line x1="100" y1="68" x2="72" y2="106" stroke="rgba(71,168,26,.5)" stroke-width="2"/>
+          <line x1="200" y1="68" x2="228" y2="106" stroke="rgba(71,168,26,.5)" stroke-width="2"/>
+          <!-- Person 2 & 3 -->
+          <circle cx="64" cy="122" r="22" fill="rgba(71,168,26,.15)" stroke="#47A81A" stroke-width="1.5"/>
+          <text x="64" y="128" text-anchor="middle" fill="#fff" font-size="14">👤</text>
+          <circle cx="236" cy="122" r="22" fill="rgba(71,168,26,.15)" stroke="#47A81A" stroke-width="1.5"/>
+          <text x="236" y="128" text-anchor="middle" fill="#fff" font-size="14">👤</text>
+          <text x="150" y="120" text-anchor="middle" fill="rgba(255,128,1,.8)" font-family="Montserrat" font-size="11" font-weight="700">+2 novos clientes</text>
+          <!-- bônus badge -->
+          <rect x="90" y="155" width="120" height="36" rx="10" fill="rgba(255,128,1,.15)" stroke="rgba(255,128,1,.4)" stroke-width="1.5"/>
+          <text x="150" y="178" text-anchor="middle" fill="#FF8001" font-family="Montserrat" font-size="14" font-weight="900">+ 1 mensalidade bônus</text>
+          <!-- arrow to bonus -->
+          <line x1="150" y1="90" x2="150" y2="152" stroke="rgba(255,128,1,.4)" stroke-width="1.5" stroke-dasharray="4,3"/>
+        </svg>
+        <div class="card" style="width:100%">
+          <div class="card-ico">📋</div>
+          <div class="card-ttl">Próximo passo</div>
+          <div class="card-bod">Definir estrutura na reunião 08/06. Selecionar 2–3 pessoas piloto em Perolândia.</div>
+        </div>
+      </div>
     </div>
-    <div class="slide-footer">TerraNet · Plano Estratégico Jun–Jul 2026</div>
-  </section>
+  </div>
+  <p class="sfoot dark-foot">TerraNet · Plano de Marketing Jun–Jul 2026</p>
+</section>
 
-  <!-- ═══════════════════════════════════════════════
-       SLIDE 9 — FRENTE 04: PRESENÇA DE MARCA
-  ═══════════════════════════════════════════════ -->
-  <section class="slide slide-white" id="s9">
-    <div class="slide-header">
-      <span class="slide-label">Frente 04 — Presença de Marca</span>
-      <div class="logo-mark logo-mark-sm">
-        <div class="logo-t">T</div>
-        <div class="logo-name">Terra<span>Net</span></div>
+<!-- ═══ S9 — PRESENÇA MARCA ═══ -->
+<section class="slide dark" id="s9">
+  <div class="sh">
+    <span class="sh-label orange">Frente 04 — Presença de Marca</span>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAQ4CAYAAADo08FDAAAACXBIWXMAAAsSAAALEgHS3X78AAAgAElEQVR4nOzd71Ec17bG4eVT5zvKQJydANwIhCMQjkA4AuMIPIrgyhF4FIFRBHfIABJYFyK4EIHuh2nVkX30hxm6Z/eseZ4qVanKNLzlYihJv+ndP3z8+DEAAAAAAAAA2H//6D0AAAAAAAAAgHEIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQ" alt="TerraNet" class="logo-img-sm">
+  </div>
+  <div class="sb">
+    <h2 class="h2">Marca visível. <em>Custo baixo.</em> Resultado acumulado.</h2>
+    <div class="c4" style="flex:1;align-items:start">
+      <div class="card">
+        <div style="font-size:40px">📌</div>
+        <div class="card-lbl">Guerrilha</div>
+        <div class="card-ttl">Placas nos Drops</div>
+        <div class="card-bod">Adesivos e plaquinhas nos equipamentos de rua e pontos de rede. Custo mínimo, presença permanente. Estratégia Red Bull aplicada ao telecom.</div>
+      </div>
+      <div class="card">
+        <div style="font-size:40px">⚽</div>
+        <div class="card-lbl">Parceria</div>
+        <div class="card-ttl">Copa nos Bares</div>
+        <div class="card-bod">Wi-Fi gratuito em estabelecimentos que transmitirão a Copa. Visibilidade da marca no momento de maior consumo de internet do ano.</div>
+      </div>
+      <div class="card" style="border-color:rgba(71,168,26,.3)">
+        <div style="font-size:40px">🎬</div>
+        <div class="card-lbl">Conteúdo</div>
+        <div class="card-ttl">Visita Granja Naro</div>
+        <div class="card-bod">Visita a cliente para produção de conteúdo real. Cliente em destaque, TerraNet como parceiro. Uma visita = 8 a 10 vídeos. Semana 09/06.</div>
+      </div>
+      <div class="card">
+        <div style="font-size:40px">🎉</div>
+        <div class="card-lbl">Interno</div>
+        <div class="card-ttl">Decoração Festa Junina + Copa</div>
+        <div class="card-bod">Escritório decorado até esta sexta. Colaboradores no verde e amarelo nos dias de jogo. São João (28/06) com traje caipira.</div>
       </div>
     </div>
-    <div class="slide-body">
-      <h2 class="slide-headline">Marca visível.<br/><em>Custo baixo.</em> Resultado acumulado.</h2>
-      <div class="cards-4" style="flex:1; align-items:start;">
-        <div class="card">
-          <div class="card-icon">📌</div>
-          <div class="card-title">Placas nos Drops</div>
-          <div class="card-body">Adesivos e plaquinhas nos equipamentos de rua e pontos de rede. Baixíssimo custo, presença permanente. Estratégia da Red Bull aplicada ao telecom.</div>
-        </div>
-        <div class="card">
-          <div class="card-icon">⚽</div>
-          <div class="card-title">Parceria Copa</div>
-          <div class="card-body">Wi-Fi gratuito em bares e estabelecimentos que vão transmitir os jogos. Visibilidade da marca no momento de maior consumo de internet do ano.</div>
-        </div>
-        <div class="card">
-          <div class="card-icon">🎬</div>
-          <div class="card-title">Visita Granja Naro</div>
-          <div class="card-body">Visita a cliente da região para produção de conteúdo real. Mostrar a estrutura, a conectividade no campo, o cliente em destaque — não a TerraNet.</div>
-        </div>
-        <div class="card">
-          <div class="card-icon">🎉</div>
-          <div class="card-title">Decoração Interna</div>
-          <div class="card-body">Festa junina e Copa no escritório. Colaboradores como parte do conteúdo. Humanização da marca para stories e posts do dia a dia.</div>
-        </div>
-      </div>
-      <div class="highlight-box">
-        <p style="font-size:13px; color:var(--slate); font-weight:500; line-height:1.6">
-          🎯 <strong style="color:var(--green)">Visita Granja Naro agenda:</strong> semana de 09/06. Bruno confirma com o cliente e a Vizantu prepara o roteiro. Uma visita = 8 a 10 vídeos de conteúdo.
-        </p>
-      </div>
-    </div>
-    <div class="slide-footer">TerraNet · Plano Estratégico Jun–Jul 2026</div>
-  </section>
+  </div>
+  <p class="sfoot dark-foot">TerraNet · Plano de Marketing Jun–Jul 2026</p>
+</section>
 
-  <!-- ═══════════════════════════════════════════════
-       SLIDE 10 — INSTAGRAM & CONTEÚDO
-  ═══════════════════════════════════════════════ -->
-  <section class="slide slide-white" id="s10">
-    <div class="slide-header">
-      <span class="slide-label">Conteúdo & Instagram</span>
-      <div class="logo-mark logo-mark-sm">
-        <div class="logo-t">T</div>
-        <div class="logo-name">Terra<span>Net</span></div>
-      </div>
-    </div>
-    <div class="slide-body">
-      <h2 class="slide-headline">Linha editorial <em>consistente</em><br/>e presença humana real</h2>
-      <div class="two-col" style="flex:1">
-        <div style="display:flex; flex-direction:column; gap:14px;">
-          <div class="card" style="border: 2px solid var(--green);">
-            <div class="card-icon">📱</div>
-            <div class="card-title">Bruno — Head de Marketing</div>
-            <div class="card-body">Assume responsabilidade pela execução: gravações, stories diários, visitas de campo, agendamentos. Comprometimento total com os KPIs.</div>
-          </div>
-          <div class="list-items">
-            <div class="list-item">
-              <div class="list-dot"></div>
-              <div class="li-text"><strong>Stories diários</strong> — Vizantu entrega cronograma semanal. Bruno executa.</div>
-            </div>
-            <div class="list-item">
-              <div class="list-dot"></div>
-              <div class="li-text"><strong>Vídeos de campo</strong> — bastidor real, visitas a clientes, dia a dia da equipe técnica.</div>
-            </div>
-            <div class="list-item">
-              <div class="list-dot orange"></div>
-              <div class="li-text"><span class="orange-strong">Equipamentos necessários:</span> iPhone 17 Pro Max + Hollyland — a aprovar com diretoria.</div>
-            </div>
-          </div>
-        </div>
-        <div style="display:flex; flex-direction:column; gap:14px;">
-          <div class="highlight-box">
-            <p style="font-size:12px; font-weight:700; color:var(--black); margin-bottom:8px; text-transform:uppercase; letter-spacing:1px">Linha Editorial</p>
-            <div style="display:flex; flex-direction:column; gap:8px;">
-              <div style="display:flex; align-items:center; gap:8px;">
-                <span style="color:var(--green); font-size:14px;">✓</span>
-                <span style="font-size:13px; color:var(--slate)">Bastidor real — equipe em campo, instalações, visitas</span>
-              </div>
-              <div style="display:flex; align-items:center; gap:8px;">
-                <span style="color:var(--green); font-size:14px;">✓</span>
-                <span style="font-size:13px; color:var(--slate)">Educativo — análise de viabilidade, tecnologia, agro</span>
-              </div>
-              <div style="display:flex; align-items:center; gap:8px;">
-                <span style="color:var(--green); font-size:14px;">✓</span>
-                <span style="font-size:13px; color:var(--slate)">Consistência — mesmo formato, repetido até virar marca</span>
-              </div>
-              <div style="display:flex; align-items:center; gap:8px; margin-top:4px; border-top:1px solid var(--gray-mid); padding-top:8px;">
-                <span style="color:#e53935; font-size:14px;">✗</span>
-                <span style="font-size:13px; color:var(--gray-text)">Trends aleatórias desconexas da identidade</span>
-              </div>
-              <div style="display:flex; align-items:center; gap:8px;">
-                <span style="color:#e53935; font-size:14px;">✗</span>
-                <span style="font-size:13px; color:var(--gray-text)">Troca excessiva de formatos — fragmenta o perfil</span>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-icon">📅</div>
-            <div class="card-title">Porta-vozes</div>
-            <div class="card-body"><strong>Bruno</strong> — campo, POV de rotina, presença humana<br/><strong>Ianka</strong> — análise técnica, viabilidade, autoridade<br/><strong>Wesley</strong> — testes, dados técnicos</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="slide-footer">TerraNet · Plano Estratégico Jun–Jul 2026</div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════
-       SLIDE 11 — INVESTIMENTO
-  ═══════════════════════════════════════════════ -->
-  <section class="slide slide-white" id="s11">
-    <div class="slide-header">
-      <span class="slide-label">Investimento</span>
-      <div class="logo-mark logo-mark-sm">
-        <div class="logo-t">T</div>
-        <div class="logo-name">Terra<span>Net</span></div>
-      </div>
-    </div>
-    <div class="slide-body">
-      <h2 class="slide-headline">O que precisamos<br/>para <em>colocar em prática</em></h2>
-      <div class="two-col" style="flex:1; align-items:center;">
-        <div>
-          <div class="inv-row">
-            <div class="inv-icon">📣</div>
-            <div class="inv-info">
-              <div class="inv-label">Tráfego Pago — Meta Ads</div>
-              <div class="inv-value"><span class="green">R$ 2.400</span></div>
-              <div class="inv-detail">R$100/dia × 24 dias úteis · Estância e Perolândia</div>
-            </div>
-            <div class="inv-badge aprovado">Aprovado</div>
-          </div>
-          <div class="inv-row">
-            <div class="inv-icon">🎯</div>
-            <div class="inv-info">
-              <div class="inv-label">Promoção de Entrada</div>
-              <div class="inv-value"><span class="green">R$ 89,90</span></div>
-              <div class="inv-detail">Primeiros meses para novos clientes · 2 propostas para o dia 08</div>
-            </div>
-            <div class="inv-badge aprovar">A aprovar</div>
-          </div>
-          <div class="inv-row">
-            <div class="inv-icon">📸</div>
-            <div class="inv-info">
-              <div class="inv-label">Equipamentos de Captação</div>
-              <div class="inv-value" style="font-size:16px; font-weight:700; color:var(--black);">iPhone 17 Pro Max + Hollyland</div>
-              <div class="inv-detail">Necessário para qualidade de vídeo de campo — Head de Marketing</div>
-            </div>
-            <div class="inv-badge aprovar">A aprovar</div>
-          </div>
-          <div class="inv-row">
-            <div class="inv-icon">👕</div>
-            <div class="inv-info">
-              <div class="inv-label">Camisetas Copa (Mirante)</div>
-              <div class="inv-value" style="font-size:16px; font-weight:700; color:var(--black);">White label — logo TerraNet</div>
-              <div class="inv-detail">Uniforme copa + ação de engajamento com clientes · R$30/un aprox.</div>
-            </div>
-            <div class="inv-badge aprovar">A aprovar</div>
-          </div>
-        </div>
-        <div style="display:flex; flex-direction:column; gap:16px; align-items:center;">
-          <div class="highlight-box" style="text-align:center; padding:32px 40px; width:100%">
-            <div style="font-size:14px; font-weight:700; color:var(--gray-text); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px">Investimento imediato</div>
-            <div style="font-size:52px; font-weight:900; color:var(--green)">R$2.400</div>
-            <div style="font-size:13px; color:var(--gray-text)">tráfego pago · 24 dias</div>
-          </div>
-          <div style="font-size:12px; color:var(--gray-text); text-align:center; line-height:1.8;">
-            ROI esperado:<br/>
-            <strong style="color:var(--black)">Cada novo cliente</strong><br/>
-            = R$89,90/mês recorrente<br/>
-            break-even ≈ 27 clientes novos
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="slide-footer">TerraNet · Plano Estratégico Jun–Jul 2026</div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════
-       SLIDE 12 — LINHA DO TEMPO
-  ═══════════════════════════════════════════════ -->
-  <section class="slide slide-white" id="s12">
-    <div class="slide-header">
-      <span class="slide-label">Linha do Tempo</span>
-      <div class="logo-mark logo-mark-sm">
-        <div class="logo-t">T</div>
-        <div class="logo-name">Terra<span>Net</span></div>
-      </div>
-    </div>
-    <div class="slide-body">
-      <h2 class="slide-headline">Junho e Julho:<br/><em>tudo tem data</em></h2>
-
-      <div class="timeline" style="flex:0; padding: 16px 0;">
-        <div class="tl-item">
-          <div class="tl-dot active">✅</div>
-          <div class="tl-content">
-            <div class="tl-date">05–07 Jun</div>
-            <div class="tl-title">Decoração escritório</div>
-            <div class="tl-desc">Festa junina + Copa<br/>Bruno responsável</div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot active" style="background:var(--orange)">📋</div>
-          <div class="tl-content">
-            <div class="tl-date">08 Jun</div>
-            <div class="tl-title">Reunião gerencial</div>
-            <div class="tl-desc">Aprovação do plano<br/>+ 2 promoções propostas</div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot active">⚽</div>
-          <div class="tl-content">
-            <div class="tl-date">13 Jun</div>
-            <div class="tl-title">1º jogo do Brasil</div>
-            <div class="tl-desc">Conteúdo de latência<br/>no ar antes desta data</div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot active">🎬</div>
-          <div class="tl-content">
-            <div class="tl-date">Sem. 09/06</div>
-            <div class="tl-title">Visita Granja Naro</div>
-            <div class="tl-desc">Captação de conteúdo<br/>real com o cliente</div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot orange-dot">🎆</div>
-          <div class="tl-content">
-            <div class="tl-date">28 Jun</div>
-            <div class="tl-title">São João</div>
-            <div class="tl-desc">Ação especial<br/>traje caipira na empresa</div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot" style="background:var(--gray-mid)">📊</div>
-          <div class="tl-content">
-            <div class="tl-date">Jul 2026</div>
-            <div class="tl-title">Revisão de resultados</div>
-            <div class="tl-desc">Avaliar captação<br/>e ajustar campanha</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="cards-3" style="flex:1; align-items:start;">
-        <div class="card" style="background:rgba(71,168,26,0.06); border:1px solid rgba(71,168,26,0.2)">
-          <div class="card-icon">📅</div>
-          <div class="card-title" style="color:var(--green)">Semana 1 (9–13 Jun)</div>
-          <div class="card-body">Reunião aprovação (dia 8) · Tráfego pago no ar · Conteúdo Copa pronto · Agendar Granja Naro</div>
-        </div>
-        <div class="card" style="background:rgba(255,128,1,0.06); border:1px solid rgba(255,128,1,0.2)">
-          <div class="card-icon">📅</div>
-          <div class="card-title" style="color:var(--orange)">Semana 2–3 (16–27 Jun)</div>
-          <div class="card-body">Jogos Copa em andamento · Campanha rodando · Visita cliente + conteúdo de campo · Programa parceiros ativado</div>
+<!-- ═══ S10 — INSTAGRAM & CONTEÚDO ═══ -->
+<section class="slide dark" id="s10">
+  <div class="sh">
+    <span class="sh-label">Instagram & Conteúdo</span>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAQ4CAYAAADo08FDAAAACXBIWXMAAAsSAAALEgHS3X78AAAgAElEQVR4nOzd71Ec17bG4eVT5zvKQJydANwIhCMQjkA4AuMIPIrgyhF4FIFRBHfIABJYFyK4EIHuh2nVkX30hxm6Z/eseZ4qVanKNLzlYihJv+ndP3z8+DEAAAAAAAAA2H//6D0AAAAAAAAAgHEIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQ" alt="TerraNet" class="logo-img-sm">
+  </div>
+  <div class="sb">
+    <h2 class="h2">Linha editorial <em>consistente</em> e presença humana real</h2>
+    <div class="two center" style="flex:1">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div class="card" style="border:2px solid var(--g)">
+          <div style="font-size:28px">📱</div>
+          <div class="card-lbl">Liderança</div>
+          <div class="card-ttl">Bruno — Head de Marketing</div>
+          <div class="card-bod">Assume responsabilidade pela execução: gravações, stories diários, visitas de campo. KPIs claros, comprometimento total.</div>
         </div>
         <div class="card">
-          <div class="card-icon">📅</div>
-          <div class="card-title">Semana 4 (28 Jun+)</div>
-          <div class="card-body">São João (28/6) · Avaliação das primeiras métricas · Ajuste de campanha para julho · Copa indo pra fase decisiva</div>
+          <div class="card-ttl" style="font-size:16px;margin-bottom:8px">📅 Vizantu entrega</div>
+          <div class="card-bod">Cronograma semanal de stories → Bruno executa<br/>Roteiros e copy de todos os vídeos<br/>Gestão do tráfego pago Meta Ads<br/>Apresentações e relatórios</div>
+        </div>
+        <div class="card" style="border-color:rgba(255,128,1,.3)">
+          <div class="card-lbl orange">Equipamentos necessários</div>
+          <div class="card-ttl">iPhone 17 Pro Max + Hollyland</div>
+          <div class="card-bod">Necessário para qualidade de vídeo de campo. Responsável: Head de Marketing.</div>
+        </div>
+      </div>
+      <!-- SVG: editorial compass -->
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div class="abox" style="padding:20px 24px">
+          <p style="font-size:14px;font-weight:700;color:var(--g);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px">Linha editorial — O QUE FAZEMOS</p>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="display:flex;gap:10px;align-items:center"><span style="color:var(--g);font-size:18px">✓</span><span style="font-size:15px;color:var(--w70)">Bastidor real — equipe em campo, instalações, visitas</span></div>
+            <div style="display:flex;gap:10px;align-items:center"><span style="color:var(--g);font-size:18px">✓</span><span style="font-size:15px;color:var(--w70)">Educativo — análise de viabilidade, tecnologia, agro</span></div>
+            <div style="display:flex;gap:10px;align-items:center"><span style="color:var(--g);font-size:18px">✓</span><span style="font-size:15px;color:var(--w70)">Consistência — mesmo formato repetido até virar marca</span></div>
+          </div>
+          <div style="height:1px;background:var(--w10);margin:14px 0"></div>
+          <p style="font-size:14px;font-weight:700;color:rgba(231,76,60,.8);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px">O QUE NÃO FAZEMOS</p>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="display:flex;gap:10px;align-items:center"><span style="color:rgba(231,76,60,.8);font-size:18px">✗</span><span style="font-size:15px;color:var(--w30)">Trends aleatórias desconexas da identidade</span></div>
+            <div style="display:flex;gap:10px;align-items:center"><span style="color:rgba(231,76,60,.8);font-size:18px">✗</span><span style="font-size:15px;color:var(--w30)">Troca excessiva de formatos — fragmenta o perfil</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-lbl">Porta-vozes</div>
+          <div class="card-bod" style="font-size:16px"><strong style="color:var(--wh)">Bruno</strong> — campo, rotina, POV técnico<br/><strong style="color:var(--wh)">Ianka</strong> — análise técnica, autoridade<br/><strong style="color:var(--wh)">Wesley</strong> — dados, testes de rede</div>
         </div>
       </div>
     </div>
-    <div class="slide-footer">TerraNet · Plano Estratégico Jun–Jul 2026</div>
-  </section>
+  </div>
+  <p class="sfoot dark-foot">TerraNet · Plano de Marketing Jun–Jul 2026</p>
+</section>
 
-  <!-- ═══════════════════════════════════════════════
-       SLIDE 13 — TIME & PRÓXIMOS PASSOS
-  ═══════════════════════════════════════════════ -->
-  <section class="slide slide-dark" id="s13">
-    <div class="slide-header" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-      <span class="slide-label">Time & Próximos Passos</span>
-      <div class="logo-mark logo-mark-sm">
-        <div class="logo-t">T</div>
-        <div class="logo-name">Terra<span>Net</span></div>
+<!-- ═══ S11 — INVESTIMENTO ═══ -->
+<section class="slide dark" id="s11">
+  <div class="sh">
+    <span class="sh-label">Investimento & Tempo</span>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAQ4CAYAAADo08FDAAAACXBIWXMAAAsSAAALEgHS3X78AAAgAElEQVR4nOzd71Ec17bG4eVT5zvKQJydANwIhCMQjkA4AuMIPIrgyhF4FIFRBHfIABJYFyK4EIHuh2nVkX30hxm6Z/eseZ4qVanKNLzlYihJv+ndP3z8+DEAAAAAAAAA2H//6D0AAAAAAAAAgHEIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQ" alt="TerraNet" class="logo-img-sm">
+  </div>
+  <div class="sb">
+    <h2 class="h2">O que precisamos <em>aprovar</em> e por quanto tempo</h2>
+    <div class="two" style="flex:1;gap:28px">
+      <!-- left: items -->
+      <div>
+        <div class="inv-row">
+          <div class="inv-ico">📣</div>
+          <div class="inv-info">
+            <div class="inv-lbl">Tráfego Pago — Meta Ads</div>
+            <div class="inv-val">R$ 1.000<span style="font-size:16px;color:var(--w30)">/mês inicial</span></div>
+            <div class="inv-det">Cresce com resultado. Seg–Sex · Estância e Perolândia</div>
+            <div class="tbar-wrap">
+              <span class="tbar-label">Jun</span>
+              <div class="tbar"><div class="tbar-fill g" style="width:100%"></div></div>
+            </div>
+            <div class="tbar-wrap">
+              <span class="tbar-label">Jul</span>
+              <div class="tbar-dashed"></div>
+            </div>
+            <div style="font-size:12px;color:var(--o);margin-top:4px;font-weight:700">⟶ Jul avalia resultado e ajusta verba</div>
+          </div>
+          <div class="inv-badge ok">Aprovar</div>
+        </div>
+        <div class="inv-row" style="margin-top:12px">
+          <div class="inv-ico">🎯</div>
+          <div class="inv-info">
+            <div class="inv-lbl">Promoção de Entrada</div>
+            <div class="inv-val orange">R$ 89,90</div>
+            <div class="inv-det">Primeiros meses para novos clientes — 2 propostas na reunião 08/06</div>
+            <div class="tbar-wrap">
+              <span class="tbar-label">Jun–Jul</span>
+              <div class="tbar"><div class="tbar-fill o" style="width:100%"></div></div>
+            </div>
+          </div>
+          <div class="inv-badge pend">Definir</div>
+        </div>
+        <div class="inv-row" style="margin-top:12px">
+          <div class="inv-ico">📸</div>
+          <div class="inv-info">
+            <div class="inv-lbl">Equipamentos — Produção</div>
+            <div class="inv-val" style="font-size:18px;color:var(--wh)">iPhone 17 Pro Max + Hollyland</div>
+            <div class="inv-det">Qualidade de vídeo de campo — investimento único. Head de Marketing.</div>
+            <div class="tbar-wrap">
+              <span class="tbar-label">Permanente</span>
+              <div class="tbar"><div class="tbar-fill g" style="width:100%"></div></div>
+            </div>
+          </div>
+          <div class="inv-badge pend">Aprovar</div>
+        </div>
+        <div class="inv-row" style="margin-top:12px">
+          <div class="inv-ico">👕</div>
+          <div class="inv-info">
+            <div class="inv-lbl">Camisetas Copa (Mirante)</div>
+            <div class="inv-val" style="font-size:18px;color:var(--wh)">White label — logo TerraNet</div>
+            <div class="inv-det">~R$30/unidade · Uniforme + ação de engajamento na Copa</div>
+            <div class="tbar-wrap">
+              <span class="tbar-label">Copa</span>
+              <div class="tbar"><div class="tbar-fill o" style="width:60%"></div></div>
+            </div>
+          </div>
+          <div class="inv-badge pend">Aprovar</div>
+        </div>
+      </div>
+      <!-- right: summary -->
+      <div style="display:flex;flex-direction:column;gap:16px;justify-content:center">
+        <div class="abox" style="text-align:center;padding:32px">
+          <div style="font-size:14px;font-weight:700;color:var(--w30);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px">Investimento Mês 1</div>
+          <div style="font-size:60px;font-weight:900;line-height:1;color:var(--g)">R$1.000</div>
+          <div style="font-size:16px;color:var(--w50);margin-top:6px">tráfego pago · mês inicial</div>
+          <div style="font-size:13px;color:var(--o);font-weight:700;margin-top:10px">Escala em Julho conforme resultado</div>
+        </div>
+        <!-- SVG growth chart -->
+        <svg width="100%" height="100" viewBox="0 0 280 100" xmlns="http://www.w3.org/2000/svg">
+          <text x="14" y="90" fill="rgba(255,255,255,.3)" font-family="Montserrat" font-size="11">Jun</text>
+          <text x="100" y="90" fill="rgba(255,255,255,.3)" font-family="Montserrat" font-size="11">Jul</text>
+          <text x="186" y="90" fill="rgba(255,255,255,.3)" font-family="Montserrat" font-size="11">Ago+</text>
+          <!-- bars -->
+          <rect x="10" y="32" width="70" height="50" rx="6" fill="rgba(71,168,26,.7)"/>
+          <text x="45" y="26" text-anchor="middle" fill="#47A81A" font-family="Montserrat" font-size="12" font-weight="800">R$1k</text>
+          <rect x="96" y="12" width="70" height="70" rx="6" fill="rgba(71,168,26,.5)"/>
+          <text x="131" y="7" text-anchor="middle" fill="rgba(71,168,26,.7)" font-family="Montserrat" font-size="12" font-weight="700">se ok →</text>
+          <rect x="182" y="2" width="70" height="80" rx="6" fill="rgba(71,168,26,.3)" stroke="rgba(71,168,26,.4)" stroke-dasharray="4,3"/>
+          <text x="217" y="2" text-anchor="middle" fill="rgba(71,168,26,.5)" font-family="Montserrat" font-size="10">escala</text>
+        </svg>
       </div>
     </div>
-    <div class="slide-body">
-      <h2 class="slide-headline">Cada um tem seu<br/><em>papel.</em> Vamos juntos.</h2>
-      <div class="cards-4" style="flex:0">
-        <div class="person-card">
-          <div class="person-avatar" style="background: linear-gradient(135deg, var(--green), var(--green-dark));">B</div>
-          <div class="person-name">Bruno Hoobert</div>
-          <div class="person-role">Head de Marketing</div>
-          <div class="person-tasks">
-            <div class="person-task">Gravações e field content</div>
-            <div class="person-task">Stories diários</div>
-            <div class="person-task">Visita Granja Naro</div>
-            <div class="person-task">Decoração interna</div>
-          </div>
-        </div>
-        <div class="person-card">
-          <div class="person-avatar" style="background: linear-gradient(135deg, #394E45, #2a3d35);">I</div>
-          <div class="person-name">Ianka Kamynsk</div>
-          <div class="person-role">Porta-voz Técnica</div>
-          <div class="person-tasks">
-            <div class="person-task">Vídeos de viabilidade</div>
-            <div class="person-task">Definição de preços</div>
-            <div class="person-task">Análise competitiva</div>
-          </div>
-        </div>
-        <div class="person-card">
-          <div class="person-avatar" style="background: linear-gradient(135deg, #5a6a7e, #3d4f60);">W</div>
-          <div class="person-name">Wesley Fernando</div>
-          <div class="person-role">Suporte & Operações</div>
-          <div class="person-tasks">
-            <div class="person-task">Testes de latência</div>
-            <div class="person-task">Infra Perolândia</div>
-            <div class="person-task">Domínio Nets</div>
-          </div>
-        </div>
-        <div class="person-card" style="background: rgba(71,168,26,0.08); border-color: rgba(71,168,26,0.3);">
-          <div class="person-avatar" style="background: linear-gradient(135deg, var(--orange), #cc6600);">V</div>
-          <div class="person-name">Vizantu</div>
-          <div class="person-role">Estratégia & Conteúdo</div>
-          <div class="person-tasks">
-            <div class="person-task">Copy e roteiros</div>
-            <div class="person-task">Tráfego pago</div>
-            <div class="person-task">Cronograma semanal</div>
-            <div class="person-task">Apresentações</div>
-          </div>
-        </div>
-      </div>
+  </div>
+  <p class="sfoot dark-foot">TerraNet · Plano de Marketing Jun–Jul 2026</p>
+</section>
 
-      <div class="highlight-box-dark" style="flex:1; display:flex; flex-direction:column; justify-content:center;">
-        <p style="font-size:12px; font-weight:700; color:var(--green); letter-spacing:2px; text-transform:uppercase; margin-bottom:14px;">Para aprovar na reunião do dia 08/06</p>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
-          <div style="display:flex; gap:10px; align-items:center;">
-            <span style="color:var(--orange); font-size:16px;">→</span>
-            <span style="font-size:13px; color:rgba(255,255,255,0.8);">2 propostas de promoção (R$89,90 ou R$79,90)</span>
-          </div>
-          <div style="display:flex; gap:10px; align-items:center;">
-            <span style="color:var(--orange); font-size:16px;">→</span>
-            <span style="font-size:13px; color:rgba(255,255,255,0.8);">Orçamento de tráfego: R$2.400</span>
-          </div>
-          <div style="display:flex; gap:10px; align-items:center;">
-            <span style="color:var(--orange); font-size:16px;">→</span>
-            <span style="font-size:13px; color:rgba(255,255,255,0.8);">Equipamentos: iPhone 17 Pro Max + Hollyland</span>
-          </div>
-          <div style="display:flex; gap:10px; align-items:center;">
-            <span style="color:var(--orange); font-size:16px;">→</span>
-            <span style="font-size:13px; color:rgba(255,255,255,0.8);">Estrutura do Programa de Parceiros</span>
-          </div>
+<!-- ═══ S12 — CALENDÁRIO ═══ -->
+<section class="slide dark" id="s12">
+  <div class="sh">
+    <span class="sh-label">Calendário — Junho e Julho</span>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAQ4CAYAAADo08FDAAAACXBIWXMAAAsSAAALEgHS3X78AAAgAElEQVR4nOzd71Ec17bG4eVT5zvKQJydANwIhCMQjkA4AuMIPIrgyhF4FIFRBHfIABJYFyK4EIHuh2nVkX30hxm6Z/eseZ4qVanKNLzlYihJv+ndP3z8+DEAAAAAAAAA2H//6D0AAAAAAAAAgHEIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQ" alt="TerraNet" class="logo-img-sm">
+  </div>
+  <div class="sb">
+    <h2 class="h2">Tudo tem <em>data</em> e <em>responsável</em></h2>
+    <div class="two" style="flex:1;gap:32px;align-items:start">
+      <!-- JUNHO -->
+      <div>
+        <div class="cal-month-title">Junho 2026</div>
+        <table class="cal">
+          <tr><th>Seg</th><th>Ter</th><th>Qua</th><th>Qui</th><th>Sex</th><th>Sáb</th><th>Dom</th></tr>
+          <tr>
+            <td class="today">1</td><td>2</td><td>3</td><td>4</td><td class="event-g">5<div class="cal-event-dot g"></div></td><td>6</td><td>7</td>
+          </tr>
+          <tr>
+            <td class="event-g">8<div class="cal-event-dot g"></div></td><td>9</td><td>10</td><td>11</td><td>12</td><td class="event">13<div class="cal-event-dot"></div></td><td>14</td>
+          </tr>
+          <tr>
+            <td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td>
+          </tr>
+          <tr>
+            <td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td class="event">28<div class="cal-event-dot"></div></td>
+          </tr>
+          <tr>
+            <td>29</td><td>30</td><td class="off-month">—</td><td class="off-month">—</td><td class="off-month">—</td><td class="off-month">—</td><td class="off-month">—</td>
+          </tr>
+        </table>
+        <!-- Legenda Junho -->
+        <div style="margin-top:14px;display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;gap:10px;align-items:center"><div style="width:12px;height:12px;border-radius:3px;background:var(--g);opacity:.6;flex-shrink:0"></div><span style="font-size:13px;color:var(--w70)"><strong style="color:var(--wh)">05/06</strong> — Decoração escritório pronta</span></div>
+          <div style="display:flex;gap:10px;align-items:center"><div style="width:12px;height:12px;border-radius:3px;background:var(--g);flex-shrink:0"></div><span style="font-size:13px;color:var(--w70)"><strong style="color:var(--g)">08/06</strong> — ⭐ Reunião gerencial — aprovação do plano</span></div>
+          <div style="display:flex;gap:10px;align-items:center"><div style="width:12px;height:12px;border-radius:3px;background:var(--o);flex-shrink:0"></div><span style="font-size:13px;color:var(--w70)"><strong style="color:var(--o)">13/06</strong> — ⚽ 1º jogo do Brasil — conteúdo no ar</span></div>
+          <div style="display:flex;gap:10px;align-items:center"><div style="width:12px;height:12px;border-radius:3px;background:var(--o);flex-shrink:0"></div><span style="font-size:13px;color:var(--w70)"><strong style="color:var(--o)">28/06</strong> — 🎆 São João — ação especial</span></div>
+          <div style="display:flex;gap:10px;align-items:center"><div style="width:12px;height:12px;border-radius:3px;background:rgba(255,255,255,.2);flex-shrink:0"></div><span style="font-size:13px;color:var(--w50)">Semana 09/06 — visita Granja Naro</span></div>
+        </div>
+      </div>
+      <!-- JULHO -->
+      <div>
+        <div class="cal-month-title">Julho 2026</div>
+        <table class="cal">
+          <tr><th>Seg</th><th>Ter</th><th>Qua</th><th>Qui</th><th>Sex</th><th>Sáb</th><th>Dom</th></tr>
+          <tr>
+            <td class="off-month">—</td><td class="off-month">—</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+          </tr>
+          <tr>
+            <td>6</td><td>7</td><td>8</td><td>9</td><td class="event-g">10<div class="cal-event-dot g"></div></td><td>11</td><td>12</td>
+          </tr>
+          <tr>
+            <td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td>
+          </tr>
+          <tr>
+            <td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td>
+          </tr>
+          <tr>
+            <td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td class="off-month">—</td><td class="off-month">—</td>
+          </tr>
+        </table>
+        <!-- Legenda Julho -->
+        <div style="margin-top:14px;display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;gap:10px;align-items:center"><div style="width:12px;height:12px;border-radius:3px;background:var(--g);flex-shrink:0"></div><span style="font-size:13px;color:var(--w70)"><strong style="color:var(--g)">10/07</strong> — 📊 Revisão de resultados Jun + ajuste de verba</span></div>
+          <div style="display:flex;gap:10px;align-items:center"><div style="width:12px;height:12px;border-radius:3px;background:rgba(255,255,255,.2);flex-shrink:0"></div><span style="font-size:13px;color:var(--w50)">Copa: fase decisiva — conteúdo de latência</span></div>
+          <div style="display:flex;gap:10px;align-items:center"><div style="width:12px;height:12px;border-radius:3px;background:rgba(255,255,255,.2);flex-shrink:0"></div><span style="font-size:13px;color:var(--w50)">Programa de parceiros operando</span></div>
+          <div style="display:flex;gap:10px;align-items:center"><div style="width:12px;height:12px;border-radius:3px;background:rgba(255,255,255,.2);flex-shrink:0"></div><span style="font-size:13px;color:var(--w50)">Avaliação: crescer verba ou manter</span></div>
         </div>
       </div>
     </div>
-    <p class="slide-footer-dark">Vizantu Gestão de Marca · TerraNet · 2026</p>
-  </section>
+  </div>
+  <p class="sfoot dark-foot">TerraNet · Plano de Marketing Jun–Jul 2026</p>
+</section>
+
+<!-- ═══ S13 — TIME & PRÓXIMOS PASSOS ═══ -->
+<section class="slide dark" id="s13">
+  <div class="sh" style="border-color:var(--w10)">
+    <span class="sh-label">Time & O que aprovar agora</span>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAQ4CAYAAADo08FDAAAACXBIWXMAAAsSAAALEgHS3X78AAAgAElEQVR4nOzd71Ec17bG4eVT5zvKQJydANwIhCMQjkA4AuMIPIrgyhF4FIFRBHfIABJYFyK4EIHuh2nVkX30hxm6Z/eseZ4qVanKNLzlYihJv+ndP3z8+DEAAAAAAAAA2H//6D0AAAAAAAAAgHEIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQjAAAAAAAAAAEUIwAAAAAAAAABFCMAAAAAAAAAARQ" alt="TerraNet" class="logo-img-sm">
+  </div>
+  <div class="sb">
+    <h2 class="h2">Cada um tem seu <em>papel.</em> Vamos juntos.</h2>
+    <div class="c4" style="flex:0">
+      <div class="pcard">
+        <div class="pavatar" style="background:linear-gradient(135deg,var(--g),var(--gd))">B</div>
+        <div class="pname">Bruno Hoobert</div>
+        <div class="prole">Head de Marketing</div>
+        <div class="ptasks">
+          <div class="ptask">📹 Gravações e field content</div>
+          <div class="ptask">📱 Stories diários</div>
+          <div class="ptask">🌾 Visita Granja Naro</div>
+          <div class="ptask">🎉 Decoração interna</div>
+        </div>
+      </div>
+      <div class="pcard">
+        <div class="pavatar" style="background:linear-gradient(135deg,var(--slate),#2a3d35)">I</div>
+        <div class="pname">Ianka Kamynsk</div>
+        <div class="prole">Porta-voz Técnica</div>
+        <div class="ptasks">
+          <div class="ptask">🎙️ Vídeos de viabilidade</div>
+          <div class="ptask">💰 Definição de preços</div>
+          <div class="ptask">📊 Análise competitiva</div>
+        </div>
+      </div>
+      <div class="pcard">
+        <div class="pavatar" style="background:linear-gradient(135deg,#3d5470,#2a3a50)">W</div>
+        <div class="pname">Wesley Fernando</div>
+        <div class="prole">Suporte & Operações</div>
+        <div class="ptasks">
+          <div class="ptask">⚡ Testes de latência</div>
+          <div class="ptask">🏗️ Infra Perolândia</div>
+          <div class="ptask">🌐 Domínio Nets</div>
+        </div>
+      </div>
+      <div class="pcard" style="border-color:rgba(71,168,26,.35);background:rgba(71,168,26,.06)">
+        <div class="pavatar" style="background:linear-gradient(135deg,var(--o),var(--od))">V</div>
+        <div class="pname" style="color:var(--wh)">Vizantu</div>
+        <div class="prole">Estratégia & Criação</div>
+        <div class="ptasks">
+          <div class="ptask">✍️ Copy e roteiros</div>
+          <div class="ptask">📣 Tráfego pago</div>
+          <div class="ptask">📅 Cronograma semanal</div>
+          <div class="ptask">📊 Relatórios mensais</div>
+        </div>
+      </div>
+    </div>
+    <div class="abox" style="flex:1;display:flex;flex-direction:column;justify-content:center">
+      <p style="font-size:13px;font-weight:700;color:var(--g);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px">Para aprovar na reunião do dia 08/06</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <div style="display:flex;gap:10px;align-items:flex-start"><span style="color:var(--o);font-size:18px;line-height:1">→</span><span style="font-size:15px;color:var(--w70)"><strong style="color:var(--wh)">2 propostas de promoção</strong> (R$89,90 ou menor para bater concorrente)</span></div>
+        <div style="display:flex;gap:10px;align-items:flex-start"><span style="color:var(--o);font-size:18px;line-height:1">→</span><span style="font-size:15px;color:var(--w70)"><strong style="color:var(--wh)">Orçamento tráfego</strong> R$1.000/mês inicial — cresce com resultado</span></div>
+        <div style="display:flex;gap:10px;align-items:flex-start"><span style="color:var(--o);font-size:18px;line-height:1">→</span><span style="font-size:15px;color:var(--w70)"><strong style="color:var(--wh)">Equipamentos:</strong> iPhone 17 Pro Max + Hollyland para Bruno</span></div>
+        <div style="display:flex;gap:10px;align-items:flex-start"><span style="color:var(--o);font-size:18px;line-height:1">→</span><span style="font-size:15px;color:var(--w70)"><strong style="color:var(--wh)">Estrutura do Programa de Parceiros</strong> — modelo e remuneração</span></div>
+      </div>
+    </div>
+  </div>
+  <p class="sfoot dark-foot" style="color:var(--w50)">Vizantu Gestão de Marca · TerraNet · 2026</p>
+</section>
 
 </div><!-- /deck -->
 
 <script>
-  const slides = document.querySelectorAll('.slide');
-  const total = slides.length;
-  let current = 0;
-
-  function goTo(index) {
-    slides[current].classList.remove('active');
-    current = Math.max(0, Math.min(index, total - 1));
-    slides[current].classList.add('active');
-
-    document.getElementById('progress-bar').style.width = ((current + 1) / total * 100) + '%';
-    document.getElementById('slide-counter').textContent =
-      String(current + 1).padStart(2,'0') + ' / ' + String(total).padStart(2,'0');
-
-    document.getElementById('btn-prev').disabled = current === 0;
-    document.getElementById('btn-next').disabled = current === total - 1;
-  }
-
-  function changeSlide(dir) { goTo(current + dir); }
-
-  document.addEventListener('keydown', e => {
-    if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') changeSlide(1);
-    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') changeSlide(-1);
-  });
-
-  // Touch swipe
-  let touchStart = 0;
-  document.addEventListener('touchstart', e => touchStart = e.touches[0].clientX);
-  document.addEventListener('touchend', e => {
-    const diff = touchStart - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 50) changeSlide(diff > 0 ? 1 : -1);
-  });
-
-  goTo(0);
+const slides=document.querySelectorAll('.slide');
+const N=slides.length;
+let cur=0;
+function goTo(i){
+  slides[cur].classList.remove('active');
+  cur=Math.max(0,Math.min(i,N-1));
+  slides[cur].classList.add('active');
+  document.getElementById('pbar').style.width=((cur+1)/N*100)+'%';
+  document.getElementById('pctr').textContent=String(cur+1).padStart(2,'0')+' / '+String(N).padStart(2,'0');
+  document.getElementById('btnp').disabled=cur===0;
+  document.getElementById('btnn').disabled=cur===N-1;
+}
+function go(d){goTo(cur+d);}
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight'||e.key==='ArrowDown'||e.key===' ')go(1);
+  if(e.key==='ArrowLeft'||e.key==='ArrowUp')go(-1);
+});
+let tx=0;
+document.addEventListener('touchstart',e=>tx=e.touches[0].clientX);
+document.addEventListener('touchend',e=>{const d=tx-e.changedTouches[0].clientX;if(Math.abs(d)>50)go(d>0?1:-1);});
+goTo(0);
 </script>
 </body>
 </html>
