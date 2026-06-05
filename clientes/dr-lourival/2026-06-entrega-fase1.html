@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Lourival Lobo — Entrega Fase 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --blue:#1B4FCC;
+  --blue-dark:#0D2F8A;
+  --blue-bg:#EBF0FF;
+  --blue-border:#C8D8FF;
+  --orange:#F4722B;
+  --orange-bg:#FEF0E8;
+  --orange-border:#F4B896;
+  --gold:#FFB800;
+  --gold-bg:#FFF8E0;
+  --navy:#0A1628;
+  --dark:#1A2840;
+  --med:#5C6E8A;
+  --light:#9BAABF;
+  --bg:#FFFFFF;
+  --surface:#F4F7FF;
+  --cream:#FFF8F0;
+  --border:#DDE6FF;
+  --green:#15714A;
+  --green-bg:#E8F8F0;
+  --font:'Inter',system-ui,sans-serif;
+}
+
+html,body{height:100%;overflow:hidden;font-family:var(--font);background:#fff;color:var(--dark);-webkit-font-smoothing:antialiased}
+
+/* ── TOPBAR ── */
+.bar{position:fixed;top:0;left:0;right:0;height:58px;background:#fff;border-bottom:2px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 48px;z-index:200}
+.bar-brand{display:flex;align-items:center;gap:12px}
+.bar-dot{width:10px;height:10px;border-radius:5px;background:var(--blue)}
+.bar-name{font-size:13px;font-weight:800;letter-spacing:.04em;color:var(--navy);text-transform:uppercase}
+.bar-right{display:flex;align-items:center;gap:20px}
+.bar-tag{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--light)}
+.bar-num{font-size:13px;font-weight:700;color:var(--light)}
+
+/* ── DECK ── */
+.deck{position:fixed;top:58px;left:0;right:0;bottom:62px}
+.slide{position:absolute;inset:0;opacity:0;transform:translateX(48px);transition:opacity .38s ease,transform .4s ease;pointer-events:none;display:flex;flex-direction:column;justify-content:center}
+.slide.active{opacity:1;transform:none;pointer-events:all}
+.slide.out{opacity:0;transform:translateX(-48px)}
+
+/* ── BOTTOM ── */
+.bnav{position:fixed;bottom:0;left:0;right:0;height:62px;background:#fff;border-top:2px solid var(--border);display:flex;align-items:center;justify-content:center;gap:32px;z-index:200}
+.dots{display:flex;gap:7px;align-items:center;flex-wrap:wrap;max-width:600px;justify-content:center}
+.dot{width:6px;height:6px;border-radius:3px;background:var(--border);cursor:pointer;transition:all .22s}
+.dot.active{width:22px;background:var(--blue)}
+.btn{width:40px;height:40px;border-radius:50%;border:2px solid var(--border);background:#fff;color:var(--dark);cursor:pointer;font-size:15px;transition:all .18s;display:flex;align-items:center;justify-content:center}
+.btn:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+
+/* ── LAYOUT ── */
+.si{padding:44px 64px;width:100%;height:100%;display:flex;flex-direction:column;justify-content:center}
+.si.top{justify-content:flex-start;padding-top:38px}
+
+/* ── TYPE ── */
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+.eyebrow.orange{color:var(--orange)}
+.slide-h{font-size:40px;font-weight:900;line-height:1.08;color:var(--dark)}
+.slide-h.big{font-size:52px}
+.slide-sub{font-size:16px;color:var(--med);line-height:1.65;max-width:700px;margin-top:8px}
+.rule{width:40px;height:4px;background:var(--blue);border-radius:2px;margin:14px 0 0}
+.rule.orange{background:var(--orange)}
+
+/* ── CHIPS ── */
+.chip{display:inline-flex;align-items:center;padding:4px 11px;border-radius:4px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;width:fit-content}
+.c-blue{background:var(--blue-bg);color:var(--blue)}
+.c-orange{background:var(--orange-bg);color:var(--orange)}
+.c-gold{background:var(--gold-bg);color:#A07000}
+.c-green{background:var(--green-bg);color:var(--green)}
+.c-grey{background:var(--surface);color:var(--med)}
+
+/* ── CARDS ── */
+.card{background:var(--surface);border:1.5px solid var(--border);border-radius:10px;padding:26px}
+.card.blue{border-color:var(--blue);background:var(--blue-bg)}
+.card.orange{border-color:var(--orange);background:var(--orange-bg)}
+.card.gold{border-color:var(--gold);background:var(--gold-bg)}
+.card.cream{background:var(--cream);border-color:#F0DEC8}
+
+/* ── BIG STAT ── */
+.sn{font-size:50px;font-weight:900;line-height:1}
+.sn.blue{color:var(--blue)}.sn.orange{color:var(--orange)}.sn.gold{color:var(--gold)}
+.sl{font-size:13px;font-weight:600;color:var(--med);margin-top:5px}
+.ss{font-size:12px;color:var(--light);margin-top:2px}
+
+/* ── METRIC ── */
+.mv{font-size:28px;font-weight:800;color:var(--dark)}
+.mv.blue{color:var(--blue)}.mv.orange{color:var(--orange)}.mv.green{color:var(--green)}
+.ml{font-size:12px;color:var(--light);margin-top:3px}
+
+/* ── INSIGHT LIST ── */
+.il{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--med);line-height:1.55}
+.il:last-child{border:none;padding-bottom:0}
+.ib{width:6px;height:6px;border-radius:50%;margin-top:6px;flex-shrink:0}
+.ib.b{background:var(--blue)}.ib.o{background:var(--orange)}.ib.g{background:var(--green)}.ib.a{background:var(--gold)}
+
+/* ── QUOTE ── */
+.qt{border-left:4px solid var(--blue);padding:14px 20px;background:var(--blue-bg);border-radius:0 8px 8px 0;font-size:14px;color:var(--dark);font-style:italic;line-height:1.65}
+.qt.orange{border-color:var(--orange);background:var(--orange-bg)}
+.qt-src{font-size:12px;font-weight:700;color:var(--med);margin-top:8px;font-style:normal}
+
+/* ── TABLE ── */
+.tbl{width:100%;border-collapse:collapse;font-size:13px}
+.tbl th{text-align:left;padding:10px 14px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--light);border-bottom:2px solid var(--border)}
+.tbl td{padding:12px 14px;border-bottom:1px solid var(--border);color:var(--dark);vertical-align:top;line-height:1.5}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:hover td{background:var(--surface)}
+
+/* ── CONTENT ITEM ── */
+.ci{background:#fff;border:1.5px solid var(--border);border-left:4px solid var(--blue);border-radius:0 8px 8px 0;padding:14px 16px;display:flex;flex-direction:column;gap:7px}
+.ci.orange{border-left-color:var(--orange)}
+.ci.gold{border-left-color:var(--gold)}
+.ci.green{border-left-color:var(--green)}
+.ci-nm{font-size:13px;font-weight:600;color:var(--dark);line-height:1.35}
+
+/* ── CAPA ── */
+.capa{display:flex;height:100%}
+.capa-l{width:44%;background:var(--blue);display:flex;flex-direction:column;justify-content:flex-end;padding:64px 56px;position:relative;overflow:hidden}
+.capa-bg{position:absolute;inset:0;background:linear-gradient(145deg,var(--blue-dark) 0%,var(--blue) 60%,#2D6AFF 100%)}
+.capa-circle{position:absolute;width:340px;height:340px;border-radius:50%;background:rgba(255,255,255,.06);bottom:-80px;right:-80px}
+.capa-circle2{position:absolute;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.04);top:40px;right:60px}
+.capa-phase{position:relative;font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:16px}
+.capa-brand{position:relative;font-size:14px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:6px}
+.capa-name{position:relative;font-size:52px;font-weight:900;color:#fff;line-height:1.0;letter-spacing:-.02em}
+.capa-accent{color:var(--gold)}
+.capa-r{flex:1;display:flex;flex-direction:column;justify-content:center;padding:72px 64px}
+.capa-label{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--light);margin-bottom:10px}
+.capa-title{font-size:32px;font-weight:900;color:var(--dark);line-height:1.1;margin-bottom:6px}
+.capa-sub-txt{font-size:14px;color:var(--med);line-height:1.6;margin-bottom:28px;max-width:360px}
+.capa-divider{width:1px;height:48px;background:var(--border);margin:24px 0}
+.capa-meta{display:flex;flex-direction:column;gap:9px;font-size:14px;color:var(--light)}
+.capa-meta span{display:flex;align-items:center;gap:8px}
+.capa-meta b{color:var(--med)}
+
+/* ── FASE PILL ── */
+.fase-pill{display:flex;align-items:center;gap:16px;background:var(--surface);border:1.5px solid var(--border);border-radius:100px;padding:10px 24px;width:fit-content}
+.fase-dot{width:12px;height:12px;border-radius:50%;background:var(--border);flex-shrink:0}
+.fase-dot.active{background:var(--blue)}
+.fase-dot.done{background:var(--green)}
+.fase-lbl{font-size:13px;font-weight:600;color:var(--med)}
+.fase-lbl.active{color:var(--blue);font-weight:700}
+.fase-sep{width:32px;height:2px;background:var(--border)}
+
+/* ── PAUTA CARD ── */
+.pc{background:#fff;border:1.5px solid var(--border);border-radius:10px;padding:24px 22px}
+.pc-icon{font-size:30px;margin-bottom:12px}
+.pc-title{font-size:15px;font-weight:800;color:var(--dark);margin-bottom:8px;line-height:1.3}
+.pc-desc{font-size:13px;color:var(--med);line-height:1.6}
+
+/* ── COMPETITOR ROW ── */
+.comp-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:24px}
+.comp-card{background:#fff;border:1.5px solid var(--border);border-radius:10px;padding:22px}
+.comp-card.hl{border-color:var(--blue);border-width:2px;background:var(--blue-bg)}
+.comp-name{font-size:16px;font-weight:800;color:var(--dark);margin-bottom:4px}
+.comp-role{font-size:12px;color:var(--light);margin-bottom:14px}
+.comp-row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--border);font-size:12px}
+.comp-row:last-child{border:none}
+.comp-key{color:var(--light);font-weight:500}
+.comp-val{color:var(--dark);font-weight:600;text-align:right;max-width:160px}
+
+/* ── IMAGE MOCKUP ── */
+.phone-wrap{display:flex;gap:16px;align-items:flex-start;justify-content:center}
+.phone-img{height:260px;width:auto;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.12);object-fit:cover}
+.phone-img.tall{height:300px}
+
+/* ── STEP ── */
+.step{display:flex;gap:20px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--border)}
+.step:last-child{border:none}
+.step-num{width:32px;height:32px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.step-num.orange{background:var(--orange)}
+.step-body{flex:1}
+.step-title{font-size:15px;font-weight:700;color:var(--dark);margin-bottom:3px}
+.step-desc{font-size:13px;color:var(--med);line-height:1.55}
+
+/* ── FINDING ── */
+.finding{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid var(--border)}
+.finding:last-child{border:none}
+.find-n{width:28px;height:28px;border-radius:6px;background:var(--blue-bg);color:var(--blue);font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.find-body{flex:1}
+.find-title{font-size:14px;font-weight:700;color:var(--dark);margin-bottom:2px}
+.find-desc{font-size:13px;color:var(--med);line-height:1.5}
+
+/* ── ATENCAO CARD ── */
+.alert-card{background:#fff;border:1.5px solid var(--border);border-radius:10px;padding:22px}
+.alert-card.warn{border-top:4px solid var(--orange)}
+.alert-icon{font-size:24px;margin-bottom:10px}
+.alert-title{font-size:14px;font-weight:800;color:var(--dark);margin-bottom:6px}
+.alert-desc{font-size:13px;color:var(--med);line-height:1.55}
+
+/* ── NEXT STEPS ── */
+.ns-card{background:#fff;border:1.5px solid var(--border);border-radius:10px;padding:26px;display:flex;gap:18px;align-items:flex-start}
+.ns-badge{width:44px;height:44px;border-radius:10px;background:var(--blue-bg);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.ns-title{font-size:15px;font-weight:800;color:var(--dark);margin-bottom:4px}
+.ns-desc{font-size:13px;color:var(--med);line-height:1.55}
+
+/* ── COVER ── */
+.cover-slide{background:var(--navy);height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:64px}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="bar">
+  <div class="bar-brand">
+    <div class="bar-dot"></div>
+    <span class="bar-name">Dr. Lourival Lobo</span>
+  </div>
+  <div class="bar-right">
+    <span class="bar-tag">Gestão Vizantu</span>
+    <span class="bar-num" id="counter">1 / 23</span>
+  </div>
+</div>
+
+<div class="deck" id="deck">
+
+<!-- ═══ 1 · CAPA ═══ -->
+<div class="slide active">
+  <div class="capa">
+    <div class="capa-l">
+      <div class="capa-bg"></div>
+      <div class="capa-circle"></div>
+      <div class="capa-circle2"></div>
+      <div class="capa-phase">Vizantu — Gestão de Marca</div>
+      <div class="capa-brand">Dr. Lourival Lobo</div>
+      <div class="capa-name">FASE <span class="capa-accent">01</span><br>ENTREGUE.</div>
+    </div>
+    <div class="capa-r">
+      <div class="capa-label">Entrega estratégica</div>
+      <div class="capa-title">Criação de Marca —<br>Visão do Cenário</div>
+      <div class="capa-sub-txt">Diagnóstico completo: entrevistas, pesquisas, análise de mercado e produto. A base da candidatura está mapeada.</div>
+      <div class="capa-divider"></div>
+      <div class="capa-meta">
+        <span>📅 <b>Período:</b> 25 Abr — 09 Jun 2026</span>
+        <span>🗳️ <b>Candidatura:</b> Deputado Estadual — Goiás</span>
+        <span>🏥 <b>Partido:</b> Podemos 20</span>
+        <span>📍 <b>Base:</b> Mineiros, GO — Sudoeste de Goiás</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 2 · SUMÁRIO ═══ -->
+<div class="slide">
+  <div class="si">
+    <div class="eyebrow">Fase 1 — Junho 2026</div>
+    <div class="slide-h">O que vamos apresentar</div>
+    <div class="rule"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px">
+      <div class="ci"><div class="chip c-blue">Diagnóstico</div><div class="ci-nm">01 — Nossa metodologia de criação de marca</div></div>
+      <div class="ci"><div class="chip c-blue">Diagnóstico</div><div class="ci-nm">02 — As entrevistas: quem entrevistamos</div></div>
+      <div class="ci"><div class="chip c-blue">Diagnóstico</div><div class="ci-nm">03 — O que as pessoas veem: pessoal, médico, candidato</div></div>
+      <div class="ci orange"><div class="chip c-orange">Diagnóstico</div><div class="ci-nm">04 — Pontos de atenção identificados</div></div>
+      <div class="ci orange"><div class="chip c-orange">Mercado</div><div class="ci-nm">05 — O cenário político de Mineiros</div></div>
+      <div class="ci orange"><div class="chip c-orange">Mercado</div><div class="ci-nm">06 — Análise de concorrentes</div></div>
+      <div class="ci gold"><div class="chip c-gold">Produto</div><div class="ci-nm">07 — O médico + o candidato: quem é Lourival</div></div>
+      <div class="ci gold"><div class="chip c-gold">Produto</div><div class="ci-nm">08 — As 4 pautas confirmadas da campanha</div></div>
+      <div class="ci green"><div class="chip c-green">Entregas</div><div class="ci-nm">09 — Tudo que foi produzido na Fase 1</div></div>
+      <div class="ci green"><div class="chip c-green">Próximos passos</div><div class="ci-nm">10 — O que vem na Fase 2</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 3 · METODOLOGIA ═══ -->
+<div class="slide">
+  <div class="si">
+    <div class="eyebrow">Como trabalhamos</div>
+    <div class="slide-h">Nossa metodologia de marca</div>
+    <div class="rule"></div>
+    <div class="slide-sub">Toda criação de marca na Vizantu passa por três fases. Cada fase entrega um produto e alimenta a próxima.</div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:32px">
+      <div class="card blue" style="border-width:2px;position:relative">
+        <div style="position:absolute;top:16px;right:16px"><div class="chip c-blue">Fase atual</div></div>
+        <div style="font-size:40px;font-weight:900;color:var(--blue);opacity:.2;margin-bottom:8px;line-height:1">01</div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:8px">Diagnóstico</div>
+        <div style="font-size:17px;font-weight:800;color:var(--dark);margin-bottom:12px">Visão do Cenário</div>
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div class="il" style="padding:6px 0"><div class="ib b"></div><span>Entrevistas com apoiadores, pacientes e família</span></div>
+          <div class="il" style="padding:6px 0"><div class="ib b"></div><span>Pesquisa de mercado e cenário político</span></div>
+          <div class="il" style="padding:6px 0;border:none"><div class="ib b"></div><span>Mapeamento de produto: o médico e o candidato</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div style="font-size:40px;font-weight:900;color:var(--border);margin-bottom:8px;line-height:1">02</div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-bottom:8px">Estratégia de Marca</div>
+        <div style="font-size:17px;font-weight:800;color:var(--dark);margin-bottom:12px">Visão Criativa</div>
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div class="il" style="padding:6px 0"><div class="ib b" style="background:var(--border)"></div><span style="color:var(--light)">Plataforma de marca</span></div>
+          <div class="il" style="padding:6px 0"><div class="ib b" style="background:var(--border)"></div><span style="color:var(--light)">Posicionamento</span></div>
+          <div class="il" style="padding:6px 0;border:none"><div class="ib b" style="background:var(--border)"></div><span style="color:var(--light)">Identidade verbal</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div style="font-size:40px;font-weight:900;color:var(--border);margin-bottom:8px;line-height:1">03</div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-bottom:8px">Manual de Marca</div>
+        <div style="font-size:17px;font-weight:800;color:var(--dark);margin-bottom:12px">Visão Definitiva</div>
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div class="il" style="padding:6px 0"><div class="ib b" style="background:var(--border)"></div><span style="color:var(--light)">Estratégia consolidada</span></div>
+          <div class="il" style="padding:6px 0"><div class="ib b" style="background:var(--border)"></div><span style="color:var(--light)">Identidade visual e verbal</span></div>
+          <div class="il" style="padding:6px 0;border:none"><div class="ib b" style="background:var(--border)"></div><span style="color:var(--light)">Moodboard e aplicações</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:18px;padding:14px 20px;background:var(--blue-bg);border-radius:8px;font-size:14px;color:var(--blue);font-weight:600;border-left:4px solid var(--blue)">
+      ✅ &nbsp;A Fase 1 está completa. Hoje entregamos o que encontramos e o que isso significa para a marca do Dr. Lourival.
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 4 · AS ENTREVISTAS ═══ -->
+<div class="slide">
+  <div class="si top">
+    <div class="eyebrow">Diagnóstico — Entrevistas</div>
+    <div class="slide-h">Quem ouvimos</div>
+    <div class="rule"></div>
+    <div class="slide-sub">5 entrevistas realizadas entre 22 e 28 de maio de 2026. Perfis selecionados pelo próprio Dr. Lourival.</div>
+    <table class="tbl" style="margin-top:24px">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Relação com o doutor</th>
+          <th>Perfil</th>
+          <th>Tempo de relação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>Antônio Batista</b></td>
+          <td>Amigo da mesma igreja. Netos são pacientes.</td>
+          <td><span class="chip c-blue">Apoiador / Paciente</span></td>
+          <td>~11 anos</td>
+        </tr>
+        <tr>
+          <td><b>Christofer Cruz</b></td>
+          <td>Pastor auxiliar da igreja do doutor</td>
+          <td><span class="chip c-blue">Líder religioso / Apoiador</span></td>
+          <td>~8 anos</td>
+        </tr>
+        <tr>
+          <td><b>Claudeline Almeida</b></td>
+          <td>Paciente — filhos atendidos desde o nascimento</td>
+          <td><span class="chip c-green">Paciente / Apoiadora</span></td>
+          <td>~15 anos</td>
+        </tr>
+        <tr>
+          <td><b>Paulo Júnior Lívia</b></td>
+          <td>Primo. Também pediatra em Mineiros.</td>
+          <td><span class="chip c-orange">Família / Colega de profissão</span></td>
+          <td>Vida toda</td>
+        </tr>
+        <tr>
+          <td><b>Wendel — Agrocampo</b></td>
+          <td>Amigo, ex-cliente rural, filhas são pacientes</td>
+          <td><span class="chip c-gold">Parceiro de negócio / Paciente</span></td>
+          <td>~10 anos</td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="margin-top:18px;padding:13px 18px;background:var(--surface);border-radius:8px;font-size:13px;color:var(--med);border-left:3px solid var(--blue)">
+      <b style="color:var(--dark)">Por que esses perfis?</b> — A metodologia exige visão de fora: quem convive com o doutor no dia a dia percebe coisas que o próprio candidato não vê sobre si mesmo. Essas entrevistas constroem a percepção real, não a percepção declarada.
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 5 · PERCEPÇÃO: A PESSOA ═══ -->
+<div class="slide">
+  <div class="si">
+    <div class="eyebrow">Diagnóstico — Entrevistas</div>
+    <div class="slide-h">O que viram: a pessoa</div>
+    <div class="rule"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px">
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-bottom:14px">Adjetivos que apareceram em todas as entrevistas</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px">
+          <span class="chip c-blue" style="font-size:13px;padding:6px 14px">Honesto</span>
+          <span class="chip c-blue" style="font-size:13px;padding:6px 14px">Carismático</span>
+          <span class="chip c-blue" style="font-size:13px;padding:6px 14px">Humilde</span>
+          <span class="chip c-blue" style="font-size:13px;padding:6px 14px">Confiável</span>
+          <span class="chip c-blue" style="font-size:13px;padding:6px 14px">Acessível</span>
+          <span class="chip c-blue" style="font-size:13px;padding:6px 14px">Simples</span>
+          <span class="chip c-blue" style="font-size:13px;padding:6px 14px">Comprometido</span>
+        </div>
+        <div class="qt">
+          "Se você o conhece na rua sem saber que é médico, não imaginaria pela simplicidade e humildade dele."
+          <div class="qt-src">— Christofer Cruz, pastor</div>
+        </div>
+        <div class="qt" style="margin-top:12px">
+          "Caminhonete 1990. Ele chega assim e está completamente à vontade com isso. Não é materialista, é um cara que quer cuidar."
+          <div class="qt-src">— Wendel, Agrocampo</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-bottom:14px">Sobre fé e família</div>
+        <div class="qt orange">
+          "O que ele deve manter é o compromisso com Deus, a força na família, o carisma e a humildade que já tem."
+          <div class="qt-src" style="color:var(--orange)">— Antônio Batista, amigo da igreja</div>
+        </div>
+        <div class="qt orange" style="margin-top:12px">
+          "Eu vejo no Lorival comprometimento com Cristo e com o bem-estar da sociedade. Alguém que realmente quer fazer diferença."
+          <div class="qt-src" style="color:var(--orange)">— Christofer Cruz, pastor auxiliar</div>
+        </div>
+        <div style="margin-top:16px;padding:13px 16px;background:var(--surface);border-radius:8px;font-size:13px;color:var(--med)">
+          💡 <b style="color:var(--dark)">O que isso significa:</b> A fé não é pano de fundo — é motivação declarada por todos. Aparece sem ser perguntada. É genuína.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 6 · PERCEPÇÃO: O MÉDICO ═══ -->
+<div class="slide">
+  <div class="si">
+    <div class="eyebrow">Diagnóstico — Entrevistas</div>
+    <div class="slide-h">O que viram: o médico</div>
+    <div class="rule"></div>
+    <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:28px;margin-top:28px">
+      <div>
+        <div class="qt">
+          "Ele olha e sabe. Não sei se é pela experiência ou por gostar da profissão, mas ele olha e sabe o que é. Outras vezes a gente rodou por vários médicos e quando finalmente chegava ao doutor, ele resolvia."
+          <div class="qt-src">— Wendel, pai de pacientes</div>
+        </div>
+        <div class="qt" style="margin-top:12px">
+          "Nunca tive problemas com os tratamentos. Ele sempre me deu suporte necessário via telefone. Eu tenho um carinho muito especial por ele."
+          <div class="qt-src">— Claudeline, paciente há 15 anos</div>
+        </div>
+        <div class="qt" style="margin-top:12px">
+          "Já vi esse cara fazer muita coisa que você fala: cara, eu não daria conta de fazer não. Ele tem um cuidado extraordinário."
+          <div class="qt-src">— Paulo Júnior, primo e pediatra</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-bottom:14px">O que os pacientes percebem</div>
+        <div style="display:flex;flex-direction:column;gap:0">
+          <div class="il"><div class="ib b"></div><span><b style="color:var(--dark)">Diagnóstico preciso</b> — acerta quando outros erram</span></div>
+          <div class="il"><div class="ib b"></div><span><b style="color:var(--dark)">Suporte contínuo</b> — atende por telefone fora do consultório</span></div>
+          <div class="il"><div class="ib b"></div><span><b style="color:var(--dark)">Empatia com as mães</b> — presente no momento de aflição</span></div>
+          <div class="il"><div class="ib b"></div><span><b style="color:var(--dark)">15 anos de histórico</b> — Claudeline trouxe os filhos desde o nascimento</span></div>
+          <div class="il" style="border:none"><div class="ib b"></div><span><b style="color:var(--dark)">O medo de perdê-lo</b> — pacientes têm medo que ele saia do consultório</span></div>
+        </div>
+        <div style="margin-top:16px;padding:13px 16px;background:var(--orange-bg);border-radius:8px;font-size:13px;color:var(--med);border-left:3px solid var(--orange)">
+          ⚠️ <b style="color:var(--dark)">Atenção:</b> A credibilidade de médico é o ativo mais valioso da candidatura — e também a principal ansiedade dos apoiadores mais próximos.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 7 · PERCEPÇÃO: O CANDIDATO ═══ -->
+<div class="slide">
+  <div class="si">
+    <div class="eyebrow">Diagnóstico — Entrevistas</div>
+    <div class="slide-h">O que viram: o candidato</div>
+    <div class="rule"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px">
+      <div>
+        <div class="qt orange">
+          "O despertar do Lourival para a política veio numa concepção de vocação cristã. Inspirado por Abraham Kuyper — pastor que se tornou primeiro-ministro da Holanda. Ele não entrou nisso por ambição."
+          <div class="qt-src" style="color:var(--orange)">— Christofer Cruz, pastor</div>
+        </div>
+        <div class="qt orange" style="margin-top:12px">
+          "O município travou ele. Antes de entrar na política, ele já era assim — queria fazer mais e a cidade limitava."
+          <div class="qt-src" style="color:var(--orange)">— Paulo Júnior, primo</div>
+        </div>
+        <div class="qt orange" style="margin-top:12px">
+          "Mesmo que não ganhe, ele vai ser visto. Abre portas para o futuro. Não é loucura — é estratégia."
+          <div class="qt-src" style="color:var(--orange)">— Wendel, Agrocampo</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-bottom:14px">O que todos concordaram</div>
+        <div style="display:flex;flex-direction:column;gap:0">
+          <div class="il"><div class="ib o"></div><span>Não entra na política por dinheiro — é movido por vocação</span></div>
+          <div class="il"><div class="ib o"></div><span>Pai foi político — cresceu acompanhando, é estrategista por herança</span></div>
+          <div class="il"><div class="ib o"></div><span>Quer mudar o que o consultório não alcança — saúde em escala</span></div>
+          <div class="il"><div class="ib o"></div><span>A candidatura tem valor de longo prazo — construção de reputação</span></div>
+          <div class="il" style="border:none"><div class="ib o"></div><span>Quem o conhece, apoia. O desafio é alcançar quem não o conhece ainda</span></div>
+        </div>
+        <div style="margin-top:16px;padding:13px 16px;background:var(--blue-bg);border-radius:8px;font-size:13px;color:var(--med);border-left:3px solid var(--blue)">
+          💡 <b style="color:var(--dark)">O achado mais importante:</b> Ninguém o descreveu como político. Todos o descreveram como médico, pai e cristão. A candidatura soa como progressão natural — não como oportunismo.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 8 · PONTOS DE ATENÇÃO ═══ -->
+<div class="slide">
+  <div class="si top">
+    <div class="eyebrow orange">Diagnóstico — Pontos de Atenção</div>
+    <div class="slide-h">O que precisa de cuidado</div>
+    <div class="rule orange"></div>
+    <div class="slide-sub">Estes não são defeitos — são sinais que apareceram espontaneamente em múltiplas entrevistas e que a marca precisa endereçar.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px">
+      <div class="alert-card warn">
+        <div class="alert-icon">🎯</div>
+        <div class="alert-title">Jogo de cintura na comunicação</div>
+        <div class="alert-desc">3 de 5 entrevistados citaram espontaneamente. O posicionamento forte pode gerar precipitação. A política exige estratégia — falar as coisas certas no momento certo, sem comprometer a integridade.</div>
+      </div>
+      <div class="alert-card warn">
+        <div class="alert-icon">🔒</div>
+        <div class="alert-title">Obstinação — força e vulnerabilidade</div>
+        <div class="alert-desc">"Ele decide uma coisa e não tem quem mude." (Paulo Júnior, primo). Em contextos certos, é firmeza de convicções. Em comunicação política, pode parecer arrogância para quem ainda não o conhece.</div>
+      </div>
+      <div class="alert-card warn">
+        <div class="alert-icon">💰</div>
+        <div class="alert-title">A barreira do "médico rico"</div>
+        <div class="alert-desc">"A falsa premissa de que médico é rico e não precisa de política." (Paulo Júnior). Eleitores de menor renda podem não votar por achar que ele não precisa. A história da campanha para prefeito — onde ficou no prejuízo — destrói essa barreira.</div>
+      </div>
+      <div class="alert-card warn">
+        <div class="alert-icon">😟</div>
+        <div class="alert-title">Pacientes com medo de perdê-lo</div>
+        <div class="alert-desc">A esposa de Wendel ficou brava. Claudeline tem o mesmo receio. A marca precisa responder isso com clareza: entrar na política é extensão do cuidado, não abandono. Ele não some do consultório — ele amplia o alcance.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 9 · CENÁRIO POLÍTICO ═══ -->
+<div class="slide">
+  <div class="si">
+    <div class="eyebrow">Mercado — Mineiros, GO</div>
+    <div class="slide-h">O cenário político</div>
+    <div class="rule"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px">
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-bottom:14px">Os números de Mineiros</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px">
+          <div class="card">
+            <div class="mv blue">~40k</div>
+            <div class="ml">Eleitores em Mineiros</div>
+          </div>
+          <div class="card">
+            <div class="mv orange">79,89%</div>
+            <div class="ml">Votos do prefeito em 2024</div>
+          </div>
+          <div class="card">
+            <div class="mv">~6k</div>
+            <div class="ml">Votos do Dr. em 2024 (prefeito)</div>
+          </div>
+          <div class="card blue">
+            <div class="mv blue">12k</div>
+            <div class="ml">Meta para deputado 2026</div>
+          </div>
+        </div>
+        <div style="padding:13px 16px;background:var(--blue-bg);border-radius:8px;font-size:13px;color:var(--med);border-left:3px solid var(--blue)">
+          💡 Para ser eleito deputado estadual por Goiás, são necessários entre <b style="color:var(--dark)">14.000 e 16.000 votos</b>. A estratégia precisa alcançar cidades da região além de Mineiros.
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-bottom:14px">Como os votos se distribuem</div>
+        <div style="display:flex;flex-direction:column;gap:0">
+          <div class="il"><div class="ib b"></div><span><b style="color:var(--dark)">Base do prefeito (~80%)</b> → dividida entre Ana Paula Rezende e Rosângela Rezende</span></div>
+          <div class="il"><div class="ib o"></div><span><b style="color:var(--dark)">Oposição organizada</b> → concentrada no Dr. Lourival. É onde estão os votos disponíveis.</span></div>
+          <div class="il" style="border:none"><div class="ib a"></div><span><b style="color:var(--dark)">3 candidatos de Mineiros</b> disputam o mesmo eleitorado. Fragmentação é o risco mais imediato.</span></div>
+        </div>
+        <div class="qt" style="margin-top:16px">
+          "O que motivou a minha candidatura foi a falta de atendimento de qualidade no interior resultando no óbito de crianças."
+          <div class="qt-src">— Dr. Lourival Lobo</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 10 · CONCORRENTES ═══ -->
+<div class="slide">
+  <div class="si top">
+    <div class="eyebrow">Mercado — Análise</div>
+    <div class="slide-h">Os concorrentes</div>
+    <div class="rule"></div>
+    <div class="comp-grid">
+      <div class="comp-card">
+        <div class="comp-name">Ana Paula Rezende</div>
+        <div class="comp-role">Primeira-dama de Mineiros · Dentista · Direito</div>
+        <div class="comp-row"><span class="comp-key">Apoio</span><span class="comp-val">Esposa do prefeito — máquina municipal</span></div>
+        <div class="comp-row"><span class="comp-key">Votos est.</span><span class="comp-val">Até 30.000 (base do prefeito)</span></div>
+        <div class="comp-row"><span class="comp-key">Pauta</span><span class="comp-val">Saúde, mulheres, causas sociais</span></div>
+        <div class="comp-row"><span class="comp-key">Autoridade</span><span class="comp-val">Cargo político / Governo</span></div>
+        <div class="comp-row"><span class="comp-key">Fragilidade</span><span class="comp-val">Candidatura-palanque. Pauta das mães é política, não vivência</span></div>
+      </div>
+      <div class="comp-card">
+        <div class="comp-name">Rosângela Rezende</div>
+        <div class="comp-role">Deputada estadual eleita em 2022 · Dentista</div>
+        <div class="comp-row"><span class="comp-key">Votos 2022</span><span class="comp-val">19.965 (47% de Mineiros ~9.400)</span></div>
+        <div class="comp-row"><span class="comp-key">Votos 2018</span><span class="comp-val">16.073 votos</span></div>
+        <div class="comp-row"><span class="comp-key">Família</span><span class="comp-val">Prima do prefeito — com tensão política</span></div>
+        <div class="comp-row"><span class="comp-key">Base</span><span class="comp-val">Saúde, infra, agro, histórico Rezende</span></div>
+        <div class="comp-row"><span class="comp-key">Fragilidade</span><span class="comp-val">Briga interna com o prefeito → fragmenta voto governista</span></div>
+      </div>
+      <div class="comp-card hl">
+        <div style="margin-bottom:4px"><span class="chip c-blue">Nossa aposta</span></div>
+        <div class="comp-name" style="margin-top:6px">Dr. Lourival Lobo</div>
+        <div class="comp-role">Pediatra · Professor · Podemos 20</div>
+        <div class="comp-row"><span class="comp-key">Base 2024</span><span class="comp-val">~6.000 votos (prefeito)</span></div>
+        <div class="comp-row"><span class="comp-key">Meta 2026</span><span class="comp-val">12.000 votos (deputado)</span></div>
+        <div class="comp-row"><span class="comp-key">Campo</span><span class="comp-val">Oposição + mães + saúde pública</span></div>
+        <div class="comp-row"><span class="comp-key">Autoridade</span><span class="comp-val">15 anos de consultório — prova real</span></div>
+        <div class="comp-row"><span class="comp-key">Vantagem</span><span class="comp-val">O único que faz política a partir do consultório pediátrico</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 11 · O PRODUTO: O MÉDICO ═══ -->
+<div class="slide">
+  <div class="si">
+    <div class="eyebrow">Produto — O Médico</div>
+    <div class="slide-h">Lourival como médico</div>
+    <div class="rule"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px">
+      <div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px">
+          <div class="card blue">
+            <div class="mv blue">15+</div>
+            <div class="ml">anos atendendo no sudoeste de GO</div>
+          </div>
+          <div class="card">
+            <div class="mv" style="font-size:22px;line-height:1.3">FAMP</div>
+            <div class="ml">Professor de medicina em Mineiros</div>
+          </div>
+        </div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-bottom:10px">A proposta de valor clínica</div>
+        <div class="card cream" style="margin-bottom:14px">
+          <div style="font-size:13px;font-style:italic;color:var(--dark);line-height:1.65;margin-bottom:8px">"Ajudo mães a ficarem tranquilas com uma abordagem de escuta ativa e atenta às necessidades."</div>
+          <div style="font-size:12px;font-weight:700;color:var(--light)">— Dr. Lourival Lobo</div>
+        </div>
+        <div style="display:flex;justify-content:space-between;gap:14px">
+          <div class="card" style="flex:1;text-align:center;padding:16px">
+            <div style="font-size:22px;margin-bottom:6px">😰</div>
+            <div style="font-size:12px;font-weight:700;color:var(--med)">Antes</div>
+            <div style="font-size:13px;color:var(--dark)">Chega aflita</div>
+          </div>
+          <div style="display:flex;align-items:center;color:var(--blue);font-size:20px">→</div>
+          <div class="card blue" style="flex:1;text-align:center;padding:16px">
+            <div style="font-size:22px;margin-bottom:6px">😌</div>
+            <div style="font-size:12px;font-weight:700;color:var(--blue)">Depois</div>
+            <div style="font-size:13px;color:var(--dark)">Sai tranquila</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-bottom:14px">O que define tudo</div>
+        <div style="background:var(--navy);border-radius:12px;padding:28px;text-align:center;margin-bottom:16px">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:10px">A palavra que define a marca</div>
+          <div style="font-size:52px;font-weight:900;color:var(--gold);line-height:1;margin-bottom:10px">ESPERANÇA</div>
+          <div style="font-size:13px;color:rgba(255,255,255,.6);line-height:1.6">Quando tiram qualidade, confiança e preço da equação — o que sobra é esperança. É isso que o doutor entrega.</div>
+        </div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-bottom:10px">Por que ele existe</div>
+        <div class="qt">
+          "Eu acredito que fui vocacionado para fazer o que eu faço. Tenho muita leveza em fazer isso — sempre foi leve. Sinto que é uma vocação."
+          <div class="qt-src">— Dr. Lourival Lobo</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 12 · O PRODUTO: O CANDIDATO ═══ -->
+<div class="slide">
+  <div class="si">
+    <div class="eyebrow orange">Produto — O Candidato</div>
+    <div class="slide-h">Lourival como candidato</div>
+    <div class="rule orange"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px">
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-bottom:10px">A motivação da candidatura</div>
+        <div class="qt orange" style="margin-bottom:16px">
+          "O que motivou a minha candidatura foi a falta de atendimento de qualidade no interior resultando no óbito de crianças, saber que poderia ser feito mais para evitar o pior mas por falta de recurso ou acessibilidade."
+          <div class="qt-src" style="color:var(--orange)">— Dr. Lourival Lobo</div>
+        </div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-bottom:10px">Por que deputado — e não vereador</div>
+        <div style="display:flex;flex-direction:column;gap:0">
+          <div class="il"><div class="ib o"></div><span>Vereador <b style="color:var(--dark)">depende do executivo</b> para mudar qualquer coisa</span></div>
+          <div class="il"><div class="ib o"></div><span>As pautas dele — UTI, transporte, licença — são <b style="color:var(--dark)">decisões de estado</b></span></div>
+          <div class="il" style="border:none"><div class="ib o"></div><span>Deputado estadual <b style="color:var(--dark)">aprova emenda parlamentar</b> para construir UTI Neonatal</span></div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-bottom:10px">A metodologia de comunicação</div>
+        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:16px">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-body"><div class="step-title">Levantamento</div><div class="step-desc">Mostrar o problema com dado, vivência ou gancho visual. Nunca começa pela solução.</div></div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-body"><div class="step-title">Conexão</div><div class="step-desc">Se colocar no lugar de quem sofre. Criar empatia real — não discurso.</div></div>
+          </div>
+          <div class="step" style="border:none">
+            <div class="step-num">3</div>
+            <div class="step-body"><div class="step-title">Resolução</div><div class="step-desc">Apresentar o que ele propõe ou já defende como saída concreta.</div></div>
+          </div>
+        </div>
+        <div style="padding:12px 16px;background:var(--orange-bg);border-radius:8px;font-size:13px;color:var(--med);border-left:3px solid var(--orange)">
+          🚫 <b style="color:var(--dark)">Regra de ouro:</b> O Dr. Lourival <b>nunca apenas reclama</b> e <b>nunca apenas fala</b>. Todo conteúdo sem esse movimento completo está incompleto.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 13 · AS 4 PAUTAS ═══ -->
+<div class="slide">
+  <div class="si top">
+    <div class="eyebrow orange">Produto — Pautas Confirmadas</div>
+    <div class="slide-h">As 4 pautas da campanha</div>
+    <div class="rule orange"></div>
+    <div class="slide-sub">Não são plataforma a construir — são pautas testadas, com engajamento comprovado e nascidas do consultório.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px">
+      <div class="pc">
+        <div class="pc-icon">🚌</div>
+        <div class="pc-title">Transporte para o Pré-Natal</div>
+        <div class="pc-desc">Todo pré-natal em Mineiros é feito no Hospital Municipal. Bairros distantes não têm transporte público. Mães percorrem horas a pé. O Dr. já fez essa caminhada de 2h para mostrar na prática.</div>
+        <div style="margin-top:12px"><span class="chip c-orange">Conteúdo produzido</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-icon">🏥</div>
+        <div class="pc-title">UTI Neonatal em Mineiros</div>
+        <div class="pc-desc">Mineiros não tem UTI Neonatal. Uma cidade com mais de 50 mil habitantes não deveria transferir um bebê em estado crítico para outra cidade. Crianças morreram por isso — e o doutor sabe do consultório, não de relatório.</div>
+        <div style="margin-top:12px"><span class="chip c-blue">Pauta ativa</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-icon">👶</div>
+        <div class="pc-title">Licença Maternidade: 4 → 6 Meses</div>
+        <div class="pc-desc">4 meses não são suficientes. O Dr. Lourival defende a ampliação. Já mobilizou mães na cidade com cartazes e evento coletivo. É a pauta com maior potencial de viralização pelo engajamento emocional.</div>
+        <div style="margin-top:12px"><span class="chip c-orange">Conteúdo produzido ✓</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-icon">🤱</div>
+        <div class="pc-title">Transporte Pós-Parto</div>
+        <div class="pc-desc">O retorno ao hospital no puerpério enfrenta as mesmas barreiras que o pré-natal. A pauta é extensão natural — e mostra que o cuidado não termina no parto.</div>
+        <div style="margin-top:12px"><span class="chip c-blue">Pauta ativa</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 14 · OS 10 ACHADOS ═══ -->
+<div class="slide">
+  <div class="si top">
+    <div class="eyebrow">Diagnóstico — Síntese</div>
+    <div class="slide-h">Os 10 achados centrais</div>
+    <div class="rule"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 32px;margin-top:22px">
+      <div>
+        <div class="finding"><div class="find-n">1</div><div class="find-body"><div class="find-title">O médico e o candidato são a mesma pessoa</div><div class="find-desc">A marca não pode separar essas identidades — elas se alimentam e se justificam mutuamente.</div></div></div>
+        <div class="finding"><div class="find-n">2</div><div class="find-body"><div class="find-title">A vocação política nasceu da vocação médica</div><div class="find-desc">Não é ambição — é escala. Quer fazer pelo estado o que o consultório não alcança.</div></div></div>
+        <div class="finding"><div class="find-n">3</div><div class="find-body"><div class="find-title">A prova está no consultório, a promessa na Assembleia</div><div class="find-desc">15 anos de cuidado real sustentam a promessa política. Usar a primeira para dar credibilidade à segunda.</div></div></div>
+        <div class="finding"><div class="find-n">4</div><div class="find-body"><div class="find-title">Humildade e simplicidade são diferenciais percebidos</div><div class="find-desc">Não são posicionamento — são traços que todos apontam espontaneamente. Já existem, só precisam aparecer.</div></div></div>
+        <div class="finding" style="border:none"><div class="find-n">5</div><div class="find-body"><div class="find-title">A fé não é pano de fundo — é motivação declarada</div><div class="find-desc">Aparece em todas as entrevistas sem ser perguntada. É genuína e precisa aparecer de forma natural.</div></div></div>
+      </div>
+      <div>
+        <div class="finding"><div class="find-n" style="background:var(--orange-bg);color:var(--orange)">6</div><div class="find-body"><div class="find-title">O público mais próximo teme perdê-lo como médico</div><div class="find-desc">A marca precisa responder: política é extensão do cuidado, não abandono do consultório.</div></div></div>
+        <div class="finding"><div class="find-n" style="background:var(--orange-bg);color:var(--orange)">7</div><div class="find-body"><div class="find-title">Jogo de cintura é o principal ponto de desenvolvimento</div><div class="find-desc">Não mudar quem ele é — aprender a comunicar com mais estratégia e menos impulsividade.</div></div></div>
+        <div class="finding"><div class="find-n" style="background:var(--orange-bg);color:var(--orange)">8</div><div class="find-body"><div class="find-title">A barreira do "médico rico" precisa ser desconstruída</div><div class="find-desc">A história da campanha para prefeito — prejuízo porque o partido o abandonou — é a prova mais direta.</div></div></div>
+        <div class="finding"><div class="find-n" style="background:var(--orange-bg);color:var(--orange)">9</div><div class="find-body"><div class="find-title">As pautas já existem e já foram testadas</div><div class="find-desc">Transporte, UTI, licença, pós-parto. Não é plataforma a construir — é plataforma a amplificar.</div></div></div>
+        <div class="finding" style="border:none"><div class="find-n" style="background:var(--orange-bg);color:var(--orange)">10</div><div class="find-body"><div class="find-title">A candidatura tem valor independente do resultado</div><div class="find-desc">O entorno já entende. A marca precisa construir reputação de longo prazo, não só campanha de outubro.</div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 15 · O QUE ENTREGAMOS ═══ -->
+<div class="slide">
+  <div class="si top">
+    <div class="eyebrow">Fase 1 — Entregas</div>
+    <div class="slide-h">Tudo que foi produzido</div>
+    <div class="rule"></div>
+    <div class="slide-sub">Da imersão ao setup digital — 7 frentes trabalhadas simultaneamente desde 25 de abril de 2026.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px">
+      <div class="ci green"><div class="chip c-green">✓ Entregue</div><div class="ci-nm">Diagnóstico de marca — entrevistas, mercado, produto</div></div>
+      <div class="ci green"><div class="chip c-green">✓ Entregue</div><div class="ci-nm">Setup completo do perfil @lourivallobo_ — foto, bio, destaques</div></div>
+      <div class="ci green"><div class="chip c-green">✓ Publicado</div><div class="ci-nm">Caminhada do Apoio Familiar das Mães — conteúdo de empatia</div></div>
+      <div class="ci green"><div class="chip c-green">✓ Publicado</div><div class="ci-nm">Movimento da Maternidade — Licença de 4 para 6 Meses</div></div>
+      <div class="ci green"><div class="chip c-green">✓ Publicado</div><div class="ci-nm">Acontece mais do que vocês imaginam — série de destaques</div></div>
+      <div class="ci green"><div class="chip c-green">✓ Entregue</div><div class="ci-nm">Adesivo Redondo — material de campanha física</div></div>
+      <div class="ci green"><div class="chip c-green">✓ Aprovado</div><div class="ci-nm">Destaques do Instagram — 5 capas criadas (Quem sou eu, Pautas, Licença, Apoiadores, Família)</div></div>
+      <div class="ci"><div class="chip c-blue">Em produção</div><div class="ci-nm">Identidade visual completa — logo, paleta, tipografia, manual</div></div>
+    </div>
+    <div style="margin-top:16px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+      <div class="card" style="text-align:center;padding:18px">
+        <div class="mv blue" style="font-size:36px">7</div>
+        <div class="ml">Conteúdos publicados</div>
+      </div>
+      <div class="card" style="text-align:center;padding:18px">
+        <div class="mv blue" style="font-size:36px">5</div>
+        <div class="ml">Entrevistas realizadas</div>
+      </div>
+      <div class="card blue" style="text-align:center;padding:18px">
+        <div class="mv blue" style="font-size:36px">40</div>
+        <div class="ml">dias de Fase 1</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 16 · SETUP DO PERFIL ═══ -->
+<div class="slide">
+  <div class="si">
+    <div class="eyebrow">Entrega — Setup Digital</div>
+    <div class="slide-h">Setup do perfil @lourivallobo_</div>
+    <div class="rule"></div>
+    <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:32px;margin-top:24px;align-items:start">
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-bottom:14px">Bio aprovada</div>
+        <div class="card cream" style="margin-bottom:16px">
+          <div style="font-size:14px;color:var(--dark);line-height:1.8;font-family:monospace,sans-serif">
+            Pediatra, pai e cristão.<br>
+            O consultório me ensinou<br>
+            que o importante é cuidar<br>
+            das pessoas.<br>
+            Pré-candidato a Deputado<br>
+            Estadual pelo Podemos 20<br>
+            📍 Mineiros, GO
+          </div>
+        </div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-bottom:10px">5 destaques criados</div>
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div class="il"><div class="ib b"></div><span><b style="color:var(--dark)">Quem sou eu</b> — apresentação pessoal e profissional</span></div>
+          <div class="il"><div class="ib b"></div><span><b style="color:var(--dark)">Pautas</b> — o que ele defende e por quê</span></div>
+          <div class="il"><div class="ib b"></div><span><b style="color:var(--dark)">Licença Maternidade</b> — movimento e conteúdo</span></div>
+          <div class="il"><div class="ib b"></div><span><b style="color:var(--dark)">Apoiadores</b> — depoimentos e presença</span></div>
+          <div class="il" style="border:none"><div class="ib b"></div><span><b style="color:var(--dark)">Família</b> — o lado humano do candidato</span></div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-bottom:14px">Foto de perfil oficial</div>
+        <div style="display:flex;gap:16px;align-items:flex-start">
+          <img class="phone-img" style="height:220px;border-radius:10px" src="file:///Users/phedroborges/Library/CloudStorage/GoogleDrive-phedro%40vizantu.com.br/Drives%20compartilhados/Dr%20Lourival%20Lobo/Gest%C3%A3o%20de%20Marca/05%20-%20Maio/Setup%20perfil/01%20Foto%20de%20Pefil%20Dr%20Lourival.png" alt="Foto de perfil Dr. Lourival">
+          <img class="phone-img" style="height:220px;border-radius:10px" src="file:///Users/phedroborges/Library/CloudStorage/GoogleDrive-phedro%40vizantu.com.br/Drives%20compartilhados/Dr%20Lourival%20Lobo/Gest%C3%A3o%20de%20Marca/05%20-%20Maio/Setup%20perfil/02%20Foto%20de%20Pefil%20Dr%20Lourival.png" alt="Foto de perfil Dr. Lourival 2">
+        </div>
+        <div style="margin-top:12px;font-size:12px;color:var(--light)">Versão 1: pré-candidato · Versão 2: candidato oficial (após registro)</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 17 · CAPAS DE DESTAQUES ═══ -->
+<div class="slide">
+  <div class="si top">
+    <div class="eyebrow">Entrega — Identidade Visual</div>
+    <div class="slide-h">Capas dos Destaques</div>
+    <div class="rule"></div>
+    <div class="slide-sub">5 capas criadas com a identidade visual do Dr. Lourival — azul royal, laranja e ícones dourados.</div>
+    <div style="display:flex;gap:16px;margin-top:24px;align-items:flex-start;justify-content:center">
+      <div style="text-align:center">
+        <img style="height:180px;width:180px;border-radius:12px;object-fit:cover;box-shadow:0 6px 20px rgba(0,0,0,.1)" src="file:///Users/phedroborges/Library/CloudStorage/GoogleDrive-phedro%40vizantu.com.br/Drives%20compartilhados/Dr%20Lourival%20Lobo/Gest%C3%A3o%20de%20Marca/06%20-%20Junho/Capa%20destaques/Quem%20sou%20eu%20Capa%20destaques%20Lourival.png" alt="Quem sou eu">
+        <div style="font-size:12px;font-weight:600;color:var(--med);margin-top:8px">Quem sou eu</div>
+      </div>
+      <div style="text-align:center">
+        <img style="height:180px;width:180px;border-radius:12px;object-fit:cover;box-shadow:0 6px 20px rgba(0,0,0,.1)" src="file:///Users/phedroborges/Library/CloudStorage/GoogleDrive-phedro%40vizantu.com.br/Drives%20compartilhados/Dr%20Lourival%20Lobo/Gest%C3%A3o%20de%20Marca/06%20-%20Junho/Capa%20destaques/Pautas%20Capa%20destaques%20Lourival.png" alt="Pautas">
+        <div style="font-size:12px;font-weight:600;color:var(--med);margin-top:8px">Pautas</div>
+      </div>
+      <div style="text-align:center">
+        <img style="height:180px;width:180px;border-radius:12px;object-fit:cover;box-shadow:0 6px 20px rgba(0,0,0,.1)" src="file:///Users/phedroborges/Library/CloudStorage/GoogleDrive-phedro%40vizantu.com.br/Drives%20compartilhados/Dr%20Lourival%20Lobo/Gest%C3%A3o%20de%20Marca/06%20-%20Junho/Capa%20destaques/Licen%C3%A7a%20Maternidade%20Capa%20destaques%20Lourival.png" alt="Licença Maternidade">
+        <div style="font-size:12px;font-weight:600;color:var(--med);margin-top:8px">Licença Maternidade</div>
+      </div>
+      <div style="text-align:center">
+        <img style="height:180px;width:180px;border-radius:12px;object-fit:cover;box-shadow:0 6px 20px rgba(0,0,0,.1)" src="file:///Users/phedroborges/Library/CloudStorage/GoogleDrive-phedro%40vizantu.com.br/Drives%20compartilhados/Dr%20Lourival%20Lobo/Gest%C3%A3o%20de%20Marca/06%20-%20Junho/Capa%20destaques/Apoiadores%20Capa%20destaques%20Lourival.png" alt="Apoiadores">
+        <div style="font-size:12px;font-weight:600;color:var(--med);margin-top:8px">Apoiadores</div>
+      </div>
+      <div style="text-align:center">
+        <img style="height:180px;width:180px;border-radius:12px;object-fit:cover;box-shadow:0 6px 20px rgba(0,0,0,.1)" src="file:///Users/phedroborges/Library/CloudStorage/GoogleDrive-phedro%40vizantu.com.br/Drives%20compartilhados/Dr%20Lourival%20Lobo/Gest%C3%A3o%20de%20Marca/06%20-%20Junho/Capa%20destaques/Familia%20Capa%20destaques%20Lourival.png" alt="Família">
+        <div style="font-size:12px;font-weight:600;color:var(--med);margin-top:8px">Família</div>
+      </div>
+    </div>
+    <div style="margin-top:24px;padding:14px 20px;background:var(--blue-bg);border-radius:8px;font-size:14px;color:var(--med);border-left:4px solid var(--blue)">
+      🎨 &nbsp;<b style="color:var(--dark)">Identidade visual:</b> Azul royal como cor principal de marca. Laranja como acento de energia e ação. Ícones em gradiente dourado/laranja. Sistema coeso e reconhecível.
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 18 · CONTEÚDO: MOVIMENTO DA MATERNIDADE ═══ -->
+<div class="slide">
+  <div class="si">
+    <div class="eyebrow orange">Entrega — Conteúdo</div>
+    <div class="slide-h">Movimento da Maternidade</div>
+    <div class="rule orange"></div>
+    <div style="display:grid;grid-template-columns:auto 1fr;gap:36px;margin-top:24px;align-items:start">
+      <img style="height:320px;width:auto;border-radius:12px;box-shadow:0 8px 28px rgba(0,0,0,.14);object-fit:cover" src="file:///Users/phedroborges/Library/CloudStorage/GoogleDrive-phedro%40vizantu.com.br/Drives%20compartilhados/Dr%20Lourival%20Lobo/Gest%C3%A3o%20de%20Marca/05%20-%20Maio/Movimento%20da%20Maternidade/Feed%20-%20Movimento%20da%20Maternidade%20%E2%80%94%20Licen%C3%A7a%20de%204%20para%206%20Meses.png" alt="Movimento da Maternidade">
+      <div>
+        <div style="margin-bottom:16px"><span class="chip c-green">Publicado ✓</span></div>
+        <div style="font-size:17px;font-weight:800;color:var(--dark);margin-bottom:10px;line-height:1.3">Licença Maternidade: 6 meses ao lado da mãe</div>
+        <div style="display:flex;flex-direction:column;gap:0;margin-bottom:18px">
+          <div class="il"><div class="ib o"></div><span><b style="color:var(--dark)">O que é:</b> Mobilização coletiva com mães de Mineiros segurando cartazes em defesa da licença de 6 meses</span></div>
+          <div class="il"><div class="ib o"></div><span><b style="color:var(--dark)">Quando:</b> 20 de maio de 2026 · Escola Comecinho de Vida</span></div>
+          <div class="il"><div class="ib o"></div><span><b style="color:var(--dark)">Por que funciona:</b> A pauta das mães sai do discurso e vira cena real. Mães presentes, cartaz na mão.</span></div>
+          <div class="il" style="border:none"><div class="ib o"></div><span><b style="color:var(--dark)">Metodologia:</b> Levantamento → Conexão → Resolução em uma única peça visual</span></div>
+        </div>
+        <div class="qt orange">
+          "Mães de Mineiros se unem para defender o mínimo que nossos filhos merecem! Todas juntas em prol do aumento da licença maternidade."
+          <div class="qt-src" style="color:var(--orange)">— Copy do conteúdo</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 19 · CONTEÚDO: DESTAQUES DE PAUTAS ═══ -->
+<div class="slide">
+  <div class="si top">
+    <div class="eyebrow orange">Entrega — Conteúdo</div>
+    <div class="slide-h">Série de Destaques — Pautas</div>
+    <div class="rule orange"></div>
+    <div class="slide-sub">11 slides produzidos. Cada slide trata uma pauta com dados reais do consultório — no formato de post estilo Twitter para gerar identificação imediata.</div>
+    <div style="display:flex;gap:14px;margin-top:20px;justify-content:center;align-items:flex-start">
+      <div style="text-align:center">
+        <img style="height:230px;width:auto;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,.12);object-fit:cover" src="file:///Users/phedroborges/Library/CloudStorage/GoogleDrive-phedro%40vizantu.com.br/Drives%20compartilhados/Dr%20Lourival%20Lobo/Gest%C3%A3o%20de%20Marca/06%20-%20Junho/Destaque%20-%20Pautas/01%20Destaque%20%E2%80%94%20Pautas.png" alt="Pauta 1">
+        <div style="font-size:11px;color:var(--light);margin-top:6px">Tudo que eu defendo…</div>
+      </div>
+      <div style="text-align:center">
+        <img style="height:230px;width:auto;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,.12);object-fit:cover" src="file:///Users/phedroborges/Library/CloudStorage/GoogleDrive-phedro%40vizantu.com.br/Drives%20compartilhados/Dr%20Lourival%20Lobo/Gest%C3%A3o%20de%20Marca/06%20-%20Junho/Destaque%20-%20Pautas/03%20Destaque%20%E2%80%94%20Pautas.png" alt="Pauta 3">
+        <div style="font-size:11px;color:var(--light);margin-top:6px">UTI Neonatal</div>
+      </div>
+      <div style="text-align:center">
+        <img style="height:230px;width:auto;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,.12);object-fit:cover" src="file:///Users/phedroborges/Library/CloudStorage/GoogleDrive-phedro%40vizantu.com.br/Drives%20compartilhados/Dr%20Lourival%20Lobo/Gest%C3%A3o%20de%20Marca/06%20-%20Junho/Destaque%20-%20Pautas/05%20Destaque%20%E2%80%94%20Pautas.png" alt="Pauta 5">
+        <div style="font-size:11px;color:var(--light);margin-top:6px">Pré-natal e acesso</div>
+      </div>
+    </div>
+    <div style="margin-top:20px;padding:14px 20px;background:var(--orange-bg);border-radius:8px;font-size:14px;color:var(--med);border-left:4px solid var(--orange)">
+      🎯 &nbsp;<b style="color:var(--dark)">Decisão criativa:</b> Formato "post estilo Twitter" com fundo laranja — cria reconhecimento imediato da marca, gera salvamento e compartilhamento. Cada pauta em uma linguagem que mães entendem e se identificam.
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 20 · CONTEÚDO: ADESIVO ═══ -->
+<div class="slide">
+  <div class="si">
+    <div class="eyebrow">Entrega — Material Físico</div>
+    <div class="slide-h">Adesivo de Campanha</div>
+    <div class="rule"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:28px;align-items:start">
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-bottom:14px">O que foi entregue</div>
+        <div style="display:flex;flex-direction:column;gap:0;margin-bottom:20px">
+          <div class="il"><div class="ib b"></div><span><b style="color:var(--dark)">Adesivo Redondo</b> — para colagem em carros durante ações de rua</span></div>
+          <div class="il"><div class="ib b"></div><span><b style="color:var(--dark)">Formato:</b> Circular, otimizado para colagem em vidro traseiro</span></div>
+          <div class="il" style="border:none"><div class="ib b"></div><span><b style="color:var(--dark)">Status:</b> Arquivo final entregue para impressão</span></div>
+        </div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-bottom:14px">Por que material físico importa</div>
+        <div style="display:flex;flex-direction:column;gap:0">
+          <div class="il"><div class="ib o"></div><span>Visibilidade passiva — o carro é mídia ambulante</span></div>
+          <div class="il"><div class="ib o"></div><span>Demonstra comprometimento do apoiador</span></div>
+          <div class="il" style="border:none"><div class="ib o"></div><span>Constrói presença visual na cidade antes da campanha oficial</span></div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-bottom:14px">Contexto da entrega</div>
+        <div class="card" style="margin-bottom:14px">
+          <div style="font-size:13px;color:var(--med);line-height:1.65">O adesivo foi uma das primeiras peças físicas da campanha — um sinal de que a presença do Dr. Lourival nas ruas de Mineiros começou antes da largada oficial de 16 de agosto.</div>
+        </div>
+        <div style="padding:14px 18px;background:var(--blue-bg);border-radius:8px;font-size:13px;color:var(--med);border-left:3px solid var(--blue)">
+          📌 <b style="color:var(--dark)">Próximo passo físico:</b> Planejamento de banners, busdoors, camisetas e panfletos — todos para estarem prontos até 15 de agosto.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 21 · A MARCA ATÉ AQUI ═══ -->
+<div class="slide">
+  <div class="si">
+    <div class="eyebrow">Fase 1 — Reflexão</div>
+    <div class="slide-h">O que a marca já diz</div>
+    <div class="rule"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px">
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-bottom:14px">A bio que resume tudo</div>
+        <div style="background:var(--navy);border-radius:12px;padding:28px;margin-bottom:16px">
+          <div style="font-size:16px;color:#fff;line-height:2;font-weight:500">
+            <span style="color:var(--gold)">Pediatra</span>, pai e cristão.<br>
+            O consultório me ensinou<br>
+            que o importante é <span style="color:var(--gold)">cuidar das pessoas</span>.<br>
+            Pré-candidato a Deputado Estadual<br>
+            pelo <span style="color:var(--gold)">Podemos 20</span><br>
+            📍 Mineiros, GO
+          </div>
+        </div>
+        <div style="padding:13px 16px;background:var(--surface);border-radius:8px;font-size:13px;color:var(--med)">
+          Três palavras que carregam o candidato inteiro: <b style="color:var(--dark)">pediatra</b> (credibilidade), <b style="color:var(--dark)">pai</b> (empatia) e <b style="color:var(--dark)">cristão</b> (valores). Nessa ordem. Essa é a hierarquia da marca.
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-bottom:14px">O diferencial competitivo</div>
+        <div class="card blue" style="margin-bottom:14px;padding:24px">
+          <div style="font-size:15px;font-weight:800;color:var(--dark);margin-bottom:8px">O único que faz política a partir do consultório</div>
+          <div style="font-size:13px;color:var(--med);line-height:1.65">Ana Paula fala de saúde. Rosângela fala de saúde. O Dr. Lourival ouve mães no consultório toda manhã antes de qualquer agenda política. Isso não é posicionamento — é modo de vida.</div>
+        </div>
+        <div class="card" style="padding:24px">
+          <div style="font-size:15px;font-weight:800;color:var(--dark);margin-bottom:8px">A candidatura como extensão do cuidado</div>
+          <div style="font-size:13px;color:var(--med);line-height:1.65">Deputado não é o oposto de médico. É o médico que ampliou o consultório para o estado inteiro. A Assembleia é onde ele pode fazer o que o consultório não alcança.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 22 · PRÓXIMOS PASSOS ═══ -->
+<div class="slide">
+  <div class="si top">
+    <div class="eyebrow">Fase 2 — O que vem agora</div>
+    <div class="slide-h">Estratégia de Marca</div>
+    <div class="rule"></div>
+    <div class="slide-sub">A Fase 1 está completa. A Fase 2 começa imediatamente com a construção da estratégia criativa a partir do que diagnosticamos.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:22px">
+      <div class="ns-card">
+        <div class="ns-badge" style="background:var(--blue-bg)">🏛️</div>
+        <div>
+          <div class="ns-title">Plataforma de Marca</div>
+          <div class="ns-desc">Propósito, promessa, personalidade e posicionamento definitivo. A estrutura que fundamenta toda a comunicação.</div>
+        </div>
+      </div>
+      <div class="ns-card">
+        <div class="ns-badge" style="background:var(--orange-bg)">🎯</div>
+        <div>
+          <div class="ns-title">Posicionamento</div>
+          <div class="ns-desc">Como o Dr. Lourival se diferencia dos concorrentes no campo da percepção do eleitor. O que só ele pode dizer.</div>
+        </div>
+      </div>
+      <div class="ns-card">
+        <div class="ns-badge" style="background:var(--gold-bg)">✍️</div>
+        <div>
+          <div class="ns-title">Identidade Verbal</div>
+          <div class="ns-desc">Tom de voz, vocabulário, frases que entram e frases proibidas. Como o doutor fala — e como nunca deve falar.</div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:14px">
+      <div class="ns-card">
+        <div class="ns-badge">📱</div>
+        <div>
+          <div class="ns-title">Setup Digital Completo</div>
+          <div class="ns-desc">TikTok criado, Facebook com URL corrigida, WhatsApp de campanha, link na bio — toda a presença digital organizada.</div>
+        </div>
+      </div>
+      <div class="ns-card">
+        <div class="ns-badge" style="background:var(--green-bg)">📅</div>
+        <div>
+          <div class="ns-title">Calendário Editorial Junho–Julho</div>
+          <div class="ns-desc">Conteúdo de autoridade médica e pautas roteirizadas. Meta: 1.000+ seguidores qualificados até julho.</div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:14px;padding:14px 20px;background:var(--blue-bg);border-radius:8px;font-size:14px;color:var(--blue);font-weight:600;border-left:4px solid var(--blue)">
+      📅 Convenção partidária: 20/07 – 05/08 &nbsp;·&nbsp; Largada oficial da campanha: 16/08 &nbsp;·&nbsp; Eleição: 04/10/2026
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 23 · ENCERRAMENTO ═══ -->
+<div class="slide">
+  <div class="capa">
+    <div class="capa-l" style="justify-content:center">
+      <div class="capa-bg" style="background:linear-gradient(145deg,#0A1628 0%,#0D2F8A 60%,var(--blue) 100%)"></div>
+      <div class="capa-circle"></div>
+      <div class="capa-circle2"></div>
+      <div style="position:relative;text-align:center">
+        <div style="font-size:80px;margin-bottom:20px">🗳️</div>
+        <div style="font-size:40px;font-weight:900;color:#fff;line-height:1.1;margin-bottom:12px">A base está<br><span style="color:var(--gold)">construída.</span></div>
+        <div style="font-size:14px;color:rgba(255,255,255,.6);line-height:1.7;max-width:280px;margin:0 auto">Diagnóstico concluído. Agora transformamos o que aprendemos em marca, posicionamento e estratégia.</div>
+      </div>
+    </div>
+    <div class="capa-r" style="justify-content:center">
+      <div style="font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--light);margin-bottom:16px">Vizantu — Gestão de Marca</div>
+      <div style="font-size:30px;font-weight:900;color:var(--dark);line-height:1.1;margin-bottom:8px">Dr. Lourival Lobo</div>
+      <div style="font-size:14px;color:var(--med);margin-bottom:32px">Deputado Estadual GO · Eleição 04/10/2026</div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;align-items:center;gap:12px;font-size:14px;color:var(--med)">
+          <span class="chip c-green">✓ Concluído</span>
+          <span>Fase 1 — Criação de Marca (Diagnóstico)</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;font-size:14px;color:var(--med)">
+          <span class="chip c-blue">Em andamento</span>
+          <span>Fase 2 — Estratégia de Marca (Jun–Ago)</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;font-size:14px;color:var(--light)">
+          <span class="chip c-grey">Próxima</span>
+          <span>Fase 3 — Manual de Marca (Jul–Ago)</span>
+        </div>
+      </div>
+      <div style="margin-top:36px;padding:18px 22px;background:var(--surface);border-radius:10px">
+        <div style="font-size:13px;font-weight:600;color:var(--dark);margin-bottom:4px">Próxima reunião</div>
+        <div style="font-size:13px;color:var(--med)">Apresentação da Estratégia de Marca — Plataforma, Posicionamento e Identidade Verbal</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /deck -->
+
+<!-- BOTTOM NAV -->
+<div class="bnav">
+  <button class="btn" id="prev">←</button>
+  <div class="dots" id="dots"></div>
+  <button class="btn" id="next">→</button>
+</div>
+
+<script>
+const slides = document.querySelectorAll('.slide');
+const dotsEl = document.getElementById('dots');
+const counter = document.getElementById('counter');
+const total = slides.length;
+let cur = 0;
+
+// build dots
+slides.forEach((_,i)=>{
+  const d = document.createElement('div');
+  d.className = 'dot' + (i===0?' active':'');
+  d.onclick = ()=>go(i);
+  dotsEl.appendChild(d);
+});
+
+function go(n){
+  if(n<0||n>=total)return;
+  slides[cur].classList.remove('active');
+  slides[cur].classList.add('out');
+  setTimeout(()=>slides[cur].classList.remove('out'), 420);
+  cur=n;
+  slides[cur].classList.add('active');
+  document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('active',i===cur));
+  counter.textContent = (cur+1) + ' / ' + total;
+}
+
+document.getElementById('prev').onclick=()=>go(cur-1);
+document.getElementById('next').onclick=()=>go(cur+1);
+
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight'||e.key===' ')go(cur+1);
+  if(e.key==='ArrowLeft')go(cur-1);
+});
+</script>
+</body>
+</html>
