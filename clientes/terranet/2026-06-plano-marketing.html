@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TerraNet — Plano Estratégico de Marketing | Jun–Jul 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --green: #47A81A;
+      --green-dark: #327713;
+      --orange: #FF8001;
+      --slate: #394E45;
+      --black: #121212;
+      --white: #FFFFFF;
+      --gray: #F5F5F5;
+      --gray-mid: #E0E0E0;
+      --gray-text: #666666;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      width: 100%; height: 100%;
+      font-family: 'Montserrat', sans-serif;
+      background: var(--black);
+      overflow: hidden;
+    }
+
+    /* ─── SLIDE ENGINE ─── */
+    .deck { width: 100%; height: 100%; position: relative; }
+
+    .slide {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.45s ease;
+    }
+    .slide.active { opacity: 1; pointer-events: all; }
+
+    /* ─── PROGRESS BAR ─── */
+    #progress-bar {
+      position: fixed; top: 0; left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--green), var(--orange));
+      transition: width 0.4s ease;
+      z-index: 1000;
+    }
+
+    /* ─── NAV ─── */
+    .nav {
+      position: fixed; bottom: 28px; right: 36px;
+      display: flex; gap: 10px; z-index: 999;
+    }
+    .nav-btn {
+      width: 42px; height: 42px; border-radius: 50%;
+      border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; transition: all 0.2s;
+    }
+    .nav-btn.prev { background: rgba(255,255,255,0.12); color: #fff; }
+    .nav-btn.next {
+      background: linear-gradient(135deg, var(--green), var(--green-dark));
+      color: #fff; box-shadow: 0 4px 14px rgba(71,168,26,0.4);
+    }
+    .nav-btn:hover { transform: scale(1.08); }
+    .nav-btn:disabled { opacity: 0.3; cursor: default; transform: none; }
+
+    /* ─── SLIDE COUNTER ─── */
+    #slide-counter {
+      position: fixed; bottom: 36px; left: 36px;
+      font-size: 11px; font-weight: 600; letter-spacing: 1.5px;
+      color: rgba(255,255,255,0.35); z-index: 999;
+    }
+
+    /* ─── LOGO MARK ─── */
+    .logo-mark {
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .logo-t {
+      width: 32px; height: 32px;
+      background: linear-gradient(135deg, var(--green), var(--green-dark));
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; font-weight: 900; color: white;
+    }
+    .logo-name {
+      font-size: 18px; font-weight: 800; color: var(--white);
+      letter-spacing: 0.5px;
+    }
+    .logo-name span { color: var(--orange); }
+
+    /* ─── SLIDE 1 — CAPA ─── */
+    #s1 {
+      background: var(--black);
+      align-items: center; justify-content: center;
+    }
+    #s1::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 20% 50%, rgba(71,168,26,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 80% at 80% 30%, rgba(255,128,1,0.08) 0%, transparent 70%);
+    }
+    .capa-inner {
+      position: relative; z-index: 1;
+      display: flex; flex-direction: column;
+      align-items: center; text-align: center; gap: 28px;
+    }
+    .capa-tag {
+      background: rgba(71,168,26,0.15); border: 1px solid rgba(71,168,26,0.35);
+      color: var(--green); font-size: 10px; font-weight: 700;
+      letter-spacing: 3px; padding: 6px 16px; border-radius: 100px;
+      text-transform: uppercase;
+    }
+    .capa-title {
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 900; line-height: 1.05;
+      color: var(--white); letter-spacing: -1px;
+    }
+    .capa-title em {
+      font-style: normal;
+      background: linear-gradient(90deg, var(--green), var(--orange));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .capa-sub {
+      font-size: 15px; font-weight: 400; color: rgba(255,255,255,0.5);
+      letter-spacing: 1px;
+    }
+    .capa-divider {
+      width: 48px; height: 3px;
+      background: linear-gradient(90deg, var(--green), var(--orange));
+      border-radius: 2px;
+    }
+    .capa-tagline {
+      font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.35);
+      letter-spacing: 2px; text-transform: uppercase;
+    }
+
+    /* ─── CONTENT SLIDES — WHITE ─── */
+    .slide-white {
+      background: var(--white);
+    }
+    .slide-header {
+      padding: 36px 56px 24px;
+      border-bottom: 1px solid var(--gray-mid);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .slide-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 3px;
+      color: var(--green); text-transform: uppercase;
+    }
+    .logo-mark-sm .logo-t { width: 24px; height: 24px; font-size: 14px; border-radius: 5px; }
+    .logo-mark-sm .logo-name { font-size: 14px; color: var(--black); }
+    .logo-mark-sm .logo-name span { color: var(--orange); }
+
+    .slide-body {
+      flex: 1; padding: 40px 56px;
+      display: flex; flex-direction: column; gap: 28px;
+    }
+    .slide-headline {
+      font-size: clamp(22px, 3vw, 36px);
+      font-weight: 800; color: var(--black); line-height: 1.15;
+      letter-spacing: -0.5px;
+    }
+    .slide-headline em {
+      font-style: normal; color: var(--green);
+    }
+    .slide-headline .orange { color: var(--orange); }
+
+    /* ─── DARK SLIDES ─── */
+    .slide-dark {
+      background: var(--black);
+    }
+    .slide-dark .slide-label { color: var(--green); }
+    .slide-dark .logo-mark-sm .logo-name { color: var(--white); }
+    .slide-dark .slide-headline { color: var(--white); }
+
+    /* ─── CARDS GRID ─── */
+    .cards-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .cards-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; }
+    .cards-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 16px; }
+
+    .card {
+      background: var(--gray);
+      border-radius: 14px; padding: 24px;
+      border: 1px solid var(--gray-mid);
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .card-dark {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 14px; padding: 24px;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .card-green {
+      background: linear-gradient(135deg, var(--green), var(--green-dark));
+      border: none; color: white;
+    }
+    .card-orange {
+      background: linear-gradient(135deg, var(--orange), #cc6600);
+      border: none; color: white;
+    }
+    .card-icon { font-size: 28px; }
+    .card-num {
+      font-size: 40px; font-weight: 900; line-height: 1;
+      color: var(--green);
+    }
+    .card-num.orange { color: var(--orange); }
+    .card-title {
+      font-size: 13px; font-weight: 700; color: var(--black);
+      text-transform: uppercase; letter-spacing: 1px;
+    }
+    .card-dark .card-title, .card-green .card-title, .card-orange .card-title {
+      color: rgba(255,255,255,0.8);
+    }
+    .card-body {
+      font-size: 13px; font-weight: 400; color: var(--gray-text);
+      line-height: 1.55;
+    }
+    .card-dark .card-body { color: rgba(255,255,255,0.55); }
+    .card-green .card-body, .card-orange .card-body { color: rgba(255,255,255,0.85); }
+
+    /* ─── LIST ITEMS ─── */
+    .list-items { display: flex; flex-direction: column; gap: 12px; }
+    .list-item {
+      display: flex; align-items: flex-start; gap: 14px;
+      padding: 14px 18px;
+      background: var(--gray); border-radius: 10px;
+      border-left: 3px solid var(--green);
+    }
+    .list-item-dark {
+      background: rgba(255,255,255,0.05);
+      border-left: 3px solid var(--green);
+    }
+    .list-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--green); flex-shrink: 0; margin-top: 5px;
+    }
+    .list-dot.orange { background: var(--orange); }
+    .li-text { font-size: 14px; color: var(--black); line-height: 1.5; }
+    .li-text strong { font-weight: 700; color: var(--green); }
+    .li-text .orange-strong { font-weight: 700; color: var(--orange); }
+    .list-item-dark .li-text { color: rgba(255,255,255,0.8); }
+
+    /* ─── PILL TAGS ─── */
+    .pills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .pill {
+      padding: 6px 14px; border-radius: 100px;
+      font-size: 12px; font-weight: 600;
+    }
+    .pill-green { background: rgba(71,168,26,0.12); color: var(--green); }
+    .pill-orange { background: rgba(255,128,1,0.12); color: var(--orange); }
+    .pill-dark { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); }
+
+    /* ─── HIGHLIGHT BOX ─── */
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(71,168,26,0.08), rgba(255,128,1,0.06));
+      border: 1px solid rgba(71,168,26,0.2);
+      border-radius: 14px; padding: 24px 28px;
+    }
+    .highlight-box-dark {
+      background: rgba(71,168,26,0.1);
+      border: 1px solid rgba(71,168,26,0.25);
+      border-radius: 14px; padding: 24px 28px;
+    }
+
+    /* ─── TIMELINE ─── */
+    .timeline { display: flex; gap: 0; align-items: stretch; }
+    .tl-item {
+      flex: 1; display: flex; flex-direction: column; align-items: center;
+      position: relative;
+    }
+    .tl-item:not(:last-child)::after {
+      content: '';
+      position: absolute; top: 20px; left: 50%; right: -50%;
+      height: 2px; background: var(--gray-mid);
+    }
+    .tl-dot {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--gray-mid);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; position: relative; z-index: 1;
+      flex-shrink: 0;
+    }
+    .tl-dot.active { background: linear-gradient(135deg, var(--green), var(--green-dark)); }
+    .tl-dot.orange-dot { background: linear-gradient(135deg, var(--orange), #cc6600); }
+    .tl-content { padding: 12px 8px 0; text-align: center; }
+    .tl-date { font-size: 11px; font-weight: 700; color: var(--green); letter-spacing: 1px; }
+    .tl-title { font-size: 12px; font-weight: 600; color: var(--black); margin-top: 3px; line-height: 1.4; }
+    .tl-desc { font-size: 11px; color: var(--gray-text); margin-top: 2px; line-height: 1.4; }
+
+    /* ─── TABLE ─── */
+    .data-table { width: 100%; border-collapse: collapse; }
+    .data-table th {
+      padding: 10px 16px; text-align: left;
+      font-size: 10px; font-weight: 700; letter-spacing: 2px;
+      color: var(--gray-text); text-transform: uppercase;
+      border-bottom: 2px solid var(--gray-mid);
+    }
+    .data-table td {
+      padding: 12px 16px; font-size: 13px; color: var(--black);
+      border-bottom: 1px solid var(--gray-mid);
+    }
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table .val { font-weight: 700; color: var(--green); }
+    .data-table .val.orange { color: var(--orange); }
+
+    /* ─── FRENTE BADGE ─── */
+    .frente-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--black); color: white;
+      padding: 6px 16px; border-radius: 100px;
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+    }
+    .frente-badge .fb-num {
+      width: 20px; height: 20px; border-radius: 50%;
+      background: var(--green); color: white;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 10px; font-weight: 900;
+    }
+
+    /* ─── 2-COL LAYOUT ─── */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
+    .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; align-items: start; }
+
+    /* ─── PERSON CARD ─── */
+    .person-card {
+      background: var(--gray); border-radius: 14px;
+      padding: 24px; text-align: center;
+      border: 1px solid var(--gray-mid);
+    }
+    .person-avatar {
+      width: 56px; height: 56px; border-radius: 50%;
+      margin: 0 auto 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; font-weight: 900; color: white;
+    }
+    .person-name { font-size: 14px; font-weight: 700; color: var(--black); }
+    .person-role {
+      font-size: 11px; font-weight: 600; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--green); margin-top: 4px;
+    }
+    .person-tasks {
+      margin-top: 12px; display: flex; flex-direction: column; gap: 5px;
+    }
+    .person-task {
+      font-size: 11px; color: var(--gray-text);
+      padding: 4px 8px; background: white; border-radius: 6px;
+      border: 1px solid var(--gray-mid);
+    }
+
+    /* ─── BIG STAT ─── */
+    .big-stat { text-align: center; }
+    .big-stat-num { font-size: 56px; font-weight: 900; line-height: 1; color: var(--green); }
+    .big-stat-num.orange { color: var(--orange); }
+    .big-stat-label { font-size: 12px; font-weight: 600; color: var(--gray-text); margin-top: 6px; text-transform: uppercase; letter-spacing: 1px; }
+
+    /* ─── DIVIDER SLIDE (Section Intro) ─── */
+    .section-slide {
+      background: var(--black);
+      align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+    .section-slide::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 70% 60% at 30% 50%, rgba(71,168,26,0.1) 0%, transparent 60%);
+    }
+    .section-inner { position: relative; z-index: 1; text-align: center; }
+    .section-num {
+      font-size: 120px; font-weight: 900; line-height: 1;
+      color: rgba(255,255,255,0.04); letter-spacing: -5px;
+    }
+    .section-title-big {
+      font-size: clamp(32px, 4.5vw, 54px);
+      font-weight: 900; color: white; line-height: 1.1;
+      margin-top: -40px; letter-spacing: -1px;
+    }
+    .section-title-big em { font-style: normal; color: var(--green); }
+    .section-sub { font-size: 14px; color: rgba(255,255,255,0.4); margin-top: 12px; letter-spacing: 1px; }
+
+    /* ─── INVESTMENT HIGHLIGHT ─── */
+    .inv-row {
+      display: flex; align-items: center; gap: 20px;
+      padding: 16px 20px; border-radius: 12px; background: var(--gray);
+      border: 1px solid var(--gray-mid);
+    }
+    .inv-row + .inv-row { margin-top: 12px; }
+    .inv-icon { font-size: 24px; flex-shrink: 0; }
+    .inv-info { flex: 1; }
+    .inv-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; color: var(--gray-text); text-transform: uppercase; }
+    .inv-value { font-size: 22px; font-weight: 800; color: var(--black); margin-top: 2px; }
+    .inv-value .green { color: var(--green); }
+    .inv-detail { font-size: 12px; color: var(--gray-text); margin-top: 2px; }
+    .inv-badge {
+      padding: 6px 12px; border-radius: 8px;
+      font-size: 11px; font-weight: 700;
+    }
+    .inv-badge.aprovar { background: rgba(255,128,1,0.12); color: var(--orange); }
+    .inv-badge.aprovado { background: rgba(71,168,26,0.12); color: var(--green); }
+
+    /* ─── SLIDE 4: FRENTES OVERVIEW ─── */
+    .frente-card {
+      background: var(--gray); border-radius: 16px;
+      padding: 28px 24px; border: 1px solid var(--gray-mid);
+      display: flex; flex-direction: column; gap: 10px;
+      transition: border-color 0.2s;
+    }
+    .frente-card:hover { border-color: var(--green); }
+    .frente-num {
+      font-size: 11px; font-weight: 700; letter-spacing: 2px;
+      color: var(--green); text-transform: uppercase;
+    }
+    .frente-title { font-size: 16px; font-weight: 800; color: var(--black); line-height: 1.3; }
+    .frente-desc { font-size: 12px; color: var(--gray-text); line-height: 1.5; }
+
+    /* ─── FOOTER / WATERMARK ─── */
+    .slide-footer {
+      padding: 10px 56px;
+      font-size: 10px; color: var(--gray-text);
+      letter-spacing: 1px; text-align: right;
+    }
+    .slide-footer-dark {
+      padding: 10px 56px;
+      font-size: 10px; color: rgba(255,255,255,0.2);
+      letter-spacing: 1px; text-align: right;
+    }
+  </style>
+</head>
+<body>
+
+<div id="progress-bar" style="width:7.69%"></div>
+<div id="slide-counter">01 / 13</div>
+<nav class="nav">
+  <button class="nav-btn prev" id="btn-prev" onclick="changeSlide(-1)" disabled>←</button>
+  <button class="nav-btn next" id="btn-next" onclick="changeSlide(1)">→</button>
+</nav>
+
+<div class="deck">
+
+  <!-- ═══════════════════════════════════════════════
+       SLIDE 1 — CAPA
+  ═══════════════════════════════════════════════ -->
+  <section class="slide active" id="s1">
+    <div class="capa-inner">
+      <div class="logo-mark">
+        <div class="logo-t">T</div>
+        <div class="logo-name">Terra<span>Net</span></div>
+      </div>
+      <div class="capa-divider"></div>
+      <p class="capa-tag">Confidencial — Uso Interno</p>
+      <h1 class="capa-title">
+        Plano Estratégico<br/>
+        de <em>Marketing</em>
+      </h1>
+      <p class="capa-sub">Junho — Julho 2026</p>
+      <div class="capa-divider"></div>
+      <p class="capa-tagline">Conexão sem Fronteiras</p>
+    </div>
+    <p class="slide-footer-dark">Vizantu Gestão de Marca · 2026</p>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       SLIDE 2 — CONTEXTO ATUAL
+  ═══════════════════════════════════════════════ -->
+  <section class="slide slide-white" id="s2">
+    <div class="slide-header">
+      <span class="slide-label">Contexto Atual</span>
+      <div class="logo-mark logo-mark-sm">
+        <div class="logo-t">T</div>
+        <div class="logo-name">Terra<span>Net</span></div>
+      </div>
+    </div>
+    <div class="slide-body">
+      <h2 class="slide-headline">O que está <em>acontecendo</em><br/>no mercado agora</h2>
+      <div class="cards-2" style="flex:1">
+        <div class="card" style="border-left: 3px solid var(--green);">
+          <div class="card-icon">📊</div>
+          <div class="card-title">Tráfego orgânico</div>
+          <div class="card-body">Instagram em aceleração gradual. Conteúdo com posicionamento de agro educativo e institucional. Sorteio Dia das Mães executado com sucesso em maio.</div>
+        </div>
+        <div class="card" style="border-left: 3px solid #e53935;">
+          <div class="card-icon">⚠️</div>
+          <div class="card-title">Lacuna no varejo B2C</div>
+          <div class="card-body">Foco anterior no agro de precisão deixou o cliente residencial (CPF) descoberto. Estância e Perolândia com portas abertas na infraestrutura mas baixa captação ativa.</div>
+        </div>
+        <div class="card" style="border-left: 3px solid #e53935;">
+          <div class="card-icon">🆚</div>
+          <div class="card-title">TBM avançando em Perolândia</div>
+          <div class="card-body">Concorrente com agente local fixo: vende, instala e faz suporte. Placas espalhadas pela cidade, presença nos grupos locais. Estratégia de guerrilha bem executada.</div>
+        </div>
+        <div class="card" style="border-left: 3px solid #FF8001;">
+          <div class="card-icon">🛰️</div>
+          <div class="card-title">Starlink — cliente difícil de retomar</div>
+          <div class="card-body">Clientes que migraram para Starlink estão satisfeitos e resistentes à mudança. Foco em novos clientes e base insatisfeita com concorrentes locais.</div>
+        </div>
+      </div>
+      <div class="highlight-box">
+        <p style="font-size:13px; color: var(--slate); font-weight:600;">
+          ✅ <strong style="color:var(--green)">Oportunidade real:</strong> estrutura pronta em Estância e Perolândia. Concorrência local com falhas. Clientes buscando a TerraNet de forma independente.
+        </p>
+      </div>
+    </div>
+    <div class="slide-footer">TerraNet · Plano Estratégico Jun–Jul 2026</div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       SLIDE 3 — DECISÃO ESTRATÉGICA
+  ═══════════════════════════════════════════════ -->
+  <section class="slide section-slide" id="s3">
+    <div class="section-inner">
+      <p class="section-num">01</p>
+      <h2 class="section-title-big">A <em>virada</em><br/>estratégica</h2>
+      <p class="section-sub">O redirecionamento decidido na reunião de 02/06/2026</p>
+    </div>
+    <p class="slide-footer-dark">TerraNet · Plano Estratégico Jun–Jul 2026</p>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       SLIDE 4 — DECISÃO DETALHADA
+  ═══════════════════════════════════════════════ -->
+  <section class="slide slide-white" id="s4">
+    <div class="slide-header">
+      <span class="slide-label">Decisão Estratégica</span>
+      <div class="logo-mark logo-mark-sm">
+        <div class="logo-t">T</div>
+        <div class="logo-name">Terra<span>Net</span></div>
+      </div>
+    </div>
+    <div class="slide-body">
+      <h2 class="slide-headline"><em>Foco imediato:</em> cliente CPF<br/>Estância e Perolândia</h2>
+      <div class="two-col" style="flex:1; align-items:center;">
+        <div class="list-items">
+          <div class="list-item">
+            <div class="list-dot"></div>
+            <div class="li-text"><strong>Captação B2C agressiva</strong> nas duas cidades com campanha paga e promoção competitiva de entrada</div>
+          </div>
+          <div class="list-item">
+            <div class="list-dot"></div>
+            <div class="li-text"><strong>Agro não abandona</strong> — conteúdo educativo continua, mas o foco de aquisição muda para varejo por 2 meses</div>
+          </div>
+          <div class="list-item">
+            <div class="list-dot orange"></div>
+            <div class="li-text"><span class="orange-strong">Premissa central:</span> encher a base com clientes satisfeitos. Cliente satisfeito é o melhor vendedor</div>
+          </div>
+          <div class="list-item">
+            <div class="list-dot"></div>
+            <div class="li-text"><strong>Sazonalidade a favor:</strong> Copa do Mundo + São João = ganchos perfeitos para campanha de captação em junho</div>
+          </div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:16px; align-items:center;">
+          <div style="text-align:center; padding: 36px; background: var(--gray); border-radius:20px; border: 2px solid var(--green);">
+            <div class="big-stat-num">2</div>
+            <div class="big-stat-label">cidades foco<br/>Estância + Perolândia</div>
+          </div>
+          <div style="text-align:center; padding: 24px 36px; background: var(--gray); border-radius:20px; border: 1px solid var(--gray-mid);">
+            <div class="big-stat-num orange" style="font-size:40px;">B2C</div>
+            <div class="big-stat-label">cliente residencial<br/>prioridade imediata</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">TerraNet · Plano Estratégico Jun–Jul 2026</div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       SLIDE 5 — AS 4 FRENTES (OVERVIEW)
+  ═══════════════════════════════════════════════ -->
+  <section class="slide slide-white" id="s5">
+    <div class="slide-header">
+      <span class="slide-label">Plano de Ação</span>
+      <div class="logo-mark logo-mark-sm">
+        <div class="logo-t">T</div>
+        <div class="logo-name">Terra<span>Net</span></div>
+      </div>
+    </div>
+    <div class="slide-body">
+      <h2 class="slide-headline">As <em>4 frentes</em> de ação</h2>
+      <div class="cards-2" style="flex:1">
+        <div class="frente-card">
+          <div class="frente-num">Frente 01</div>
+          <div class="frente-title">Campanha B2C — Captação<br/>Estância & Perolândia</div>
+          <div class="frente-desc">Promoção de entrada + tráfego pago focado nas duas cidades. Copa e São João como ganchos de conversão.</div>
+          <div class="pills" style="margin-top:4px">
+            <span class="pill pill-green">Meta Ads</span>
+            <span class="pill pill-orange">R$89,90</span>
+            <span class="pill pill-green">24 dias</span>
+          </div>
+        </div>
+        <div class="frente-card">
+          <div class="frente-num">Frente 02</div>
+          <div class="frente-title">Diferencial Técnico —<br/>Copa do Mundo</div>
+          <div class="frente-desc">CDN do YouTube e Globo em Rio Verde = latência quase zero. Demonstração em vídeo comparando com concorrência.</div>
+          <div class="pills" style="margin-top:4px">
+            <span class="pill pill-green">Vídeo demo</span>
+            <span class="pill pill-orange">Baixa latência</span>
+          </div>
+        </div>
+        <div class="frente-card">
+          <div class="frente-num">Frente 03</div>
+          <div class="frente-title">Programa de Parceiros —<br/>Promotores Locais</div>
+          <div class="frente-desc">Transformar clientes em promotores de vendas. Indicou, ganhou 1 mensalidade. Modelo "Parceiro TerraNet".</div>
+          <div class="pills" style="margin-top:4px">
+            <span class="pill pill-green">Indicação</span>
+            <span class="pill pill-green">Remuneração</span>
+          </div>
+        </div>
+        <div class="frente-card">
+          <div class="frente-num">Frente 04</div>
+          <div class="frente-title">Presença de Marca —<br/>Baixo Custo</div>
+          <div class="frente-desc">Adesivos nos drops e pontos de rede. Parceria com bares para Copa. Visita Granja Naro para conteúdo real.</div>
+          <div class="pills" style="margin-top:4px">
+            <span class="pill pill-green">Placas/Drops</span>
+            <span class="pill pill-orange">Copa Wi-Fi</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">TerraNet · Plano Estratégico Jun–Jul 2026</div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       SLIDE 6 — FRENTE 01: CAMPANHA B2C
+  ═══════════════════════════════════════════════ -->
+  <section class="slide slide-white" id="s6">
+    <div class="slide-header">
+      <span class="slide-label">Frente 01 — Campanha B2C</span>
+      <div class="logo-mark logo-mark-sm">
+        <div class="logo-t">T</div>
+        <div class="logo-name">Terra<span>Net</span></div>
+      </div>
+    </div>
+    <div class="slide-body">
+      <h2 class="slide-headline">Captação agressiva em<br/><em>Estância</em> e <em>Perolândia</em></h2>
+      <div class="two-col" style="flex:1">
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div class="highlight-box" style="text-align:center">
+            <div style="font-size:48px; font-weight:900; color:var(--green)">R$89,90</div>
+            <div style="font-size:13px; color:var(--gray-text); margin-top:4px">preço promocional — primeiros meses</div>
+            <div style="font-size:11px; color:var(--orange); font-weight:600; margin-top:6px">a confirmar com diretoria no dia 08/06</div>
+          </div>
+          <div class="list-items">
+            <div class="list-item">
+              <div class="list-dot orange"></div>
+              <div class="li-text"><span class="orange-strong">Copa do Mundo</span> — gancho: assistir sem delay, CDN local</div>
+            </div>
+            <div class="list-item">
+              <div class="list-dot orange"></div>
+              <div class="li-text"><span class="orange-strong">São João</span> — ação sazonalestrelando a identidade regional</div>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div class="card" style="border:2px solid var(--green);">
+            <div class="card-num">24</div>
+            <div class="card-title">Dias de tráfego pago</div>
+            <div class="card-body">Seg a Sex · Pausa no final de semana conforme atendimento comercial</div>
+          </div>
+          <div class="card" style="border:2px solid var(--orange);">
+            <div class="card-num orange">R$2.400</div>
+            <div class="card-title">Investimento estimado</div>
+            <div class="card-body">R$100/dia × 24 dias · Meta Ads focado em Estância e Perolândia</div>
+          </div>
+          <div style="font-size: 12px; color: var(--gray-text); padding: 0 4px;">
+            ⚡ Teste de hipótese: se não vier cliente com preço competitivo, o problema é visibilidade — não preço.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">TerraNet · Plano Estratégico Jun–Jul 2026</div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       SLIDE 7 — FRENTE 02: DIFERENCIAL COPA
+  ═══════════════════════════════════════════════ -->
+  <section class="slide slide-white" id="s7">
+    <div class="slide-header">
+      <span class="slide-label">Frente 02 — Diferencial Técnico</span>
+      <div class="logo-mark logo-mark-sm">
+        <div class="logo-t">T</div>
+        <div class="logo-name">Terra<span>Net</span></div>
+      </div>
+    </div>
+    <div class="slide-body">
+      <h2 class="slide-headline">Assista o gol<br/><em>antes do vizinho</em></h2>
+      <div class="two-col" style="flex:1">
+        <div class="list-items">
+          <div class="list-item">
+            <div class="list-dot"></div>
+            <div class="li-text"><strong>CDN do YouTube e Globo Play</strong> instalados em Rio Verde. Dados não precisam ir até São Paulo — saem daqui.</div>
+          </div>
+          <div class="list-item">
+            <div class="list-dot"></div>
+            <div class="li-text"><strong>Delay quase zero</strong> vs concorrência. A Globo também migrou para o YouTube — transmissão em milissegundos.</div>
+          </div>
+          <div class="list-item">
+            <div class="list-dot orange"></div>
+            <div class="li-text"><span class="orange-strong">Conteúdo planejado:</span> vídeo com teste de ping ao vivo comparando TerraNet × concorrente. Quem chega primeiro no gol?</div>
+          </div>
+          <div class="list-item">
+            <div class="list-dot orange"></div>
+            <div class="li-text"><span class="orange-strong">Ideia de campanha:</span> poste foto com camisa do Brasil marcando @terranetoficial — ganhe bonificação. Parceria com estabelecimentos locais.</div>
+          </div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:14px; align-items:center; justify-content:center;">
+          <div class="highlight-box" style="text-align:center; padding:32px;">
+            <div style="font-size:48px">⚡</div>
+            <div style="font-size:32px; font-weight:900; color:var(--green); margin-top:8px">Latência<br/>quase zero</div>
+            <div style="font-size:12px; color:var(--gray-text); margin-top:8px">TerraNet — CDN local Rio Verde</div>
+          </div>
+          <div style="font-size:12px; color:var(--gray-text); text-align:center; line-height:1.6">
+            🎯 Primeiro jogo do Brasil:<br/><strong style="color:var(--black)">13 de Junho</strong><br/>Conteúdo precisa estar pronto antes.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">TerraNet · Plano Estratégico Jun–Jul 2026</div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       SLIDE 8 — FRENTE 03: PROGRAMA DE PARCEIROS
+  ═══════════════════════════════════════════════ -->
+  <section class="slide slide-white" id="s8">
+    <div class="slide-header">
+      <span class="slide-label">Frente 03 — Programa de Parceiros</span>
+      <div class="logo-mark logo-mark-sm">
+        <div class="logo-t">T</div>
+        <div class="logo-name">Terra<span>Net</span></div>
+      </div>
+    </div>
+    <div class="slide-body">
+      <h2 class="slide-headline">Transformar clientes<br/>em <em>promotores de vendas</em></h2>
+      <div class="two-col" style="flex:1">
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div class="highlight-box">
+            <p style="font-size:13px; font-weight:700; color:var(--black); margin-bottom:8px">Como funciona</p>
+            <p style="font-size:13px; color:var(--gray-text); line-height:1.6">
+              Cliente indica um amigo. Amigo instala e permanece ativo. Indicador recebe <strong style="color:var(--green)">1 mensalidade inteira</strong> como bônus.<br/><br/>
+              Para parceiros mais ativos: bônus progressivo a cada 3 meses de retenção do indicado.
+            </p>
+          </div>
+          <div class="list-items">
+            <div class="list-item">
+              <div class="list-dot"></div>
+              <div class="li-text"><strong>Nome estratégico:</strong> "Parceiro TerraNet" — não "indique e ganhe". Evita associação com pirâmide.</div>
+            </div>
+            <div class="list-item">
+              <div class="list-dot orange"></div>
+              <div class="li-text"><span class="orange-strong">Perfil ideal:</span> pessoas bem-relacionadas na cidade, que conheçam vizinhos e comerciantes.</div>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div class="card" style="border:2px solid var(--green);">
+            <div class="card-icon">🤝</div>
+            <div class="card-title">Por que funciona</div>
+            <div class="card-body">A mãe da Ianka vendeu R$800 nos grupos de WhatsApp. Cidades pequenas têm redes de confiança. O melhor vendedor é quem já usa e confia.</div>
+          </div>
+          <div class="card" style="border:1px solid var(--gray-mid);">
+            <div class="card-icon">📋</div>
+            <div class="card-title">Próximo passo</div>
+            <div class="card-body">Definir estrutura do programa e formalizar na reunião do dia 08. Selecionar 2–3 pessoas em Perolândia para piloto.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">TerraNet · Plano Estratégico Jun–Jul 2026</div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       SLIDE 9 — FRENTE 04: PRESENÇA DE MARCA
+  ═══════════════════════════════════════════════ -->
+  <section class="slide slide-white" id="s9">
+    <div class="slide-header">
+      <span class="slide-label">Frente 04 — Presença de Marca</span>
+      <div class="logo-mark logo-mark-sm">
+        <div class="logo-t">T</div>
+        <div class="logo-name">Terra<span>Net</span></div>
+      </div>
+    </div>
+    <div class="slide-body">
+      <h2 class="slide-headline">Marca visível.<br/><em>Custo baixo.</em> Resultado acumulado.</h2>
+      <div class="cards-4" style="flex:1; align-items:start;">
+        <div class="card">
+          <div class="card-icon">📌</div>
+          <div class="card-title">Placas nos Drops</div>
+          <div class="card-body">Adesivos e plaquinhas nos equipamentos de rua e pontos de rede. Baixíssimo custo, presença permanente. Estratégia da Red Bull aplicada ao telecom.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">⚽</div>
+          <div class="card-title">Parceria Copa</div>
+          <div class="card-body">Wi-Fi gratuito em bares e estabelecimentos que vão transmitir os jogos. Visibilidade da marca no momento de maior consumo de internet do ano.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🎬</div>
+          <div class="card-title">Visita Granja Naro</div>
+          <div class="card-body">Visita a cliente da região para produção de conteúdo real. Mostrar a estrutura, a conectividade no campo, o cliente em destaque — não a TerraNet.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🎉</div>
+          <div class="card-title">Decoração Interna</div>
+          <div class="card-body">Festa junina e Copa no escritório. Colaboradores como parte do conteúdo. Humanização da marca para stories e posts do dia a dia.</div>
+        </div>
+      </div>
+      <div class="highlight-box">
+        <p style="font-size:13px; color:var(--slate); font-weight:500; line-height:1.6">
+          🎯 <strong style="color:var(--green)">Visita Granja Naro agenda:</strong> semana de 09/06. Bruno confirma com o cliente e a Vizantu prepara o roteiro. Uma visita = 8 a 10 vídeos de conteúdo.
+        </p>
+      </div>
+    </div>
+    <div class="slide-footer">TerraNet · Plano Estratégico Jun–Jul 2026</div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       SLIDE 10 — INSTAGRAM & CONTEÚDO
+  ═══════════════════════════════════════════════ -->
+  <section class="slide slide-white" id="s10">
+    <div class="slide-header">
+      <span class="slide-label">Conteúdo & Instagram</span>
+      <div class="logo-mark logo-mark-sm">
+        <div class="logo-t">T</div>
+        <div class="logo-name">Terra<span>Net</span></div>
+      </div>
+    </div>
+    <div class="slide-body">
+      <h2 class="slide-headline">Linha editorial <em>consistente</em><br/>e presença humana real</h2>
+      <div class="two-col" style="flex:1">
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div class="card" style="border: 2px solid var(--green);">
+            <div class="card-icon">📱</div>
+            <div class="card-title">Bruno — Head de Marketing</div>
+            <div class="card-body">Assume responsabilidade pela execução: gravações, stories diários, visitas de campo, agendamentos. Comprometimento total com os KPIs.</div>
+          </div>
+          <div class="list-items">
+            <div class="list-item">
+              <div class="list-dot"></div>
+              <div class="li-text"><strong>Stories diários</strong> — Vizantu entrega cronograma semanal. Bruno executa.</div>
+            </div>
+            <div class="list-item">
+              <div class="list-dot"></div>
+              <div class="li-text"><strong>Vídeos de campo</strong> — bastidor real, visitas a clientes, dia a dia da equipe técnica.</div>
+            </div>
+            <div class="list-item">
+              <div class="list-dot orange"></div>
+              <div class="li-text"><span class="orange-strong">Equipamentos necessários:</span> iPhone 17 Pro Max + Hollyland — a aprovar com diretoria.</div>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div class="highlight-box">
+            <p style="font-size:12px; font-weight:700; color:var(--black); margin-bottom:8px; text-transform:uppercase; letter-spacing:1px">Linha Editorial</p>
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <div style="display:flex; align-items:center; gap:8px;">
+                <span style="color:var(--green); font-size:14px;">✓</span>
+                <span style="font-size:13px; color:var(--slate)">Bastidor real — equipe em campo, instalações, visitas</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:8px;">
+                <span style="color:var(--green); font-size:14px;">✓</span>
+                <span style="font-size:13px; color:var(--slate)">Educativo — análise de viabilidade, tecnologia, agro</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:8px;">
+                <span style="color:var(--green); font-size:14px;">✓</span>
+                <span style="font-size:13px; color:var(--slate)">Consistência — mesmo formato, repetido até virar marca</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:8px; margin-top:4px; border-top:1px solid var(--gray-mid); padding-top:8px;">
+                <span style="color:#e53935; font-size:14px;">✗</span>
+                <span style="font-size:13px; color:var(--gray-text)">Trends aleatórias desconexas da identidade</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:8px;">
+                <span style="color:#e53935; font-size:14px;">✗</span>
+                <span style="font-size:13px; color:var(--gray-text)">Troca excessiva de formatos — fragmenta o perfil</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-icon">📅</div>
+            <div class="card-title">Porta-vozes</div>
+            <div class="card-body"><strong>Bruno</strong> — campo, POV de rotina, presença humana<br/><strong>Ianka</strong> — análise técnica, viabilidade, autoridade<br/><strong>Wesley</strong> — testes, dados técnicos</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">TerraNet · Plano Estratégico Jun–Jul 2026</div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       SLIDE 11 — INVESTIMENTO
+  ═══════════════════════════════════════════════ -->
+  <section class="slide slide-white" id="s11">
+    <div class="slide-header">
+      <span class="slide-label">Investimento</span>
+      <div class="logo-mark logo-mark-sm">
+        <div class="logo-t">T</div>
+        <div class="logo-name">Terra<span>Net</span></div>
+      </div>
+    </div>
+    <div class="slide-body">
+      <h2 class="slide-headline">O que precisamos<br/>para <em>colocar em prática</em></h2>
+      <div class="two-col" style="flex:1; align-items:center;">
+        <div>
+          <div class="inv-row">
+            <div class="inv-icon">📣</div>
+            <div class="inv-info">
+              <div class="inv-label">Tráfego Pago — Meta Ads</div>
+              <div class="inv-value"><span class="green">R$ 2.400</span></div>
+              <div class="inv-detail">R$100/dia × 24 dias úteis · Estância e Perolândia</div>
+            </div>
+            <div class="inv-badge aprovado">Aprovado</div>
+          </div>
+          <div class="inv-row">
+            <div class="inv-icon">🎯</div>
+            <div class="inv-info">
+              <div class="inv-label">Promoção de Entrada</div>
+              <div class="inv-value"><span class="green">R$ 89,90</span></div>
+              <div class="inv-detail">Primeiros meses para novos clientes · 2 propostas para o dia 08</div>
+            </div>
+            <div class="inv-badge aprovar">A aprovar</div>
+          </div>
+          <div class="inv-row">
+            <div class="inv-icon">📸</div>
+            <div class="inv-info">
+              <div class="inv-label">Equipamentos de Captação</div>
+              <div class="inv-value" style="font-size:16px; font-weight:700; color:var(--black);">iPhone 17 Pro Max + Hollyland</div>
+              <div class="inv-detail">Necessário para qualidade de vídeo de campo — Head de Marketing</div>
+            </div>
+            <div class="inv-badge aprovar">A aprovar</div>
+          </div>
+          <div class="inv-row">
+            <div class="inv-icon">👕</div>
+            <div class="inv-info">
+              <div class="inv-label">Camisetas Copa (Mirante)</div>
+              <div class="inv-value" style="font-size:16px; font-weight:700; color:var(--black);">White label — logo TerraNet</div>
+              <div class="inv-detail">Uniforme copa + ação de engajamento com clientes · R$30/un aprox.</div>
+            </div>
+            <div class="inv-badge aprovar">A aprovar</div>
+          </div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:16px; align-items:center;">
+          <div class="highlight-box" style="text-align:center; padding:32px 40px; width:100%">
+            <div style="font-size:14px; font-weight:700; color:var(--gray-text); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px">Investimento imediato</div>
+            <div style="font-size:52px; font-weight:900; color:var(--green)">R$2.400</div>
+            <div style="font-size:13px; color:var(--gray-text)">tráfego pago · 24 dias</div>
+          </div>
+          <div style="font-size:12px; color:var(--gray-text); text-align:center; line-height:1.8;">
+            ROI esperado:<br/>
+            <strong style="color:var(--black)">Cada novo cliente</strong><br/>
+            = R$89,90/mês recorrente<br/>
+            break-even ≈ 27 clientes novos
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">TerraNet · Plano Estratégico Jun–Jul 2026</div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       SLIDE 12 — LINHA DO TEMPO
+  ═══════════════════════════════════════════════ -->
+  <section class="slide slide-white" id="s12">
+    <div class="slide-header">
+      <span class="slide-label">Linha do Tempo</span>
+      <div class="logo-mark logo-mark-sm">
+        <div class="logo-t">T</div>
+        <div class="logo-name">Terra<span>Net</span></div>
+      </div>
+    </div>
+    <div class="slide-body">
+      <h2 class="slide-headline">Junho e Julho:<br/><em>tudo tem data</em></h2>
+
+      <div class="timeline" style="flex:0; padding: 16px 0;">
+        <div class="tl-item">
+          <div class="tl-dot active">✅</div>
+          <div class="tl-content">
+            <div class="tl-date">05–07 Jun</div>
+            <div class="tl-title">Decoração escritório</div>
+            <div class="tl-desc">Festa junina + Copa<br/>Bruno responsável</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot active" style="background:var(--orange)">📋</div>
+          <div class="tl-content">
+            <div class="tl-date">08 Jun</div>
+            <div class="tl-title">Reunião gerencial</div>
+            <div class="tl-desc">Aprovação do plano<br/>+ 2 promoções propostas</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot active">⚽</div>
+          <div class="tl-content">
+            <div class="tl-date">13 Jun</div>
+            <div class="tl-title">1º jogo do Brasil</div>
+            <div class="tl-desc">Conteúdo de latência<br/>no ar antes desta data</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot active">🎬</div>
+          <div class="tl-content">
+            <div class="tl-date">Sem. 09/06</div>
+            <div class="tl-title">Visita Granja Naro</div>
+            <div class="tl-desc">Captação de conteúdo<br/>real com o cliente</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot orange-dot">🎆</div>
+          <div class="tl-content">
+            <div class="tl-date">28 Jun</div>
+            <div class="tl-title">São João</div>
+            <div class="tl-desc">Ação especial<br/>traje caipira na empresa</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot" style="background:var(--gray-mid)">📊</div>
+          <div class="tl-content">
+            <div class="tl-date">Jul 2026</div>
+            <div class="tl-title">Revisão de resultados</div>
+            <div class="tl-desc">Avaliar captação<br/>e ajustar campanha</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards-3" style="flex:1; align-items:start;">
+        <div class="card" style="background:rgba(71,168,26,0.06); border:1px solid rgba(71,168,26,0.2)">
+          <div class="card-icon">📅</div>
+          <div class="card-title" style="color:var(--green)">Semana 1 (9–13 Jun)</div>
+          <div class="card-body">Reunião aprovação (dia 8) · Tráfego pago no ar · Conteúdo Copa pronto · Agendar Granja Naro</div>
+        </div>
+        <div class="card" style="background:rgba(255,128,1,0.06); border:1px solid rgba(255,128,1,0.2)">
+          <div class="card-icon">📅</div>
+          <div class="card-title" style="color:var(--orange)">Semana 2–3 (16–27 Jun)</div>
+          <div class="card-body">Jogos Copa em andamento · Campanha rodando · Visita cliente + conteúdo de campo · Programa parceiros ativado</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">📅</div>
+          <div class="card-title">Semana 4 (28 Jun+)</div>
+          <div class="card-body">São João (28/6) · Avaliação das primeiras métricas · Ajuste de campanha para julho · Copa indo pra fase decisiva</div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">TerraNet · Plano Estratégico Jun–Jul 2026</div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       SLIDE 13 — TIME & PRÓXIMOS PASSOS
+  ═══════════════════════════════════════════════ -->
+  <section class="slide slide-dark" id="s13">
+    <div class="slide-header" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+      <span class="slide-label">Time & Próximos Passos</span>
+      <div class="logo-mark logo-mark-sm">
+        <div class="logo-t">T</div>
+        <div class="logo-name">Terra<span>Net</span></div>
+      </div>
+    </div>
+    <div class="slide-body">
+      <h2 class="slide-headline">Cada um tem seu<br/><em>papel.</em> Vamos juntos.</h2>
+      <div class="cards-4" style="flex:0">
+        <div class="person-card">
+          <div class="person-avatar" style="background: linear-gradient(135deg, var(--green), var(--green-dark));">B</div>
+          <div class="person-name">Bruno Hoobert</div>
+          <div class="person-role">Head de Marketing</div>
+          <div class="person-tasks">
+            <div class="person-task">Gravações e field content</div>
+            <div class="person-task">Stories diários</div>
+            <div class="person-task">Visita Granja Naro</div>
+            <div class="person-task">Decoração interna</div>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-avatar" style="background: linear-gradient(135deg, #394E45, #2a3d35);">I</div>
+          <div class="person-name">Ianka Kamynsk</div>
+          <div class="person-role">Porta-voz Técnica</div>
+          <div class="person-tasks">
+            <div class="person-task">Vídeos de viabilidade</div>
+            <div class="person-task">Definição de preços</div>
+            <div class="person-task">Análise competitiva</div>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-avatar" style="background: linear-gradient(135deg, #5a6a7e, #3d4f60);">W</div>
+          <div class="person-name">Wesley Fernando</div>
+          <div class="person-role">Suporte & Operações</div>
+          <div class="person-tasks">
+            <div class="person-task">Testes de latência</div>
+            <div class="person-task">Infra Perolândia</div>
+            <div class="person-task">Domínio Nets</div>
+          </div>
+        </div>
+        <div class="person-card" style="background: rgba(71,168,26,0.08); border-color: rgba(71,168,26,0.3);">
+          <div class="person-avatar" style="background: linear-gradient(135deg, var(--orange), #cc6600);">V</div>
+          <div class="person-name">Vizantu</div>
+          <div class="person-role">Estratégia & Conteúdo</div>
+          <div class="person-tasks">
+            <div class="person-task">Copy e roteiros</div>
+            <div class="person-task">Tráfego pago</div>
+            <div class="person-task">Cronograma semanal</div>
+            <div class="person-task">Apresentações</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="highlight-box-dark" style="flex:1; display:flex; flex-direction:column; justify-content:center;">
+        <p style="font-size:12px; font-weight:700; color:var(--green); letter-spacing:2px; text-transform:uppercase; margin-bottom:14px;">Para aprovar na reunião do dia 08/06</p>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+          <div style="display:flex; gap:10px; align-items:center;">
+            <span style="color:var(--orange); font-size:16px;">→</span>
+            <span style="font-size:13px; color:rgba(255,255,255,0.8);">2 propostas de promoção (R$89,90 ou R$79,90)</span>
+          </div>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <span style="color:var(--orange); font-size:16px;">→</span>
+            <span style="font-size:13px; color:rgba(255,255,255,0.8);">Orçamento de tráfego: R$2.400</span>
+          </div>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <span style="color:var(--orange); font-size:16px;">→</span>
+            <span style="font-size:13px; color:rgba(255,255,255,0.8);">Equipamentos: iPhone 17 Pro Max + Hollyland</span>
+          </div>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <span style="color:var(--orange); font-size:16px;">→</span>
+            <span style="font-size:13px; color:rgba(255,255,255,0.8);">Estrutura do Programa de Parceiros</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="slide-footer-dark">Vizantu Gestão de Marca · TerraNet · 2026</p>
+  </section>
+
+</div><!-- /deck -->
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const total = slides.length;
+  let current = 0;
+
+  function goTo(index) {
+    slides[current].classList.remove('active');
+    current = Math.max(0, Math.min(index, total - 1));
+    slides[current].classList.add('active');
+
+    document.getElementById('progress-bar').style.width = ((current + 1) / total * 100) + '%';
+    document.getElementById('slide-counter').textContent =
+      String(current + 1).padStart(2,'0') + ' / ' + String(total).padStart(2,'0');
+
+    document.getElementById('btn-prev').disabled = current === 0;
+    document.getElementById('btn-next').disabled = current === total - 1;
+  }
+
+  function changeSlide(dir) { goTo(current + dir); }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') changeSlide(1);
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') changeSlide(-1);
+  });
+
+  // Touch swipe
+  let touchStart = 0;
+  document.addEventListener('touchstart', e => touchStart = e.touches[0].clientX);
+  document.addEventListener('touchend', e => {
+    const diff = touchStart - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) changeSlide(diff > 0 ? 1 : -1);
+  });
+
+  goTo(0);
+</script>
+</body>
+</html>
