@@ -1,7 +1,7 @@
 # POPs da Vizantu
 
 Status: ativo
-Atualizado em: 2026-05-20
+Atualizado em: 2026-06-09
 
 ## Princípio fundamental — leia antes de qualquer POP
 
@@ -16,20 +16,22 @@ O risco de qualquer padrão é virar engessamento. Esses POPs evitam isso porque
 ## POPs mapeados
 
 - POP-001: Criação de tarefa no ClickUp (campos obrigatórios e quando preencher)
-- POP-002: Padrão de descrição de tarefa — Seção 1 (Direcionamento)
-- POP-003: Padrão de descrição de tarefa — Seção 2 (Roteiro/Conteúdo por formato)
+- POP-002: Padrão de descrição de tarefa no ClickUp
+- POP-003: Padrão de roteiro/conteúdo por formato
 - POP-004: Processo de criação de marca — fase de entrevistas
 
 ---
 
 ## POP-001 — Criação de tarefa no ClickUp
 
-**Atualizado em:** 2026-05-18
+**Atualizado em:** 2026-06-09
 **Origem:** Análise de 150+ tarefas em 13 listas do workspace da Vizantu
 
 ### Objetivo
 
-Garantir que toda tarefa criada no ClickUp tenha informação suficiente para que qualquer membro do time execute sem precisar perguntar, e para que o gestor aprove sem ambiguidade.
+Garantir que toda tarefa criada no ClickUp tenha informação suficiente para que qualquer membro do time execute sem precisar perguntar, para que o gestor aprove sem ambiguidade e para que o criativo entregue no prazo interno de produção.
+
+O ClickUp e a esteira de tarefas e entregas. Ele nao e mais o calendario editorial principal. O calendario de conteudo fica fora do ClickUp e e responsabilidade da social media.
 
 ### Quando usar
 
@@ -43,10 +45,8 @@ Sempre que uma nova demanda de conteúdo, design ou ação for criada no ClickUp
 | **FORMATO** | Na criação | Obrigatório. Selecionar o tipo de peça (CARROSSEL, VÍDEO VERTICAL 9:16, FEED/STORY, IMPRESSO, etc.). Flyers, folders e panfletos entram como IMPRESSO — o tipo específico é detalhado no Direcionamento. Pode ser múltiplos se a mesma peça tiver adaptações. |
 | **CANAL** | Na criação | Obrigatório. Selecionar onde vai publicar (INSTAGRAM, ANÚNCIO NA META, WHATSAPP, etc.). Pode ser múltiplos. |
 | **Responsável** | Na criação | Obrigatório. Adicionar todos os envolvidos na demanda — copy, design, estratégia. Não existe tarefa sem dono. |
-| **Due date** | Na criação | Data de publicação pretendida. Não a data de entrega interna — a data que o conteúdo vai ao ar. |
-| **Descrição** | Na criação | Ver POP-002 e POP-003. |
-| **LEGENDA(ORG)** | Antes de mover para "aprovação da copy" | Obrigatório apenas para conteúdo que vai a redes sociais: vídeo, carrossel, post estático, story. Não se aplica a impresso, logo, identidade visual, branding, assinatura de e-mail e similares. Usar o campo, nunca escrever a legenda dentro da descrição. |
-| **LEGENDA(ADS)** | Antes de mover para "aprovação da copy" | Obrigatório apenas quando o CANAL incluir ANÚNCIO NA META ou outro canal de anúncio pago, e somente para os formatos de conteúdo que vão a redes sociais. |
+| **Due date** | Na criação | Data limite interna para a entrega estar criada, revisada e aprovada. A data de publicação fica no calendario externo da social media. |
+| **Descrição** | Na criação | Obrigatória. Deve seguir estritamente a estrutura do POP-002: `Direcionamento`, `Roteiro`, `Legenda` e checklist final. |
 | **LINK DO ARQUIVO** | Assim que a pasta for criada | A pasta é criada quando o material do cliente chega OU quando o diretor de arte inicia a criação. Ao mover para "em criação", o link já deve estar no campo. |
 | **Prioridade** | Somente quando há urgência real de prazo | Não usar como hábito. Urgent/High só quando há data iminente que justifica. Sem urgência real = sem prioridade. |
 
@@ -54,49 +54,82 @@ Sempre que uma nova demanda de conteúdo, design ou ação for criada no ClickUp
 
 ```
 ideia
-  ↓ (copy escrita + legenda no campo LEGENDA(ORG))
-escrevendo a copy / aprovação da copy
-  ↓ (aprovado pelo cliente ou gestor)
+  ↓ (descrição escrita com direcionamento, roteiro e legenda)
+aprovação de copy
+  ↓ (copy aprovada ou precisa melhorar)
+ajuste
+  ↓ (descrição corrigida)
 pronto para criação
   ↓ (pasta criada, LINK DO ARQUIVO preenchido)
-em criação
+revisão
   ↓
-aguardando material (se o cliente não enviou algo necessário)
+aprovação(cliente)
   ↓
-para aprovação
-  ↓
-aprovado
-  ↓ (publicado)
-[fechado]
+aprovado(status de fechamento)
+
+problema externo/interno
+  (usar quando cliente, material, escopo, copy, criação ou revisão bloquearem o andamento)
 ```
 
 ### Riscos comuns
 
-- Legenda escrita dentro da descrição em vez do campo LEGENDA(ORG): impede o uso da IA e quebra o processo de aprovação de copy.
+- Legenda ausente da descrição: a copy fica incompleta e a tarefa nao deve sair de `aprovação de copy`.
+- Descrição sem a estrutura obrigatória: aumenta retrabalho e confunde o criativo.
 - LINK DO ARQUIVO não preenchido ao mover para "em criação": o diretor de arte não sabe onde entregar o arquivo.
 - Nome genérico na tarefa: cria ambiguidade no review e na aprovação.
 - Tarefa sem responsável: não anda.
-- Tarefa sem due date: não entra no calendário editorial.
+- Tarefa sem due date: perde o prazo interno de entrega.
+- Usar o ClickUp como calendario de publicacao: mistura planejamento editorial com esteira de produção e atrapalha a entrega no prazo.
 
 ### Ferramentas envolvidas
 
-- ClickUp (gestão)
+- ClickUp (gestão de tarefas e entregas)
 - Google Drive (arquivos)
-- IA do campo LEGENDA(ORG) e LEGENDA(ADS) (geração de legenda e copy de anúncio)
+- Calendario externo de conteúdo (responsabilidade da social media)
 
 ---
 
-## POP-002 — Padrão de descrição — Seção 1: Direcionamento
+## POP-002 — Padrão de descrição de tarefa no ClickUp
 
-**Atualizado em:** 2026-05-18
+**Atualizado em:** 2026-06-09
 
 ### Objetivo
 
-Garantir que quem executa a demanda entenda exatamente o que precisa ser feito, por que, como deve ser feito e o que não pode acontecer — sem precisar perguntar nada.
+Garantir que a descrição da tarefa seja completa, clara e padronizada para o ClickUp reconhecer o Markdown sem quebrar a leitura, e para que copy, cliente e equipe criativa entendam exatamente o que precisa ser feito.
+
+### Estrutura obrigatória da descrição
+
+Toda descrição de tarefa deve seguir esta estrutura, nesta ordem, com estes títulos:
+
+```md
+### Direcionamento:
+---
+[Texto simples, claro e em passo a passo sobre por que e como a tarefa deve ser feita.]
+
+### Roteiro:
+---
+[Tabela com CENA - FALA - LETTERING, quando o formato pedir roteiro. Para outros formatos, usar a estrutura correspondente do POP-003.]
+
+### Legenda:
+---
+[Legenda final pronta para copiar e colar na rede social.]
+
+### Checklist:
+---
+1. direcionamento ok? se a resposta for não, melhore
+2. roteiro ok? (de acordo com o tipo de conteúdo) se a resposta for não, melhore
+3. legenda ok? se a resposta for não, melhore
+4. os criativos da equipe vão entender o que fazer? se a resposta for não, melhore
+5. o clickup reconheceu o md? se a resposta for não, arrume
+```
+
+Essa estrutura e obrigatoria mesmo quando alguma parte nao se aplica. Se nao houver roteiro por causa do formato, a seção `Roteiro` deve explicar a estrutura de conteúdo daquele formato conforme POP-003. Se nao houver legenda porque o material nao sera publicado em rede social, a seção `Legenda` deve registrar `Nao se aplica` e explicar o motivo em uma frase.
+
+### Seção 1: Direcionamento
 
 ### Princípio fundamental
 
-O Direcionamento é escrito em **prosa narrativa**, não em campos ou formulário. Lê como uma explicação clara de uma pessoa para outra — como você descreveria a tarefa num áudio ou numa conversa. A ordem do raciocínio é o que importa, não rótulos ou categorias.
+O Direcionamento é escrito em **prosa narrativa e passo a passo**, não em campos soltos ou formulário. Lê como uma explicação clara de uma pessoa para outra — como você descreveria a tarefa num áudio ou numa conversa para alguém de 12 anos entender sem precisar perguntar.
 
 **A linguagem precisa ser concreta.** Nunca usar adjetivos abstratos que cada pessoa interpreta diferente — "algo mais sério", "visualmente claro", "tom profissional". Sempre traduzir para o que isso significa na prática: "sem ilustrações, tipografia bold, sem cantos arredondados", "texto legível de dentro de um carro parado no sinal", "voz de médico explicando para paciente, não de apresentador".
 
@@ -145,11 +178,48 @@ Separar com linha de título antes de cada material:
 [blocos 1, 2, 3 e 4 do material 2]
 ```
 
+### Seção 2: Roteiro
+
+O Roteiro mostra exatamente o que o cliente, porta-voz ou peça precisa dizer. Para vídeo, a tabela obrigatória e:
+
+| CENA | FALA | LETTERING |
+|---|---|---|
+| O que acontece visualmente, câmera, entrega ou ação | Texto corrido, natural e falável | Trecho curto que aparece na tela |
+
+A coluna `FALA` precisa seguir o tom de voz e a linguagem específica de cada marca, documentados no contexto de cada cliente. Cada cliente tem seu jeito: nao existe voz padrao da Vizantu para todo mundo.
+
+Regras de linguagem:
+
+- Escrever como uma pessoa real falaria, com texto corrido e natural.
+- Evitar frases curtas de impacto sem sentido.
+- Evitar excesso de pontos finais que deixam a fala robótica.
+- Nao usar fórmulas comuns de IA, como "não é sobre isso, é sobre aquilo" ou "é muito mais que um conceito".
+- Evitar palavras que soam artificiais na fala cotidiana quando nao forem naturais para a marca, como "celebração".
+- Se o texto parece escrito por IA, reescrever ate soar humano.
+
+Para formatos que nao usam `CENA | FALA | LETTERING`, seguir a estrutura específica do POP-003.
+
+### Seção 3: Legenda
+
+A Legenda e o texto final pronto para copiar e colar no Instagram ou em outra rede onde o conteúdo sera publicado.
+
+A legenda e um plus do conteúdo. Ela nao repete simplesmente o que esta no carrossel, no reels, no estático ou no story. Ela entrega algo a mais sobre o mesmo assunto para manter a pessoa interessada e dar uma camada nova de valor.
+
+Uma boa legenda normalmente tem:
+
+- gancho forte;
+- corpo com algo interessante, complementar ao conteúdo;
+- CTA coerente com o CTA da peça.
+
+A legenda deve ser avaliada conforme o tipo de conteúdo. Em uma trend, por exemplo, a legenda pode ser curta e espontânea, como uma reação natural. Em um conteúdo educativo, comercial ou institucional, ela deve aprofundar um ângulo que a peça nao entregou inteira.
+
+Regra central: a legenda precisa somar, nao repetir.
+
 ---
 
-## POP-003 — Padrão de descrição — Seção 2: Roteiro / Conteúdo por formato
+## POP-003 — Padrão de roteiro/conteúdo por formato
 
-**Atualizado em:** 2026-05-18
+**Atualizado em:** 2026-06-09
 
 ### Objetivo
 

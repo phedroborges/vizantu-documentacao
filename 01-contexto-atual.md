@@ -1,7 +1,7 @@
 # Contexto Atual da Vizantu
 
 Status: ativo
-Atualizado em: 2026-05-18
+Atualizado em: 2026-06-09
 
 ## Time
 
@@ -25,6 +25,10 @@ Com base no quadro analisado, a operacao atual da Vizantu parece girar em torno 
 4. Criacao de conteudo
 
 O `ClickUp` aparece como nucleo operacional do sistema.
+
+Desde 2026-06-09, a funcao do `ClickUp` passa a ser especialmente a gestao de tarefas e entregas, nao o calendario editorial principal. O calendario de conteudo sera externo e ficara sob responsabilidade da social media. Dentro do ClickUp, o foco e garantir que nenhuma ideia se perca, que toda entrega tenha briefing/copy/roteiro/legenda completos e que o criativo saiba exatamente o que fazer antes do prazo de entrega.
+
+Com essa mudanca, a `due date` da tarefa deve representar o prazo interno para a entrega estar criada, revisada e aprovada, nao necessariamente o dia de publicacao.
 
 ## Estrutura percebida no quadro
 
@@ -77,7 +81,8 @@ A Vizantu parece operar com uma estrutura que mistura:
 - producao criativa;
 - atendimento e comunicacao;
 - acompanhamento operacional;
-- centralizacao de tarefas no ClickUp.
+- centralizacao de tarefas e entregas no ClickUp;
+- calendario de conteudo externo, sob responsabilidade da social media.
 
 ## Pendencias de detalhamento
 

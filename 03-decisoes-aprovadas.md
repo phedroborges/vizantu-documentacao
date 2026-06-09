@@ -1,7 +1,7 @@
 # Decisoes Aprovadas
 
 Status: ativo
-Atualizado em: 2026-05-18
+Atualizado em: 2026-06-09
 
 ## Decisoes
 
@@ -24,3 +24,24 @@ Atualizado em: 2026-05-18
   - LINK DO ARQUIVO: obrigatório assim que a pasta for criada — seja pelo recebimento de material do cliente ou pela criação pelo diretor de arte ao iniciar a demanda.
   - Responsável: pode ser múltiplos — todos os envolvidos na demanda devem estar adicionados.
   - Prioridade: usar apenas com urgência real de prazo, não como hábito.
+
+### 2026-06-09
+
+- A legenda deixa de existir como custom field separado (`LEGENDA(ORG)` e `LEGENDA(ADS)` deixam de ser usados).
+- A legenda passa a ficar dentro da `Descrição` da tarefa, como a terceira seção obrigatória depois de `Direcionamento` e `Roteiro`.
+- A estrutura obrigatória da descrição passa a ser:
+  - `### Direcionamento:`
+  - `### Roteiro:`
+  - `### Legenda:`
+  - checklist final de qualidade.
+- O ClickUp passa a ser usado com foco em tarefas e entregas, nao como calendario editorial principal.
+- O calendario de conteudo sera externo e ficara sob responsabilidade da social media.
+- Os status aprovados para a esteira do ClickUp sao:
+  - ideia
+  - aprovação de copy
+  - ajuste
+  - pronto para criação
+  - revisão
+  - aprovação(cliente)
+  - aprovado(status de fechamento)
+  - problema externo/interno
