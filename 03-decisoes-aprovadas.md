@@ -36,9 +36,11 @@ Atualizado em: 2026-06-09
   - checklist final de qualidade.
 - O ClickUp passa a ser usado com foco em tarefas e entregas, nao como calendario editorial principal.
 - O calendario de conteudo sera externo e ficara sob responsabilidade da social media.
+- A social media tambem assume papel de CS operacional: conduz a aprovacao dos materiais com o cliente, cobra retornos e acompanha materiais pendentes.
 - Os status aprovados para a esteira do ClickUp sao:
   - ideia
   - aprovação de copy
+  - aguardando material
   - ajuste
   - pronto para criação
   - revisão

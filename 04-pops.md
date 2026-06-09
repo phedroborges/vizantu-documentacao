@@ -29,9 +29,11 @@ O risco de qualquer padrão é virar engessamento. Esses POPs evitam isso porque
 
 ### Objetivo
 
-Garantir que toda tarefa criada no ClickUp tenha informação suficiente para que qualquer membro do time execute sem precisar perguntar, para que o gestor aprove sem ambiguidade e para que o criativo entregue no prazo interno de produção.
+Garantir que toda tarefa criada no ClickUp tenha informação suficiente para que qualquer membro do time execute sem precisar perguntar, para que o gestor aprove sem ambiguidade, para que a social media saiba o que aprovar com o cliente e para que o criativo entregue no prazo interno de produção.
 
 O ClickUp e a esteira de tarefas e entregas. Ele nao e mais o calendario editorial principal. O calendario de conteudo fica fora do ClickUp e e responsabilidade da social media.
+
+A social media tambem tem responsabilidade de CS operacional: leva os materiais para aprovacao do cliente, cobra retornos, solicita materiais pendentes e mantém o calendario externo alinhado com o que esta em andamento no ClickUp.
 
 ### Quando usar
 
@@ -56,6 +58,10 @@ Sempre que uma nova demanda de conteúdo, design ou ação for criada no ClickUp
 ideia
   ↓ (descrição escrita com direcionamento, roteiro e legenda)
 aprovação de copy
+  ↓ se falta material nosso ou do cliente
+aguardando material
+  ↓ material recebido
+aprovação de copy
   ↓ se precisa melhorar
 ajuste
   ↓ descrição corrigida
@@ -70,14 +76,30 @@ aprovação(cliente)
 aprovado(status de fechamento)
 
 problema externo/interno
-  (usar quando cliente, material, escopo, copy, criação ou revisão bloquearem o andamento)
+  (usar quando houver bloqueio interno/externo que nao seja apenas falta de material: escopo, decisao, falha de processo, impedimento real ou conflito de prazo)
 ```
+
+### Quando usar cada status
+
+| Status | Quando usar | Responsável principal pela movimentação |
+|---|---|---|
+| **ideia** | Ideia registrada, ainda sem descrição completa. | Estratégia / copy |
+| **aprovação de copy** | Direcionamento, roteiro e legenda estão sendo avaliados antes de liberar para criação. | Estratégia / copy |
+| **aguardando material** | Falta algo por parte da Vizantu ou o cliente ainda não mandou material necessário. | Social media / CS operacional |
+| **ajuste** | A copy, roteiro, direcionamento, legenda ou material criativo precisa ser corrigido. | Quem recebeu o ajuste |
+| **pronto para criação** | Descrição aprovada e completa, material disponível e link do arquivo preenchido. | Estratégia / copy |
+| **revisão** | Peça criada e em revisão interna antes de ir para o cliente. | Gestão / direção criativa |
+| **aprovação(cliente)** | Material enviado para o cliente aprovar. | Social media / CS operacional |
+| **aprovado(status de fechamento)** | Cliente aprovou ou a entrega foi validada como finalizada. | Social media / gestão |
+| **problema externo/interno** | Existe bloqueio real que impede o andamento e precisa ser documentado. | Quem identificou o bloqueio |
 
 ### Riscos comuns
 
 - Legenda ausente da descrição: a copy fica incompleta e a tarefa nao deve sair de `aprovação de copy`.
 - Descrição sem a estrutura obrigatória: aumenta retrabalho e confunde o criativo.
 - LINK DO ARQUIVO não preenchido antes de `pronto para criação`: o diretor de arte não sabe onde entregar o arquivo.
+- Material pendente tratado como `problema externo/interno` sem necessidade: polui a esteira. Se falta material, usar `aguardando material`.
+- Material enviado ao cliente sem a social media/CS operacional acompanhar: a aprovacao se perde fora do fluxo.
 - Nome genérico na tarefa: cria ambiguidade no review e na aprovação.
 - Tarefa sem responsável: não anda.
 - Tarefa sem due date: perde o prazo interno de entrega.
@@ -88,6 +110,7 @@ problema externo/interno
 - ClickUp (gestão de tarefas e entregas)
 - Google Drive (arquivos)
 - Calendario externo de conteúdo (responsabilidade da social media)
+- WhatsApp ou canal oficial do cliente (aprovações e cobranças feitas pela social media/CS operacional)
 
 ---
 

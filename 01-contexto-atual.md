@@ -11,7 +11,7 @@ Atualizado em: 2026-06-09
 | Erika Iorrana | Diretora criativa | Sênior — capitã da equipe criativa |
 | Josiano | Diretor criativo | Pleno |
 | (nome a confirmar) | Diretor criativo | Júnior |
-| Cyntthia Almeida | Social media | — |
+| Cyntthia Almeida | Social media / CS operacional | Responsável pelo calendário externo, contato de aprovação com cliente e acompanhamento de materiais |
 
 ---
 
@@ -29,6 +29,8 @@ O `ClickUp` aparece como nucleo operacional do sistema.
 Desde 2026-06-09, a funcao do `ClickUp` passa a ser especialmente a gestao de tarefas e entregas, nao o calendario editorial principal. O calendario de conteudo sera externo e ficara sob responsabilidade da social media. Dentro do ClickUp, o foco e garantir que nenhuma ideia se perca, que toda entrega tenha briefing/copy/roteiro/legenda completos e que o criativo saiba exatamente o que fazer antes do prazo de entrega.
 
 Com essa mudanca, a `due date` da tarefa deve representar o prazo interno para a entrega estar criada, revisada e aprovada, nao necessariamente o dia de publicacao.
+
+Na operação atual, a social media também assume um papel de CS operacional: acompanha o cliente no dia a dia, envia materiais para aprovação, cobra retornos, solicita materiais pendentes e mantém o calendário externo alinhado com o que está em produção no ClickUp.
 
 ## Estrutura percebida no quadro
 
@@ -71,6 +73,8 @@ Com essa mudanca, a `due date` da tarefa deve representar o prazo interno para a
 - agendamentos de reuniao/captacao
 - confirmacoes
 - suporte
+- envio de materiais para aprovacao do cliente
+- cobranca de retorno e materiais pendentes pela social media
 
 ## Hipotese de leitura
 

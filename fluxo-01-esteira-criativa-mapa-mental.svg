@@ -52,8 +52,12 @@
   <rect class="blue" x="370" y="300" width="245" height="64"/>
   <text class="label" x="492" y="339" text-anchor="middle">aprovacao de copy</text>
 
-  <rect class="yellow" x="710" y="300" width="170" height="64"/>
-  <text class="label" x="795" y="339" text-anchor="middle">ajuste</text>
+  <rect class="yellow" x="675" y="270" width="245" height="64"/>
+  <text class="label" x="797" y="296" text-anchor="middle">aguardando</text>
+  <text class="label" x="797" y="320" text-anchor="middle">material</text>
+
+  <rect class="yellow" x="675" y="382" width="245" height="64"/>
+  <text class="label" x="797" y="421" text-anchor="middle">ajuste</text>
 
   <rect class="green" x="1010" y="300" width="245" height="64"/>
   <text class="label" x="1132" y="339" text-anchor="middle">pronto para criacao</text>
@@ -67,6 +71,7 @@
 
   <rect class="blue" x="610" y="680" width="270" height="64"/>
   <text class="label" x="745" y="719" text-anchor="middle">aprovacao(cliente)</text>
+  <text class="tiny" x="745" y="765" text-anchor="middle">social media / CS operacional</text>
 
   <rect class="green" x="220" y="680" width="270" height="64"/>
   <text class="label" x="355" y="706" text-anchor="middle">aprovado</text>
@@ -84,11 +89,15 @@
   <text class="small" x="1585" y="896" text-anchor="middle">volta para o status correto</text>
 
   <path class="arrow" d="M300 332 L370 332"/>
-  <path class="arrow-red" d="M615 332 L710 332"/>
-  <text class="tiny" x="665" y="312">melhorar</text>
+  <path class="arrow-red" d="M615 332 L675 302"/>
+  <text class="tiny" x="650" y="288">falta material</text>
+  <path class="arrow" d="M675 302 C600 250, 492 260, 492 300"/>
+  <text class="tiny" x="565" y="247">recebido</text>
+  <path class="arrow-red" d="M615 332 L675 414"/>
+  <text class="tiny" x="657" y="400">melhorar</text>
   <path class="arrow" d="M880 332 C930 332, 960 332, 1010 332"/>
-  <path class="arrow" d="M795 364 C795 430, 492 430, 492 364"/>
-  <text class="tiny" x="640" y="450">volta para aprovacao de copy</text>
+  <path class="arrow" d="M675 414 C585 450, 492 430, 492 364"/>
+  <text class="tiny" x="600" y="465">volta para aprovacao de copy</text>
 
   <path class="arrow" d="M1132 364 C1132 485, 1110 585, 1110 680"/>
   <path class="arrow" d="M990 712 L880 712"/>
@@ -102,8 +111,8 @@
   <path class="arrow-red" d="M745 680 C1000 585, 1290 610, 1460 680"/>
   <path class="arrow" d="M1585 732 L1585 825"/>
 
-  <text class="tiny" x="1320" y="960">Usar quando cliente, material, escopo, copy,</text>
-  <text class="tiny" x="1320" y="982">criacao ou revisao bloquearem o andamento.</text>
+  <text class="tiny" x="1320" y="960">Usar para escopo, decisao, processo, prazo</text>
+  <text class="tiny" x="1320" y="982">ou bloqueio real. Falta de material vai em aguardando material.</text>
 
   <text class="footer" x="90" y="1128">Vizantu | Fluxo 01 em mapa mental | ClickUp como esteira de tarefas e entregas</text>
 </svg>
