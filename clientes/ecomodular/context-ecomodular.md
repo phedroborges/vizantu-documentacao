@@ -77,6 +77,9 @@ Características do cliente ideal:
 - Quer construir do jeito certo, com material de qualidade e acabamento bonito
 - Não está pesquisando "tijolo mais barato" — está pesquisando "como construir bem"
 - Valoriza estética (tijolo à vista é visual)
+- Constrói principalmente para uso próprio e da família, não para revenda; quando falar em "valor", puxar para conquista pessoal, orgulho, conforto, experiência de viver e casa feita para durar, não para vender ou alugar.
+- Responde bem a conteúdos aspiracionais com repertório de Instagram/trends quando o insight técnico aparece como complemento dentro de uma cena desejável.
+- Para post estático, preferir uma estrutura visual enxuta: headline falável em tom de conversa/trend, um insight técnico curto e CTA simples. Evitar headline conceitual demais ou linguagem de campanha imobiliária; a peça precisa parecer natural no feed.
 - Em praças como Rio Verde e Jataí: precisa de confiança, treinamento e acompanhamento
 
 ### Perfil a evitar
