@@ -4,13 +4,13 @@
       .bg { fill: #f8f9f6; }
       .title { font-family: Arial, Helvetica, sans-serif; font-size: 42px; font-weight: 800; fill: #13213c; }
       .subtitle { font-family: Arial, Helvetica, sans-serif; font-size: 19px; fill: #526174; }
-      .box { fill: #ffffff; stroke: #cfd8de; stroke-width: 3; rx: 16; }
-      .blue { fill: #e8f1ff; stroke: #3a86ff; stroke-width: 4; rx: 16; }
-      .green { fill: #e8f7ef; stroke: #2f9e65; stroke-width: 4; rx: 16; }
-      .yellow { fill: #fff4d9; stroke: #f2b705; stroke-width: 4; rx: 16; }
-      .red { fill: #fff0ed; stroke: #e5484d; stroke-width: 4; rx: 16; }
-      .dark { fill: #13213c; stroke: #13213c; stroke-width: 4; rx: 22; }
-      .panel { fill: #ffffff; stroke: #d8e0e5; stroke-width: 2; rx: 20; }
+      .panel { fill: #ffffff; stroke: #d8e0e5; stroke-width: 2; rx: 18; }
+      .box { fill: #ffffff; stroke: #cfd8de; stroke-width: 3; rx: 14; }
+      .blue { fill: #e8f1ff; stroke: #3a86ff; stroke-width: 4; rx: 14; }
+      .green { fill: #e8f7ef; stroke: #2f9e65; stroke-width: 4; rx: 14; }
+      .yellow { fill: #fff4d9; stroke: #f2b705; stroke-width: 4; rx: 14; }
+      .red { fill: #fff0ed; stroke: #e5484d; stroke-width: 4; rx: 14; }
+      .dark { fill: #13213c; stroke: #13213c; stroke-width: 4; rx: 18; }
       .label { font-family: Arial, Helvetica, sans-serif; font-size: 20px; font-weight: 800; fill: #13213c; }
       .small { font-family: Arial, Helvetica, sans-serif; font-size: 15px; fill: #526174; }
       .tiny { font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 700; fill: #526174; }
@@ -18,15 +18,10 @@
       .white-small { font-family: Arial, Helvetica, sans-serif; font-size: 16px; fill: #dbe4ea; }
       .footer { font-family: Arial, Helvetica, sans-serif; font-size: 16px; fill: #526174; }
       .arrow { stroke: #475569; stroke-width: 3.2; fill: none; marker-end: url(#arrow); }
-      .arrow-green { stroke: #2f9e65; stroke-width: 3.2; fill: none; marker-end: url(#arrow-green); }
       .arrow-red { stroke: #e5484d; stroke-width: 3.2; fill: none; marker-end: url(#arrow-red); }
-      .arrow-problem { stroke: #e5484d; stroke-width: 3; fill: none; marker-end: url(#arrow-red); stroke-dasharray: 8 8; }
     </style>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto">
       <path d="M2,2 L8.5,5 L2,8 Z" fill="#475569"/>
-    </marker>
-    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto">
-      <path d="M2,2 L8.5,5 L2,8 Z" fill="#2f9e65"/>
     </marker>
     <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto">
       <path d="M2,2 L8.5,5 L2,8 Z" fill="#e5484d"/>
@@ -35,127 +30,80 @@
 
   <rect class="bg" x="0" y="0" width="1920" height="1200"/>
 
-  <text class="title" x="90" y="88">Fluxo 01 — Esteira Criativa</text>
-  <text class="subtitle" x="92" y="118">Mapa mental 16:10 do fluxo aprovado. Status final: aprovado.</text>
+  <text class="title" x="90" y="88">Fluxo 01 - Esteira Criativa</text>
+  <text class="subtitle" x="92" y="118">Mapa mental do fluxo aprovado em 2026-06-09. Status final: aprovado(status de fechamento).</text>
 
   <rect class="dark" x="1270" y="55" width="520" height="84"/>
   <text class="white-label" x="1530" y="90" text-anchor="middle">ClickUp Criativo</text>
-  <text class="white-small" x="1530" y="118" text-anchor="middle">entrega final, nao publicacao</text>
+  <text class="white-small" x="1530" y="118" text-anchor="middle">tarefas e entregas, nao publicacao</text>
 
-  <!-- Content panels with generous safe margins -->
   <rect class="panel" x="90" y="175" width="1740" height="300"/>
   <text class="label" x="125" y="215">1. Entrada e copy</text>
 
   <rect class="panel" x="90" y="525" width="1140" height="500"/>
-  <text class="label" x="125" y="565">2. Criacao e aprovacao</text>
+  <text class="label" x="125" y="565">2. Criacao, revisao e cliente</text>
 
   <rect class="panel" x="1280" y="525" width="550" height="500"/>
-  <text class="label" x="1315" y="565">3. Problema externo / interno</text>
+  <text class="label" x="1315" y="565">3. Bloqueios</text>
 
-  <!-- Row 1 -->
   <rect class="box" x="130" y="300" width="170" height="64"/>
-  <text class="label" x="215" y="339" text-anchor="middle">Ideia</text>
+  <text class="label" x="215" y="339" text-anchor="middle">ideia</text>
 
-  <rect class="blue" x="370" y="300" width="235" height="64"/>
-  <text class="label" x="488" y="339" text-anchor="middle">Aprovacao de copy</text>
+  <rect class="blue" x="370" y="300" width="245" height="64"/>
+  <text class="label" x="492" y="339" text-anchor="middle">aprovacao de copy</text>
 
-  <rect class="box" x="690" y="270" width="230" height="124"/>
-  <text class="label" x="805" y="320" text-anchor="middle">Copy aprovada</text>
-  <text class="small" x="805" y="347" text-anchor="middle">e completa?</text>
-
-  <rect class="yellow" x="690" y="415" width="230" height="64"/>
-  <text class="label" x="805" y="441" text-anchor="middle">Ajuste</text>
-  <text class="label" x="805" y="465" text-anchor="middle">de copy</text>
+  <rect class="yellow" x="710" y="300" width="170" height="64"/>
+  <text class="label" x="795" y="339" text-anchor="middle">ajuste</text>
 
   <rect class="green" x="1010" y="300" width="245" height="64"/>
-  <text class="label" x="1132" y="339" text-anchor="middle">Pronto para criacao</text>
+  <text class="label" x="1132" y="339" text-anchor="middle">pronto para criacao</text>
 
-  <rect class="box" x="1350" y="270" width="230" height="124"/>
-  <text class="label" x="1465" y="320" text-anchor="middle">Checklist</text>
-  <text class="small" x="1465" y="347" text-anchor="middle">completo?</text>
+  <text class="tiny" x="1285" y="318">Descricao completa:</text>
+  <text class="tiny" x="1285" y="342">Direcionamento + Roteiro + Legenda</text>
+  <text class="tiny" x="1285" y="366">+ checklist final.</text>
 
-  <!-- Row 2 -->
-  <rect class="box" x="990" y="680" width="240" height="64"/>
-  <text class="label" x="1110" y="719" text-anchor="middle">Em criacao</text>
+  <rect class="blue" x="990" y="680" width="240" height="64"/>
+  <text class="label" x="1110" y="719" text-anchor="middle">revisao</text>
 
-  <rect class="blue" x="710" y="680" width="230" height="64"/>
-  <text class="label" x="825" y="719" text-anchor="middle">Revisao interna</text>
+  <rect class="blue" x="610" y="680" width="270" height="64"/>
+  <text class="label" x="745" y="719" text-anchor="middle">aprovacao(cliente)</text>
 
-  <rect class="box" x="430" y="650" width="230" height="124"/>
-  <text class="label" x="545" y="700" text-anchor="middle">Aprovado</text>
-  <text class="small" x="545" y="727" text-anchor="middle">internamente?</text>
+  <rect class="green" x="220" y="680" width="270" height="64"/>
+  <text class="label" x="355" y="706" text-anchor="middle">aprovado</text>
+  <text class="small" x="355" y="730" text-anchor="middle">status de fechamento</text>
 
-  <rect class="blue" x="130" y="680" width="245" height="64"/>
-  <text class="label" x="252" y="706" text-anchor="middle">Para aprovacao</text>
-  <text class="label" x="252" y="730" text-anchor="middle">do cliente</text>
+  <rect class="yellow" x="610" y="858" width="270" height="64"/>
+  <text class="label" x="745" y="897" text-anchor="middle">ajuste</text>
 
-  <rect class="box" x="130" y="835" width="245" height="112"/>
-  <text class="label" x="252" y="880" text-anchor="middle">Cliente</text>
-  <text class="small" x="252" y="906" text-anchor="middle">aprovou?</text>
-
-  <rect class="green" x="430" y="858" width="230" height="64"/>
-  <text class="label" x="545" y="897" text-anchor="middle">Aprovado</text>
-
-  <rect class="yellow" x="710" y="858" width="230" height="64"/>
-  <text class="label" x="825" y="884" text-anchor="middle">Ajuste</text>
-  <text class="label" x="825" y="908" text-anchor="middle">criativo</text>
-
-  <!-- Problem panel -->
   <rect class="red" x="1460" y="640" width="250" height="92"/>
-  <text class="label" x="1585" y="674" text-anchor="middle">Problema</text>
-  <text class="label" x="1585" y="700" text-anchor="middle">externo / interno</text>
+  <text class="label" x="1585" y="674" text-anchor="middle">problema</text>
+  <text class="label" x="1585" y="700" text-anchor="middle">externo/interno</text>
 
   <rect class="box" x="1460" y="825" width="250" height="112"/>
-  <text class="label" x="1585" y="870" text-anchor="middle">Problema</text>
-  <text class="small" x="1585" y="896" text-anchor="middle">resolvido?</text>
+  <text class="label" x="1585" y="870" text-anchor="middle">resolvido?</text>
+  <text class="small" x="1585" y="896" text-anchor="middle">volta para o status correto</text>
 
-  <text class="tiny" x="1320" y="960">Entradas possiveis:</text>
-  <text class="tiny" x="1320" y="982">pronto, criacao, revisao ou cliente.</text>
-
-  <!-- Top arrows -->
   <path class="arrow" d="M300 332 L370 332"/>
-  <path class="arrow" d="M605 332 L690 332"/>
-  <path class="arrow-green" d="M920 332 L1010 332"/>
-  <text class="tiny" x="950" y="312">sim</text>
-  <path class="arrow" d="M1255 332 L1350 332"/>
+  <path class="arrow-red" d="M615 332 L710 332"/>
+  <text class="tiny" x="665" y="312">melhorar</text>
+  <path class="arrow" d="M880 332 C930 332, 960 332, 1010 332"/>
+  <path class="arrow" d="M795 364 C795 430, 492 430, 492 364"/>
+  <text class="tiny" x="640" y="450">volta para aprovacao de copy</text>
 
-  <path class="arrow-red" d="M805 394 L805 415"/>
-  <text class="tiny" x="830" y="409">nao</text>
-  <path class="arrow" d="M690 447 C565 450, 488 412, 488 364"/>
+  <path class="arrow" d="M1132 364 C1132 485, 1110 585, 1110 680"/>
+  <path class="arrow" d="M990 712 L880 712"/>
+  <path class="arrow" d="M610 712 L490 712"/>
+  <path class="arrow-red" d="M745 744 L745 858"/>
+  <text class="tiny" x="770" y="810">cliente pediu ajuste</text>
+  <path class="arrow" d="M880 890 C990 865, 1110 795, 1110 744"/>
 
-  <path class="arrow-red" d="M1465 394 C1355 470, 1040 495, 920 447"/>
-  <text class="tiny" x="1300" y="470">nao</text>
-  <path class="arrow-green" d="M1465 394 C1405 520, 1285 650, 1230 712"/>
-  <text class="tiny" x="1365" y="530">sim</text>
-
-  <!-- Bottom arrows -->
-  <path class="arrow" d="M990 712 L940 712"/>
-  <path class="arrow" d="M710 712 L660 712"/>
-  <path class="arrow-green" d="M430 712 L375 712"/>
-  <text class="tiny" x="393" y="694">sim</text>
-  <path class="arrow" d="M252 744 L252 835"/>
-  <path class="arrow-green" d="M375 891 L430 891"/>
-  <text class="tiny" x="395" y="872">sim</text>
-
-  <path class="arrow-red" d="M545 774 C585 820, 640 860, 710 890"/>
-  <text class="tiny" x="590" y="817">nao</text>
-  <path class="arrow-red" d="M252 835 C370 800, 640 805, 710 872"/>
-  <text class="tiny" x="382" y="807">nao</text>
-  <path class="arrow" d="M940 890 C1065 860, 1110 795, 1110 744"/>
-
-  <!-- Problem arrows -->
-  <path class="arrow-problem" d="M1132 364 C1245 500, 1375 595, 1460 670"/>
-  <path class="arrow-problem" d="M1110 680 C1240 650, 1360 650, 1460 680"/>
-  <path class="arrow-problem" d="M825 680 C1030 600, 1290 610, 1460 680"/>
-  <path class="arrow-problem" d="M252 680 C675 520, 1250 545, 1460 680"/>
-
+  <path class="arrow-red" d="M1132 364 C1245 500, 1375 595, 1460 670"/>
+  <path class="arrow-red" d="M1110 680 C1240 650, 1360 650, 1460 680"/>
+  <path class="arrow-red" d="M745 680 C1000 585, 1290 610, 1460 680"/>
   <path class="arrow" d="M1585 732 L1585 825"/>
-  <path class="arrow" d="M1460 882 C1250 965, 1000 960, 940 900"/>
-  <text class="tiny" x="1120" y="976">volta para criacao</text>
-  <path class="arrow" d="M1460 882 C1180 830, 960 625, 920 455"/>
-  <text class="tiny" x="1125" y="780">volta para copy</text>
-  <path class="arrow" d="M1710 882 C1780 825, 1780 700, 1710 686"/>
-  <text class="tiny" x="1725" y="785">sem acao</text>
 
-  <text class="footer" x="90" y="1128">Vizantu | Fluxo 01 em mapa mental | PNG 16:10 | Status final: aprovado</text>
+  <text class="tiny" x="1320" y="960">Usar quando cliente, material, escopo, copy,</text>
+  <text class="tiny" x="1320" y="982">criacao ou revisao bloquearem o andamento.</text>
+
+  <text class="footer" x="90" y="1128">Vizantu | Fluxo 01 em mapa mental | ClickUp como esteira de tarefas e entregas</text>
 </svg>

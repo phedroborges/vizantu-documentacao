@@ -47,7 +47,7 @@ Sempre que uma nova demanda de conteúdo, design ou ação for criada no ClickUp
 | **Responsável** | Na criação | Obrigatório. Adicionar todos os envolvidos na demanda — copy, design, estratégia. Não existe tarefa sem dono. |
 | **Due date** | Na criação | Data limite interna para a entrega estar criada, revisada e aprovada. A data de publicação fica no calendario externo da social media. |
 | **Descrição** | Na criação | Obrigatória. Deve seguir estritamente a estrutura do POP-002: `Direcionamento`, `Roteiro`, `Legenda` e checklist final. |
-| **LINK DO ARQUIVO** | Assim que a pasta for criada | A pasta é criada quando o material do cliente chega OU quando o diretor de arte inicia a criação. Ao mover para "em criação", o link já deve estar no campo. |
+| **LINK DO ARQUIVO** | Assim que a pasta for criada | A pasta é criada quando o material do cliente chega OU quando o diretor de arte inicia a criação. Antes de mover para `pronto para criação`, o link já deve estar no campo. |
 | **Prioridade** | Somente quando há urgência real de prazo | Não usar como hábito. Urgent/High só quando há data iminente que justifica. Sem urgência real = sem prioridade. |
 
 ### Fluxo de status
@@ -56,9 +56,11 @@ Sempre que uma nova demanda de conteúdo, design ou ação for criada no ClickUp
 ideia
   ↓ (descrição escrita com direcionamento, roteiro e legenda)
 aprovação de copy
-  ↓ (copy aprovada ou precisa melhorar)
+  ↓ se precisa melhorar
 ajuste
-  ↓ (descrição corrigida)
+  ↓ descrição corrigida
+aprovação de copy
+  ↓ se a descrição está completa
 pronto para criação
   ↓ (pasta criada, LINK DO ARQUIVO preenchido)
 revisão
@@ -75,7 +77,7 @@ problema externo/interno
 
 - Legenda ausente da descrição: a copy fica incompleta e a tarefa nao deve sair de `aprovação de copy`.
 - Descrição sem a estrutura obrigatória: aumenta retrabalho e confunde o criativo.
-- LINK DO ARQUIVO não preenchido ao mover para "em criação": o diretor de arte não sabe onde entregar o arquivo.
+- LINK DO ARQUIVO não preenchido antes de `pronto para criação`: o diretor de arte não sabe onde entregar o arquivo.
 - Nome genérico na tarefa: cria ambiguidade no review e na aprovação.
 - Tarefa sem responsável: não anda.
 - Tarefa sem due date: perde o prazo interno de entrega.
