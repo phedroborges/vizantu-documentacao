@@ -102,6 +102,7 @@ Características do cliente ideal:
   - **Bônus 1:** projeto de modulação
   - **Bônus 2:** desenho da casa em 3D
 - Usar cases de cidade + cases de campo juntos no conteúdo
+- Campanhas promocionais precisam ter um conceito guarda-chuva. Exemplo aprovado: **Barraca do Tijolo Ecológico** para junho, unindo vídeos temáticos de festa junina e vídeos de oferta direta sob a mesma mensagem: R$ 1,70, mínimo 5.000 tijolos, projeto de modulação + desenho 3D, Rio Verde/Jataí/Mineiros e foco em casa de campo.
 
 ### Rio Verde — Prioridade máxima a partir de 20/mai/2026
 - **4 obras em Rio Verde** — 2 já em execução
