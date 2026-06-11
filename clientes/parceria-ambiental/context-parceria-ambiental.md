@@ -357,3 +357,47 @@ Este contexto foi consolidado principalmente a partir de:
 Se precisar resumir a Parceria Ambiental em poucas linhas para qualquer nova demanda:
 
 > A Parceria Ambiental é uma consultoria ambiental do interior de Goiás reconhecida por unir técnica, agilidade e atendimento humano. A marca fala com produtores, empreendedores e empresas que precisam de regularização, segurança e direção clara para operar dentro da lei. O tom deve ser direto, acolhedor e resolutivo. A comunicação nunca pode ser ambiental genérica: ela precisa transmitir confiança, orientação e resultado real.
+
+---
+
+## 19. Defesa criativa do rebranding
+
+Fonte: projeto Canva `DAHKI_XnTmQ` — "Visão Criativa - Rebrading Parceria Ambiental", acessado em 2026-06-11.
+
+A defesa central da nova marca parte da constatação de que a Parceria Ambiental já possui força real na prática: resolve problemas, transmite confiança e gera valor na experiência do cliente. O desafio do rebranding é fazer essa força ser percebida com clareza na presença visual, na comunicação e na apresentação ao mercado.
+
+### Tese da identidade visual
+
+Tornar visível a força que a Parceria Ambiental já possui na prática.
+
+### Objetivos apresentados
+
+- Traduzir a marca como empresa técnica, confiável e profissional.
+- Reforçar sua capacidade de orientar, regularizar e resolver.
+- Gerar mais clareza sobre seu posicionamento no mercado.
+- Fortalecer percepção de autoridade sem perder proximidade humana.
+- Apoiar o crescimento com imagem mais sólida, consistente e reconhecível.
+
+### Leitura competitiva
+
+A análise de concorrentes sustenta que o setor usa códigos visuais muito comuns, especialmente verde genérico, árvore e engrenagem. Mesmo quando esses elementos fazem sentido, eles reduzem diferenciação e podem transmitir amadorismo quando não há consistência visual. A nova identidade precisa fugir do lugar-comum ambiental e competir por clareza, solidez e reconhecimento.
+
+### DNA da marca na defesa
+
+- Humana
+- Técnica
+- Confiável
+- Resolutiva
+- Equilibrada
+
+### Construção simbólica
+
+O símbolo é defendido a partir da combinação de ideias de vegetação, parceria e coletividade. A intenção não é representar apenas natureza, mas uma marca que orienta, conecta, conduz e sustenta relações de confiança. O sistema visual inclui paleta, tipografias, iconografia, símbolo, pattern e aplicações para mostrar como a marca se comporta no mundo.
+
+### Direção verbal de aplicação
+
+Uma aplicação de perfil apresentada no projeto usa a linha:
+
+> É a parceria que mantém o agro em movimento.
+
+Essa frase reforça a ponte entre conformidade ambiental e continuidade produtiva, alinhada à causa da marca: manter a economia em movimento com consciência ambiental.
