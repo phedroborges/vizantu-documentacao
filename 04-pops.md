@@ -19,6 +19,7 @@ O risco de qualquer padrão é virar engessamento. Esses POPs evitam isso porque
 - POP-002: Padrão de descrição de tarefa no ClickUp
 - POP-003: Padrão de roteiro/conteúdo por formato
 - POP-004: Processo de criação de marca — fase de entrevistas
+- POP-005: Processo de manual de marca
 
 ---
 
@@ -745,3 +746,340 @@ Meus horários essa semana:
 - Reforçar que é rápido, sem gravação e pelo celular — remove qualquer barreira de comprometimento
 - Oferecer os horários disponíveis já na primeira mensagem — elimina uma troca desnecessária e facilita o agendamento
 - O contexto é construção de marca — não detalhar aspectos políticos ou de candidatura
+
+---
+
+## POP-005 — Processo de manual de marca
+
+**Atualizado em:** 2026-06-11
+**Origem:** Padrão do `Brandbook True West.pdf`, versão 1.0, janeiro de 2026.
+
+### Objetivo
+
+Documentar como a Vizantu monta um manual de marca depois da criação ou rebranding, para que o cliente entenda a essência da marca, saiba aplicar a identidade corretamente e tenha um material consultivo para preservar consistência em todos os pontos de contato.
+
+O manual de marca não é só um arquivo técnico de logo. Ele precisa explicar a lógica da marca, defender as escolhas visuais e mostrar como o sistema se comporta no mundo.
+
+### Quando usar
+
+Sempre que um projeto de criação de marca ou rebranding chegar à etapa de finalização e o cliente precisar receber um brandbook/manual com regras, orientações e exemplos de aplicação.
+
+### Responsável
+
+Direção de marca e criação. Normalmente:
+
+- Phedro: estrutura, narrativa, defesa estratégica e textos.
+- Erika: sistema visual, diagramação, aplicações e fechamento visual.
+- Apoio operacional: organização de arquivos finais, links e revisão.
+
+### Entradas obrigatórias antes de começar
+
+Antes de montar o manual, precisam estar definidos:
+
+- Nome oficial da marca.
+- Versões finais de logo/símbolo aprovadas.
+- Posicionamento, propósito ou tese central da marca.
+- Missão, visão e valores, quando existirem no projeto.
+- Atributos de marca.
+- Tagline oficial, se houver.
+- Frases de efeito ou mensagens de apoio, se fizerem parte da estratégia verbal.
+- Paleta final com códigos técnicos.
+- Tipografias finais.
+- Elementos gráficos auxiliares: pattern, textura, ícones, grafismos ou símbolo secundário.
+- Direção fotográfica/imagética.
+- Aplicações ou mockups que mostrem a marca em uso.
+- Pasta final de arquivos da marca para linkar na última página.
+
+Se algum desses itens não existir no projeto, não inventar. Adaptar a estrutura e registrar apenas o que foi aprovado.
+
+### Estrutura padrão do manual
+
+O manual segue esta ordem-base:
+
+```md
+Capa
+Índice + apresentação do manual
+
+1. Sobre a Marca
+  1.1 [Nome da marca] e propósito
+  1.2 Missão, visão e valores
+  1.3 Atributos da marca
+  1.4 Tagline oficial
+  1.5 Frases de efeito
+
+2. Identidade Visual
+  2.1 Símbolo
+  2.2 Construção do símbolo
+  2.3 Cores do símbolo
+  2.4 Símbolos ou versões secundárias
+  2.5 Cores dos símbolos secundários
+  2.6 Logotipos e versões
+  2.7 Cores dos logotipos
+  2.8 Usos incorretos
+  2.9 Área de proteção
+  2.10 Paleta de cores
+  2.11 Tipografias
+  2.12 Texturas, patterns ou elementos de apoio
+  2.13 Fotografia
+
+3. Moodboard visual da marca
+
+4. Exemplos de aplicações
+
+Última página: link dos arquivos da marca + assinatura Vizantu
+```
+
+A ordem pode ser ajustada quando a marca não tiver tagline, textura, símbolo secundário ou frases de efeito. O princípio é manter a progressão: essência primeiro, regras visuais depois, universo visual em seguida, aplicações por último.
+
+### Passo a passo de criação
+
+#### 1. Criar capa e sistema do documento
+
+Definir o formato como apresentação horizontal 16:9. A capa deve conter:
+
+- `Manual de Marca`
+- Nome da marca ou `Brandbook`
+- Versão do manual
+- Mês e ano
+- Identidade visual já aplicada
+
+O documento precisa ter cabeçalho ou rodapé consistente com nome do material, versão e paginação. A diagramação deve usar a própria identidade da marca como prova de uso: cores, tipografias, símbolo, texturas e respiros.
+
+#### 2. Abrir com apresentação e índice
+
+A página de abertura deve explicar por que o manual existe. O texto precisa dizer que o manual preserva e orienta a aplicação da identidade nos pontos de contato da marca, garantindo consistência, reconhecimento e respeito à essência construída.
+
+Na mesma abertura ou página seguinte, inserir o índice com todas as seções e páginas. O índice é obrigatório porque transforma o manual em documento consultivo, não apenas apresentação.
+
+#### 3. Documentar a essência da marca
+
+Começar a seção `Sobre a Marca` com uma abertura de seção limpa.
+
+Depois, explicar:
+
+- O que a marca é.
+- Para quem ela existe.
+- Qual problema, desejo ou território ela ocupa.
+- Qual é o propósito central.
+
+O padrão de texto é: primeiro uma explicação objetiva da marca; depois uma frase de propósito mais forte em destaque.
+
+#### 4. Registrar missão, visão e valores
+
+Organizar em três blocos:
+
+- Missão: o que a marca entrega hoje e como entrega.
+- Visão: onde a marca quer chegar.
+- Valores: princípios que orientam produto, atendimento, comunicação e comportamento.
+
+Valores devem vir com explicação curta, não apenas palavras soltas.
+
+#### 5. Traduzir atributos de marca
+
+Listar os atributos principais e explicar cada um em linguagem prática. Quando fizer sentido, usar um diagrama visual/radar para mostrar o território da marca.
+
+Os atributos não devem ser genéricos. Cada atributo precisa explicar uma tensão real da marca, por exemplo: técnica + humana, robusta + sofisticada, popular + premium.
+
+#### 6. Defender tagline e frases de efeito
+
+Se houver tagline, dedicar páginas para:
+
+- Apresentar a frase em destaque.
+- Explicar o que ela significa.
+- Quebrar a frase por camadas de sentido.
+- Mostrar quais aspectos do posicionamento ela sustenta.
+
+Se houver frases de efeito, registrar frases aprovadas que podem aparecer em campanhas, embalagens, posts ou materiais institucionais. Elas devem ser coerentes com a voz da marca.
+
+#### 7. Apresentar o símbolo
+
+Na seção `Identidade Visual`, abrir com o símbolo principal.
+
+Explicar:
+
+- De onde veio a inspiração.
+- O que o símbolo representa.
+- Quais valores ele comunica.
+- Por que a forma escolhida funciona para reconhecimento e diferenciação.
+
+O texto precisa defender a escolha criativa sem parecer enfeite. A pergunta que essa página responde é: por que esse símbolo faz sentido para esta marca?
+
+#### 8. Mostrar construção do símbolo
+
+Criar uma ou mais páginas técnicas com grade, geometria, proporção, alinhamentos, módulos ou lógica formal do desenho.
+
+Essa seção serve para mostrar solidez, não para complicar. Deve deixar claro que o símbolo foi construído com intenção e controle visual.
+
+#### 9. Documentar cores do símbolo, logotipos e versões
+
+Mostrar as versões aprovadas da marca:
+
+- Símbolo isolado.
+- Logotipo principal.
+- Versões horizontais, verticais ou compactas.
+- Versões com e sem tagline.
+- Versões positivas, negativas e monocromáticas.
+- Símbolos secundários, se existirem.
+
+Para cada família de versão, indicar quando usar. A regra principal: aplicar a versão que melhor preserva legibilidade e identificação total da marca.
+
+#### 10. Registrar usos incorretos
+
+Criar uma página obrigatória de proibições visuais. Ela deve mostrar exemplos de erros e nomear cada erro.
+
+Erros mínimos a cobrir:
+
+- Não alterar cores fora da marca.
+- Não adicionar textos ou elementos.
+- Não distorcer.
+- Não rotacionar.
+- Não usar outline quando não aprovado.
+- Não trocar fonte.
+- Não aplicar degradê.
+- Não usar sem área de respiro.
+- Não redimensionar partes isoladas.
+- Não usar sombras fortes.
+- Não modificar formatos originais.
+- Não aplicar sobre fundo sem contraste.
+
+Essa página precisa ser direta: não tentar alterar logotipos de forma alguma, salvo versões previstas no manual.
+
+#### 11. Definir área de proteção
+
+Criar páginas para a área de proteção das principais versões. Usar uma medida simples derivada do próprio logo, identificada como `X`.
+
+Explicar:
+
+- O que é a área de proteção.
+- Como definir `X`.
+- Que textos, imagens, bordas e outros elementos devem ficar fora dessa área.
+- Exemplos corretos de aplicação com margem.
+
+Sempre que houver versões diferentes de logo, documentar a área de proteção de cada versão relevante.
+
+#### 12. Documentar paleta de cores
+
+Apresentar a paleta com:
+
+- Nome da cor.
+- Papel da cor: principal, secundária ou apoio.
+- CMYK.
+- RGB.
+- HEX.
+- Breve justificativa estratégica/sensorial.
+
+As cores precisam ser explicadas a partir do universo da marca, não apenas listadas.
+
+#### 13. Documentar tipografias
+
+Para cada tipografia, criar uma página com:
+
+- Nome da fonte.
+- Função de uso: títulos, chamadas, corpo, apoio, institucional etc.
+- Breve explicação do motivo.
+- Alfabeto completo em caixa alta/baixa quando fizer sentido.
+- Numerais.
+- Pesos aprovados.
+
+Se houver uma fonte expressiva e outra funcional, deixar claro quando cada uma entra.
+
+#### 14. Documentar elementos de apoio
+
+Incluir texturas, patterns, grafismos, iconografia ou elementos secundários quando existirem.
+
+Cada elemento precisa ter:
+
+- O que é.
+- Por que combina com a marca.
+- Onde pode aparecer.
+- Que sensação ou função visual cumpre.
+
+Não incluir elemento decorativo sem função.
+
+#### 15. Definir direção fotográfica
+
+Registrar o estilo de fotografia com:
+
+- Clima desejado.
+- Tipos de cena.
+- Elementos-chave.
+- Textura, contraste, luz, enquadramento e presença humana.
+- O que evitar, se necessário.
+
+A fotografia deve ser tratada como parte da identidade, porque ela muda completamente a percepção da marca.
+
+#### 16. Montar moodboard visual
+
+Criar uma seção de impacto, geralmente mais visual que textual, mostrando o universo da marca: cores, textura, fotos, composição, clima, grafismos e sensações.
+
+O moodboard serve para alinhar direção estética. Ele não substitui as regras técnicas.
+
+#### 17. Criar exemplos de aplicações
+
+Fechar o manual mostrando a marca no mundo real. As aplicações devem provar que o sistema funciona.
+
+Exemplos possíveis:
+
+- Papelaria.
+- Embalagens.
+- Etiquetas.
+- Sacolas.
+- Camisetas/uniformes.
+- Bonés.
+- Bandeiras.
+- Posts.
+- Fachada.
+- Assinatura.
+- Peças de evento.
+- Materiais comerciais.
+
+Não basta colar o logo em mockups. As aplicações precisam usar o sistema completo: cor, tipografia, símbolo, grafismo, textura, fotografia e frases.
+
+#### 18. Finalizar com link dos arquivos da marca
+
+A última página deve conter:
+
+- Chamada para baixar os arquivos da marca.
+- Link ou botão para a pasta final.
+- Assinatura da Vizantu.
+- Mês e ano do projeto.
+- Contato e Instagram da Vizantu, quando fizer sentido.
+
+Antes de entregar, conferir se o link da pasta está funcionando e se contém os arquivos finais corretos.
+
+### Checklist de revisão antes de entregar
+
+- O manual explica a marca antes de mostrar regras visuais.
+- O índice bate com a paginação final.
+- Todas as versões finais da marca aparecem.
+- As versões proibidas estão claras.
+- Área de proteção existe para as versões principais.
+- Paleta tem CMYK, RGB e HEX.
+- Tipografias têm nome, função e pesos.
+- Elementos de apoio foram explicados, não só mostrados.
+- Direção fotográfica tem critérios práticos.
+- Aplicações mostram uso real do sistema, não mockups soltos.
+- O arquivo não contém versões antigas ou rejeitadas.
+- A pasta final da marca está linkada na última página.
+- O PDF final está exportado em qualidade adequada para envio ao cliente.
+
+### Como adaptar para a Parceria Ambiental
+
+Para o manual da Parceria Ambiental, usar a mesma estrutura, mas adaptar o conteúdo à estratégia já aprovada da marca.
+
+Pontos que precisam aparecer:
+
+- A marca como consultoria ambiental técnica, confiável, humana, resolutiva e equilibrada.
+- A tese: tornar visível a força que a Parceria Ambiental já possui na prática.
+- Posicionamento: `Conformidade ambiental com quem busca o melhor caminho.`
+- Mensagem-chave: `Tem solução. A gente encontra.`
+- Causa: manter a economia em movimento com consciência ambiental.
+- Explicação do símbolo a partir de vegetação, parceria e coletividade.
+- Defesa de que a identidade foge do clichê ambiental de árvore genérica, folha comum e engrenagem.
+- Paleta conectada a verde floresta, marrom madeira/rústico e solidez técnica.
+- Direção visual minimalista, orgânica, clássica e sólida.
+- Elementos vetados pela cliente: flor, ipê amarelo e engrenagem.
+- Quando houver elementos regionais/agro, preferir folhas de pequi em vez de folhas genéricas.
+- Fotografia e aplicações precisam comunicar orientação, campo, regularização, agro, segurança e atendimento humano sem cair em ambientalismo genérico.
+
+O manual da Parceria Ambiental deve mostrar que a marca não é apenas "ambiental". Ela é uma empresa que orienta produtores, empreendedores e empresas para produzir, crescer e operar dentro da lei com tranquilidade.
