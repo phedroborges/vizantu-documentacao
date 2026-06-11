@@ -1,7 +1,7 @@
 # POPs da Vizantu
 
 Status: ativo
-Atualizado em: 2026-06-09
+Atualizado em: 2026-06-11
 
 ## Princípio fundamental — leia antes de qualquer POP
 
