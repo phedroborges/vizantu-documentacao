@@ -128,6 +128,10 @@ Garantir que a descrição da tarefa seja completa, clara e padronizada para o C
 Toda descrição de tarefa deve seguir esta estrutura, nesta ordem, com estes títulos:
 
 ```md
+## Resumo da demanda
+---
+[Resumo curto do pacote de produção: quantidade de materiais, formato geral e objetivo da entrega.]
+
 ### Direcionamento:
 ---
 [Texto simples, claro e em passo a passo sobre por que e como a tarefa deve ser feita.]
@@ -139,17 +143,11 @@ Toda descrição de tarefa deve seguir esta estrutura, nesta ordem, com estes t�
 ### Legenda:
 ---
 [Legenda final pronta para copiar e colar na rede social.]
-
-### Checklist:
----
-1. direcionamento ok? se a resposta for não, melhore
-2. roteiro ok? (de acordo com o tipo de conteúdo) se a resposta for não, melhore
-3. legenda ok? se a resposta for não, melhore
-4. os criativos da equipe vão entender o que fazer? se a resposta for não, melhore
-5. o clickup reconheceu o md? se a resposta for não, arrume
 ```
 
 Essa estrutura e obrigatoria mesmo quando alguma parte nao se aplica. Se nao houver roteiro por causa do formato, a seção `Roteiro` deve explicar a estrutura de conteúdo daquele formato conforme POP-003. Se nao houver legenda porque o material nao sera publicado em rede social, a seção `Legenda` deve registrar `Nao se aplica` e explicar o motivo em uma frase.
+
+O checklist e criterio interno de revisao, nao precisa aparecer na descricao da tarefa. Antes de mover a tarefa adiante, quem escreveu deve conferir: direcionamento completo, roteiro adequado ao formato, legenda finalizada quando aplicavel, entendimento claro para o criativo e Markdown reconhecido pelo ClickUp.
 
 ### Seção 1: Direcionamento
 
@@ -193,6 +191,10 @@ Imagens, links, exemplos — o que serve de guia e o que serve de anti-referênc
 > *"Referência de direção: adesivo 'EU FREIO PARA ANIMAIS' [imagem anexa]. Anti-referência: modelo anterior rejeitado [imagem anexa] — é exatamente esse caminho que não queremos."*
 
 ### Quando há mais de um material na mesma tarefa
+
+Demandas de pacote devem ficar juntas quando representam a mesma entrega operacional: captação de varios videos, leva de carrosseis, rodada de posts estaticos ou pacote editorial planejado. A tarefa so deve ser considerada entregue quando todos os materiais do pacote forem aprovados.
+
+Pendencias variaveis, cobranças, confirmações e atualizações de andamento devem ficar nos comentarios da tarefa, nao na descricao. A descricao guarda o briefing mestre estavel para captação, criação e edição.
 
 Separar com linha de título antes de cada material:
 
