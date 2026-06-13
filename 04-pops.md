@@ -1,7 +1,7 @@
 # POPs da Vizantu
 
 Status: ativo
-Atualizado em: 2026-06-11
+Atualizado em: 2026-06-13
 
 ## Princípio fundamental — leia antes de qualquer POP
 
@@ -125,22 +125,22 @@ Garantir que a descrição da tarefa seja completa, clara e padronizada para o C
 
 ### Estrutura obrigatória da descrição
 
-Toda descrição de tarefa deve seguir esta estrutura, nesta ordem, com estes títulos:
+Toda descrição de tarefa deve seguir esta estrutura, nesta ordem, com estes títulos. No ClickUp, usar no máximo títulos `###`. Não usar `##` na descrição da tarefa. Abaixo de todo título `###`, inserir `---` como divisor padrão. Fora dos títulos, escrever em texto simples.
 
 ```md
-## Resumo da demanda
+### Resumo da demanda
 ---
 [Resumo curto do pacote de produção: quantidade de materiais, formato geral e objetivo da entrega.]
 
-### Direcionamento:
+### Direcionamento
 ---
 [Texto simples, claro e em passo a passo sobre por que e como a tarefa deve ser feita.]
 
-### Roteiro:
+### Roteiro
 ---
 [Tabela com CENA - FALA - LETTERING, quando o formato pedir roteiro. Para outros formatos, usar a estrutura correspondente do POP-003.]
 
-### Legenda:
+### Legenda
 ---
 [Legenda final pronta para copiar e colar na rede social.]
 ```
@@ -149,46 +149,48 @@ Essa estrutura e obrigatoria mesmo quando alguma parte nao se aplica. Se nao hou
 
 O checklist e criterio interno de revisao, nao precisa aparecer na descricao da tarefa. Antes de mover a tarefa adiante, quem escreveu deve conferir: direcionamento completo, roteiro adequado ao formato, legenda finalizada quando aplicavel, entendimento claro para o criativo e Markdown reconhecido pelo ClickUp.
 
+### Regra absoluta sobre links e referências
+
+Links, anexos e referencias fazem parte do briefing. A IA, a social media, o copy ou qualquer pessoa que reorganizar uma demanda nao pode remover, resumir, trocar, ocultar ou deixar de migrar links existentes na descrição.
+
+Sempre que uma descrição for criada, reescrita ou reorganizada com apoio de IA/MCP, todos os links encontrados na demanda original devem ser preservados exatamente como estavam e mantidos dentro do material correspondente.
+
+Se houver um link que a IA nao consiga abrir, interpretar ou acessar, isso deve ser avisado de forma explícita no retorno para o usuário ou em comentário operacional. O link mesmo assim deve ser mantido na descrição. Falha de acesso nao autoriza remover a referencia.
+
+Antes de finalizar qualquer atualização de descrição, conferir se a quantidade de links da versão nova bate com a quantidade de links da versão original.
+
 ### Seção 1: Direcionamento
 
-### Princípio fundamental
+O Direcionamento e um briefing de execução. Ele deve ser direto, proporcional ao tamanho da demanda e rapido de escanear. Nao e lugar para justificar demais, fazer texto bonito ou repetir o roteiro.
 
-O Direcionamento é escrito em **prosa narrativa e passo a passo**, não em campos soltos ou formulário. Lê como uma explicação clara de uma pessoa para outra — como você descreveria a tarefa num áudio ou numa conversa para alguém de 12 anos entender sem precisar perguntar.
+Para demandas simples, o direcionamento pode ter poucas linhas. Para demandas complexas, pode ser maior, mas ainda precisa ir direto ao ponto. Se uma frase nao ajuda o criativo a entender o que fazer, corta.
 
-**A linguagem precisa ser concreta.** Nunca usar adjetivos abstratos que cada pessoa interpreta diferente — "algo mais sério", "visualmente claro", "tom profissional". Sempre traduzir para o que isso significa na prática: "sem ilustrações, tipografia bold, sem cantos arredondados", "texto legível de dentro de um carro parado no sinal", "voz de médico explicando para paciente, não de apresentador".
+O direcionamento precisa responder, nesta ordem:
 
-**O Direcionamento é um caminho, não uma prisão criativa.** O objetivo é dar ao setor criativo uma direção que faça sentido — não travar a execução. Cor, fonte e decisões técnicas de design vêm da identidade visual do cliente, não do Direcionamento. O que o Direcionamento entrega é a ideia do que deve ser representado visualmente e uma referência que aponta o caminho. A execução é do criativo.
+- O que precisa ser feito.
+- Qual e a lógica da peça.
+- Como deve ser executado.
+- Quais referencias devem ser consideradas, quando houver.
 
-Para vídeo: ideias de cena precisam respeitar o ambiente de gravação definido no Direcionamento. Não adianta sugerir uma cena em locação externa se o vídeo é lo-fi gravado num estúdio. A CENA descreve o que é possível dentro do ambiente estabelecido.
+A linguagem precisa ser concreta. Evitar adjetivos abertos como "mais serio", "mais bonito", "moderno" ou "profissional" sem explicar o que isso significa na prática. Trocar por instruções observáveis, como "sem tom infantil", "texto grande para leitura rapida", "câmera frontal em local fixo", "usar como referencia o link abaixo".
 
-Para design e carrossel: o VISUAL descreve a ideia da imagem ou representação — o que deve ser transmitido visualmente naquele slide ou peça. Não especifica cor nem fonte (isso é da marca). Especifica conceito e referência.
+O Direcionamento orienta, mas nao engessa a criação. Cor, fonte e acabamento visual seguem a identidade do cliente e a decisão do criativo. O direcionamento entrega a ideia, o objetivo, as restrições e as referencias.
 
-### Estrutura obrigatória (quatro blocos, nessa ordem)
+Para video, o direcionamento precisa deixar claro o estilo de produção: lo-fi ou hi-fi. As cenas do roteiro devem respeitar esse ambiente. Se o video e lo-fi em câmera frontal, nao sugerir locações, trocas de cenário ou ações impossiveis.
 
-**1. O que precisa ser feito**
-Começa direto, com contexto imediato. Quem pediu, o que é, o que precisa existir ao final. Sem rodeios.
+Para carrossel, post estatico e design, o direcionamento deve explicar a ideia visual e a função da peça. Nao precisa descrever cada cor ou fonte. Quando houver uma referencia, manter o link ou anexo dentro do material correspondente.
 
-> *"A pedido da Fran, precisamos criar um adesivo redondo para ser colado em carros durante uma ação no semáforo. O adesivo precisa ter formato redondo, cor amarela da identidade visual da Casa Caramelo, e comunicar a mensagem de forma direta e séria."*
+Exemplo simples:
 
-**2. Por que / a lógica**
-A razão por trás da demanda. O que justifica as decisões criativas, qual o contexto que quem vai executar precisa entender para fazer sentido do que está fazendo.
+Precisamos criar um post estatico para avisar que a loja tera atendimento em horario especial no feriado. A peça precisa ser objetiva, com leitura rapida e sem excesso de texto. Usar tom informativo, sem tentativa de humor. A informação principal e o horario de funcionamento.
 
-> *"O adesivo vai ser colado em carros e lido por pessoas dentro de outros carros no semáforo — a leitura acontece em menos de 5 segundos, então o texto principal precisa ser imediato. O modelo anterior foi rejeitado por ser fofo demais — a direção é outra: séria, como uma placa de trânsito."*
+Exemplo complexo:
 
-**3. Como deve ser feito**
-As instruções concretas de execução. Decisões visuais, restrições, elementos obrigatórios, o que é proibido — tudo escrito como instrução direta, não como lista de atributos abstratos.
+Precisamos criar um video lo-fi com representante da Casa Caramelo alertando tutores sobre carrapato. A lógica e mostrar que o risco nao e apenas coceira: o carrapato transmite doenças graves e pode chegar ao pet mesmo sem contato com mato.
 
-Para vídeo, este bloco responde obrigatoriamente três coisas:
-- **Estilo de produção:** lo-fi (uma câmera, local fixo, fala direta) ou hi-fi (múltiplas locações, jogo de cena, produção elaborada). Isso define como a coluna CENA da tabela é preenchida.
-- **Duração:** curto (15s até menos de 1min) / médio (~2min) / longo (~3min)
-- **Objetivo e CTA:** qual comportamento o vídeo deve provocar no final — comentar, compartilhar, repostar, ir ao WhatsApp. Isso define o encerramento do roteiro.
+Gravar em câmera frontal, ambiente fixo, tom direto e serio. A fala deve soar como alguém que vê esse problema toda semana e quer que o tutor aja antes de virar emergência.
 
-> *"Câmera frontal, fundo preto, camisa preta. Lo-fi — nenhuma mudança de cena. Tom do médico que está explicando algo importante para uma paciente, não de apresentador. Vídeo longo, 90 a 120 segundos. Objetivo: repost — é uma mensagem pessoal que toca mães."*
-
-**4. Referências**
-Imagens, links, exemplos — o que serve de guia e o que serve de anti-referência. Imagens anexadas diretamente na tarefa, links para o Drive quando necessário.
-
-> *"Referência de direção: adesivo 'EU FREIO PARA ANIMAIS' [imagem anexa]. Anti-referência: modelo anterior rejeitado [imagem anexa] — é exatamente esse caminho que não queremos."*
+Referencias: sem referencia visual definida.
 
 ### Quando há mais de um material na mesma tarefa
 
@@ -196,14 +198,32 @@ Demandas de pacote devem ficar juntas quando representam a mesma entrega operaci
 
 Pendencias variaveis, cobranças, confirmações e atualizações de andamento devem ficar nos comentarios da tarefa, nao na descricao. A descricao guarda o briefing mestre estavel para captação, criação e edição.
 
-Separar com linha de título antes de cada material:
+Separar cada material com título `###` e divisor `---`. Links de referencia devem ficar dentro do material correspondente, para nao se perderem quando a descricao for reorganizada.
 
 ```
-— MATERIAL 1: ADESIVO REDONDO —
+### Material 1 - Adesivo redondo
+---
+
+Direcionamento
 [blocos 1, 2, 3 e 4 do material 1]
 
-— MATERIAL 2: CAMISETA MÃE BICHOLÓGICA —
+Roteiro
+[estrutura do material 1]
+
+Legenda
+[legenda do material 1]
+
+### Material 2 - Camiseta Mae Bichologica
+---
+
+Direcionamento
 [blocos 1, 2, 3 e 4 do material 2]
+
+Roteiro
+[estrutura do material 2]
+
+Legenda
+[legenda do material 2]
 ```
 
 ### Seção 2: Roteiro
@@ -245,463 +265,482 @@ Regra central: a legenda precisa somar, nao repetir.
 
 ---
 
-## POP-003 — Padrão de roteiro/conteúdo por formato
+## POP-003 — Padrão de conteúdo por formato criativo
 
-**Atualizado em:** 2026-06-09
+**Atualizado em:** 2026-06-13
 
 ### Objetivo
 
-Definir como o conteúdo em si deve ser estruturado dentro da tarefa, para que quem cria saiba exatamente o que produzir e quem revisa saiba exatamente o que aprovar.
+Definir como cada material criativo deve ser preenchido dentro da demanda-pacote no ClickUp.
 
+A Vizantu passa a trabalhar com conjuntos de criativos. O time criativo recebe uma demanda única com todos os materiais da leva e deve entregar o conjunto completo até a data estipulada.
+
+Os formatos ficam separados em três grupos: criativos recorrentes, criativos complementares e projetos/planejamentos maiores. Todos seguem a mesma lógica de demanda-pacote quando houver mais de uma entrega.
+
+Formatos criativos recorrentes:
+
+- Vídeo
+- Carrossel
+- Post estático
+- Story
+- Impresso
+- Capa
+- Apresentação
+- Website
+
+Formatos criativos complementares:
+
+- Destaque de Instagram
+- Copy
+- Figurinha de WhatsApp
+- Assinatura de e-mail
+
+Projetos e planejamentos maiores:
+
+- Campanha comercial
+- Relatório / Planejamento
+- Logo / Identidade visual / Branding / Template
+
+### Regra geral para todos os formatos
+
+Cada demanda deve ser organizada como pacote:
+
+```md
+### Resumo da demanda
 ---
+[Quantidade de materiais, formato, objetivo geral e prazo da leva.]
 
-### VÍDEO (vertical 9:16 ou horizontal 16:9)
+### Material 1 - [Nome do material]
+---
+Direcionamento
+[Briefing objetivo.]
 
-#### Cabeçalho obrigatório antes da tabela
+Roteiro / Conteúdo
+[Estrutura do formato.]
 
+Legenda
+[Legenda final, quando aplicável.]
+
+### Material 2 - [Nome do material]
+---
+Direcionamento
+[Briefing objetivo.]
+
+Roteiro / Conteúdo
+[Estrutura do formato.]
+
+Legenda
+[Legenda final, quando aplicável.]
 ```
+
+Usar no máximo títulos `###` na descrição do ClickUp. Todo título `###` recebe `---` logo abaixo. Dentro de cada material, usar texto simples.
+
+Pendências, cobranças e mudanças de andamento ficam nos comentários. Links de referência ficam dentro do material correspondente.
+
+Nenhum link de referência pode ser perdido ao criar, revisar, reescrever ou reorganizar uma demanda. Se a IA nao tiver acesso ao conteúdo de um link, deve avisar explicitamente e preservar o link na descrição.
+
+### Vídeo
+
+Vídeo pode ser lo-fi ou hi-fi. O direcionamento precisa deixar claro qual é o estilo, porque isso muda a captação, as cenas e a edição.
+
+Estrutura do conteúdo:
+
+```md
 Estilo: Lo-fi / Hi-fi
-Duração: Curto (15s–1min) / Médio (~2min) / Longo (~3min)
-CTA: [comportamento que queremos provocar — comentar / compartilhar / repostar / WhatsApp]
-```
-
-#### Tabela: CENA | FALA | LETTERING
+Duração: Curto / Médio / Longo
+CTA: [comentar / compartilhar / repostar / WhatsApp / visitar / outro]
 
 | CENA | FALA | LETTERING |
 |---|---|---|
-| Instrução de câmera, entrega ou cena | Texto corrido, voz natural | Trecho de até 6 palavras retirado da fala |
+| [O que acontece visualmente] | [Fala natural] | [Trecho curto na tela] |
+```
 
-#### Regras da coluna CENA
+Regras:
 
-As ideias de cena precisam respeitar o ambiente de gravação definido no Direcionamento. Não se sugere uma cena que o ambiente não comporta.
+- Lo-fi: câmera simples, ambiente fixo, fala direta. A coluna `CENA` indica enquadramento, pausa, tom e pequenos movimentos.
+- Hi-fi: pode ter locação, cortes, movimento de câmera, encenação e transições. A coluna `CENA` descreve o que precisa ser captado.
+- A fala deve soar natural, como uma pessoa real falando.
+- O lettering deve ser curto e, de preferência, recorte exato da fala.
+- Não precisa ter lettering em toda linha.
+- O CTA precisa combinar com o objetivo do vídeo.
 
-- **Lo-fi:** anota posição de câmera, tom de entrega, pausas. Não descreve mudança de locação porque não há.
-  - Exemplos: *"Câmera frontal, consultório ao fundo"* / *"(pausa) — corte seco"* / *"Tom mais firme, olha direto para a câmera"*
-- **Hi-fi:** descreve cada cena, locação e o que acontece visualmente nela — sempre dentro das locações definidas no Direcionamento.
-  - Exemplos: *"Plano aberto — fazenda, maquinário ao fundo, amanhecer"* / *"Close na tela do tablet com dados em tempo real"* / *"Walking shot saindo do galpão"*
+### Carrossel
 
-#### Regras da coluna FALA
+Carrossel é uma narrativa dividida em slides. Não é uma sequência de cards soltos. O texto precisa avançar de um slide para o outro até chegar no CTA.
 
-- Texto corrido em parágrafos, na voz natural da marca ou pessoa — nunca roteiro travado ou academico
-- O roteiro inteiro precisa criar a sensação de **"isso já aconteceu comigo"** — a conexão com o maior número de pessoas possível vem da semelhança, não da informação genérica
-- Usa dados reais quando reforça o argumento — brasileiros ou mundiais — mas integrados naturalmente na fala, não como citação de paper
-- Não é prolixo: cada linha diz algo que importa. Se pode cortar sem perder nada, corta.
-- O gancho pode ser narrativo (primeira frase que fisga), visual (algo acontece na cena antes de qualquer fala) ou os dois. O Direcionamento define qual.
+Estrutura do conteúdo:
 
-#### Regras do LETTERING
+```md
+Tipo: Notícia / Discussão / Educação / Fofoca / Dump / Oferta / Outro
+Objetivo: [o que queremos que aconteça depois da leitura]
+CTA: [comentar / compartilhar / salvar / repostar / WhatsApp / outro]
 
-- Máximo 6 palavras — idealmente 3 ou 4
-- Sempre um recorte exato da FALA — nunca paráfrase, nunca texto diferente do que está sendo dito naquele momento
-- Escolhe o trecho que tem maior impacto isolado na tela — a frase que, sozinha, para o scroll
-- Não precisa ter lettering em toda linha — só onde faz sentido ancorar a atenção
-- Não usar lettering em falas de transição ou explicativas — só em momentos de virada, dado forte ou frase de efeito
+Fontes:
+[Nome, data, link] quando houver.
 
-#### CTA alinhado ao objetivo
-
-| Objetivo do vídeo | CTA |
-|---|---|
-| Engajamento | Pede comentário — "comenta aqui o que você acha" / "me conta nos comentários" |
-| Viral / alcance | Pede compartilhamento — "manda pra alguém que precisa ver isso" |
-| Mensagem forte / pessoal | Pede repost — "salva e compartilha com quem precisa ouvir" |
-| Conversão | Direciona para WhatsApp ou link — "chama a gente no WhatsApp" / "clica no link da bio" |
-
-#### Exemplo de tabela preenchida (Dr. Lourival — Lo-fi — Longo — CTA: Repost)
-
-| CENA | FALA | LETTERING |
+| SLIDE | VISUAL | TEXTO |
 |---|---|---|
-| Câmera frontal, consultório ao fundo, jaleco. Tom tranquilo, quase íntimo. | Deixa eu te contar o que eu vejo como pediatra toda semana. | — |
-| Mesmo enquadramento | Uma mãe entra no consultório com um bebê de quatro meses no colo. Ela está de volta ao trabalho. O bebê ainda está em aleitamento exclusivo, ainda precisa mamar a cada duas horas, ainda depende dela de uma forma que a ciência reconhece como fundamental para o desenvolvimento. | bebê de 4 meses |
-| (pausa) — corte seco | E eu pergunto como ela está. A resposta quase sempre é a mesma. Cansada. Ansiosa. Culpada. Sem dormir. | Cansada. Ansiosa. Culpada. |
-| Mesmo enquadramento, tom mais firme | Isso não é fraqueza. Isso é o que acontece quando o tempo que o corpo precisa não é o mesmo que a lei garante. | a lei não garante |
-| (pausa) | A OMS é clara: os primeiros seis meses são de amamentação exclusiva. Não é opinião minha. É consenso científico global. | 6 meses — consenso global |
-
----
-
-### CARROSSEL
-
-#### Princípio do carrossel
-
-O carrossel não é uma sequência de cards independentes com título + texto em cada um. É um **texto único partido em slides** — do começo ao fim, o usuário lê como uma novela. Entra no primeiro slide e vai lendo, lendo, lendo até chegar na CTA sem perceber. O gancho abre, o texto flui sem quebra de estrutura, a CTA fecha.
-
-Os mesmos princípios de criação do vídeo se aplicam aqui: conexão com "isso já aconteceu comigo", conteúdo verdadeiro, sem prolixidade, CTA alinhada ao objetivo.
-
-#### Tipos de carrossel por objetivo
-
-| Tipo | Abordagem |
-|---|---|
-| **Notícia / Fofoca** | Factual, ritmo acelerado, linguagem de quem está contando algo que acabou de acontecer |
-| **Discussão** | Provoca, apresenta dois lados ou uma opinião forte, convida quem lê a tomar partido |
-| **Educação** | Ensina de forma progressiva — cada slide avança o entendimento, nunca repete o que já foi dito |
-| **Dump / Acontecimentos** | Sequência de registros, mais visual, texto mais leve e direto |
-
-#### Cabeçalho obrigatório antes da tabela
-
-```
-Tipo: Notícia / Discussão / Educação / Fofoca / Dump
-Objetivo: [o que queremos que aconteça depois que alguém ler]
-CTA: [comportamento que queremos provocar — comentar / compartilhar / repostar / WhatsApp]
+| 1 | [Ideia visual] | [Texto do slide] |
 ```
 
-Se o conteúdo for baseado em dados ou pesquisa, incluir bloco de **Fontes** logo após o cabeçalho:
+Regras:
 
-```
-Fontes
-[Nome, data, link]
-```
+- O slide 1 precisa ter gancho claro.
+- Cada slide deve avançar a ideia. Se repetir, corta.
+- `VISUAL` descreve conceito, não cor ou fonte.
+- Se o visual seguir o padrão da marca sem instrução específica, usar `-`.
+- Dados, pesquisas e notícias precisam ter fonte.
+- A legenda deve complementar o carrossel, não repetir todos os slides.
 
-#### Tabela: VISUAL | TEXTO
+### Post estático
 
-| VISUAL | TEXTO |
-|---|---|
-| Ideia da imagem ou representação visual desse slide. Se segue o padrão definido no Direcionamento: — | O trecho da narrativa que vai nesse slide |
+Post estático é uma única tela. A peça precisa funcionar rápido: imagem, headline e CTA devem ser entendidos de imediato.
 
-#### Regras da coluna VISUAL
+Estrutura do conteúdo:
 
-O VISUAL descreve a **ideia** do que deve ser representado — não especifica cor nem fonte, que vêm da identidade visual do cliente. O criativo tem liberdade total de execução dentro da ideia e da referência dada.
-
-- Se o slide segue o estilo visual padrão definido no Direcionamento (ex: fundo sólido, texto centralizado): deixar **—**
-- Se há uma ideia de imagem, elemento ou representação específica para aquele slide: descrever o conceito e, se possível, indicar uma referência
-  - Exemplos: *"Imagem de mãe com bebê no colo, ambiente doméstico — algo que remeta ao cansaço pós-parto"* / *"Representação visual de um semáforo — referência: [imagem]"* / *"Foto real do clube durante um campeonato — material no Drive"*
-
-#### CTA alinhada ao objetivo
-
-| Objetivo | CTA |
-|---|---|
-| Engajamento | Comentário — "comenta o que você acha" / "me conta aqui embaixo" |
-| Viral / alcance | Compartilhamento — "manda pra alguém que precisa ler isso" |
-| Mensagem forte / pessoal | Salvar ou repost — "salva esse post" / "compartilha com quem precisa ver" |
-| Conversão | WhatsApp ou link — "chama a gente no WhatsApp" / "link na bio" |
-
----
-
-### POST ESTÁTICO — FEED/STORY
-
-#### Princípio
-
-Um post estático é uma única tela — imagem e texto funcionam juntos como unidade. A estrutura interna muda conforme o objetivo do post: não existe estrutura universal. O Direcionamento precisa deixar claro qual é o tipo, porque o tipo define o que vai na peça.
-
-Cor e fonte são da identidade do cliente. A direção visual entrega ideia + referência, não especificação técnica.
-
-#### Cabeçalho obrigatório antes do conteúdo
-
-```
-Tipo: [Post comum / Frase / Notícia / Contagem regressiva / Oferta / Depoimento / Comunicado / Alerta / outro]
+```md
+Tipo: Post comum / Frase / Notícia / Oferta / Depoimento / Comunicado / Alerta / Outro
 Objetivo: [o que queremos que aconteça depois que alguém ver]
 CTA: [comentar / compartilhar / repostar / WhatsApp / link / nenhum]
+
+Headline: [texto principal]
+Subheadline: [complemento, se houver]
+Corpo: [texto de apoio, se houver]
+CTA visual: [chamada na peça, se houver]
+Informações obrigatórias: [preço, data, endereço, WhatsApp, QR Code, regras, etc.]
 ```
 
-#### Estrutura por tipo (tabela)
+Regras:
 
-Cada tipo tem uma tabela com os campos obrigatórios. Ao preencher a task, copiar a tabela do tipo correspondente e preencher a coluna **Conteúdo**. Não escrever a estrutura em texto livre.
+- Headline curta e clara.
+- Não colocar texto demais em peça de tela única.
+- Se for oferta, deixar preço, condição e forma de compra claros.
+- Se for comunicado, priorizar informação antes de estética.
+- Se for depoimento, preservar o texto original ou sinalizar adaptação.
 
-**Post comum**
+### Story
 
-| Elemento | Conteúdo |
-|---|---|
-| Headline | [Frase que para o scroll] |
-| Subheadline | [Complemento direto — se necessário] |
-| Corpo | [Texto de apoio — se o layout comportar] |
-| CTA visual | [Chamada para ação na peça] |
+Story é leitura rápida e ação imediata. Pode ser peça única ou sequência.
 
-**Frase (motivacional, reflexão, opinião)**
+Estrutura do conteúdo:
 
-| Elemento | Conteúdo |
-|---|---|
-| Frase | [A frase completa — ela é tudo. Nada mais na peça.] |
-| Atribuição | [Autor ou marca — se aplicável] |
+```md
+Tipo: Story único / Sequência
+Objetivo: [informar / engajar / vender / direcionar / outro]
+Elemento de interação: [enquete / caixinha / slider / link / contagem / nenhum]
+Instrução para social media: [o que adicionar na publicação]
 
-**Notícia / Fofoca**
-
-| Elemento | Conteúdo |
-|---|---|
-| Headline | [Título forte e direto — o fato] |
-| Sub | [O que complementa ou contextualiza o fato] |
-
-**Contagem regressiva**
-
-| Elemento | Conteúdo |
-|---|---|
-| Headline | [O que está chegando] |
-| Número | [Quantos dias / horas — destaque visual] |
-| CTA | [O que o usuário deve fazer agora] |
-
-**Oferta / Produto**
-
-| Elemento | Conteúdo |
-|---|---|
-| Headline | [A oferta ou o produto em destaque] |
-| Detalhe | [Preço, condição, benefício principal] |
-| CTA | [Onde comprar / como aproveitar] |
-
-**Depoimento / Prova social**
-
-| Elemento | Conteúdo |
-|---|---|
-| Fala | [O texto do cliente — entre aspas, fiel ao original] |
-| Identificação | [Nome, contexto — ex: "Maria, tutora do Bento"] |
-
-**Comunicado / Alerta**
-
-| Elemento | Conteúdo |
-|---|---|
-| Headline | [O aviso em uma linha — claro e direto] |
-| Corpo | [O que o leitor deve saber / fazer / não fazer — máximo 3 pontos curtos] |
-| Canais ou ação obrigatória | [Links, contatos, instruções de contato] |
-| CTA visual | [O que o leitor deve fazer — geralmente compartilhar] |
-
----
-
-### STORY
-
-#### Princípio
-
-O story é a tela mais rápida e direta — uma mensagem, uma ação, em menos de 3 segundos de leitura. O que o torna estratégico não é só o texto: são os elementos de interação. Cada elemento de interação é uma ferramenta de engajamento — não enfeite, não opcional. Usar ou não usar, e qual usar, é uma decisão estratégica que precisa estar no Direcionamento.
-
-O Direcionamento precisa ser intencional sobre dois pontos que impactam diretamente a execução:
-1. **Design:** se há elemento de interação, o criativo precisa deixar espaço na diagramação para a figurinha. Isso muda o layout.
-2. **Social media:** precisa saber exatamente qual elemento adicionar, com qual conteúdo, no momento da publicação.
-
-#### Elementos de interação disponíveis
-
-| Elemento | Quando usar |
-|---|---|
-| **Enquete** | Quando quer dividir a audiência em dois lados e medir opinião. Definir as duas opções. |
-| **Slider de emoji (reação arrastando)** | Quando quer medir intensidade de reação sem exigir resposta. Definir qual emoji. |
-| **Reação com emoji** | Quando quer reação rápida, tipo curtida diferenciada. |
-| **Caixinha de perguntas** | Quando quer coletar respostas livres ou abrir conversa. Definir a pergunta da caixa. |
-| **Contagem regressiva** | Quando há um evento ou lançamento com data definida. Definir nome e data/hora. |
-| **Lembrete** | Quando quer que o seguidor seja notificado no momento do evento. |
-| **Imagem** | Quando o story é só visual, sem texto. |
-| **Imagem coberta** | Quando quer criar curiosidade — o usuário toca para revelar. Definir o que está coberto e qual o gatilho. |
-
-#### Cabeçalho obrigatório antes do conteúdo
-
-```
-Objetivo: [o que queremos que aconteça]
-Elemento de interação: [qual + como será configurado — ou "nenhum"]
-Instrução para o social media: [o que adicionar na publicação e como]
+Tela 1:
+Texto principal: [até 2 linhas]
+CTA: [ação esperada]
+Espaço para figurinha: Sim / Não
 ```
 
-#### Estrutura do conteúdo
+Regras:
 
-```
-Texto principal: [O que aparece na tela — máximo 2 linhas]
-CTA: [O que o usuário deve fazer]
-Espaço para figurinha: [Sim / Não — informa o criativo na diagramação]
-```
+- Texto curto.
+- Se tiver figurinha, avisar para o criativo reservar espaço.
+- Elemento de interação precisa ter função, não entra como enfeite.
+- Em sequência, cada tela deve ter uma função clara.
 
----
+### Impresso
 
-### IMPRESSO
+Impresso depende do contexto físico. O direcionamento precisa dizer onde será usado, tamanho, material e distância de leitura.
 
-#### Princípio
+Estrutura do conteúdo:
 
-Impresso tem hierarquia visual: há uma ordem em que o olho percorre a peça, e essa ordem precisa ser definida intencionalmente. O contexto de uso muda tudo — um adesivo de vidro de carro é lido em movimento em 3 segundos; um folder é lido com a peça na mão em 30 segundos; uma camiseta é lida de passagem na rua. O Direcionamento precisa especificar exatamente o que é a peça e como ela será usada.
+```md
+Tipo: Adesivo / Banner / Flyer / Folder / Camiseta / Cartão / Brinde / Outro
+Tamanho: [dimensão ou formato]
+Uso: [onde e como será aplicado]
+Quantidade: [se houver]
+Formato de entrega: [PDF / PNG / vetor / arquivo aberto / outro]
 
-Cor e fonte são da identidade do cliente. A direção criativa entrega ideia visual + referência.
-
-#### Tipos de impresso — especificar sempre no Direcionamento
-
-| Tipo | Observação específica |
-|---|---|
-| **Adesivo de vidro (jateado/Citru)** | Aplicado no vidro traseiro — precisa ser legível de trás e considerar transparência |
-| **Adesivo de lataria** | Aplicado na carroceria — sem restrição de transparência, superfície plana |
-| **Banner** | Especificar dimensões e se é para pendurar ou com base |
-| **Flyer / Panfleto** | Especificar tamanho, se frente-e-verso, se vai para impressão ou digital |
-| **Folder** | Especificar número de dobras e tamanho aberto |
-| **Camiseta / Roupa** | Especificar onde vai a estampa (frente, costas, manga), técnica (serigrafia, sublimação) |
-| **Caderneta / Brinde** | Especificar onde vai a marca e as dimensões da área de impressão |
-| **Cartão de visita** | Tamanho padrão (9x5cm) ou diferenciado, frente e/ou verso |
-
-#### O que vai obrigatoriamente no Direcionamento para todo impresso
-
-- **Tipo exato** da peça (da tabela acima)
-- **Tamanho / dimensões** — exatos ou formato de referência
-- **Onde e como será usado / aplicado** — contexto de uso
-- **Ideia visual** — o conceito, com referência se possível
-
-#### Estrutura do conteúdo
-
-```
-Hierarquia 1 — O que o olho vê primeiro: [Texto ou elemento principal]
-Hierarquia 2 — O que apoia: [Texto ou elemento secundário]
-Hierarquia 3 — O que informa: [Dados de apoio — se aplicável]
-Informações obrigatórias: [WhatsApp / endereço / site / logo de parceiro / QR Code]
-Obs. de produção: [Quantidade / material / formato de entrega: vetor, PNG com sangria, etc.]
+Hierarquia 1: [o que aparece primeiro]
+Hierarquia 2: [apoio]
+Hierarquia 3: [informações complementares]
+Informações obrigatórias: [WhatsApp, endereço, QR Code, logos, regras, etc.]
+Referências: [links ou anexos]
 ```
 
----
+Regras:
 
-### DESTAQUE DE INSTAGRAM
+- Definir tipo exato da peça.
+- Definir tamanho antes de criar.
+- Considerar distância e tempo de leitura.
+- Não sobrecarregar peça que será lida de longe ou em movimento.
+- Informações obrigatórias devem estar completas antes de ir para criação.
 
-#### Princípio
+### Capa
 
-Os destaques em sua maioria são criados durante o setup do perfil. A task de destaque engloba a capa de cada destaque e o conteúdo interno. O conteúdo interno segue exatamente o padrão do formato que o compõe — se for vídeo, usa a estrutura de vídeo; se for imagem, usa a estrutura de carrossel. Não há formato próprio para o interior do destaque.
+Capa é peça de atração. Serve para fazer a pessoa clicar, abrir, assistir ou reconhecer rapidamente um conteúdo.
 
-A capa é lida em menos de 2 segundos por quem passa pelo perfil — precisa comunicar o tema de forma instantânea. Nos stories que compõem o destaque, usar elementos de interação quando possível para manter o engajamento mesmo dentro do arquivo.
+Estrutura do conteúdo:
 
-#### Estrutura do conteúdo
+```md
+Tipo: Thumbnail / Capa de Reels / Capa de destaque / Capa de apresentação / Outro
+Uso: [onde será usada]
+Objetivo: [clique / identificação / organização / impacto]
 
-Lista de cada destaque com sua capa:
-
-```
-Destaque 1 — [Nome do destaque]
-Capa: [Ícone ou elemento visual que representa o tema + texto que aparece]
-Conteúdo interno: [Vídeo → usar estrutura de vídeo | Imagem → usar estrutura de carrossel]
-
-Destaque 2 — [Nome do destaque]
-Capa: [...]
-Conteúdo interno: [...]
-```
-
----
-
-### COPY (texto puro, sem design)
-
-#### Princípio
-
-Quando o entregável é apenas o texto — sem peça visual associada. Pode ser copy para legenda, script para WhatsApp, texto para site, roteiro para apresentação verbal, etc. O Direcionamento precisa especificar onde esse texto vai ser usado, porque o tom e a estrutura mudam conforme o destino.
-
-#### Cabeçalho obrigatório
-
-```
-Destino: [onde esse texto vai ser usado]
-Tom: [como deve soar]
-Objetivo: [o que deve gerar]
+Texto principal: [máximo 5 palavras]
+Texto secundário: [se houver]
+Elemento visual: [ideia da imagem ou representação]
+Referências: [links ou anexos]
 ```
 
-#### Estrutura do conteúdo
+Regras:
 
-O texto em si, organizado conforme o destino — sem tabela, sem slides, só o texto pronto para uso.
+- Texto mínimo.
+- Precisa funcionar em tamanho pequeno.
+- A imagem ou composição precisa ser mais forte que a explicação.
+- Não transformar capa em post completo.
 
----
+### Apresentação
 
-### CAPA (thumbnail, capa de destaque, capa de vídeo)
+Apresentação é uma sequência de slides para conduzir raciocínio. Pode ser para apresentar ao vivo ou para leitura autônoma.
 
-#### Princípio
+Estrutura do conteúdo:
 
-A capa é uma peça de atração — sua única função é fazer alguém clicar ou parar. É lida em menos de 2 segundos. O texto precisa ser mínimo e impactante. A imagem precisa ser visualmente forte o suficiente para competir com o feed.
-
-#### Estrutura do conteúdo
-
-```
-Texto principal: [O que aparece em destaque — máximo 5 palavras]
-Elemento visual: [Ideia da imagem ou representação — conceito + referência]
-Onde será usada: [Thumbnail YouTube / capa de destaque / capa de Reels / outro]
-```
-
----
-
-### FIGURINHA DE WHATS
-
-#### Princípio
-
-Figurinha é uma peça de expressão — usada em conversas no WhatsApp para substituir ou complementar uma mensagem de texto. Precisa ser lida instantaneamente, sem contexto, por qualquer pessoa que receber. Fundo transparente obrigatório.
-
-#### Estrutura do conteúdo
-
-```
-Conceito: [O que a figurinha expressa — emoção, reação, frase de efeito]
-Texto (se houver): [A frase — máxima 4 palavras]
-Elemento visual: [Ideia da imagem, personagem ou elemento gráfico]
-Uso previsto: [Onde será distribuída — pack da marca / campanha específica]
-```
-
----
-
-### ASS DE E-MAIL (assinatura de e-mail)
-
-#### Princípio
-
-A assinatura de e-mail é uma peça de identidade — aparece em toda comunicação formal por e-mail. Precisa ter hierarquia clara: nome e cargo em primeiro lugar, contatos em segundo, marca em terceiro. Deve ser leve em peso de arquivo para não atrasar o carregamento do e-mail.
-
-#### Estrutura do conteúdo
-
-```
-Hierarquia 1: [Nome completo + cargo]
-Hierarquia 2: [Contatos — WhatsApp, e-mail, telefone]
-Hierarquia 3: [Site / redes sociais — se aplicável]
-Logo: [Sim / especificar versão]
-Obs. técnicas: [Formato de entrega — PNG, HTML / dimensões máximas]
-```
-
----
-
-### APRESENTAÇÃO
-
-#### Princípio
-
-Apresentação é uma peça de comunicação em sequência — slides que conduzem o raciocínio de quem assiste. Pode ser apresentada ao vivo (com locutor) ou enviada para leitura autônoma. O Direcionamento precisa especificar qual dos dois, porque isso muda completamente a densidade de texto por slide.
-
-#### Cabeçalho obrigatório
-
-```
-Tipo: [Apresentada ao vivo / Enviada para leitura autônoma]
-Objetivo: [fechar contrato / apresentar proposta / treinar equipe / outro]
+```md
+Tipo: Apresentada ao vivo / Leitura autônoma
+Objetivo: [vender / explicar / treinar / apresentar proposta / outro]
 Público: [quem vai ver]
-Número estimado de slides: [se houver limite]
+Número estimado de slides: [se houver]
+
+Slide 1: [capa]
+Slide 2: [ideia principal]
+Slide 3: [ideia principal]
+Slide final: [CTA / próximo passo / contato]
 ```
 
-#### Estrutura do conteúdo
+Regras:
 
-Slides numerados, mesmo padrão do carrossel — texto corrido por slide, sem fragmentos.
+- Apresentação ao vivo pode ter menos texto e mais apoio visual.
+- Leitura autônoma precisa explicar mais dentro do próprio slide.
+- Cada slide deve ter uma ideia principal.
+- Não transformar slide em documento cheio de parágrafo.
 
+### Website
+
+Website pode ser página completa, landing page ou seção específica. A demanda precisa deixar clara a hierarquia de conteúdo e o objetivo da página.
+
+Estrutura do conteúdo:
+
+```md
+Tipo: Página completa / Landing page / Seção / Ajuste de conteúdo
+Objetivo: [vender / captar lead / informar / institucional / outro]
+Público: [quem vai acessar]
+CTA principal: [ação esperada]
+
+Página / seção: [qual parte do site]
+H1: [título principal]
+Seções:
+- [Nome da seção]: [conteúdo principal]
+- [Nome da seção]: [conteúdo principal]
+CTA final: [chamada e destino]
+Referências: [links ou anexos]
 ```
-Slide 1 (Capa): [Título + subtítulo]
-Slide 2 a N: [Conteúdo progressivo — cada slide com uma ideia]
-Slide final: [Próximo passo / CTA / contato]
+
+Regras:
+
+- Começar pela hierarquia: H1, seções, CTAs.
+- Cada seção precisa ter uma função.
+- Texto de site precisa ser claro, direto e orientado à ação.
+- Referências de páginas devem ficar no material correspondente.
+
+### Destaque de Instagram
+
+Destaque de Instagram pode envolver capa e conteúdo interno. A capa é criação visual. O conteúdo interno segue o formato correspondente: story, vídeo, carrossel ou post.
+
+Estrutura do conteúdo:
+
+```md
+Tipo: Capa de destaque / Destaque completo
+Objetivo: [organizar perfil / explicar serviço / prova social / perguntas frequentes / outro]
+Quantidade de destaques: [número]
+
+Destaque 1:
+Nome: [nome que aparece no perfil]
+Capa: [ícone, símbolo ou ideia visual]
+Conteúdo interno: [story / vídeo / carrossel / post / nenhum]
+Estrutura do conteúdo interno: [usar o formato correspondente]
+Referências: [links ou anexos]
 ```
 
----
+Regras:
 
-### LOGO / IDENTIDADE VISUAL / BRANDING / TEMPLATE
+- Capa precisa ser lida rápido no perfil.
+- Nome do destaque deve ser curto.
+- Se houver conteúdo interno, ele não cria formato novo: usa story, vídeo, carrossel ou post.
+- Se a demanda for só capa, não inventar conteúdo interno.
 
-Esses formatos são entregas de projeto, não de conteúdo — o briefing deles vai no Direcionamento e a Seção 2 descreve os entregáveis esperados. Seguem o mesmo princípio narrativo do Direcionamento (o que é, por que, como, referências), mas a Seção 2 lista o que deve ser entregue ao invés de roteiro ou copy.
+### Copy
 
+Copy é texto puro, sem peça visual obrigatória. Pode ser legenda, mensagem de WhatsApp, texto para site, e-mail, script comercial ou texto institucional.
+
+Estrutura do conteúdo:
+
+```md
+Tipo: Legenda / WhatsApp / E-mail / Site / Script / Institucional / Outro
+Destino: [onde o texto será usado]
+Objetivo: [informar / vender / responder / convidar / posicionar / outro]
+Tom: [como deve soar]
+
+Texto:
+[copy final pronta para uso]
 ```
+
+Regras:
+
+- Escrever pronto para uso, não como ideia.
+- O destino define o tamanho e o tom.
+- Se for mensagem direta, soar como conversa real.
+- Se for texto institucional, ser claro antes de tentar ser bonito.
+- Se a copy fizer parte de outro material, ela deve ficar dentro daquele material, não em demanda separada.
+
+### Figurinha de WhatsApp
+
+Figurinha é peça de expressão para conversa. Precisa ser lida sem contexto e funcionar em tamanho pequeno.
+
+Estrutura do conteúdo:
+
+```md
+Tipo: Figurinha avulsa / Pack de figurinhas
+Objetivo: [reação / campanha / relacionamento / humor / atendimento / outro]
+Uso previsto: [onde será distribuída]
+
+Figurinha 1:
+Conceito: [emoção, reação ou ideia]
+Texto: [máximo 4 palavras, se houver]
+Elemento visual: [personagem, símbolo, rosto, objeto ou ideia]
+Formato: Fundo transparente / Outro
+Referências: [links ou anexos]
+```
+
+Regras:
+
+- Texto mínimo.
+- Precisa funcionar pequena.
+- Não depender de explicação externa.
+- Se for pack, cada figurinha deve ter função diferente.
+- Fundo transparente deve ser indicado quando for obrigatório.
+
+### Assinatura de e-mail
+
+Assinatura de e-mail é peça de identidade aplicada em comunicação formal. Precisa ter hierarquia clara e arquivo leve.
+
+Estrutura do conteúdo:
+
+```md
+Tipo: Assinatura individual / Assinatura de equipe
+Objetivo: [padronizar comunicação / institucional / comercial]
+Formato de entrega: [PNG / HTML / outro]
+
+Nome: [nome completo]
+Cargo: [cargo]
+Contatos: [telefone, WhatsApp, e-mail]
+Links: [site, Instagram, LinkedIn, outros]
+Logo: [versão da marca]
+Observações técnicas: [dimensões, peso, restrições]
+```
+
+Regras:
+
+- Nome e cargo vêm primeiro.
+- Contatos precisam estar corretos antes de criar.
+- Não usar imagem pesada.
+- Se for assinatura de equipe, repetir a estrutura para cada pessoa.
+
+### Campanha comercial
+
+Campanha comercial é planejamento de conjunto, não uma peça isolada. Ela organiza mensagem, período, oferta e materiais que serão criados.
+
+Estrutura do conteúdo:
+
+```md
+Tipo: Campanha comercial
+Objetivo: [vender / captar lead / divulgar lançamento / movimentar loja / outro]
+Período: [início e fim]
+Oferta ou mensagem central: [o que a campanha comunica]
+Público: [quem precisa ser atingido]
+CTA principal: [ação esperada]
+
+Peças do pacote:
+- [Formato 1]: [quantidade e objetivo]
+- [Formato 2]: [quantidade e objetivo]
+- [Formato 3]: [quantidade e objetivo]
+
+Observações:
+[restrições, regras comerciais, condições, referências e links]
+```
+
+Regras:
+
+- Campanha define o pacote, não substitui o briefing de cada peça.
+- Cada peça listada precisa seguir o formato correspondente.
+- Condições comerciais precisam estar claras antes de criação.
+- A demanda só fecha quando todas as peças da campanha estiverem aprovadas.
+
+### Relatório / Planejamento
+
+Relatório e planejamento são documentos de raciocínio. Podem ser internos ou para cliente. A prioridade é clareza, ordem lógica e decisão acionável.
+
+Estrutura do conteúdo:
+
+```md
+Tipo: Relatório / Planejamento / Diagnóstico / Plano de ação / Outro
+Destino: Interno / Cliente
+Objetivo: [analisar / decidir / apresentar / orientar execução / outro]
+Público: [quem vai ler]
+Formato de entrega: [PDF / apresentação / documento / outro]
+
+Estrutura:
+- Contexto
+- Análise
+- Recomendações
+- Próximos passos
+- Anexos / fontes, quando houver
+```
+
+Regras:
+
+- Começar pelo objetivo do documento.
+- Não transformar relatório em texto decorativo.
+- Dados, prints e fontes devem estar linkados ou anexados.
+- Próximos passos precisam ser claros.
+- Se o planejamento gerar peças criativas, cada peça segue seu formato.
+
+### Logo / Identidade visual / Branding / Template
+
+Logo, identidade, branding e template são projetos de marca. A demanda precisa organizar entregáveis, critérios e referências.
+
+Estrutura do conteúdo:
+
+```md
+Tipo: Logo / Identidade visual / Branding / Template
+Objetivo: [criar marca / atualizar marca / padronizar materiais / criar sistema visual / outro]
+Uso previsto: [onde será aplicado]
+Público: [quem precisa reconhecer ou usar]
+
 Entregáveis:
-- [Item 1 — ex: logotipo em versão horizontal e vertical]
-- [Item 2 — ex: paleta de cores com códigos HEX, RGB e CMYK]
-- [Item 3 — ex: tipografia principal e secundária]
-- [...]
-Formatos de arquivo: [AI, PDF, PNG, etc.]
+- [Item 1]
+- [Item 2]
+- [Item 3]
+
+Direção desejada:
+[ideias, restrições, referências e anti-referências]
+
+Formatos de arquivo:
+[AI / PDF / PNG / SVG / Canva / Figma / outro]
 ```
 
----
+Regras:
 
-### RELATÓRIO / PLANEJAMENTO
-
-Documentos internos ou para cliente. O Direcionamento explica o propósito e o destinatário. A Seção 2 é o próprio conteúdo organizado em tópicos.
-
----
-
-### CAMPANHA COMERCIAL
-
-Campanha envolve múltiplas peças com uma mesma identidade. A task de campanha funciona como tarefa-mãe que define a estratégia geral — as peças individuais têm suas próprias tasks filhas, cada uma seguindo o padrão do seu formato.
-
-#### Estrutura do conteúdo da task-mãe
-
-```
-Nome da campanha: [Nome que identifica todas as peças]
-Período: [Data de início e fim]
-Peças que compõem a campanha: [Lista com formato e canal de cada uma]
-Mensagem central: [O que todas as peças precisam comunicar de forma unificada]
-```
-
----
-
-### WEBSITE (página ou seção)
-
-#### Estrutura do conteúdo
-
-```
-Página / seção: [Qual parte do site]
-Hierarquia de conteúdo:
-  H1: [Título principal da página]
-  H2: [Seções]
-  Corpo: [Texto de cada seção]
-  CTA: [Chamada para ação principal da página]
-```
+- Listar entregáveis antes de começar.
+- Separar referência de anti-referência quando houver.
+- Não decidir marca só por gosto: registrar objetivo e uso.
+- Templates precisam indicar onde serão usados e quem vai editar.
+- A entrega só fecha quando todos os arquivos combinados estiverem disponíveis.
 
 ---
 

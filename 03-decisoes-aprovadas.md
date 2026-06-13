@@ -1,7 +1,7 @@
 # Decisoes Aprovadas
 
 Status: ativo
-Atualizado em: 2026-06-09
+Atualizado em: 2026-06-13
 
 ## Decisoes
 
@@ -47,3 +47,24 @@ Atualizado em: 2026-06-09
   - aprovação(cliente)
   - aprovado(status de fechamento)
   - problema externo/interno
+
+### 2026-06-13
+
+- Demandas em pacote devem ficar juntas quando representam a mesma entrega operacional, como captação de videos, leva de carrosseis, rodada de posts estaticos ou pacote editorial planejado.
+- A tarefa de pacote so deve ser considerada entregue quando todos os materiais do pacote estiverem aprovados.
+- Pendencias variaveis, cobranças, confirmações e atualizações de andamento devem ficar nos comentarios da tarefa, nao na descrição.
+- A descrição da tarefa deve usar no maximo títulos `###` no ClickUp. Não usar `##`.
+- Todo título `###` da descrição deve ser seguido por `---` como divisor padrão.
+- O checklist de qualidade continua obrigatorio como criterio interno de revisão, mas nao precisa aparecer na descrição da tarefa.
+- Links de referencia devem permanecer dentro do material correspondente para nao se perderem na reorganização da demanda.
+- A regra de Markdown vale para toda descrição da tarefa no ClickUp: no maximo `###` para títulos principais e texto simples para os blocos internos.
+- O Direcionamento deixa de ser narrativo longo por padrão. Deve ser um briefing objetivo, proporcional à complexidade da demanda, com apenas o contexto necessário para o criativo executar sem dúvida.
+- A esteira criativa passa a priorizar 8 formatos recorrentes no POP-003: video, carrossel, post estatico, story, impresso, capa, apresentação e website.
+- Campanha comercial, relatório, planejamento, identidade visual e branding passam a ser tratados como planejamentos ou projetos maiores, nao como formatos criativos recorrentes dentro do POP-003.
+- O time criativo deve receber conjuntos de criativos em uma demanda unica e entregar o conjunto completo ate a data estipulada.
+- O POP-003 passa a cobrir todo tipo de material em três grupos: formatos criativos recorrentes, formatos criativos complementares e projetos/planejamentos maiores.
+- Formatos criativos complementares mapeados: destaque de Instagram, copy, figurinha de WhatsApp e assinatura de e-mail.
+- Projetos e planejamentos maiores mapeados: campanha comercial, relatório/planejamento e logo/identidade visual/branding/template.
+- Links, anexos e referencias passam a ser parte obrigatoria do briefing. Nenhuma IA, MCP ou pessoa pode remover, resumir, trocar, ocultar ou deixar de migrar links existentes ao criar, reescrever ou reorganizar uma demanda.
+- Se a IA nao conseguir abrir, interpretar ou acessar um link, deve avisar explicitamente o usuário ou registrar em comentário operacional, mas o link deve ser preservado na descrição.
+- Antes de finalizar atualização de descrição no ClickUp, a quantidade de links da versão nova deve bater com a quantidade de links da versão original.
