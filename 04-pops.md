@@ -125,23 +125,24 @@ Garantir que a descrição da tarefa seja completa, clara e padronizada para o C
 
 ### Estrutura obrigatória da descrição
 
-Toda descrição de tarefa deve seguir esta estrutura, nesta ordem, com estes títulos. No ClickUp, usar no máximo títulos `###`. Não usar `##` na descrição da tarefa. Abaixo de todo título `###`, inserir `---` como divisor padrão. Fora dos títulos, escrever em texto simples.
+Toda descrição de tarefa deve seguir esta estrutura, nesta ordem, com estes títulos. No ClickUp, usar `#` para os títulos principais da demanda e dos materiais. Usar `###` para blocos internos como Direcionamento, Roteiro / Conteúdo e Legenda. Não usar `##` na descrição da tarefa.
+
+Abaixo de todo título principal `#`, inserir `---` como divisor padrão. O conteúdo começa logo depois do divisor, sem linha em branco extra entre o `---` e o primeiro texto ou subtítulo.
 
 ```md
-### Resumo da demanda
+# RESUMO DA DEMANDA
 ---
 [Resumo curto do pacote de produção: quantidade de materiais, formato geral e objetivo da entrega.]
 
-### Direcionamento
+# MATERIAL #1 | [TÍTULO DO MATERIAL EM MAIÚSCULO]
 ---
+### Direcionamento
 [Texto simples, claro e em passo a passo sobre por que e como a tarefa deve ser feita.]
 
-### Roteiro
----
+### Roteiro / Conteúdo
 [Tabela com CENA - FALA - LETTERING, quando o formato pedir roteiro. Para outros formatos, usar a estrutura correspondente do POP-003.]
 
 ### Legenda
----
 [Legenda final pronta para copiar e colar na rede social.]
 ```
 
@@ -198,31 +199,37 @@ Demandas de pacote devem ficar juntas quando representam a mesma entrega operaci
 
 Pendencias variaveis, cobranças, confirmações e atualizações de andamento devem ficar nos comentarios da tarefa, nao na descricao. A descricao guarda o briefing mestre estavel para captação, criação e edição.
 
-Separar cada material com título `###` e divisor `---`. Links de referencia devem ficar dentro do material correspondente, para nao se perderem quando a descricao for reorganizada.
+Separar cada material com título principal `#` e divisor `---`. Links de referencia devem ficar dentro do material correspondente, para nao se perderem quando a descricao for reorganizada.
+
+Para demandas de vídeo, nomear cada material neste padrão:
+
+`# VÍDEO #1 | [TÍTULO DO VÍDEO EM MAIÚSCULO]`
+
+Para outros formatos, usar o mesmo princípio:
+
+`# MATERIAL #1 | [TÍTULO DO MATERIAL EM MAIÚSCULO]`
 
 ```
-### Material 1 - Adesivo redondo
+# MATERIAL #1 | ADESIVO REDONDO
 ---
-
-Direcionamento
+### Direcionamento
 [blocos 1, 2, 3 e 4 do material 1]
 
-Roteiro
+### Roteiro / Conteúdo
 [estrutura do material 1]
 
-Legenda
+### Legenda
 [legenda do material 1]
 
-### Material 2 - Camiseta Mae Bichologica
+# MATERIAL #2 | CAMISETA MAE BICHOLOGICA
 ---
-
-Direcionamento
+### Direcionamento
 [blocos 1, 2, 3 e 4 do material 2]
 
-Roteiro
+### Roteiro / Conteúdo
 [estrutura do material 2]
 
-Legenda
+### Legenda
 [legenda do material 2]
 ```
 
@@ -258,10 +265,13 @@ Uma boa legenda normalmente tem:
 - gancho forte;
 - corpo com algo interessante, complementar ao conteúdo;
 - CTA coerente com o CTA da peça.
+- uso moderado de emojis, que deixe a legenda mais viva e escaneavel sem poluir o texto.
 
 A legenda deve ser avaliada conforme o tipo de conteúdo. Em uma trend, por exemplo, a legenda pode ser curta e espontânea, como uma reação natural. Em um conteúdo educativo, comercial ou institucional, ela deve aprofundar um ângulo que a peça nao entregou inteira.
 
-Regra central: a legenda precisa somar, nao repetir.
+Emojis nao sao enfeite obrigatorio em toda linha. Devem ajudar a dar ritmo, destacar CTA, criar respiro visual ou reforçar a emoção do tema. Se a legenda ficar limpa demais, adicionar pelo menos alguns marcadores visuais coerentes com o cliente e o assunto.
+
+Regra central: a legenda precisa somar, nao repetir. E precisa parecer pronta para rede social, nao apenas um bloco de texto cru.
 
 ---
 
@@ -306,34 +316,34 @@ Projetos e planejamentos maiores:
 Cada demanda deve ser organizada como pacote:
 
 ```md
-### Resumo da demanda
+# RESUMO DA DEMANDA
 ---
 [Quantidade de materiais, formato, objetivo geral e prazo da leva.]
 
-### Material 1 - [Nome do material]
+# MATERIAL #1 | [NOME DO MATERIAL EM MAIÚSCULO]
 ---
-Direcionamento
+### Direcionamento
 [Briefing objetivo.]
 
-Roteiro / Conteúdo
+### Roteiro / Conteúdo
 [Estrutura do formato.]
 
-Legenda
+### Legenda
 [Legenda final, quando aplicável.]
 
-### Material 2 - [Nome do material]
+# MATERIAL #2 | [NOME DO MATERIAL EM MAIÚSCULO]
 ---
-Direcionamento
+### Direcionamento
 [Briefing objetivo.]
 
-Roteiro / Conteúdo
+### Roteiro / Conteúdo
 [Estrutura do formato.]
 
-Legenda
+### Legenda
 [Legenda final, quando aplicável.]
 ```
 
-Usar no máximo títulos `###` na descrição do ClickUp. Todo título `###` recebe `---` logo abaixo. Dentro de cada material, usar texto simples.
+Usar `#` para títulos principais e `###` para blocos internos na descrição do ClickUp. Todo título principal `#` recebe `---` logo abaixo, sem linha em branco entre o divisor e o conteúdo seguinte. Dentro de cada bloco, usar texto simples.
 
 Pendências, cobranças e mudanças de andamento ficam nos comentários. Links de referência ficam dentro do material correspondente.
 

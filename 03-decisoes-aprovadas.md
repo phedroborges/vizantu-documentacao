@@ -68,3 +68,7 @@ Atualizado em: 2026-06-13
 - Links, anexos e referencias passam a ser parte obrigatoria do briefing. Nenhuma IA, MCP ou pessoa pode remover, resumir, trocar, ocultar ou deixar de migrar links existentes ao criar, reescrever ou reorganizar uma demanda.
 - Se a IA nao conseguir abrir, interpretar ou acessar um link, deve avisar explicitamente o usuário ou registrar em comentário operacional, mas o link deve ser preservado na descrição.
 - Antes de finalizar atualização de descrição no ClickUp, a quantidade de links da versão nova deve bater com a quantidade de links da versão original.
+- A hierarquia visual das descrições no ClickUp passa a usar `#` para títulos principais da demanda e dos materiais, e `###` para blocos internos como Direcionamento, Roteiro / Conteúdo e Legenda.
+- Demandas de vídeo devem nomear cada material no padrão `VÍDEO #N | TÍTULO DO VÍDEO`, sempre em maiúsculo.
+- Divisores `---` devem ficar logo abaixo dos títulos principais, sem linha em branco extra entre o divisor e o conteúdo seguinte.
+- Legendas devem ser prontas para rede social, com uso moderado de emojis ou marcadores visuais quando fizer sentido, evitando que fiquem apenas como bloco de texto limpo.
