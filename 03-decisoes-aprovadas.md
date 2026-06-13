@@ -53,11 +53,11 @@ Atualizado em: 2026-06-13
 - Demandas em pacote devem ficar juntas quando representam a mesma entrega operacional, como captação de videos, leva de carrosseis, rodada de posts estaticos ou pacote editorial planejado.
 - A tarefa de pacote so deve ser considerada entregue quando todos os materiais do pacote estiverem aprovados.
 - Pendencias variaveis, cobranças, confirmações e atualizações de andamento devem ficar nos comentarios da tarefa, nao na descrição.
-- A descrição da tarefa deve usar no maximo títulos `###` no ClickUp. Não usar `##`.
-- Todo título `###` da descrição deve ser seguido por `---` como divisor padrão.
+- A descrição da tarefa deve usar `#` para títulos principais da demanda e dos materiais, e `###` para blocos internos. Não usar `##`.
+- Todo título principal `#` da descrição deve ser seguido por `---` como divisor padrão.
 - O checklist de qualidade continua obrigatorio como criterio interno de revisão, mas nao precisa aparecer na descrição da tarefa.
 - Links de referencia devem permanecer dentro do material correspondente para nao se perderem na reorganização da demanda.
-- A regra de Markdown vale para toda descrição da tarefa no ClickUp: no maximo `###` para títulos principais e texto simples para os blocos internos.
+- A regra de Markdown vale para toda descrição da tarefa no ClickUp: títulos principais em `#`, blocos internos em `###` e texto simples dentro dos blocos.
 - O Direcionamento deixa de ser narrativo longo por padrão. Deve ser um briefing objetivo, proporcional à complexidade da demanda, com apenas o contexto necessário para o criativo executar sem dúvida.
 - A esteira criativa passa a priorizar 8 formatos recorrentes no POP-003: video, carrossel, post estatico, story, impresso, capa, apresentação e website.
 - Campanha comercial, relatório, planejamento, identidade visual e branding passam a ser tratados como planejamentos ou projetos maiores, nao como formatos criativos recorrentes dentro do POP-003.
