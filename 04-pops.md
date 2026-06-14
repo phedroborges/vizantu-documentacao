@@ -134,7 +134,7 @@ Abaixo de todo título principal `#`, inserir `---` como divisor padrão. O cont
 ---
 [Resumo curto do pacote de produção: quantidade de materiais, formato geral e objetivo da entrega.]
 
-# MATERIAL #1 | [TÍTULO DO MATERIAL EM MAIÚSCULO]
+# MATERIAL 1 | [TÍTULO DO MATERIAL EM MAIÚSCULO]
 ---
 ### Direcionamento
 [Texto simples, claro e em passo a passo sobre por que e como a tarefa deve ser feita.]
@@ -203,14 +203,14 @@ Separar cada material com título principal `#` e divisor `---`. Links de refere
 
 Para demandas de vídeo, nomear cada material neste padrão:
 
-`# VÍDEO #1 | [TÍTULO DO VÍDEO EM MAIÚSCULO]`
+`# VÍDEO 1 | [TÍTULO DO VÍDEO EM MAIÚSCULO]`
 
 Para outros formatos, usar o mesmo princípio:
 
-`# MATERIAL #1 | [TÍTULO DO MATERIAL EM MAIÚSCULO]`
+`# MATERIAL 1 | [TÍTULO DO MATERIAL EM MAIÚSCULO]`
 
 ```
-# MATERIAL #1 | ADESIVO REDONDO
+# MATERIAL 1 | ADESIVO REDONDO
 ---
 ### Direcionamento
 [blocos 1, 2, 3 e 4 do material 1]
@@ -221,7 +221,7 @@ Para outros formatos, usar o mesmo princípio:
 ### Legenda
 [legenda do material 1]
 
-# MATERIAL #2 | CAMISETA MAE BICHOLOGICA
+# MATERIAL 2 | CAMISETA MAE BICHOLOGICA
 ---
 ### Direcionamento
 [blocos 1, 2, 3 e 4 do material 2]
@@ -320,7 +320,7 @@ Cada demanda deve ser organizada como pacote:
 ---
 [Quantidade de materiais, formato, objetivo geral e prazo da leva.]
 
-# MATERIAL #1 | [NOME DO MATERIAL EM MAIÚSCULO]
+# MATERIAL 1 | [NOME DO MATERIAL EM MAIÚSCULO]
 ---
 ### Direcionamento
 [Briefing objetivo.]
@@ -331,7 +331,7 @@ Cada demanda deve ser organizada como pacote:
 ### Legenda
 [Legenda final, quando aplicável.]
 
-# MATERIAL #2 | [NOME DO MATERIAL EM MAIÚSCULO]
+# MATERIAL 2 | [NOME DO MATERIAL EM MAIÚSCULO]
 ---
 ### Direcionamento
 [Briefing objetivo.]
