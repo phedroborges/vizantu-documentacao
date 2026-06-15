@@ -20,6 +20,7 @@ O risco de qualquer padrão é virar engessamento. Esses POPs evitam isso porque
 - POP-003: Padrão de roteiro/conteúdo por formato
 - POP-004: Processo de criação de marca — fase de entrevistas
 - POP-005: Processo de manual de marca
+- POP-006: Diretrizes de copy/legenda e de revisão de demandas (com ou sem IA)
 
 ---
 
@@ -1134,3 +1135,54 @@ Pontos que precisam aparecer:
 - Fotografia e aplicações precisam comunicar orientação, campo, regularização, agro, segurança e atendimento humano sem cair em ambientalismo genérico.
 
 O manual da Parceria Ambiental deve mostrar que a marca não é apenas "ambiental". Ela é uma empresa que orienta produtores, empreendedores e empresas para produzir, crescer e operar dentro da lei com tranquilidade.
+
+---
+
+## POP-006 — Diretrizes de copy/legenda e de revisão de demandas
+
+**Atualizado em:** 2026-06-15
+**Origem:** Aprendizados consolidados a partir dos questionamentos de Phedro durante a revisão da demanda "VÍDEOS ORGÂNICOS #2 | CASA CARAMELO".
+
+### Objetivo
+
+Padronizar a qualidade da copy e da legenda e estabelecer guardrails de revisão para que qualquer pessoa — ou IA — possa criar e reorganizar demandas sem perder conteúdo, sem descaracterizar o trabalho e sem extrapolar o que foi pedido.
+
+---
+
+### Parte A — Diretrizes de copy, legenda e roteiro
+
+**1. Gancho de legenda é conteúdo, nunca comando genérico.**
+A primeira linha da legenda nunca deve ser "leia a legenda", "salva esse post", "faça isso antes de ler" ou similar. O gancho precisa ser conteúdo de verdade — uma cena, um dado ou uma provocação que gere identificação e puxe a leitura de forma natural.
+> Ruim: "Salva esse vídeo antes de continuar."
+> Bom: "Tem gato que passa o dia inteiro do lado do pote cheio e mal encosta na água."
+
+**2. Emojis com propósito.**
+Legenda não pode ser apenas bloco de texto limpo. Usar emojis de forma moderada para dar ritmo e respiro visual, sem exagero e sem poluir.
+
+**3. CTA consistente nas três seções.**
+O CTA precisa ser idêntico em Direcionamento, Roteiro e Legenda. Se o vídeo é de WhatsApp, as três seções dizem WhatsApp. Inconsistência entre o CTA falado no roteiro e o CTA da legenda é erro de revisão.
+
+**4. O roteiro entrega o que promete.**
+Conteúdo que abre com "veja como", "saiba como", "o jeito certo é" precisa mostrar de fato o conteúdo prometido dentro do roteiro. Não prometer no gancho e entregar vago.
+
+**5. Complexidade proporcional à ideia.**
+Não complicar conteúdo que é simples por natureza. Vídeo leve e de entretenimento (ex.: "provador de roupinha no pet") pede roteiro enxuto e direto — não transformar em produção elaborada. A estrutura é fixa; o tamanho e a densidade se ajustam à ideia.
+
+---
+
+### Parte B — Guardrails de revisão de demandas (vale para IA e para pessoas)
+
+**6. Não alterar o que não foi pedido.**
+Mexer apenas no que foi solicitado. Se um material está marcado como "não é para mexer", ele permanece intacto — inclusive título, roteiro e legenda. Reorganizar a demanda não autoriza reescrever o que não foi pedido.
+
+**7. Preservar links e referências sempre.**
+Nenhum link pode ser removido, resumido, trocado ou esquecido ao reescrever uma demanda. Conferir a contagem de links antes e depois. Seção de referência que estava vazia permanece vazia — nunca substituir um link por "—" nem inventar referência.
+
+**8. Não concluir além do dado.**
+Ao analisar dados (ex.: Meta Ads), separar claramente o que o dado mostra do que é hipótese. Não afirmar causa ("faltou verba para escalar") a partir de correlação. Hipótese é hipótese e deve ser declarada como tal, com o teste necessário para validá-la.
+
+**9. Não inventar propostas sem base.**
+Ideias de criativo, estratégia ou conteúdo precisam estar ancoradas em referência real: o que já rodou na conta, o que o cliente já validou, dados existentes. Antes de propor, verificar o histórico — não tirar ideia "da cabeça" e apresentar como recomendação.
+
+**10. Ler tarefas longas pelo navegador antes de editar.**
+Demandas em pacote (vários materiais numa só tarefa) podem estourar o limite de retorno do MCP do ClickUp e truncar a descrição, escondendo materiais, legendas ou links. Para essas tarefas, ler a descrição completa pelo navegador antes de reescrever. A escrita continua pelo MCP (`clickup_update_task`).
