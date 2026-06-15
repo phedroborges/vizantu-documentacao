@@ -1,7 +1,7 @@
 # Decisoes Aprovadas
 
 Status: ativo
-Atualizado em: 2026-06-13
+Atualizado em: 2026-06-15
 
 ## Decisoes
 
@@ -72,3 +72,9 @@ Atualizado em: 2026-06-13
 - Demandas de vídeo devem nomear cada material no padrão `VÍDEO N | TÍTULO DO VÍDEO`, sempre em maiúsculo. Não usar `#` dentro do título porque o ClickUp pode corromper a formatação.
 - Divisores `---` devem ficar logo abaixo dos títulos principais, sem linha em branco extra entre o divisor e o conteúdo seguinte.
 - Legendas devem ser prontas para rede social, com uso moderado de emojis ou marcadores visuais quando fizer sentido, evitando que fiquem apenas como bloco de texto limpo.
+
+### 2026-06-15
+
+- A primeira linha da legenda (gancho) nunca deve ser uma instrução genérica como "leia a legenda", "salva esse post" ou "faça isso antes de ler". O gancho deve ser conteúdo de verdade — uma cena, dado ou provocação que gere identificação e puxe a leitura naturalmente.
+- Para ler tarefas longas no ClickUp (demandas em pacote, com vários materiais numa só tarefa), usar SEMPRE o navegador para ler a descrição completa antes de editar. O `clickup_get_task` (MCP) trunca descrições muito longas e pode esconder materiais/legendas/links — o que causaria perda de conteúdo ao reescrever a descrição inteira.
+- A escrita/atualização da tarefa continua sendo feita pelo MCP do ClickUp (`clickup_update_task`). O navegador é usado apenas para a leitura completa e segura.
