@@ -51,7 +51,13 @@ Reunião com Ianka, Wesley e Bruno identificou que o concorrente **TBM** está a
 - **Programa de indicação "Indique e ganhe":** cliente indica alguém; quando o indicado se torna cliente, quem indicou ganha 1 mensalidade inteira de internet de graça. Benefício pontual por indicação efetivada — **nunca** comunicar como ganho recorrente/renda passiva (risco de associação com pirâmide).
 - **Ação "Camisa do Brasil" na Copa:** cliente veste a camisa da seleção, marca @terranet no story durante os jogos do Brasil, e a cada gol do Brasil ganha desconto na próxima mensalidade. Repetir/atualizar a cada rodada do Brasil (não só o primeiro jogo). Referência: campanha da Petoria (a cada gol, chopp grátis).
 - **Tráfego pago:** 24 dias, 5 dias/semana, ~R$100/dia, segmentado para Perolândia e Estância.
-- **Execução:** task `86aj0kfca` — pacote misto com 2 vídeos orgânicos (Copa institucional) + 3 criativos de anúncio (Meta Ads) para essa campanha.
+- **Execução:** task `86aj0kfca` — pacote de 5 vídeos finalizado:
+  - Vídeo 1: "Copa é pelo celular, festa é ao vivo" (institucional, gol sem atraso).
+  - Vídeo 2: "Família brigando" (institucional, plano dimensionado pra casa toda).
+  - Vídeo 3: "A TerraNet entra em campo" — promoção R$79,90 nos 3 primeiros meses (Perolândia/Estância).
+  - Vídeo 4: "Indique e ganhe" — programa de indicação (1 mensalidade grátis por amigo) + preço R$79,90.
+  - Vídeo 5: "A cada gol do Brasil, 50% de desconto" — camisa do Brasil + marcação @terranet no story, repostar a cada rodada do Brasil.
+  - Todos os 5 têm duas legendas: orgânica (post normal) e de anúncio (Texto principal/Título/Descrição), para uso em conteúdo orgânico e em Meta Ads.
 
 ---
 

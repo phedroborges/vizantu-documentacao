@@ -84,4 +84,5 @@ Atualizado em: 2026-06-15
   - Programa de indicação: cliente indica, e quando o indicado se torna cliente, quem indicou ganha uma mensalidade inteira de internet (benefício pontual, sem caráter de renda recorrente — evitar qualquer associação com pirâmide).
   - Ação ligada à Copa: camisa do Brasil + marcação da TerraNet no Instagram (story) = desconto na mensalidade a cada gol do Brasil, em todos os jogos (não só o primeiro). Referência: campanha da Petoria (a cada gol, chopp grátis).
   - Tráfego pago: 24 dias, 5 dias por semana, ~R$100/dia, focado em Perolândia e Estância.
-  - Task `86aj0kfca` reestruturada: vídeos 1 e 2 (orgânicos, Copa institucional) + vídeos 3-5 (criativos de anúncio Meta Ads para essa campanha B2C).
+  - Task `86aj0kfca` reestruturada: vídeos 1 e 2 (Copa institucional) + vídeos 3-5 (campanha B2C Perolândia/Estância — promoção R$79,90, indique e ganhe, 50% por gol do Brasil).
+- Peças que vão circular tanto como orgânico quanto como anúncio (caso da TerraNet) passam a ter, na descrição da tarefa, duas versões de legenda por material: `### Legenda` (pronta para post orgânico) e `### Legenda (Anúncio)` (estruturada em Texto principal / Título / Descrição, para Meta Ads). As duas convivem no mesmo material — não substituem uma à outra.
