@@ -1186,3 +1186,13 @@ Ideias de criativo, estratégia ou conteúdo precisam estar ancoradas em referê
 
 **10. Ler tarefas longas pelo navegador antes de editar.**
 Demandas em pacote (vários materiais numa só tarefa) podem estourar o limite de retorno do MCP do ClickUp e truncar a descrição, escondendo materiais, legendas ou links. Para essas tarefas, ler a descrição completa pelo navegador antes de reescrever. A escrita continua pelo MCP (`clickup_update_task`).
+
+### Nomenclatura de demandas-pacote recorrentes
+
+Demandas-pacote que se repetem para o mesmo cliente (ex.: VÍDEOS ORGÂNICOS, CARROSSÉIS, posts de campanha sazonal) seguem numeração sequencial no título.
+
+- A primeira leva fica sem número (é a #1 implícita).
+- As próximas recebem `#2`, `#3` etc., sempre antes do sufixo ` | CLIENTE`.
+- Exemplo: `VÍDEOS ORGÂNICOS | ENA` (1ª leva) → `VÍDEOS ORGÂNICOS #2 | ENA` (2ª leva) → `VÍDEOS ORGÂNICOS #3 | ENA` (3ª leva).
+
+Antes de criar uma nova leva, conferir na lista do cliente qual foi o último número usado naquele tipo de demanda e incrementar. A numeração é por cliente e por tipo (vídeos, carrosséis etc.) — cada tipo tem sua própria sequência.
