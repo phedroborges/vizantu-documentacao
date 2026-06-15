@@ -44,6 +44,15 @@ Expansão recente (2026):
 ### Fase atual (maio/2026)
 A TerraNet já atende múltiplas cidades há anos. A campanha de chegada em Estância e Perolândia foi um movimento pontual de expansão. Agora o foco é **conteúdo educativo e consolidação de marca** — posicionando a TerraNet como referência técnica no sudoeste goiano como um todo, com foco em análise de viabilidade, diferenciais de estrutura e conectividade para o agro.
 
+### Campanha B2C Perolândia/Estância (a partir de 02/06/2026)
+Reunião com Ianka, Wesley e Bruno identificou que o concorrente **TBM** está avançando agressivamente em Perolândia: vendedor/instalador presente na cidade, instalação na hora, chip a R$9,90 e placas espalhadas. Resposta da TerraNet, puxada pelo gancho da Copa do Mundo (jogos a partir de 13/06):
+
+- **Preço de entrada:** R$ 79,90 nos 3 primeiros meses (R$10 abaixo da referência do concorrente) — exclusivo para Perolândia e Estância.
+- **Programa de indicação "Indique e ganhe":** cliente indica alguém; quando o indicado se torna cliente, quem indicou ganha 1 mensalidade inteira de internet de graça. Benefício pontual por indicação efetivada — **nunca** comunicar como ganho recorrente/renda passiva (risco de associação com pirâmide).
+- **Ação "Camisa do Brasil" na Copa:** cliente veste a camisa da seleção, marca @terranet no story durante os jogos do Brasil, e a cada gol do Brasil ganha desconto na próxima mensalidade. Repetir/atualizar a cada rodada do Brasil (não só o primeiro jogo). Referência: campanha da Petoria (a cada gol, chopp grátis).
+- **Tráfego pago:** 24 dias, 5 dias/semana, ~R$100/dia, segmentado para Perolândia e Estância.
+- **Execução:** task `86aj0kfca` — pacote misto com 2 vídeos orgânicos (Copa institucional) + 3 criativos de anúncio (Meta Ads) para essa campanha.
+
 ---
 
 ## 3. Proposta de valor central
