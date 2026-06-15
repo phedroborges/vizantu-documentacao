@@ -188,6 +188,7 @@ Estas são as escolinhas divulgadas ativamente pela escola:
 | Evento | Detalhes |
 |--------|----------|
 | **Corre Mineiros 2026** | 07/06/2026. ENA tem stand com backdrop (3x2,50m), 2 wind banners (azul e laranja, só logo), 8 banners de diferenciais (1,20x0,80m) e sorteio de kit completo do corredor da marca **Lado de Fora** (outfit completo: meia a óculos, adaptado para homem ou mulher). Arte de comunicação do sorteio vai para Instagram e WhatsApp até 05/06. |
+| **Interclasse ENA 2026** | Evento esportivo interno com EF2 e Ensino Médio em futsal, vôlei e handebol, com cobertura em stories, placar ao vivo e Noite de Gala. Para operação no ClickUp, separar a demanda em antecipação/cobertura que já pode ser produzida e material de pós-evento que depende de registros e resultados oficiais. |
 
 ---
 
@@ -199,3 +200,4 @@ Estas são as escolinhas divulgadas ativamente pela escola:
 - O ENA tem presença ativa em eventos da cidade — ex: **Corre Mineiros** (corrida de rua com stand, banner e presença da marca).
 - A frente de **matrículas** é trabalhada em outubro com campanhas específicas.
 - A relação da Vizantu com o ENA abrange tanto **conteúdo orgânico** quanto **material impresso** e **mídia exterior**.
+- Em campanhas de evento, materiais pós-evento como resumos, melhores momentos e post de ganhadores devem ficar em tarefa separada quando dependem do evento acontecer.
