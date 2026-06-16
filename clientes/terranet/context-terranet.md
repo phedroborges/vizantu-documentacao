@@ -47,17 +47,20 @@ A TerraNet já atende múltiplas cidades há anos. A campanha de chegada em Est�
 ### Campanha B2C Perolândia/Estância (a partir de 02/06/2026)
 Reunião com Ianka, Wesley e Bruno identificou que o concorrente **TBM** está avançando agressivamente em Perolândia: vendedor/instalador presente na cidade, instalação na hora, chip a R$9,90 e placas espalhadas. Resposta da TerraNet, puxada pelo gancho da Copa do Mundo (jogos a partir de 13/06):
 
-- **Preço de entrada:** R$ 79,90 nos 3 primeiros meses (R$10 abaixo da referência do concorrente) — exclusivo para Perolândia e Estância.
+- **Preço de entrada:** sem preço fixo nos roteiros — CTA é "consulte a promoção ativa para a sua cidade" (preço varia por cidade: Perolândia e Estância têm preços diferentes). Decisão tomada em reunião de 16/06/2026.
 - **Programa de indicação "Indique e ganhe":** cliente indica alguém; quando o indicado se torna cliente, quem indicou ganha 1 mensalidade inteira de internet de graça. Benefício pontual por indicação efetivada — **nunca** comunicar como ganho recorrente/renda passiva (risco de associação com pirâmide).
-- **Ação "Camisa do Brasil" na Copa:** cliente veste a camisa da seleção, marca @terranet no story durante os jogos do Brasil, e a cada gol do Brasil ganha desconto na próxima mensalidade. Repetir/atualizar a cada rodada do Brasil (não só o primeiro jogo). Referência: campanha da Petoria (a cada gol, chopp grátis).
+- **Ação "Camisa do Brasil" na Copa:** cliente veste a camisa da seleção, marca @terranet no story **durante o jogo** do Brasil → ganha 50% de desconto na próxima mensalidade. "A cada jogo do Brasil" (não por gol — mais simples e sem depender de o Brasil marcar). Quem não é cliente pode contratar durante a Copa e participar dos próximos jogos. **Apenas tráfego pago** (não orgânico). Repostar a cada rodada do Brasil.
 - **Tráfego pago:** 24 dias, 5 dias/semana, ~R$100/dia, segmentado para Perolândia e Estância.
-- **Execução:** task `86aj0kfca` — pacote de 5 vídeos finalizado:
-  - Vídeo 1: "Copa é pelo celular, festa é ao vivo" (institucional, gol sem atraso).
-  - Vídeo 2: "Família brigando" (institucional, plano dimensionado pra casa toda).
-  - Vídeo 3: "A TerraNet entra em campo" — promoção R$79,90 nos 3 primeiros meses (Perolândia/Estância).
-  - Vídeo 4: "Indique e ganhe" — programa de indicação (1 mensalidade grátis por amigo) + preço R$79,90.
-  - Vídeo 5: "A cada gol do Brasil, 50% de desconto" — camisa do Brasil + marcação @terranet no story, repostar a cada rodada do Brasil.
-  - Todos os 5 têm duas legendas: orgânica (post normal) e de anúncio (Texto principal/Título/Descrição), para uso em conteúdo orgânico e em Meta Ads.
+- **CDN / argumento técnico (acordado em 16/06):** os servidores estão em Rio Verde com acesso direto à Cazé TV e YouTube — a Globo ainda não está pronta no servidor. Na fala dos vídeos, usar "maiores plataformas de streaming" (sem citar Globo ou outros apps específicos). Logos de Cazé TV e YouTube aparecem no lettering/arte. Metáfora aprovada: "É como se a sede dessas plataformas estivesse aqui na nossa cidade."
+- **Execução:** task `86aj0kfca` — pacote de 5 vídeos (roteiros atualizados em 16/06):
+  - Vídeo 1: "Copa é pelo celular, festa é ao vivo" — gancho Cazé TV + argumento CDN/delay. Ianka.
+  - Vídeo 2: "Família brigando" — cenário vizinho gritando gol, argumento rede interna estruturada. Bruno.
+  - Vídeo 3: "A TerraNet entra em campo" — promoção B2C Perolândia/Estância (sem preço, consultar). Bruno. 2 versões (por cidade).
+  - Vídeo 4: "Indique e ganhe" — programa de indicação (1 mensalidade grátis por amigo, sem preço). Bruno.
+  - Vídeo 5: "A cada jogo do Brasil, 50% de desconto" — camisa + story + @terranet. **APENAS TRÁFEGO PAGO.** Bruno.
+  - Todos os 5 têm duas legendas: orgânica (post normal) e de anúncio (Texto principal/Título/Descrição).
+  - **Gravação:** na casa do Bruno — boné TerraNet + camisa do Brasil. Captação com Sara (2 horas). Todos os 5 vídeos na mesma sessão.
+  - *Nota: A TerraNet gravou um "vídeo já gravado 15/06" independentemente — encerrado, fora da demanda.*
 
 ---
 
