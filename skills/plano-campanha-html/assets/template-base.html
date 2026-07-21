@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{DESCRICAO_META}}">
+  <!-- Padrão de nome obrigatório: PLANO DE [MÊS] | [PROJETO] — em caixa alta, no title, na topbar e no rodapé -->
+  <title>PLANO DE {{MES}} | {{PROJETO}}</title>
+  <style>
+
+  /* {{FONT_FACES}} — cole aqui os blocos @font-face gerados por scripts/embed_font.py */
+
+  :root {
+    /* Tokens semânticos — mapear a partir do manual de marca do cliente.
+       Ver references/design-system.md. Valores abaixo são placeholders neutros. */
+    --accent: #C8FF4D;   /* cor de destaque/ação da marca */
+    --soft: #F7F9EE;     /* fundo suave derivado da marca */
+    --primary: #2F5D50;  /* cor institucional */
+    --deep: #16211B;     /* cor mais escura da marca (hero, bands deep) */
+    --paper: #FFFFFF;    /* fundo de cards */
+    --page: #F5F6F2;     /* fundo da página (tint leve do hue da marca) */
+    --ink: #1B2620;      /* texto principal (tingido com o hue da marca) */
+    --muted: #5E6B63;    /* texto secundário */
+    --line: #DFE5DB;     /* bordas e divisórias */
+    --max: 1180px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; max-width: 100%; overflow-x: hidden; }
+  body { margin: 0; color: var(--ink); background: var(--page); font-family: '{{FONTE}}', 'Poppins', Arial, sans-serif; line-height: 1.62; overflow-x: hidden; }
+  section[id] { scroll-margin-top: 72px; }
+  a { color: inherit; }
+  button { font: inherit; }
+  .shell { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
+
+  /* ---------- Topbar ---------- */
+  .topbar { position: sticky; top: 0; z-index: 30; background: color-mix(in srgb, var(--deep) 96%, transparent); color: var(--soft); border-bottom: 1px solid rgba(255,255,255,.14); }
+  .topbar .shell { min-height: 58px; display: flex; align-items: center; gap: 22px; }
+  .mini-brand { margin-right: auto; font-weight: 600; white-space: nowrap; }
+  .mini-brand i { display: inline-block; width: 9px; height: 9px; margin-right: 8px; background: var(--accent); border-radius: 50%; }
+  .topbar nav { display: flex; gap: 18px; overflow-x: auto; scrollbar-width: none; }
+  .topbar nav::-webkit-scrollbar { display: none; }
+  .topbar nav a { font-size: 12px; text-decoration: none; white-space: nowrap; opacity: .78; }
+  .topbar nav a:hover { opacity: 1; color: var(--accent); }
+  .print-btn { border: 1px solid rgba(255,255,255,.35); background: transparent; color: var(--soft); padding: 7px 12px; border-radius: 4px; cursor: pointer; white-space: nowrap; }
+
+  /* ---------- Hero ---------- */
+  .hero { background: var(--deep); color: var(--soft); min-height: 640px; display: flex; align-items: stretch; border-bottom: 12px solid var(--accent); }
+  .hero .shell { display: grid; grid-template-columns: 1.3fr .7fr; gap: 72px; align-items: center; padding: 72px 0; }
+  .hero .shell > div { min-width: 0; }
+  .brand-logo { display: block; width: 340px; max-width: 72%; margin-bottom: 58px; }
+  .eyebrow { display: block; color: var(--primary); text-transform: uppercase; font-size: 11px; font-weight: 700; letter-spacing: .12em; margin-bottom: 9px; }
+  .hero .eyebrow { color: var(--accent); }
+  h1, h2, h3, h4, p { margin-top: 0; }
+  h1 { max-width: 820px; font-size: clamp(38px, 6vw, 76px); line-height: 1.04; font-weight: 500; margin-bottom: 28px; letter-spacing: 0; }
+  h1 strong { color: var(--accent); font-weight: 600; }
+  .hero-intro { max-width: 710px; font-size: 18px; color: color-mix(in srgb, var(--soft) 82%, transparent); }
+  .hero-note { border-left: 5px solid var(--accent); padding: 10px 0 10px 22px; margin-top: 36px; max-width: 620px; font-size: 15px; }
+  .hero-stats { border-top: 1px solid rgba(255,255,255,.24); }
+  .hero-stat { padding: 24px 0; border-bottom: 1px solid rgba(255,255,255,.24); }
+  .hero-stat strong { display: block; color: var(--accent); font-size: 36px; line-height: 1.1; font-weight: 600; }
+  .hero-stat span { font-size: 13px; color: color-mix(in srgb, var(--soft) 72%, transparent); }
+
+  /* ---------- Bandas e cabeçalhos de seção ----------
+     Respiro é parte da experiência: o leitor precisa sentir que mudou de assunto.
+     Não reduza o padding das bands nem o margin-bottom do section-head. */
+  .band { padding: 128px 0; background: var(--paper); }
+  .band.alt { background: var(--soft); }
+  .band.deep { background: var(--deep); color: var(--soft); }
+  .section-head { display: grid; grid-template-columns: 240px 1fr; gap: 48px; margin-bottom: 72px; align-items: start; }
+  .section-no { font-size: 13px; font-weight: 700; color: var(--primary); border-top: 2px solid var(--primary); padding-top: 12px; }
+  .deep .section-no { color: var(--accent); border-color: var(--accent); }
+  h2 { font-size: clamp(32px, 4vw, 52px); line-height: 1.12; font-weight: 500; margin-bottom: 16px; letter-spacing: 0; }
+  .lead { max-width: 790px; font-size: 18px; color: var(--muted); }
+  .deep .lead { color: color-mix(in srgb, var(--soft) 72%, transparent); }
+
+  /* ---------- Objetivo ---------- */
+  .objective-grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 56px; align-items: start; }
+  .objective-main { font-size: 26px; line-height: 1.45; font-weight: 500; }
+  .objective-main strong { color: var(--primary); }
+  .principles { border-left: 1px solid var(--line); padding-left: 30px; }
+  .principles h3 { font-size: 15px; text-transform: uppercase; letter-spacing: .08em; }
+  .principles ul { margin: 0; padding: 0; list-style: none; }
+  .principles li { padding: 12px 0 12px 22px; border-bottom: 1px solid var(--line); position: relative; font-size: 14px; }
+  .principles li::before { content: ''; position: absolute; left: 0; top: 21px; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+
+  /* ---------- Estratégia / linhas editoriais ---------- */
+  .strategy-grid { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); }
+  .strategy-step { padding: 28px 24px; min-height: 225px; border-right: 1px solid var(--line); background: var(--paper); }
+  .strategy-step:last-child { border-right: 0; }
+  .strategy-step b { display: block; font-size: 11px; color: var(--primary); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 18px; }
+  .strategy-step h3 { font-size: 19px; line-height: 1.35; margin-bottom: 12px; }
+  .strategy-step p { color: var(--muted); font-size: 13px; margin-bottom: 0; }
+  .audience-note { margin-top: 30px; padding: 24px 28px; background: var(--primary); color: white; display: grid; grid-template-columns: 180px 1fr; gap: 28px; align-items: center; }
+  .audience-note strong { color: var(--soft); }
+  .audience-note p { margin: 0; font-size: 14px; }
+
+  /* ---------- Design system ---------- */
+  .ds-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+  .swatches { display: grid; grid-template-columns: repeat(5, 1fr); min-height: 190px; }
+  .swatch { padding: 16px 13px; display: flex; flex-direction: column; justify-content: flex-end; font-size: 11px; font-weight: 600; }
+  .swatch small { display: block; font-size: 9px; opacity: .72; }
+  /* Crie uma classe .swatch.<nome> por cor da paleta do cliente, com background/cor/borda adequados */
+  .type-sample { border-top: 1px solid var(--line); padding-top: 24px; }
+  .type-sample .big { font-size: 48px; line-height: 1.08; font-weight: 500; margin-bottom: 14px; }
+  .type-sample p { color: var(--muted); font-size: 14px; }
+  .ds-rules { margin-top: 34px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .ds-rule { border-top: 3px solid var(--accent); padding-top: 14px; }
+  .ds-rule strong { display: block; margin-bottom: 6px; }
+  .ds-rule span { font-size: 13px; color: var(--muted); }
+
+  /* ---------- Cronograma ---------- */
+  .timeline { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 2px solid var(--primary); }
+  .week { padding: 24px 22px 10px; border-right: 1px solid var(--line); position: relative; }
+  .week::before { content: ''; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); position: absolute; top: -7px; left: 22px; box-shadow: 0 0 0 4px var(--soft); }
+  .week:last-child { border-right: 0; }
+  .week > strong { display: block; font-size: 12px; color: var(--primary); margin-bottom: 18px; }
+  .post-date { display: block; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
+  .post-date b { display: block; font-size: 15px; }
+  .recording { margin-top: 64px; background: var(--deep); color: var(--soft); display: grid; grid-template-columns: 270px 1fr; }
+  .recording-date { padding: 34px; background: var(--accent); color: var(--deep); }
+  .recording-date small { display: block; text-transform: uppercase; font-weight: 700; }
+  .recording-date strong { display: block; font-size: 58px; line-height: 1; margin: 12px 0; }
+  .recording-date span { font-size: 15px; }
+  .recording-plan { padding: 34px 38px; }
+  .recording-plan h3 { font-size: 22px; }
+  .recording-plan p { color: color-mix(in srgb, var(--soft) 74%, transparent); font-size: 14px; }
+  .recording-plan ul { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 30px; padding-left: 18px; font-size: 13px; }
+
+  /* ---------- Tráfego ---------- */
+  .traffic-map { display: grid; grid-template-columns: 1fr 88px 1fr 88px 1fr; align-items: stretch; margin: 32px 0 72px; }
+  .flow-node { border: 1px solid rgba(255,255,255,.22); padding: 28px; min-height: 260px; }
+  .flow-node.accent { background: var(--accent); color: var(--deep); border-color: var(--accent); }
+  .flow-node.accent .eyebrow { color: inherit; opacity: .8; } /* o eyebrow global usa --primary, que pode não contrastar sobre --accent */
+  .flow-node h3 { font-size: 22px; line-height: 1.25; }
+  .flow-node p, .flow-node li { font-size: 13px; }
+  .flow-node p { color: inherit; opacity: .76; }
+  .flow-node ul { padding-left: 18px; }
+  .flow-arrow { display: grid; place-items: center; color: var(--accent); font-size: 34px; }
+  .campaigns { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .campaign-card { background: rgba(255,255,255,.05); border-top: 5px solid var(--accent); padding: 30px; }
+  .campaign-card h3 { font-size: 22px; }
+  .campaign-card dl { margin: 0; display: grid; grid-template-columns: 120px 1fr; gap: 10px 16px; font-size: 13px; }
+  .campaign-card dt { color: var(--accent); font-weight: 600; }
+  .campaign-card dd { margin: 0; color: color-mix(in srgb, var(--soft) 76%, transparent); }
+  .traffic-table { margin-top: 28px; }
+
+  /* ---------- Roteiros ---------- */
+  .script-index { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); margin-bottom: 72px; }
+  .script-index a { text-decoration: none; min-height: 128px; padding: 20px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: white; }
+  .script-index a:nth-child(4n) { border-right: 0; }
+  .script-index a:nth-child(n+5) { border-bottom: 0; } /* ajustar conforme a quantidade de materiais */
+  .script-index small { display: block; color: var(--primary); font-weight: 700; margin-bottom: 8px; }
+  .script-index strong { font-size: 13px; line-height: 1.35; display: block; }
+  .script-index span { display: block; color: var(--muted); font-size: 11px; margin-top: 8px; }
+  .script { background: white; border: 1px solid var(--line); margin-bottom: 72px; scroll-margin-top: 82px; }
+  .script-header { padding: 28px 32px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; gap: 24px; align-items: center; }
+  .script-header h3 { margin: 0; font-size: 25px; line-height: 1.25; }
+  .script-header .eyebrow { margin-bottom: 4px; }
+  .tags { display: flex; gap: 7px; justify-content: flex-end; flex-wrap: wrap; }
+  .tag { display: inline-block; border: 1px solid var(--line); padding: 5px 9px; border-radius: 3px; color: var(--muted); font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; }
+  .tag.format { color: var(--deep); background: var(--accent); border-color: var(--accent); }
+  .tag.approved { color: var(--primary); background: var(--soft); border-color: var(--accent); }
+  .tag.traffic { color: var(--primary); border-color: var(--primary); }
+  .tag.date { background: var(--deep); color: var(--soft); border-color: var(--deep); }
+  .script-layout { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 0; align-items: start; }
+  .script-copy { padding: 34px 32px 42px; min-width: 0; }
+  .approved-block + .approved-block { margin-top: 38px; padding-top: 34px; border-top: 1px solid var(--line); }
+  .approved-block h4 { color: var(--primary); font-size: 13px; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 18px; }
+  .approved-block p { font-size: 14px; color: color-mix(in srgb, var(--ink) 88%, var(--primary)); }
+  .approved-block p:last-child { margin-bottom: 0; }
+  .approved-block ul { padding-left: 20px; font-size: 14px; }
+  .caption-block { border-left: 5px solid var(--accent); padding-left: 22px; }
+  .table-scroll { overflow-x: auto; margin: 18px 0; }
+  table { border-collapse: collapse; width: 100%; min-width: 650px; font-size: 12px; line-height: 1.5; }
+  th { background: var(--deep); color: var(--soft); text-align: left; padding: 12px 14px; font-size: 10px; text-transform: uppercase; letter-spacing: .07em; }
+  td { vertical-align: top; border: 1px solid var(--line); padding: 13px 14px; }
+  td:first-child { color: var(--primary); font-weight: 500; }
+  code { font-family: Consolas, monospace; background: var(--soft); padding: 1px 4px; }
+
+  /* ---------- Mockup Instagram ---------- */
+  .ig-mockup { position: sticky; top: 84px; margin: 34px 30px 34px 0; border: 1px solid var(--line); border-radius: 7px; overflow: hidden; background: white; box-shadow: 0 12px 30px color-mix(in srgb, var(--deep) 12%, transparent); }
+  .ig-top { display: flex; gap: 10px; align-items: center; padding: 11px 12px; font-size: 10px; }
+  .ig-top > span:nth-child(2) { line-height: 1.3; }
+  .ig-top small { display: block; color: var(--muted); }
+  .ig-avatar { width: 30px; height: 30px; display: grid; place-items: center; background: var(--deep); color: var(--accent); border-radius: 50%; font-size: 9px; font-weight: 700; }
+  .ig-more { margin-left: auto; letter-spacing: 2px; }
+  .ig-visual { position: relative; background: var(--soft); color: var(--deep); padding: 28px 23px; display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
+  .ig-visual.square { aspect-ratio: 1 / 1; }
+  .ig-visual.reel { aspect-ratio: 4 / 5; background: var(--deep); color: var(--soft); }
+  /* Os acentos gráficos abaixo carregam a personalidade da marca — REDESENHE conforme o manual
+     (barra, círculo, ângulo, forma orgânica...). Não mantenha o padrão sem pensar. */
+  .ig-visual::before { content: ''; position: absolute; top: 0; left: 0; width: 10px; height: 42%; background: var(--accent); }
+  .ig-visual::after { content: ''; position: absolute; right: 20px; bottom: 20px; width: 54px; height: 54px; border: 2px solid var(--accent); border-radius: 50%; opacity: .5; }
+  .ig-visual > strong { position: relative; z-index: 1; font-size: 21px; line-height: 1.32; font-weight: 500; max-width: 90%; }
+  .ig-kicker { position: relative; z-index: 1; color: var(--primary); font-size: 9px; text-transform: uppercase; letter-spacing: .1em; font-weight: 700; margin-bottom: 18px; }
+  .reel .ig-kicker { color: var(--accent); }
+  .ig-signature { position: absolute; z-index: 1; left: 23px; bottom: 22px; font-size: 9px; font-weight: 600; color: var(--primary); }
+  .reel .ig-signature { color: var(--accent); }
+  .carousel-stack { position: absolute; top: 10px; right: 10px; width: 14px; height: 14px; border-top: 2px solid var(--primary); border-right: 2px solid var(--primary); }
+  .play-mark { position: absolute; top: 12px; right: 12px; color: var(--accent); font-size: 15px; }
+  .ig-actions { padding: 9px 12px 2px; display: flex; gap: 11px; font-size: 22px; line-height: 1; }
+  .ig-actions .save { margin-left: auto; }
+  .ig-caption { padding: 7px 12px 16px; font-size: 9px; line-height: 1.55; max-height: 230px; overflow-y: auto; color: color-mix(in srgb, var(--ink) 90%, var(--muted)); }
+  .ig-caption > strong { margin-right: 6px; }
+  .ig-caption p { display: inline; margin: 0; }
+  .ig-caption p + p::before { content: ' '; }
+
+  /* ---------- Links e referências ----------
+     Todo URL do documento precisa ser clicável. A aprovação NÃO é feita aqui —
+     a plataforma Vizantu Planos injeta a interface de aprovação por conteúdo no upload. */
+  .approved-block a { color: var(--primary); text-decoration: underline; text-underline-offset: 2px; overflow-wrap: break-word; word-break: break-word; }
+  .approved-block a:hover { color: var(--accent); }
+  ul.refs { margin: 0; padding-left: 18px; font-size: 13px; }
+  ul.refs li { margin-bottom: 8px; color: var(--muted); }
+
+  /* ---------- Resultados ---------- */
+  .results-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .result { background: white; padding: 26px 22px; min-height: 210px; }
+  .result span { display: block; font-size: 42px; line-height: 1; color: var(--accent); font-weight: 600; }
+  .result h3 { font-size: 18px; margin: 18px 0 9px; }
+  .result p { color: var(--muted); font-size: 13px; }
+  .measurement { margin-top: 64px; display: grid; grid-template-columns: 1fr 1fr; gap: 46px; }
+  .measurement h3 { font-size: 19px; }
+  .measurement ul { padding-left: 20px; font-size: 14px; }
+  .kpi-note { background: var(--soft); border-left: 5px solid var(--accent); padding: 24px; font-size: 13px; }
+
+  /* ---------- Rodapé ---------- */
+  .footer { background: var(--deep); color: var(--soft); padding: 54px 0; }
+  .footer .shell { display: flex; justify-content: space-between; gap: 30px; align-items: flex-end; }
+  .footer img { width: 240px; }
+  .footer p { margin: 0; font-size: 12px; color: color-mix(in srgb, var(--soft) 62%, transparent); text-align: right; }
+
+  /* ---------- Responsivo ---------- */
+  @media (max-width: 980px) {
+    .hero .shell, .objective-grid, .ds-grid { grid-template-columns: 1fr; }
+    .hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .hero-stat { padding-right: 14px; }
+    .strategy-grid, .timeline, .results-grid { grid-template-columns: 1fr 1fr; }
+    .strategy-step:nth-child(2) { border-right: 0; }
+    .script-layout { grid-template-columns: 1fr; }
+    .ig-mockup { position: relative; top: auto; width: min(360px, calc(100% - 64px)); margin: 0 auto 40px; }
+    .traffic-map { grid-template-columns: 1fr; }
+    .flow-arrow { min-height: 60px; transform: rotate(90deg); }
+    .script-index { grid-template-columns: 1fr 1fr; }
+    .script-index a:nth-child(2n) { border-right: 0; }
+    .script-index a:nth-child(4) { border-bottom: 1px solid var(--line); }
+  }
+  @media (max-width: 680px) {
+    .shell { width: min(calc(100% - 26px), var(--max)); }
+    .topbar nav { display: none; }
+    .print-btn { display: none; }
+    .hero { min-height: 0; }
+    .hero .shell { padding: 52px 0; gap: 32px; }
+    h1 { font-size: 33px; overflow-wrap: anywhere; }
+    .hero-intro { font-size: 16px; }
+    .brand-logo { margin-bottom: 40px; max-width: 90%; }
+    .hero-stats { grid-template-columns: 1fr 1fr; }
+    .section-head { grid-template-columns: 1fr; gap: 12px; }
+    .band { padding: 64px 0; }
+    .strategy-grid, .timeline, .campaigns, .results-grid, .measurement, .ds-rules { grid-template-columns: 1fr; }
+    .strategy-step { border-right: 0; border-bottom: 1px solid var(--line); }
+    .audience-note, .recording { grid-template-columns: 1fr; }
+    .swatches { grid-template-columns: 1fr; }
+    .swatch { min-height: 86px; }
+    .recording-plan ul { grid-template-columns: 1fr; }
+    .script-index { grid-template-columns: 1fr; }
+    .script-index a { border-right: 0; border-bottom: 1px solid var(--line) !important; }
+    .script-header { align-items: flex-start; flex-direction: column; }
+    .tags { justify-content: flex-start; }
+    .script-copy { padding: 28px 20px 36px; }
+    .ig-mockup { width: calc(100% - 40px); }
+    .footer .shell { align-items: flex-start; flex-direction: column; }
+    .footer p { text-align: left; }
+  }
+
+  /* ---------- Impressão (A4) ---------- */
+  @media print {
+    @page { size: A4; margin: 13mm; }
+    body { background: white; color: #111; font-size: 9pt; padding-bottom: 0; }
+    .topbar, .print-btn { display: none !important; }
+    .shell { width: 100%; }
+    .hero { min-height: auto; border-bottom-width: 6px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .hero .shell { padding: 18mm 0; grid-template-columns: 1.3fr .7fr; }
+    .brand-logo { width: 190px; margin-bottom: 20px; }
+    h1 { font-size: 34pt; }
+    .band { padding: 16mm 0; }
+    .section-head { margin-bottom: 8mm; }
+    .script { break-before: page; break-inside: auto; }
+    .script-layout { display: block; }
+    .ig-mockup { position: relative; top: auto; width: 72mm; margin: 8mm auto; break-inside: avoid; box-shadow: none; }
+    .table-scroll { overflow: visible; }
+    table { min-width: 0; font-size: 7pt; }
+    .traffic-map, .recording, .campaigns, .results-grid { break-inside: avoid; }
+    .footer { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell">
+      <span class="mini-brand"><i></i>PLANO DE {{MES}} | {{PROJETO}}</span>
+      <nav aria-label="Navegação do plano">
+        <a href="#objetivo">Objetivo</a>
+        <a href="#estrategia">Estratégia</a>
+        <a href="#cronograma">Cronograma</a>
+        <a href="#trafego">Tráfego</a>
+        <a href="#roteiros">Roteiros</a>
+        <a href="#resultados">Resultados</a>
+      </nav>
+      <button class="print-btn" type="button" onclick="window.print()">Imprimir / PDF</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="shell">
+        <div>
+          <img class="brand-logo" src="{{LOGO_DATA_URI}}" alt="{{CLIENTE}}">
+          <span class="eyebrow">{{EYEBROW_HERO}}</span>
+          <h1>{{H1_COM_STRONG}}</h1>
+          <p class="hero-intro">{{INTRO}}</p>
+          <p class="hero-note"><strong>{{TAGLINE_DA_MARCA}}</strong><br>{{TOM_DA_COMUNICACAO}}</p>
+        </div>
+        <div class="hero-stats" aria-label="Resumo da campanha">
+          <div class="hero-stat"><strong>{{N1}}</strong><span>{{LABEL1}}</span></div>
+          <div class="hero-stat"><strong>{{N2}}</strong><span>{{LABEL2}}</span></div>
+          <div class="hero-stat"><strong>{{N3}}</strong><span>{{LABEL3}}</span></div>
+          <div class="hero-stat"><strong>{{N4}}</strong><span>{{LABEL4}}</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seções 01..N conforme references/estrutura.md.
+         Cada uma segue o padrão:
+    <section class="band [alt|deep]" id="...">
+      <div class="shell">
+        <div class="section-head">
+          <span class="section-no">01 · RÓTULO</span>
+          <div><h2>Tese da seção.</h2><p class="lead">...</p></div>
+        </div>
+        ...componentes...
+      </div>
+    </section>
+    -->
+
+    <!-- Exemplo de roteiro (repetir por material, ids roteiro-1..N):
+    <article class="script" id="roteiro-1">
+      <header class="script-header">
+        <div>
+          <span class="eyebrow">Material 01</span>
+          <h3>{{TITULO_MATERIAL}}</h3>
+        </div>
+        <div class="tags">
+          <span class="tag approved">Status: aprovado pelo usuário</span>
+          <span class="tag format">Vídeo|Estático|Carrossel</span>
+          <span class="tag">{{ETAPA}}</span>
+          <span class="tag traffic">Tráfego: {{CAMPANHA}}</span>
+          <span class="tag date">{{DD/MM}}</span>
+        </div>
+      </header>
+      <div class="script-layout">
+        <div class="script-copy">
+          <section class="approved-block"><h4>Direcionamento</h4> ...verbatim (URLs como &lt;a href&gt; clicáveis)... </section>
+          <section class="approved-block"><h4>Roteiro / Conteúdo</h4> ...verbatim (tabela em .table-scroll para vídeo/carrossel)... </section>
+          <!-- Referências: só quando o material aprovado cita fontes. Links clicáveis. -->
+          <section class="approved-block"><h4>Referências</h4><ul class="refs"><li><a href="{{URL}}" target="_blank" rel="noopener">{{Fonte legível}}</a></li></ul></section>
+          <section class="approved-block caption-block"><h4>Legenda</h4> ...verbatim... </section>
+        </div>
+        <aside class="ig-mockup" aria-label="Prévia do conteúdo 1 no Instagram">
+          <div class="ig-top">
+            <span class="ig-avatar">{{INICIAIS}}</span>
+            <span><strong>{{handle}}</strong><small>{{Cidade, UF}}</small></span>
+            <span class="ig-more">•••</span>
+          </div>
+          <div class="ig-visual reel|square">
+            <span class="play-mark" aria-hidden="true">▶</span> (vídeo) OU <span class="carousel-stack" aria-hidden="true"></span> (carrossel)
+            <span class="ig-kicker">{{CATEGORIA · ETAPA}}</span>
+            <strong>{{HEADLINE_OU_PRIMEIRA_FALA_REAL}}</strong>
+            <span class="ig-signature">{{TAGLINE}}</span>
+          </div>
+          <div class="ig-actions" aria-hidden="true"><span>♡</span><span>○</span><span>⌁</span><span class="save">▢</span></div>
+          <div class="ig-caption"><strong>{{handle}}</strong><p>{{LEGENDA_REAL_P1}}</p><p>{{P2}}</p></div>
+        </aside>
+      </div>
+    </article>
+    NÃO adicione caixa de aprovação aqui — a plataforma Vizantu Planos injeta a aprovação
+    por conteúdo automaticamente no upload (detecta cada article.script[id] / section.band).
+    -->
+  </main>
+
+  <footer class="footer">
+    <div class="shell">
+      <img src="{{LOGO_DATA_URI}}" alt="{{CLIENTE}}">
+      <p>{{TITULO_PLANO}} · {{PERIODO}}<br>Documento consolidado a partir dos {{N}} conteúdos.<br>Fonte dos roteiros: SHA-256 {{HASH}}</p>
+    </div>
+  </footer>
+
+  <!-- A aprovação por conteúdo é injetada pela plataforma Vizantu Planos no upload.
+       Não inclua approval-bar, botões de aprovar/pedir ajuste, textarea ou script de localStorage. -->
+
+  <template id="approved-source-verbatim">{{MARKDOWN_FONTE_VERBATIM}}</template>
+</body>
+</html>
