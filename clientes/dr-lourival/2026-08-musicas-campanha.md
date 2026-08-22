@@ -1,8 +1,18 @@
 # Músicas de Campanha — Dr. Lourival Lobo
-**Fase 3 — Campanha Oficial | Agosto de 2026 | Versão 3**
+**Fase 3 — Campanha Oficial | Agosto de 2026 | Versão 4**
 Vizantu | 5 faixas com objetivo definido + prompt de Suno
 
 **Número: 20777** — cantado "vinte, sete sete sete"
+
+---
+
+## O que mudou na v4
+
+**1. `UTI` virou `u tê i` em todas as faixas.** Escrito como sigla o Suno canta "úti", como se fosse palavra. Mesma correção para `BR → bê érre` na faixa 4.
+
+**2. Pisadinha acelerada de 138 para 155 BPM.** Pisadinha animada vive entre 145 e 160. O `FAST` em maiúscula no Style é de propósito — o Suno responde a ênfase.
+
+**3. Cortado o bate-papo do começo da pisadinha.** Ela agora abre com quatro compassos de teclado, um grito e cai direto no refrão, que é a parte mais forte da faixa. O diálogo do meio virou chamada de galera gritada, que mantém a energia em vez de derrubar.
 
 ---
 
@@ -62,6 +72,8 @@ O Suno canta português brasileiro bem. **Não fonetize.** Só existe uma famíl
 
 | Escreva assim | No lugar de | Por quê |
 |---|---|---|
+| **u tê i** | UTI | sigla o Suno canta como palavra: "úti" |
+| **bê érre** | BR | idem |
 | **prassa** | praça | `ç` antes de a/o/u sai como "k" |
 | **licensa** | licença | idem |
 | **criansa** | criança | idem |
@@ -127,7 +139,7 @@ E a mãe que entrou no choro sai de pé
 [Refrão]
 
 [Verso 2]
-UTI Neonatal, ó, cadê? Não tem!
+U tê i Neonatal, ó, cadê? Não tem!
 Bebê pega estrada que nem caminhoneiro, ein
 Transporte pro pré-natal, ó, cadê? Não tem!
 Mãe vai a pé duas hora e não aparece ninguém
@@ -174,23 +186,31 @@ melodic singing, english vocals, slow
 
 # FAIXA 2 — "O Bebê Pegou a BR"
 
-**Objetivo: animar e bater na oposição.** Arrasta-pé com graça, sarcasmo e pediatria de verdade.
+**Objetivo: animar e bater na oposição.** Pisadinha rápida, com graça, sarcasmo e pediatria de verdade.
 
 **Gênero:** Pisadinha / piseiro
-**BPM:** 138 · **Tom:** Sol maior · **Duração:** 3'00"
+**BPM:** 155 · **Tom:** Sol maior · **Duração:** 2'50"
 
-> **Por que joguei fora a v2:** "chega aflita, sai tranquila" era bonito no briefing e fraco na música — não tinha piada, não tinha alvo, e não falava de pediatria em nenhum momento. Essa aqui fala de bronquiolite, pneumonia, madrugada e ambulância. E tem alvo.
+> **O que mudou na v4:** cortei o bate-papo do começo — ela agora abre com quatro compassos de teclado, um grito e cai direto no refrão, que é a parte mais forte e agora está no segundo 3. Subi de 138 para 155 BPM, porque pisadinha animada vive entre 145 e 160. O diálogo do meio virou chamada de galera gritada, que mantém a energia em vez de derrubar.
 >
 > **O alvo, como no jingle da praça:** a fita cortada, a placa de obra, a live. Nunca uma pessoa, nunca um nome.
 
 ## Letra
 
 ```
-[Intro - falado, dois compadres]
-Ô compadre, cadê a UTI?
-Foi inaugurada?
-Foi não. Inauguraram a placa.
-Ah bom, então tá resolvido.
+[Intro - riff de teclado, 4 compassos, entra direto no refrão]
+Ei! Segura essa, Mineiros!
+
+[Refrão]
+Cortaram fita bonita
+Tem placa em todo lugar
+Mas cortar fita de obra
+Não corta cordão umbilical
+
+Mineiros pede u tê i
+Mineiros pede plantão
+Criansa não se cura
+Com placa de inauguração
 
 [Verso 1]
 Meu bebê tem três dias
@@ -207,18 +227,9 @@ Pra outra cidade internar
 Não é filme, não é lenda
 Não é caso de exceção
 É a conta que não fecha
-De cidade sem UTI e sem plantão
+De cidade sem u tê i e sem plantão
 
 [Refrão]
-Cortaram fita bonita
-Tem placa em todo lugar
-Mas cortar fita de obra
-Não corta cordão umbilical
-
-Mineiros pede UTI
-Mineiros pede plantão
-Criansa não se cura
-Com placa de inauguração
 
 [Verso 2]
 Se propaganda curasse
@@ -229,18 +240,14 @@ A gente vivia de alegria
 Mas quando o bebê arria
 E o relógio não perdoa
 Não adianta ter cartaz
-O que salva é UTI boa
+O que salva é u tê i boa
 
-[Refrão]
-
-[Falado - break, os dois compadres]
-Ô compadre
-Tem UTI Neonatal em Mineiros?
-Tem não
-E tem obra?
-Tem de montão
-E o bebê, vai pra onde?
-Vai pra estrada, compadre. Vai pra estrada.
+[Break gritado - chamada de galera]
+Ei!
+Quem quer u tê i, levanta a mão!
+Quem quer pediatra, levanta a mão!
+Mineiros, levanta a mão!
+Vinte, sete sete sete!
 
 [Verso 3]
 Faz mais de vinte ano
@@ -259,38 +266,33 @@ Ele fala do plantão
 Não aprendeu na cartilha
 Aprendeu no coração
 
-Seis meses de licença
-UTI e condução
+Seis meses de licensa
+U tê i e condução
 Vinte, sete sete sete
 É pediatra na Assembleia, cidadão
 
-[Refrão final - dobrado, coro]
-
-[Outro - falado]
-Placa é bonita, compadre
-Mas UTI é que salva
+[Refrão final - banda cheia e coro]
 ```
 
 ## Prompt Suno
 
 **Style of Music:**
 ```
-Piseiro, pisadinha, brazilian forró eletrônico, 138 BPM, G major, bright Yamaha PSR
-keyboard lead riff, electronic zabumba and triangle, marked walking bass, accordion
-on the chorus, male lead with female backing on the chorus, warm northeastern
-brazilian accent, cordel storytelling delivery, festive danceable groove,
-spoken comedic dialogue breaks
+Piseiro, pisadinha, brazilian forró eletrônico, FAST 155 BPM, G major, high energy
+dance groove, bright Yamaha PSR keyboard lead riff, driving electronic zabumba and
+triangle, punchy marked bass, accordion on the chorus, male lead with female backing,
+warm northeastern brazilian accent, party street sound, relentless danceable pulse
 ```
 
 **Exclude Styles:**
 ```
-sertanejo universitário, rock, trap, english vocals, spanish, reggaeton, sad ballad,
-orchestral, slow tempo
+slow tempo, ballad, sad, sertanejo universitário, rock, trap, english vocals, spanish,
+reggaeton, orchestral, spoken word intro
 ```
 
-**Lyrics:** a letra acima. Note que **"criansa"** está trocada de propósito.
+**Lyrics:** a letra acima, com as marcações em inglês (`[Chorus]`, `[Verse 1]`, `[Chant break - shouted, crowd response]`). Note **"u tê i"**, **"criansa"** e **"licensa"** trocados de propósito.
 
-**Se sair errado:** sem riff de teclado → adicione `strong PSR keyboard riff intro`. Se o Suno cantar os trechos falados em vez de falar, marque como `[Spoken - two men talking, no singing]`. Os dois breaks falados são o coração da graça — se ficarem ruins, grave com duas pessoas de verdade e cole na edição, sai melhor.
+**Se sair errado:** se vier lenta, reforce o `FAST` e adicione `uptempo, driving, no ballad`. Sem riff de teclado → adicione `strong PSR keyboard riff intro`. Se o Suno insistir em abrir com fala, o `spoken word intro` no exclude derruba.
 
 ---
 
@@ -453,7 +455,7 @@ O doutor do Sudoeste
 
 [Verso - rápido, gritado]
 Sol rachando o cerrado, poeira no retrovisor
-Da BR pra cidade, quem cuida é o doutor
+Da bê érre pra cidade, quem cuida é o doutor
 Mineiros, Portelândia, Chapadão do Céu
 Santa Rita, Serranópolis, o Sudoeste é meu
 
@@ -470,7 +472,7 @@ Quem sentiu na canela é quem resolve também
 [Silêncio total - 2 compassos]
 
 [Build 2]
-UTI pra criansa respirar
+U tê i pra criansa respirar
 Transporte pra mãe poder chegar
 Seis meses de licensa
 Que quatro não dá, não dá, não dá
@@ -616,7 +618,7 @@ spanish, sad, slow
 
 ## Antes de gerar
 - [x] Número **20777** aplicado nas faixas 1, 2, 4 e (opcional) 5
-- [x] Fonética corrigida — só `ç` antes de a/o/u e o número por extenso
+- [x] Fonética corrigida — `u tê i`, `bê érre`, `ç` antes de a/o/u e o número por extenso
 - [ ] Gerar 4 versões de cada faixa
 - [ ] Gerar instrumental das faixas 3 e 5
 - [ ] Gerar as duas versões da faixa 5 (com e sem o número no fim)
@@ -624,7 +626,7 @@ spanish, sad, slow
 ## Antes de publicar
 - [ ] Aprovação do Dr. nas letras
 - [ ] Validar a faixa 3 com o pastor Christofer Cruz — é a de maior risco reputacional se soar oportunista
-- [ ] Gravar os dois breaks falados da faixa 2 com duas pessoas de verdade. Sai melhor que o Suno e é onde está a graça
+- [ ] Conferir que o Suno soletrou **u tê i** e não cantou "úti" — vale para as faixas 1, 2 e 4
 - [ ] Conferir que o **20777** está audível e correto em todas as faixas que o citam
 
 ## Sobre bater na oposição — a linha que não pode ser cruzada
@@ -655,4 +657,4 @@ Restam cerca de 6 semanas até 04/10/2026.
 
 ---
 
-*Vizantu · Agosto de 2026 · Versão 3*
+*Vizantu · Agosto de 2026 · Versão 4*
