@@ -1,326 +1,483 @@
 # Músicas de Campanha — Dr. Lourival Lobo
 **Fase 3 — Campanha Oficial | Agosto de 2026**
-Vizantu | 5 faixas + direção de produção
+Vizantu | 5 faixas · letra oficial + prompt de produção no Suno
+
+**Número eleitoral: 20777**
 
 ---
 
-## O que é este documento
+## O que mudou na versão 2
 
-Cinco letras originais com direção completa de produção (BPM, tom, instrumentação, estrutura, arranjo vocal), prontas para serem entregues ao **compositor/produtor externo** responsável pelo jingle — item que está fora do escopo contratual da Vizantu (ver `context-dr-lourival.md`, seção 8) e que o pipeline atribui a terceiro (`pipeline-campanha-2026.md`, Bloco de Produção).
-
-O que a Vizantu entrega aqui é a **camada de marca**: o que a música diz, com que palavras, em que tom, e por quê. A camada de áudio é do produtor.
-
-### As cinco faixas
-
-| # | Faixa | Gênero | Função na campanha |
-|---|---|---|---|
-| 1 | **O Doutor das Mães** | Funk 130 (atual) | Reels/TikTok — alcance jovem, som de trend |
-| 2 | **Chega Aflita, Sai Tranquila** | Pisadinha / brega nordestino | Carro de som, rádio, eventos de rua |
-| 3 | **Quebra o Vaso** | Louvor (balada de adoração) | Igreja, público cristão, conteúdo de fé |
-| 4 | **Sudoeste Uai** | Eletrofunk goiano (ref. DJ Giraia) | Orgulho regional, som automotivo, viral local |
-| 5 | **Esperança** | Eletrônica / Brazilian bass (ref. Alok) | Vídeo institucional, aftermovie, encerramento |
+1. **Número definido.** Todos os marcadores foram substituídos por **20777**. Cantado como **"vinte, sete-sete-sete"** — 2 + 6 sílabas, que fecha exatamente dois compassos em todas as cinco faixas. Foi sorte: esse número é excepcionalmente cantável.
+2. **Rima e métrica refeitas.** A versão anterior estava escrita para leitura, não para canto. Todas as letras foram reescritas com esquema de rima fechado (AABB / ABCB) e contagem de sílabas consistente.
+3. **Prompt de Suno para cada faixa**, com letra transcrita foneticamente.
 
 ---
 
-## Regras que guiaram todas as letras
+## Como usar este documento
 
-Extraídas direto do briefing e do diagnóstico. Se o compositor mexer na letra, precisa respeitar isto:
+Cada faixa tem **duas versões da letra**:
 
-**Tom de voz:** direto · acolhedor · popular · minimalista · emocional
-**Nunca:** técnico, sofisticado, institucional, bem-humorado, provocativo
+| Versão | Para quê |
+|---|---|
+| **Letra oficial** | Aprovação do Dr. Lourival, contrato com o compositor, registro autoral |
+| **Letra fonética** | Colar no Suno. Escrita como se pronuncia, não como se escreve |
 
-- ❌ **Zero ataque nominal** às concorrentes. Nenhuma das cinco letras cita adversário, prefeito ou partido rival.
-- ❌ **Zero música que só reclama.** Toda faixa fecha em resolução — a regra do Levantamento → Conexão → Resolução vale pra letra também.
-- ❌ **Zero referência a arma, faca, revólver ou violência** — inclusive metáfora. Isso alterou a construção da faixa 3 (ver nota lá).
-- ✅ **Esperança** é a palavra-âncora da marca. Aparece como conceito em todas e como título na faixa 5.
-- ✅ A autoridade vem do **consultório**, nunca do cargo. Em toda letra ele é pediatra antes de ser candidato.
-- ✅ A objeção "ele vai parar de atender se for eleito" é respondida explicitamente nas faixas 1 e 2.
-- ✅ Frases da marca já aprovadas foram costuradas nas letras: *"Dias melhores virão"*, *"É só tentando que a gente consegue"*, *"chega aflita, sai tranquila"*.
+**Nunca mandar a versão fonética para o Dr. aprovar** — "corassaum" no grupo do WhatsApp não vai terminar bem. A fonética existe só para a máquina.
 
-### ⚠️ O número eleitoral
+---
 
-O pipeline registra o número como **20XXX** — Podemos é 20, os três dígitos finais saem no registro de candidatura. Todos os refrões abaixo estão escritos com **"vinte"** e com a métrica já aberta para receber o número de 5 dígitos.
+## Transcrição fonética — as regras que apliquei
 
-Onde aparece o marcador `[20 _ _ _]`, é ali que o número completo entra. Está indicado em cada faixa qual linha alternativa usar quando o número for definido. **Nenhuma faixa pode ir ao ar em versão final sem o número de 5 dígitos** — só "vinte" não elege ninguém na urna.
+O Suno lê português com sotaque de quem aprendeu por escrito. Estas são as regras aplicadas em todas as letras fonéticas abaixo:
+
+| Problema | Regra | Exemplo |
+|---|---|---|
+| Nasal `ão` | → **aum** | coração → corassaum |
+| Nasal `ãe` | → **ain** | mãe → main |
+| `ç` e `ce/ci` | → **ss** | licença → lissensa · cidade → sidadji |
+| `-de` / `-te` final | → **dji** / **tchi** | vinte → vintchi · sete → setchi |
+| `-e` final | → **i** | noite → nôitchi · pele → péli |
+| `-o` final | → **u** | colo → colu · tudo → tudu |
+| `-l` final | → **u** | Lourival → Lourivau · hospital → ospitau |
+| `-r` de infinitivo | **cai** (é assim que se canta) | chorar → chorá · ganhar → ganyá |
+| `lh` | → **ly** | filho → filyu · velho → velyu |
+| `nh` | → **ny** | manhã → manyan · minha → minya |
+| `-em` final | → **ein** | também → tambein · ninguém → ninguein |
+| `ch` e `x` | → **sh** | chegou → shegô · deixa → deisha |
+| `h` inicial | **cai** | hora → ora · hospital → ospitau |
+| `qu` | → **k** | quatro → kuatru · quem → kein |
+| `g` antes de e/i | → **j** | gente → jentchi · longe → lonji |
+| `s` entre vogais | → **z** | casa → caza |
+| `ei` | → **ê** | primeiro → primêru |
+| Números | **por extenso** | 20777 → vintchi setchi setchi setchi |
+
+**O que eu deliberadamente NÃO apliquei:** o `r` inicial e o `rr`, que em português brasileiro soam como um "h" aspirado (rua = "hua"). Testei mentalmente e a leitura fica ilegível para revisar, e o Suno já acerta isso na maioria das vezes. Se sair errado na geração, troque `r`/`rr` inicial por `h` e regenere.
+
+**Aviso honesto:** o Suno melhorou muito em português nas versões recentes. É possível que ele já cante a letra oficial corretamente. **Teste a letra oficial primeiro** — se a pronúncia sair boa, use ela, porque a fonética às vezes introduz erros novos. A fonética é o plano B, e ela existe pronta para você não perder tempo se o plano A falhar.
+
+---
+
+## Configuração geral do Suno
+
+Vale para as cinco faixas:
+
+- **Custom Mode:** ligado
+- **Instrumental:** desligado
+- **Modelo:** o mais recente disponível (v5 ou superior)
+- **Weirdness / Estranheza:** 15–25% — jingle precisa ser previsível, não experimental
+- **Style Influence / Influência do estilo:** 75–85% — o gênero tem que estar cravado
+- Gere **3 a 4 versões de cada faixa** antes de escolher. A primeira quase nunca é a boa.
+- **Faixa 2 e 4 são as prioritárias.** Se o tempo apertar, comece por elas.
 
 ---
 
 # FAIXA 1 — "O Doutor das Mães"
 
-**Gênero:** Funk atual (beat 130 / bregadeira · tamborzão moderno)
-**BPM:** 130 · **Tom:** Lá menor · **Duração alvo:** 1'40" (versão full) + corte de 22s para Reels
-**Referência de produção:** funk 130 atual, beat estourado com grave limpo, vocal principal masculino jovem + resposta feminina, ad-libs secos
+**Gênero:** Funk atual (beat 130 / tamborzão moderno)
+**BPM:** 130 · **Tom:** Lá menor · **Duração alvo:** 1'50"
+**Rima:** AABB nos versos, AAAA no refrão
+**Uso:** Reels e TikTok — som de trend, alcance jovem
 
-## Letra
+## Letra oficial
 
-**[INTRO — voz feminina falada, beat entrando por baixo]**
-
+**[INTRO — voz feminina falada]**
 ```
-Alô Mineiros...
+Alô Mineiros
 Alô Sudoeste de Goiás
 Chegou o doutor das mães
-(tum... tum, tum)
 ```
 
-**[REFRÃO — entra direto, é o gancho]**
-
+**[REFRÃO]**
 ```
-É o dou-tor, é o dou-tor
-O que escuta mãe chorar        (ãh!)
-É o dou-tor, é o dou-tor
-Que escutou e foi mudar        (vem!)
-Se perguntar quem que é
-Eu respondo sem errar
+É o doutor, é o doutor
+O que escuta mãe chorar
+É o doutor, é o doutor
+Que escutou e foi mudar
+Aperta vinte, sete-sete-sete
+Que é o cuidado que vai ganhar
 É o Lourival, é o Lourival
-Pediatra do lugar!
+O pediatra do lugar
 ```
 
 **[VERSO 1]**
-
 ```
-Ele não veio de gabinete, não
+Ele não é de gabinete, ele é de plantão
 Veio do consultório com a mãe pela mão
-Toda manhã tem fila, tem bebê no colo
-Tem história que ninguém conta pra qualquer um, ó
-Ele escutou tudo, guardou no coração
+Toda manhã tem fila, tem bebê chorando
+Tem mãe contando dor que ninguém tá escutando
+
+Ele escutou tudo e guardou no coração
 Foi pro bairro mais longe, foi a pé, foi no chão
-Duas horas andando pra mostrar pra você
-Que o que ele fala, ele fez
+Duas horas na estrada só pra te mostrar
+Que o que ele fala, ele faz, pode confiar
 ```
 
 **[REFRÃO]**
 
-**[VERSO 2 — as pautas]**
-
+**[VERSO 2]**
 ```
 UTI Neonatal, essa cidade tem que ter
 Bebê não pode esperar estrada pra viver
-Transporte pro pré-natal, que mãe não anda só
-Licença de seis meses, que quatro é muito pouco, dó
+Transporte pro pré-natal, que ela não vá a pé
+Seis meses de licença, porque quatro não dá pé
+
 Ele não vem reclamar, ele vem resolver
-Do consultório pra Assembleia, tá ligado quem que é?
+Do consultório pra Assembleia, cê vai ver, cê vai ver
 ```
 
-**[PONTE — resposta à objeção, meio tempo, voz limpa]**
-
+**[PONTE — meio tempo, beat quase todo fora]**
 ```
-E ó, ninguém vai perder o doutor
-Ele não vai largar o consultório, não
+Calma, ninguém vai perder o doutor
+Ele não larga a mãe, ele não larga não
 Ele vai é levar o consultório
-Pra dentro de onde se decide, irmão
+Pra dentro de onde bate o martelo, irmão
 ```
 
-**[BEAT DROP — chant, tudo em coro]**
-
+**[DROP — chant, coro]**
 ```
-Ô ô ô ô — vinte!
-Ô ô ô ô — Lourival!
-Ô ô ô ô — mãe de Goiás
-Cola com o doutor que ele tá com nós
-```
-
-**[REFRÃO FINAL — dobrado, coro de vozes femininas]**
-
-```
-É o dou-tor, é o dou-tor
-O que escuta mãe chorar        (ãh!)
-É o dou-tor, é o dou-tor
-Que escutou e foi mudar        (vem!)
-Aperta [20 _ _ _] na urna
-Que é o cuidado que vai ganhar
-É o Lourival, é o Lourival
-Pediatra do lugar!
+Vinte! Sete-sete-sete!
+Vinte! Sete-sete-sete!
+Mãe de Goiás, levanta a mão
+Vinte! Sete-sete-sete!
 ```
 
-## Direção de produção
+**[REFRÃO FINAL — coro feminino dobrando]**
 
-- **Grave:** presente mas **limpo** — precisa tocar em caixinha de celular e em carro. Nada de mandelão distorcido; o público-alvo primário é mulher de 20 a 35 anos, não paredão.
-- **Vocal:** MC masculino jovem (18–25), com **resposta feminina** nos ad-libs e no refrão final. A voz feminina é estratégica — é o público que ele quer.
-- **Ad-libs:** `ãh!` · `vem!` · `tum!` · `é nóis` — secos, sem eco exagerado.
-- **Ponte:** derruba o beat quase inteiro, deixa só o kick e a voz. É o momento mais importante da faixa e não pode ser atropelado.
-- **Corte para Reels (22s):** intro falada (4s) → refrão (10s) → drop do chant (8s). O gancho tem que estar nos primeiros 3 segundos.
+## Prompt Suno
 
-## Uso
+**Style of Music:**
+```
+Brazilian funk, funk 130 BPM, tamborzão beat, deep clean sub bass,
+young male MC lead with female backing chorus, punchy claps,
+minimal melodic loop, anthemic street chant hook, radio-clean mix
+```
 
-Reels e TikTok. Trilha de cortes rápidos do consultório e da caminhada. Serve como som de trend — se pegar, a própria base reposta.
+**Exclude Styles:**
+```
+trap, drill, mandelão, distorted bass, heavy autotune, english vocals, dark, aggressive
+```
+
+**Lyrics (fonético — colar no campo de letra):**
+```
+[Intro - spoken female voice]
+Alô Minêrus
+Alô Sudoéstchi dji Goiáiss
+Shegô u dotô dass mainss
+
+[Chorus - male lead with female backing]
+É u dotô, é u dotô
+U ki escuta main shorá
+É u dotô, é u dotô
+Ki escutô i fôi mudá
+Apérta vintchi, setchi-setchi-setchi
+Ki é u cuidadu ki vai ganyá
+É u Lourivau, é u Lourivau
+U pediátra du lugá
+
+[Verse 1 - male MC]
+Eli naum é dji gabinetchi, eli é dji plantaum
+Vêiu du consutóriu com a main péla maum
+Tóda manyan tein fila, tein bebê shorandu
+Tein main contandu dô ki ninguein tá escutandu
+
+Eli escutô tudu i guardô nu corassaum
+Fôi pru bairu maiss lonji, fôi a pé, fôi nu shaum
+Duas oras na estrada só pra tchi mostrá
+Ki u ki eli fala, eli fais, podji confiá
+
+[Chorus]
+É u dotô, é u dotô
+U ki escuta main shorá
+É u dotô, é u dotô
+Ki escutô i fôi mudá
+Apérta vintchi, setchi-setchi-setchi
+Ki é u cuidadu ki vai ganyá
+É u Lourivau, é u Lourivau
+U pediátra du lugá
+
+[Verse 2 - male MC]
+U-Tê-I Neonatau, essa sidadji tein ki tê
+Bebê naum podji esperá estrada pra vivê
+Transportchi pru pré-natau, ki éla naum vá a pé
+Seiss mezess dji lissensa, porkê kuatru naum dá pé
+
+Eli naum vein reclamá, eli vein resouvê
+Du consutóriu pra Assembléia, sê vai vê, sê vai vê
+
+[Bridge - half time, beat drops out]
+Cauma, ninguein vai perdê u dotô
+Eli naum larga a main, eli naum larga naum
+Eli vai é levá u consutóriu
+Pra dentru dji ondji batchi u martélu, irmaum
+
+[Beat drop - group chant]
+Vintchi! Setchi-setchi-setchi!
+Vintchi! Setchi-setchi-setchi!
+Main dji Goiáiss, levanta a maum
+Vintchi! Setchi-setchi-setchi!
+
+[Final chorus - female chorus doubling]
+É u dotô, é u dotô
+U ki escuta main shorá
+É u dotô, é u dotô
+Ki escutô i fôi mudá
+Apérta vintchi, setchi-setchi-setchi
+Ki é u cuidadu ki vai ganyá
+É u Lourivau, é u Lourivau
+U pediátra du lugá
+```
+
+**Notas:** o grave tem que tocar em celular, não em paredão — o público é mãe de 20 a 35 anos. Se o Suno entregar grave distorcido, adicione `clean bass, no distortion` ao style. A ponte é o momento mais importante: é onde a objeção "ele vai parar de atender" é respondida. Se o Suno atropelar a ponte, gere ela separada e cole na edição.
 
 ---
 
 # FAIXA 2 — "Chega Aflita, Sai Tranquila"
 
-**Gênero:** Pisadinha / brega nordestino (arrasta-pé)
+**Gênero:** Pisadinha / piseiro (forró eletrônico nordestino)
 **BPM:** 138 · **Tom:** Sol maior · **Duração alvo:** 2'40"
-**Referência de produção:** pisadinha de teclado (Yamaha PSR), zabumba eletrônica, baixo marcado, sanfona no refrão, dueto masculino + feminino
+**Rima:** ABCB em quadras de 7 sílabas (redondilha maior)
+**Uso:** carro de som, rádio regional, eventos de rua
 
-> O título é a frase que o próprio Dr. Lourival usou no briefing para descrever a transformação que ele entrega: *"chega aflita e sai tranquila"*. É a linha mais forte da marca inteira e vira refrão aqui.
+> O título é a frase que o próprio Dr. usou no briefing para descrever o que entrega: *"chega aflita e sai tranquila"*. Não mudei uma palavra.
 
-## Letra
+## Letra oficial
 
-**[INTRO — teclado solo, 8 compassos, entra zabumba]**
+**[INTRO — teclado solo, 8 compassos]**
 
 **[VERSO 1 — voz masculina]**
-
 ```
 Ô de casa, ô de fora
 Quem tem filho sabe a dor
 De acordar de madrugada
-Com febre e sem doutor
+Com um bebê ardendo em calor
 
-A cidade tava dormindo
-E o desespero acordou
+A cidade tava escura
+Todo mundo foi dormir
 Mas tem um homem em Mineiros
-Que atende com amor
+Que acorda pra te ouvir
 ```
 
-**[PRÉ-REFRÃO — entra o baixo, sobe]**
-
+**[PRÉ-REFRÃO]**
 ```
-Ele pega o bebê no colo
-Olha bem, e sabe o que é
-Não é só a mão de médico
-É a calma que ele te dá também
+Ele pega o teu menino
+Ele olha e sabe o que é
+Cura o choro da criança
+E a mãe sai de lá de pé
 ```
 
-**[REFRÃO 1 — dueto, voz feminina entra dobrando]**
-
+**[REFRÃO 1 — dueto]**
 ```
 Ela chega aflita
 E sai tranquila
-Ele escuta a mãe
-Como ninguém escutou
+É a mão de um doutor
+Que é maior que a dor
 Ela chega aflita
 E sai tranquila
-O doutor do povo
+É o médico do povo
 É o doutor do interior
 ```
 
 **[VERSO 2 — voz feminina solo]**
-
 ```
 Eu levei minha menina
 Com quatro dias de vida
-Hoje ela tem quinze anos
-E eu não esqueci daquele dia
+Ele olhou pra mim e disse
+Fica calma, mãe querida
 
+Hoje ela tem quinze anos
+E eu não esqueci do dia
 Mãe não esquece quem cuidou
-Mãe não esquece quem ficou
-Quando o mundo tava escuro
-Foi ele que não me largou
+Quando mais ninguém podia
 ```
 
-**[PRÉ-REFRÃO]**
-
-**[REFRÃO 1]**
+**[PRÉ-REFRÃO · REFRÃO 1]**
 
 **[PONTE — só teclado e voz, sem bateria]**
-
 ```
-Ele foi lá no bairro mais longe
-Andou duas horas a pé
+Ele foi no bairro longe
+Duas horas caminhou
 Pra sentir na perna dele
-O caminho que a mãe faz sem ter transporte
+O caminho que a mãe andou
 
-Não foi discurso não, foi suor
-Não foi promessa não, foi chão
-Quem faz assim merece
-O voto e o coração
+Não foi discurso, foi suor
+Não foi promessa, não foi não
+Quem caminha desse jeito
+Leva o voto e o coração
 ```
 
-**[VIRADA — entra tudo, arrasta-pé, dobra o andamento percebido]**
+**[VIRADA — entra tudo, arrasta-pé]**
 
-**[REFRÃO 2 — o refrão de rua, o que a galera canta]**
-
+**[REFRÃO 2 — o de rua]**
 ```
-É vinte, é vinte, é o Lourival!
-É pediatra, é do povo, é de verdade
-É vinte, é vinte, é o Lourival!
-Deputado das mães do Sudoeste de Goiás!
-```
-
-*(versão final, com número definido:)*
-```
-[20 _ _ _], [20 _ _ _], é o Lourival!
+Vinte sete-sete-sete, é o Lourival
+Pediatra do povo, gente de verdade
+Vinte sete-sete-sete, é o Lourival
+Deputado estadual da nossa cidade
 ```
 
-**[REFRÃO 1 + REFRÃO 2 alternados até o fim]**
+**[REFRÃO 1 + REFRÃO 2 alternados]**
 
-**[OUTRO — falado, voz do próprio Dr. Lourival se possível]**
-
+**[OUTRO — falado, voz do próprio Dr. Lourival]**
 ```
-Eu não vou parar de atender.
-Eu vou é levar o consultório mais longe.
-Um abraço a todos.
+Eu não vou parar de atender
+Eu vou é levar o consultório mais longe
+Um abraço a todos
 ```
 
-## Direção de produção
+## Prompt Suno
 
-- **Teclado é o protagonista.** Pisadinha sem timbre de PSR não é pisadinha. O riff de abertura tem que ser reconhecível em 2 segundos.
-- **Dueto obrigatório.** O verso 2 na voz feminina — é uma mãe falando, não o candidato. Isso é o que diferencia essa faixa de jingle comum.
-- **A ponte é o coração.** Corta a percussão inteira, deixa teclado sustentado e voz. É onde a caminhada de 2 horas vira emoção.
-- **Outro na voz do Dr.** Se ele gravar as três linhas finais, a faixa ganha autenticidade que nenhum locutor entrega. São 8 segundos de gravação — cabe na rotina de consultório dele.
-- **Masterização para carro de som:** mid alto, grave controlado, sem sub. Alto-falante de rua corta abaixo de 80Hz.
+**Style of Music:**
+```
+Piseiro, pisadinha, brazilian forró eletrônico, 138 BPM, bright Yamaha PSR
+keyboard lead riff, electronic zabumba and triangle, marked walking bass,
+accordion on the chorus, male and female duet, warm northeastern brazilian
+accent, festive danceable groove
+```
 
-## Uso
+**Exclude Styles:**
+```
+sertanejo universitário, rock, trap, english vocals, sad ballad, orchestral, reggaeton
+```
 
-Carro de som, rádio regional, eventos de rua, feiras. É a faixa de maior alcance em Mineiros e nas cidades vizinhas (Portelândia, Chapadão do Céu, Santa Rita do Araguaia).
+**Lyrics (fonético):**
+```
+[Intro - solo keyboard riff, 8 bars, then zabumba enters]
+
+[Verse 1 - male vocal]
+Ô dji caza, ô dji fóra
+Kein tein filyu sabji a dô
+Dji acordá dji madrugada
+Com um bebê ardendu ein calô
+
+A sidadji tava escura
+Tôdu mundu fôi dormí
+Maiss tein um omein ein Minêrus
+Ki acorda pra tchi ouví
+
+[Pre-chorus]
+Eli péga u teu meninu
+Eli óia i sabji u ki é
+Cura u shôru da criansa
+I a main sai dji lá dji pé
+
+[Chorus - male and female duet]
+Éla shéga aflita
+I sai trankila
+É a maum dji um dotô
+Ki é maiô ki a dô
+Éla shéga aflita
+I sai trankila
+É u médicu du póvu
+É u dotô du interiô
+
+[Verse 2 - female vocal solo]
+Eu levêi minya menina
+Com kuatru dias dji vida
+Eli olyô pra mim i dissi
+Fica cauma, main kerida
+
+Ôji éla tein kinzi anus
+I eu naum eskessi du dia
+Main naum eskessi kein cuidô
+Kuandu maiss ninguein podia
+
+[Pre-chorus]
+Eli péga u teu meninu
+Eli óia i sabji u ki é
+Cura u shôru da criansa
+I a main sai dji lá dji pé
+
+[Chorus]
+Éla shéga aflita
+I sai trankila
+É a maum dji um dotô
+Ki é maiô ki a dô
+Éla shéga aflita
+I sai trankila
+É u médicu du póvu
+É u dotô du interiô
+
+[Bridge - keyboard and voice only, no drums]
+Eli fôi nu bairu lonji
+Duas oras caminyô
+Pra sentí na pérna déli
+U caminyu ki a main andô
+
+Naum fôi discursu, fôi suô
+Naum fôi promessa, naum fôi naum
+Kein caminya dessi jêitu
+Léva u vótu i u corassaum
+
+[Drop - full band, fast arrasta-pé]
+
+[Chorus 2 - street chant]
+Vintchi setchi-setchi-setchi, é u Lourivau
+Pediátra du póvu, jentchi dji verdadji
+Vintchi setchi-setchi-setchi, é u Lourivau
+Deputadu estaduau da nóssa sidadji
+
+[Chorus 1 and Chorus 2 alternating]
+
+[Outro - spoken male voice, warm]
+Eu naum vô pará dji atendê
+Eu vô é levá u consutóriu maiss lonji
+Um abrassu a tôdus
+```
+
+**Notas:** o teclado tem que ser reconhecível em 2 segundos — se o Suno entregar sem o riff de PSR, adicione `strong keyboard riff intro, PSR synth lead` ao style. O verso 2 é uma mãe falando, não o candidato: se a voz feminina não entrar, force com `[Verse 2 - solo female singer, different voice]`. **O outro falado grave com a voz do próprio Dr.** — são 8 segundos, cabe na rotina dele, e nenhum locutor entrega essa autenticidade. Cole na edição.
 
 ---
 
 # FAIXA 3 — "Quebra o Vaso"
 
 **Gênero:** Louvor — balada de adoração congregacional
-**BPM:** 72 (versos) → mantém 72 com subdivisão dobrada no refrão · **Tom:** Ré maior · **Duração alvo:** 5'00"
-**Referência de produção:** piano + violão de aço, cordas entrando no refrão 2, bateria só a partir do refrão 2, coral no final
-**Base bíblica:** Juízes 6 e 7 · 2 Coríntios 4.7 · e a obra dos Gideões Internacionais
+**BPM:** 72 · **Tom:** Ré maior · **Duração alvo:** 5'00"
+**Base bíblica:** Juízes 6–7 · 2 Coríntios 4.7 · obra dos Gideões Internacionais
+**Uso:** igreja, conteúdo de fé, versão instrumental no aftermovie
 
-## ⚠️ Nota importante sobre esta letra
+## Por que não há espada nesta letra
 
-A história de Gideão tem no texto bíblico o grito *"a espada do Senhor e de Gideão"* (Juízes 7.20). **Essa imagem foi deliberadamente removida.** O briefing é inegociável: nenhuma arma, faca ou espada pode aparecer em nenhum material da marca — nem como metáfora.
+O texto bíblico traz *"a espada do Senhor e de Gideão"* (Juízes 7.20). Removi. O briefing é inegociável: nenhuma arma em nenhum material da marca, nem como metáfora.
 
-A troca não enfraqueceu a letra, fortaleceu. O que sobrou foi a imagem central e mais bonita da narrativa: **os trezentos carregavam tochas escondidas dentro de vasos de barro, e a vitória começou quando os vasos foram quebrados e a luz apareceu.**
+A troca fortaleceu a canção. Ficou a imagem mais bonita da história: **os trezentos carregavam tochas escondidas dentro de vasos de barro, e a vitória começou quando quebraram os vasos e a luz apareceu.** Amarra em 2 Coríntios 4.7, amarra na cruz vazada da identidade visual, e amarra nos Gideões Internacionais — a Bíblia esquecida numa gaveta, coisa pequena e sem força aparente, que muda uma vida inteira quando alguém abre.
 
-Isso conecta com 2 Coríntios 4.7 — *"temos este tesouro em vasos de barro, para que a excelência do poder seja de Deus e não de nós"* — e conecta com a marca: a cruz vazada, o que é frágil por fora e carrega luz por dentro.
+**Esta é canção de adoração, não peça de campanha.** Sem número, sem nome, sem pedido de voto. Se entrar campanha, ela morre — e queima o ativo mais delicado que ele tem, que é a fé genuína atestada pelas cinco entrevistas do diagnóstico.
 
-E conecta com os **Gideões Internacionais**: a Bíblia deixada na gaveta de um quarto de hotel, num hospital, numa escola. Uma coisa pequena, esquecida, aparentemente sem força — que muda uma vida inteira quando alguém abre.
-
-**Esta é uma canção de adoração, não uma peça de campanha.** Não há pedido de voto, não há número, não há nome de candidato. Se tiver campanha dentro, ela morre — e queima o ativo mais delicado que ele tem, que é a fé genuína atestada por todas as cinco entrevistas do diagnóstico.
-
-## Letra
+## Letra oficial
 
 **[INTRO — piano solo, 8 compassos]**
 
 **[VERSO 1 — voz solo, quase sussurrada]**
-
 ```
 Eu era o menor da casa do meu pai
 Escondido no lagar
 Batendo o meu trigo em silêncio
-E Tu me chamaste de valente
+Com medo de levantar
+
+E Tu me chamaste valente
 Antes de eu ser
 Antes de eu crer
 Antes de eu vencer
 ```
 
 **[VERSO 2]**
-
 ```
 Eu contei trinta e dois mil ao meu lado
-E Tu me disseste: é gente demais
+E Tu me disseste: são gente demais
 Porque se a força for minha
-Eu esqueço de Quem me traz
+Eu esqueço de Quem me traz a paz
 ```
 
 **[PRÉ-REFRÃO — violão entra]**
-
 ```
 Então desceu pra dez mil
-E Tu disseste: ainda é
-Até restar só trezentos
-E aí Tu disseste: é
+E Tu disseste: inda tem
+Até sobrar só trezentos
+E aí Tu disseste: amém
 ```
 
-**[REFRÃO — abre, cordas entram]**
-
+**[REFRÃO — cordas entram]**
 ```
 Trezentos bastam
 Se Tu vais na frente
@@ -331,56 +488,50 @@ Quebra o vaso
 Acende a luz
 Que o mundo veja
 Não a minha força
-Mas o Deus que me carrega
+Mas o Deus que me conduz
 ```
 
-**[VERSO 3 — volta pro piano, intimista]**
-
+**[VERSO 3 — volta pro piano]**
 ```
-Uma tocha dentro de um vaso de barro
-Uma trombeta na mão de quem não é ninguém
-Tu não pediste exército
-Tu pediste coragem
-De um povo pequeno que crê e diz amém
+Uma tocha escondida dentro de um vaso de barro
+Uma trombeta na mão de quem não era ninguém
+Tu não pediste um exército
+Tu pediste coragem de um povo que crê e diz amém
 ```
 
 **[VERSO 4 — os Gideões]**
-
 ```
 E ainda hoje Tu fazes assim
 Uma Bíblia esquecida na gaveta de um quarto
-Num hospital, numa escola
-Na mão de alguém que chorava sozinho no escuro
+Num hospital, numa escola, na mão
+De alguém que chorava sozinho no escuro
 
 Ninguém viu quem deixou
 Ninguém soube o nome
-Mas alguém abriu
-Alguém leu
+Mas alguém abriu, alguém leu
 E a vida inteira mudou
 ```
 
 **[REFRÃO — agora com bateria, cheio]**
 
-**[PONTE — sobe, congregacional, repete 3x crescendo]**
-
+**[PONTE — congregacional, repete 3x crescendo]**
 ```
 Somos poucos
 Mas contigo somos muitos
 Somos barro
 Mas trazemos Tua luz
 Se Tu sopras
-A trombeta soa
+A trombeta vai soar
 Se Tu queres
-O impossível se conclui
+O impossível vai passar
 ```
 
-**[CLÍMAX — tudo cai, só voz e piano, depois entra o coral]**
-
+**[CLÍMAX — tudo cai, só voz e piano, depois o coral]**
 ```
 Quebra o vaso em mim, Senhor
 Quebra o vaso em mim
-Que não apareça a minha glória
-Que apareça só a Tua luz
+Que se apague a minha glória
+E que a Tua brilhe enfim
 
 Quebra o vaso em mim, Senhor
 Quebra o vaso em mim
@@ -389,71 +540,168 @@ Pra Tua luz chegar
 Quebra o vaso em mim
 ```
 
-**[OUTRO — coral em pianíssimo, morre]**
-
+**[OUTRO — coral em pianíssimo]**
 ```
 Trezentos bastam
 Trezentos bastam
 Se Tu vais na frente
 ```
 
-## Direção de produção
+## Prompt Suno
 
-- **Construção clássica de adoração:** piano solo → violão → cordas → bateria → coral. A bateria só pode entrar no **segundo** refrão. Entrar antes mata a construção.
-- **O clímax é a queda, não o pico.** Depois da ponte no volume máximo, tudo cai para voz e piano em "Quebra o vaso em mim". É o momento da canção.
-- **Coral:** vozes reais, comunidade, não sintetizado. Se der pra gravar com o coral da própria igreja dele, o valor simbólico multiplica.
-- **Nada de dinâmica de "hino de campanha".** Nem marcha, nem tempo de comício. Isso é igreja.
-- **Cordas discretas** — quarteto, não orquestra. O briefing pede minimalista e orgânico, não épico.
+**Style of Music:**
+```
+Brazilian worship ballad, portuguese gospel, 72 BPM, intimate grand piano intro,
+steel string acoustic guitar, string quartet swelling on the chorus, drums entering
+only on the second chorus, congregational choir on the finale, emotive male lead
+vocal, cinematic dynamic build, reverent and warm
+```
 
-## Uso
+**Exclude Styles:**
+```
+EDM, electronic drums, american gospel choir, distortion, rap, upbeat, march tempo,
+drums from the start, orchestral bombast
+```
 
-Conteúdo de fé no Instagram, momentos de igreja, vídeo mais emocional da campanha (aftermovie de encerramento em versão instrumental). **Publicar sem número e sem pedido de voto** — a força dela está exatamente em não pedir nada.
+**Lyrics (fonético):**
+```
+[Intro - solo grand piano, 8 bars]
+
+[Verse 1 - soft male vocal, almost whispered]
+Eu éra u menô da caza du meu pai
+Escondidu nu lagá
+Batendu u meu trigu ein silênssiu
+Com médu dji levantá
+
+I Tu mi shamastchi valentchi
+Antchis dji eu sê
+Antchis dji eu crê
+Antchis dji eu venssê
+
+[Verse 2]
+Eu contêi trinta i dôis miu au meu ladu
+I Tu mi dissestchi, saum jentchi dji maiss
+Porkê si a fórsa fô minya
+Eu eskessu dji Kein mi traiss a páiss
+
+[Pre-chorus - acoustic guitar enters]
+Entaum desseu pra déiss miu
+I Tu dissestchi, inda tein
+Até sobrá só trezentus
+I aí Tu dissestchi, amein
+
+[Chorus - strings enter, opens up]
+Trezentus bastaum
+Si Tu vaiss na frentchi
+Trezentus bastaum
+Si u Senyô tá prezentchi
+
+Kébra u vazu
+Assendji a luiss
+Ki u mundu véja
+Naum a minya fórsa
+Maiss u Deuss ki mi conduiss
+
+[Verse 3 - back to intimate piano]
+Uma tósha escondida dentru dji um vazu dji barru
+Uma trombéta na maum dji kein naum éra ninguein
+Tu naum pedistchi um exérssitu
+Tu pedistchi corájein dji um póvu ki crê i diss amein
+
+[Verse 4]
+I ainda ôji Tu fáziss assim
+Uma Bíblia eskessida na gavéta dji um kuartu
+Num ospitau, numa escóla, na maum
+Dji auguein ki shorava sozinyu nu escuru
+
+Ninguein viu kein deishô
+Ninguein sôbi u nomi
+Maiss auguein abriu, auguein leu
+I a vida intêira mudô
+
+[Chorus - drums enter now, full arrangement]
+Trezentus bastaum
+Si Tu vaiss na frentchi
+Trezentus bastaum
+Si u Senyô tá prezentchi
+
+Kébra u vazu
+Assendji a luiss
+Ki u mundu véja
+Naum a minya fórsa
+Maiss u Deuss ki mi conduiss
+
+[Bridge - congregational, building, repeat 3 times]
+Somus pôcus
+Maiss contigu somus muitus
+Somus barru
+Maiss trazemus Tua luiss
+Si Tu sópras
+A trombéta vai soá
+Si Tu kériss
+U impossíveu vai passá
+
+[Climax - everything drops to voice and piano, then choir enters]
+Kébra u vazu ein mim, Senyô
+Kébra u vazu ein mim
+Ki si apagui a minya glória
+I ki a Tua brilyi enfim
+
+Kébra u vazu ein mim, Senyô
+Kébra u vazu ein mim
+Si fô presizu eu mi kebrá
+Pra Tua luiss shegá
+Kébra u vazu ein mim
+
+[Outro - choir pianissimo, fading]
+Trezentus bastaum
+Trezentus bastaum
+Si Tu vaiss na frentchi
+```
+
+**Notas:** o Suno tende a entrar com bateria cedo demais em balada. Se isso acontecer, gere em duas partes — versos 1 a 3 com `[soft, piano and guitar only, no drums]` e o resto separado — e monte na edição. **O clímax é a queda, não o pico:** depois da ponte no volume máximo, tudo cai para voz e piano. Se o Suno não fizer, é a única parte que vale a pena refazer quantas vezes for preciso. Gerar também uma **versão instrumental** para trilha de fundo.
 
 ---
 
 # FAIXA 4 — "Sudoeste Uai"
 
-**Gênero:** Eletrofunk goiano (referência DJ Giraia / cena de Goiânia)
+**Gênero:** Eletrofunk goiano (referência DJ Giraia, cena de Goiânia)
 **BPM:** 145 · **Tom:** Fá# menor · **Duração alvo:** 1'50"
-**Referência de produção:** sub grave pesado, snare roll, vocal chop picotado, tag de DJ, drop seco e curto
+**Uso:** som automotivo, status de WhatsApp, TikTok regional
 
-## Letra
+## Letra oficial
 
-**[TAG — voz grave, processada, pitch down]**
-
+**[TAG — voz grave, pitch down]**
 ```
-Uai...
+Uai
 É o eletrofunk de Goiás
 Vem, Mineiros
 ```
 
-**[BUILD 1 — snare roll subindo, 8 compassos]**
-
+**[BUILD 1 — snare roll subindo]**
 ```
 Levanta a mão quem é mãe
 Levanta a mão quem é pai
 Levanta a mão, Goiás
-E grita:
+E grita
 ```
 
-**[DROP 1 — chant curto, vocal chop, repete]**
-
+**[DROP 1 — chant curto]**
 ```
-UAI!  (vinte)
-UAI!  (vinte)
+Uai! Vinte!
+Uai! Sete-sete-sete!
 É o doutor do Sudoeste
-UAI!  (vinte)
-UAI!  (vinte)
+Uai! Vinte!
+Uai! Sete-sete-sete!
 Goiás inteiro se mexe
 ```
 
-**[VERSO — rápido, cuspido, meio tempo do beat]**
-
+**[VERSO — rápido, cuspido]**
 ```
-Poeira no retrovisor, sol rachando o cerrado
+Sol rachando o cerrado, poeira no retrovisor
 Da BR pra cidade, quem cuida é o doutor
 Mineiros, Portelândia, Chapadão do Céu
-Santa Rita, Serranópolis — o Sudoeste é meu
+Santa Rita, Serranópolis, o Sudoeste é meu
 
 Não é promessa, é prontuário
 Não é palanque, é plantão
@@ -461,56 +709,110 @@ Ele não fala de longe, não
 Ele bota o pé no chão
 
 Andou duas hora a pé pra saber como é que é
-Chegar no hospital sem transporte e sem ninguém
-Quem sente na perna, entende de verdade
-E quem entende de verdade, resolve também
+Chegar lá no hospital sem transporte e sem ninguém
+Quem já sentiu na perna não precisa de assessor
+E quem entende de verdade é quem resolve também
 ```
 
-**[BUILD 2 — mais longo, tudo filtrando]**
-
+**[BUILD 2 — tudo filtrando]**
 ```
-UTI pro bebê nascer seguro
-Transporte pra mãe chegar
+UTI pra criança respirar
+Transporte pra mãe poder chegar
 Seis meses de licença
-Que quatro não dá, não dá, não dá, não dá...
+Que quatro não dá, não dá, não dá
 ```
 
-**[DROP 2 — cheio, dobra o grave]**
-
+**[DROP 2 — cheio]**
 ```
-UAI! UAI!
-É vinte, é vinte, é o Lourival
-UAI! UAI!
-Pediatra do povo, do interior
-UAI! UAI!
-Sudoeste de Goiás no comando
-UAI!
-```
-
-*(versão final, com número definido — substituir a linha do drop 2:)*
-```
-É [20 _ _ _], [20 _ _ _], é o Lourival
+Uai! Uai!
+Vinte sete-sete-sete, Lourival
+Uai! Uai!
+Pediatra do povo, é do interior
+Uai! Uai!
+Sudoeste de Goiás, é natural
+Uai!
 ```
 
 **[OUTRO — tag]**
-
 ```
-Eletrofunk de Goiás...
-Doutor Lourival.
-Uai.
+Eletrofunk de Goiás
+Doutor Lourival
+Uai
 ```
 
-## Direção de produção
+## Prompt Suno
 
-- **O "uai" é a assinatura.** Tem que ser o elemento mais memorável da faixa — processado, picotado, virando quase um instrumento. É o que faz a música ser de Goiás e não de qualquer lugar.
-- **Drop curto e seco.** Eletrofunk goiano não sustenta drop longo. Máximo 8 compassos, depois volta.
-- **Sub pesado, mas testar em celular.** Se o gancho sumir no celular, a faixa não circula — e o circuito dela é WhatsApp e status.
-- **Citação das cidades vizinhas é estratégica**, não enfeite. O diagnóstico aponta a **capilaridade territorial** como a principal fragilidade dele: base concentrada em Mineiros. Cantar o nome das cidades da região é a forma mais barata de plantar presença fora de Mineiros.
-- **Nada de "vapo vapo" ou linguagem de embate.** O gênero tem essa vibe, mas a marca não pode. Agressividade só no som, nunca na letra.
+**Style of Music:**
+```
+Brazilian electrofunk from Goiás, eletrofunk goiano, 145 BPM, heavy sub bass,
+snare rolls, chopped vocal stabs, short dry drops, deep processed DJ tag intro,
+fast aggressive spoken male verses, club energy, car audio mix
+```
 
-## Uso
+**Exclude Styles:**
+```
+melodic, ballad, acoustic, english vocals, trap, slow tempo, sertanejo, reggaeton
+```
 
-Som automotivo, status de WhatsApp, TikTok regional, encontros de carro em Mineiros e cidades vizinhas. É a faixa de orgulho territorial.
+**Lyrics (fonético):**
+```
+[Intro tag - deep pitched-down male voice]
+Uai
+É u eletrofunkji Goiáiss
+Vein, Minêrus
+
+[Build - snare roll rising]
+Levanta a maum kein é main
+Levanta a maum kein é pai
+Levanta a maum, Goiáiss
+I grita
+
+[Drop - short chant, chopped vocals]
+Uai! Vintchi!
+Uai! Setchi-setchi-setchi!
+É u dotô du Sudoéstchi
+Uai! Vintchi!
+Uai! Setchi-setchi-setchi!
+Goiáiss intêiru si méshi
+
+[Verse - fast spoken male, half time]
+Sou rashandu u serradu, poêira nu retrovizô
+Da Bê-Érri pra sidadji, kein cuida é u dotô
+Minêrus, Portelândia, Shapadaum du Séu
+Santa Hita, Serranópoliss, u Sudoéstchi é meu
+
+Naum é promessa, é prontuáriu
+Naum é palankji, é plantaum
+Eli naum fala dji lonji, naum
+Eli bóta u pé nu shaum
+
+Andô duas óra a pé pra sabê comu é ki é
+Shegá lá nu ospitau sein transportchi i sein ninguein
+Kein já sentiu na pérna naum presiza dji assessô
+I kein entendji dji verdadji é kein resouvi tambein
+
+[Build - everything filtering up]
+U-Tê-I pra criansa respirá
+Transportchi pra main podê shegá
+Seiss mezess dji lissensa
+Ki kuatru naum dá, naum dá, naum dá
+
+[Drop - full, doubled bass]
+Uai! Uai!
+Vintchi setchi-setchi-setchi, Lourivau
+Uai! Uai!
+Pediátra du póvu, é du interiô
+Uai! Uai!
+Sudoéstchi dji Goiáiss, é naturau
+Uai!
+
+[Outro tag]
+Eletrofunkji Goiáiss
+Dotô Lourivau
+Uai
+```
+
+**Notas:** o **"uai" é a assinatura** — precisa ser o elemento mais memorável, picotado até virar quase instrumento. Se o Suno não destacar, gere o "uai" isolado e replique na edição. Drop curto e seco: máximo 8 compassos. **Citar as cidades vizinhas é estratégia, não enfeite** — o diagnóstico aponta capilaridade territorial como a fragilidade número 1 dele, e cantar Portelândia, Chapadão do Céu, Santa Rita e Serranópolis é a forma mais barata de plantar presença fora de Mineiros. Testar em celular: o circuito dessa faixa é WhatsApp.
 
 ---
 
@@ -518,64 +820,54 @@ Som automotivo, status de WhatsApp, TikTok regional, encontros de carro em Minei
 
 **Gênero:** Eletrônica / Brazilian bass — progressive house com vocal chop
 **BPM:** 124 · **Tom:** Lá menor · **Duração alvo:** 3'20"
-**Referência de produção:** Alok — estrutura de "Fuego": intro atmosférica, vocal étnico picotado no drop, pluck lead, baixo profundo, ampla reverberação
+**Referência:** estrutura de "Fuego", Alok
+**Uso:** institucional, aftermovie, encerramento de campanha
 
-> **Esperança** é, segundo o próprio Dr. Lourival no briefing, a palavra que sobra quando se tira qualidade, confiança e preço da equação. É a palavra-âncora da marca inteira. Esta faixa existe para transformá-la em som.
->
-> As duas frases mais fortes da letra — *"Dias melhores virão"* e *"É só tentando que a gente consegue"* — não foram inventadas: são frases que o próprio Dr. marcou no briefing como coisas que a marca falaria.
+> **Esperança** é, nas palavras do próprio Dr. no briefing, a palavra que sobra quando se tira qualidade, confiança e preço da equação. As duas frases mais fortes da letra — *"dias melhores virão"* e *"é só tentando que a gente consegue"* — não foram inventadas: são frases que ele marcou como coisas que a marca falaria.
 
-## Letra
+## Letra oficial
 
-**[INTRO — pad atmosférico, voz feminina distante, com delay longo]**
-
+**[INTRO — pad, voz feminina distante]**
 ```
 Quando tudo escurecer
 Vai ter alguém acordado
 Vai ter alguém acordado por você
 ```
 
-**[BUILD 1 — entra kick suave, pluck começa]**
-
+**[BUILD 1]**
 ```
 Não solta a minha mão
-Que a noite passa
+Que a noite vai passar
 Não solta a minha mão
+Que o sol vai voltar
 
 Dias melhores virão
 Dias melhores virão
 ```
 
-**[DROP 1 — vocal chop, a palavra picotada vira o lead]**
-
+**[DROP 1 — a palavra picotada vira o lead]**
 ```
 Es-pe-ran-ça
-(ça-ça-ça-ça)
 Es-pe-ran-ça
 A-cen-de
 Es-pe-ran-ça
 ```
 
 **[VERSO — voz limpa, beat reduzido]**
-
 ```
 Sol nascendo no cerrado
 Mãe com o filho no colo
-E o mundo inteiro no colo junto
-
-Sem ter carro
-Sem ter tempo
-Sem ter medo
+Sem ter carro, sem ter hora, sem ter fim
 
 Ela anda porque ama
 E o amor não pede estrada
-O amor abre caminho no meio do sereno
+O amor abre caminho pra ela e pra mim
 ```
 
-**[BUILD 2 — sobe, tudo filtrando, snare acelerando]**
-
+**[BUILD 2]**
 ```
 Se cair, eu levanto
-Se doer, eu insisto
+Se doer, eu não desisto
 Se demorar, eu espero
 
 É só tentando
@@ -583,83 +875,146 @@ Se demorar, eu espero
 É só tentando que a gente consegue
 ```
 
-**[DROP 2 — cheio, vocal chop dobrado com coral por baixo]**
-
+**[DROP 2 — cheio, coral por baixo]**
 ```
 Es-pe-ran-ça
-(ça-ça-ça-ça)
 Es-pe-ran-ça
 A-cen-de
 Es-pe-ran-ça
 
-(coro por baixo, sustentado:)
+(coro sustentado por baixo)
 Dias melhores virão
 Dias melhores virão
 ```
 
 **[BREAKDOWN — cai tudo, só pad e voz]**
-
 ```
 Esperança é o que sobra
 Quando tudo mais acaba
 E é o que basta pra recomeçar
 ```
 
-**[DROP FINAL — cheio, com todos os elementos]**
+**[DROP FINAL]**
 
-**[OUTRO — pad se dissolvendo]**
-
+**[OUTRO]**
 ```
-Dias melhores virão.
+Dias melhores virão
 ```
 
-## Direção de produção
+## Prompt Suno
 
-- **O vocal chop é a faixa.** "Esperança" picotada em `Es-pe-ran-ça` é o lead melódico — não é enfeite, é o instrumento principal do drop. Precisa ser reconhecível sem ninguém entender a palavra na primeira escuta, e óbvia na segunda.
-- **Voz feminina em toda a faixa.** Etérea, com reverb longo. Nada de voz masculina de candidato aqui.
-- **Nenhum pedido de voto na letra.** Nem número, nem nome, nem partido. Essa faixa é a marca, não a campanha. Se precisar de assinatura, ela entra só no **vídeo**, em texto na tela, nos 3 segundos finais.
-- **O breakdown é o ponto emocional** — é onde a frase-conceito da marca é dita em voz limpa. Não pode ter nada tocando por cima.
-- **Versão instrumental obrigatória**, para uso como trilha de fundo em vídeos com narração do Dr.
+**Style of Music:**
+```
+Brazilian bass, progressive house, 124 BPM, atmospheric pad intro, ethereal female
+vocal with long reverb, chopped vocal lead on the drop, deep rolling bassline,
+plucked synth lead, tribal percussion, festival build, cinematic and hopeful
+```
 
-## Uso
+**Exclude Styles:**
+```
+hardstyle, dubstep, aggressive, rap, distorted, dark techno, male vocals, trap
+```
 
-Vídeo institucional, aftermovie de eventos, encerramento de campanha, trilha de fundo de Reels mais emocionais. É a faixa que sobrevive à eleição — ela funciona em 2027 igual funciona hoje.
+**Lyrics (fonético):**
+```
+[Intro - atmospheric pad, distant ethereal female voice, long delay]
+Kuandu tudu escuressê
+Vai tê auguein acordadu
+Vai tê auguein acordadu por vossê
+
+[Build - soft kick enters, pluck begins]
+Naum sóuta a minya maum
+Ki a nôitchi vai passá
+Naum sóuta a minya maum
+Ki u sou vai voutá
+
+Dias melyóris viraum
+Dias melyóris viraum
+
+[Drop - chopped vocal lead, the word becomes the melody]
+Es-pe-ran-ssa
+Es-pe-ran-ssa
+A-ssen-dji
+Es-pe-ran-ssa
+
+[Verse - clean female vocal, reduced beat]
+Sou nassendu nu serradu
+Main com u filyu nu colu
+Sein tê carru, sein tê óra, sein tê fim
+
+Éla anda porkê ama
+I u amô naum pédji estrada
+U amô abri caminyu pra éla i pra mim
+
+[Build - rising, filtering, snare accelerating]
+Si caí, eu levantu
+Si doê, eu naum dezistu
+Si demorá, eu espéru
+
+É só tentandu
+É só tentandu
+É só tentandu ki a jentchi consegui
+
+[Drop - full, chopped vocal doubled with sustained choir underneath]
+Es-pe-ran-ssa
+Es-pe-ran-ssa
+A-ssen-dji
+Es-pe-ran-ssa
+
+Dias melyóris viraum
+Dias melyóris viraum
+
+[Breakdown - everything drops, only pad and voice]
+Esperansa é u ki sóbra
+Kuandu tudu maiss acaba
+I é u ki basta pra recomessá
+
+[Final drop - full arrangement]
+
+[Outro - pad dissolving]
+Dias melyóris viraum
+```
+
+**Notas:** o **vocal chop é a faixa** — "Esperança" picotada em `Es-pe-ran-ça` é o lead melódico, não enfeite. Se o Suno cantar a palavra inteira em vez de picotar, tente escrever `Es. Pe. Ran. Ssa.` com pontos, ou gere o chop separado e monte. **Nenhum pedido de voto na letra:** sem número, sem nome, sem partido. Essa faixa é a marca, não a campanha — a assinatura entra só no vídeo, em texto na tela, nos 3 segundos finais. Gerar **versão instrumental obrigatória** para trilha de narração.
 
 ---
 
-# Checklist de produção e conformidade
+# Checklist final
 
-## Antes de gravar
+## Antes de gerar
+- [x] Número eleitoral definido: **20777** — aplicado nas faixas 1, 2 e 4
+- [ ] Testar a **letra oficial** no Suno antes da fonética. Se a pronúncia sair boa, usar a oficial
+- [ ] Gerar 3 a 4 versões de cada faixa antes de escolher
+- [ ] Gerar versão instrumental das faixas 3 e 5
 
-- [ ] **Definir o número eleitoral de 5 dígitos** e substituir todos os marcadores `[20 _ _ _]` (faixas 1, 2 e 4). As faixas 3 e 5 não levam número por decisão de marca.
-- [ ] Validar as letras com o Dr. Lourival — ele aprova pessoalmente tudo (regra do projeto).
-- [ ] Validar a faixa 3 com o **pastor Christofer Cruz** antes de gravar. É a faixa de maior risco reputacional se soar oportunista, e ele é a autoridade natural pra dizer se soa.
-- [ ] Agendar a gravação da voz do Dr. (outro da faixa 2) respeitando a rotina de consultório — manhãs estão fora.
+## Antes de publicar
+- [ ] Aprovação do Dr. Lourival na **letra oficial** (nunca mandar a fonética)
+- [ ] Validar a faixa 3 com o pastor Christofer Cruz — é a de maior risco reputacional se soar oportunista
+- [ ] Gravar o outro falado da faixa 2 na voz do Dr. (8 segundos, respeitar a rotina de consultório — manhãs fora)
+- [ ] Conferir que o número **20777** está audível e correto em todas as três faixas que o citam
 
-## Direitos autorais — atenção crítica
+## Direitos autorais
+- [ ] **Composições originais apenas.** Nunca paródia ou regravação de música existente sem autorização — já derrubou jingle de campanha na Justiça no meio da corrida
+- [ ] Verificar os **termos de uso do Suno** quanto a titularidade e uso comercial/eleitoral do áudio gerado, e se o plano contratado permite. Isso precisa estar resolvido **antes** de veicular, não depois
+- [ ] Contrato de cessão de direitos com quem finalizar, mixar e masterizar
+- [ ] Registro das obras (Biblioteca Nacional / ECAD) antes da veiculação
 
-- [ ] **Todas as cinco faixas devem ser composições originais.** Nunca fazer paródia ou regravação de música existente sem autorização expressa do autor — o TSE e a Justiça Comum já condenaram campanhas por isso, e o risco não é só multa: é a música ser retirada do ar no meio da campanha.
-- [ ] Contrato de cessão de direitos autorais e conexos com o compositor, o produtor e todos os intérpretes, com cessão para uso eleitoral e prazo definido.
-- [ ] Registro das obras (Biblioteca Nacional / ECAD) antes da veiculação.
+## Veiculação — Lei 9.504/97
+- [ ] Propaganda eleitoral liberada desde 16/08/2026 — faixas 1, 2 e 4 podem pedir voto
+- [ ] Carro de som e alto-falante: das 8h às 22h, e proibidos a menos de 200 m de hospitais, escolas em funcionamento, bibliotecas, igrejas, teatros e sedes dos Poderes
+- [ ] Showmício é proibido
+- [ ] Validar com a assessoria jurídica eleitoral antes de veicular em rádio
 
-## Regras de veiculação (Lei 9.504/97)
+## Ordem de produção
+Restam cerca de 6 semanas até 04/10/2026.
 
-- [ ] Propaganda eleitoral está liberada desde 16/08/2026 — as faixas 1, 2 e 4 podem pedir voto livremente.
-- [ ] **Carro de som e alto-falante:** permitidos apenas das 8h às 22h, e proibidos a menos de 200m de hospitais, escolas em funcionamento, bibliotecas, igrejas, teatros e sedes dos Poderes.
-- [ ] **Showmício é proibido** — nada de apresentação de artista para promover a candidatura.
-- [ ] Verificar com a assessoria jurídica eleitoral antes de qualquer veiculação em rádio.
-
-## Ordem de produção sugerida
-
-Restam ~6 semanas até 04/10/2026. Se não der pra produzir as cinco:
-
-1. **Faixa 2 (pisadinha)** — maior alcance por real investido, funciona em carro de som e rádio, é a que ganha Mineiros
-2. **Faixa 4 (eletrofunk)** — resolve a fragilidade de capilaridade territorial citando as cidades vizinhas
-3. **Faixa 1 (funk)** — alcance jovem e potencial de trend
-4. **Faixa 5 (eletrônica)** — ativo de longo prazo, sobrevive à eleição
-5. **Faixa 3 (louvor)** — a mais cara de produzir bem; se não der pra fazer com qualidade real, **não fazer**. Louvor mal produzido em campanha soa a oportunismo e faz mais mal que bem.
+1. **Faixa 2, pisadinha** — maior alcance por real investido, é a que ganha Mineiros
+2. **Faixa 4, eletrofunk** — resolve a capilaridade territorial citando as cidades vizinhas
+3. **Faixa 1, funk** — alcance jovem, potencial de trend
+4. **Faixa 5, eletrônica** — ativo de longo prazo, sobrevive à eleição
+5. **Faixa 3, louvor** — a mais difícil de acertar. Se não sair com qualidade real, não usar: louvor mal produzido em campanha soa a oportunismo e faz mais mal que bem
 
 ---
 
-*Documento produzido pela Vizantu · Agosto de 2026*
-*Letras e direção criativa: escopo Vizantu · Composição, arranjo e produção de áudio: compositor externo (fora do escopo contratual)*
+*Vizantu · Agosto de 2026*
+*Letras e direção criativa: escopo Vizantu · Geração, mixagem e masterização: fora do escopo contratual*
