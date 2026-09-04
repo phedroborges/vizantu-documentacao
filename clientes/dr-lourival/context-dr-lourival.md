@@ -1,10 +1,21 @@
 # 📋 CONTEXTO DO PROJETO: DR. LOURIVAL LOBO
 
+> **Última consolidação:** 04/09/2026
+>
+> **Momento atual:** campanha oficial — reta final para o primeiro turno de 04/10/2026
+>
+> **Regra de atualização:** este arquivo é a fonte central de contexto estratégico. Informações operacionais e peças em produção devem ser conferidas no Vizantu Tarefas antes de qualquer nova entrega.
+
 ## 1. INFORMAÇÕES PADRÃO E CONTATO
 
 * **Nome de Posicionamento:** Dr. Lourival Lobo
 * **Nome Completo:** Lourival de Assis Lobo Filho
 * **Candidatura:** Deputado Estadual — Goiás — Eleições 2026
+* **Número oficial de urna:** **20777**
+* **Partido:** Podemos 20
+* **Situação de comunicação:** candidato em campanha oficial; não usar mais “pré-candidato”
+* **Assinatura principal atual:** **Dr. Lourival 20777**
+* **Frase de campanha em uso:** **“Vamos trazer a cidade-saúde de volta.”**
 * **Localização:** Mineiros, GO (Sudoeste de Goiás)
 * **E-mail do Candidato:** lourivalmed@outlook.com
 * **Ponto de Contato e Aprovação:** O próprio Dr. Lourival — aprovações via grupo oficial de WhatsApp do projeto
@@ -13,9 +24,11 @@
 
 | Canal | Link/Número | Status |
 |---|---|---|
-| Instagram | @lourivallobo_ | ✅ Ativo |
+| Instagram | `@lourivallobo_` / `@drlourivallobo` | ⚠️ Há divergência entre fontes; confirmar usuário oficial |
+| TikTok | — | ⚠️ Confirmar usuário e link atuais antes de publicar |
+| Facebook | `/Prefeito.Dr.Lourival.PL.22` | ⚠️ URL histórica e desatualizada (PL antigo); não usar sem confirmar o endereço atual |
 
-**Bio aprovada (mai/2026):**
+**Bio histórica da pré-campanha (mai/2026 — não reutilizar sem atualização):**
 ```
 Pediatra, pai e cristão.
 O consultório me ensinou que o importante é cuidar das pessoas.
@@ -23,8 +36,12 @@ Pré-candidato a Deputado Estadual pelo Podemos 20
 📍 Mineiros, GO
 ```
 **Nome do perfil:** Dr. Lourival Lobo
-| TikTok | — | A configurar na Fase 1 |
-| Facebook | /Prefeito.Dr.Lourival.PL.22 | ⚠️ URL desatualizada (PL antigo, hoje é Podemos 20) — corrigir no setup da Fase 1 |
+
+### Dados digitais que exigem conferência
+
+- O contexto antigo registra `@lourivallobo_`, enquanto roteiros recentes usam `@drlourivallobo`. **Confirmar o usuário oficial antes de inserir CTA ou link em qualquer peça.**
+- Não recuperar automaticamente bio, número, filiação ou linguagem da pré-campanha em novas entregas.
+- Em toda peça eleitoral atual, conferir a assinatura **Dr. Lourival 20777** e a identificação partidária exigida pela campanha e pelo jurídico eleitoral.
 
 ---
 
@@ -79,13 +96,13 @@ A desigualdade no atendimento e a precariedade dos recursos. É a favor da exper
 * Pediatra com prática diária em consultório em Mineiros-GO. Atende mães e seus filhos todos os dias — isso não é só profissão, é o principal ativo político dele: **ele escuta mães de verdade, no cotidiano, antes de qualquer campanha**.
 * Casado, em torno de 40 anos, centro-direita.
 * Histórico eleitoral: foi candidato a **prefeito** de Mineiros nas eleições de 2024, pelo PL (partido antigo — migrou). Obteve aproximadamente **6.000 votos** nesse ciclo — base que o projeto busca dobrar para **12.000 votos** em outubro de 2026.
-* **Partido atual:** Podemos (número 20)
+* **Partido atual:** Podemos 20; **número eleitoral do candidato: 20777**.
 * Professor na FAMP (Faculdade de Medicina do Planalto Médio / Mineiros — confirmar nome exato com o Dr.).
-* Oposição ao atual prefeito Aleomar Rezende (MDB), o que define claramente de onde virão os votos: **toda a oposição organizada de Mineiros tende naturalmente ao Dr. Lourival**.
+* Oposição ao atual prefeito Aleomar Rezende (MDB). A concentração de votos da oposição em torno do Dr. Lourival é uma **hipótese estratégica**, não um fato garantido; deve ser validada por pesquisa, escuta de campo e desempenho da campanha.
 
 ### O que faz o Dr. Lourival diferente
 
-A política dele é de **fora para dentro**: antes de falar de solução, ele se coloca fisicamente no lugar de quem sofre o problema. O próximo vídeo de referência é caminhar do bairro mais distante da cidade até o Hospital Municipal a pé — reproduzindo o caminho que uma mãe sem transporte e sem dinheiro para Uber faz para fazer o pré-natal (que é realizado no Hospital Municipal).
+A política dele é de **fora para dentro**: antes de falar de solução, ele se coloca fisicamente no lugar de quem sofre o problema. A caminhada de mais de duas horas de um bairro distante até o Hospital Municipal já foi realizada e se tornou uma das principais provas narrativas da campanha. Ela reproduz o caminho enfrentado por uma mãe sem transporte, sem dinheiro para aplicativo e que precisa chegar ao pré-natal.
 
 A metodologia de comunicação tem sempre 3 movimentos:
 1. **Levantamento** — mostrar o problema com dado, vivência ou gancho visual
@@ -96,7 +113,9 @@ A metodologia de comunicação tem sempre 3 movimentos:
 
 ---
 
-## 3. CENÁRIO POLÍTICO DE MINEIROS (Eleições 2026 — Deputado Estadual)
+## 4. CENÁRIO POLÍTICO DE MINEIROS (Eleições 2026 — Deputado Estadual)
+
+> **Atenção:** esta seção contém análise competitiva e informações sujeitas a mudança. Antes de usar nomes, filiações, alianças, estimativas de votos ou situações jurídicas em conteúdo público, conferir fontes atuais e o jurídico eleitoral. Fragilidades listadas abaixo são hipóteses internas de estratégia, nunca argumentos para ataque nominal.
 
 ### Contexto da cidade
 
@@ -139,18 +158,55 @@ Esse domínio determina como os votos para deputado estadual se distribuem:
 
 ---
 
-## 4. PAUTAS DE COMUNICAÇÃO
+## 5. PAUTAS DE COMUNICAÇÃO
 
 ### Eixo central: As mães e seus filhos
 
-O Dr. Lourival é o único candidato que faz política **a partir do consultório pediátrico**. Ele ouve mães com problemas reais todos os dias antes de qualquer agenda política.
+A marca posiciona o Dr. Lourival como o candidato que faz política **a partir do consultório pediátrico**. Ele ouve mães com problemas reais todos os dias antes de qualquer agenda política. Evitar afirmações absolutas como “o único” sem validação factual atual.
+
+### Eixo estruturante: Regionalização da Saúde
+
+A principal agenda pública do Dr. Lourival é a **regionalização da saúde**: garantir que quem vive nas cidades do interior tenha acesso próximo, rápido e digno aos serviços de que precisa, sem depender de grandes centros para receber atendimento básico, especializado ou de urgência. Essa agenda traduz sua visão de levar ao interior a mesma qualidade de atendimento disponível nas capitais.
+
+As pautas abaixo não devem ser comunicadas como propostas isoladas. Elas formam uma mesma jornada de cuidado, que começa no acesso ao atendimento, passa pela estrutura hospitalar e pelo acompanhamento especializado e alcança o suporte contínuo às crianças e suas famílias.
 
 ### Pautas principais (confirmadas)
 
-* **Transporte para o pré-natal:** Todo pré-natal em Mineiros é feito no Hospital Municipal. Bairros distantes não têm transporte público. Como essas mulheres chegam? O Dr. já fez a caminhada de 2h+ do bairro mais distante até o hospital para mostrar na prática.
-* **UTI Neonatal:** Mineiros não tem — e deveria ter. Uma cidade do porte e importância de Mineiros precisa desse recurso.
-* **Licença maternidade insuficiente:** 4 meses não são suficientes. O Dr. defende ampliação.
-* **Transporte para o pós-parto:** O retorno ao hospital no pós-parto tem as mesmas barreiras de acesso que o pré-natal.
+1. **Transporte público para acesso à saúde:** muitas cidades e bairros não possuem linha regular de ônibus. A ausência de transporte afeta mães com filhos doentes, gestantes, idosos e todas as pessoas que precisam se deslocar em busca de atendimento médico. O pré-natal e o retorno pós-parto são exemplos concretos dessa barreira. Em Mineiros, o Dr. Lourival já percorreu por mais de duas horas, a pé, o trajeto entre um bairro distante e o Hospital Municipal para mostrar o problema na prática.
+2. **UTI nas cidades do interior:** muitas cidades do interior não possuem UTI. Bebês e outros pacientes em estado crítico precisam ser transferidos para municípios distantes; nessas situações, cada minuto conta. A regionalização deve ampliar a estrutura de terapia intensiva e reduzir a dependência dos grandes centros.
+3. **Pediatra na UPA:** muitas UPAs não oferecem atendimento pediátrico especializado. A pauta é garantir a presença de pediatras nessas unidades, principalmente para que crianças sejam avaliadas com mais segurança, precisão e agilidade em situações de urgência.
+4. **Casa do Autista:** criar espaços adequados para crianças com Transtorno do Espectro Autista (TEA), com atendimento especializado e de qualidade, acompanhamento contínuo e suporte às famílias. A proposta deve considerar a família como parte essencial da rede de cuidado.
+5. **Licença-maternidade de seis meses:** quatro meses são insuficientes diante da recomendação de seis meses de aleitamento materno exclusivo. Muitas mães precisam retornar ao trabalho quando o bebê ainda depende intensamente delas — com o peito cheio de leite e a cabeça cheia de dúvidas. O Dr. Lourival defende a ampliação da licença-maternidade de quatro para seis meses.
+
+### Síntese política das pautas
+
+> Regionalizar a saúde é fazer o atendimento chegar às famílias do interior: transporte para acessar o serviço, estrutura para salvar vidas, pediatra na urgência, cuidado especializado para crianças com TEA e tempo adequado para mães cuidarem dos filhos nos primeiros meses de vida.
+
+### Limite estratégico da bandeira
+
+O Dr. Lourival deve ser apresentado como **especialista em saúde**, não como candidato especialista em todos os assuntos. Sua credibilidade política nasce da experiência médica e do contato cotidiano com mães, crianças e famílias.
+
+- **Saúde é a bandeira própria e prioritária.** É o campo no qual ele diagnostica problemas, propõe caminhos, lidera articulações e aceita ser cobrado por resultados.
+- **Segurança, infraestrutura, educação, agronegócio, emprego e outras áreas são importantes**, mas não devem deslocar o centro da comunicação.
+- Ao ser perguntado sobre outra área, ele reconhece sua importância, ouve os profissionais responsáveis, dispõe-se a apoiar boas iniciativas para Mineiros e explica que a Assembleia é composta por vários deputados, cada um contribuindo com sua experiência e sua bandeira.
+- A resposta deve sempre retornar de forma natural à contribuição específica do Dr. Lourival: **regionalizar a saúde e ajudar a trazer a cidade-saúde de volta**.
+- Não inventar domínio técnico, obra específica, valor de emenda, prazo de entrega ou solução executiva em áreas que não pertencem à sua especialidade.
+
+### Formulação-base para pautas fora da saúde
+
+> “Essa é uma pauta muito importante, e eu estarei disposto a apoiar projetos que sejam bons para Mineiros e para Goiás. A Assembleia é formada por vários deputados, cada um com sua experiência e sua bandeira. A minha experiência foi construída na medicina, e minha principal missão será lutar pela regionalização da saúde e ajudar a trazer a cidade-saúde de volta.”
+
+### Papel real de um deputado estadual na comunicação
+
+Evitar prometer como se o deputado fosse prefeito, governador ou gestor de hospital. O Dr. Lourival deve explicar que seu papel é:
+
+1. propor e aperfeiçoar leis estaduais;
+2. atuar no orçamento e destinar emendas parlamentares;
+3. articular Governo do Estado, municípios, hospitais, universidades e profissionais;
+4. fiscalizar a aplicação dos recursos e cobrar a execução;
+5. prestar contas publicamente sobre recursos, avanços e impedimentos.
+
+Usar verbos como **defender, buscar, destinar, articular, fiscalizar, cobrar e prestar contas**. Evitar promessas absolutas como “vou construir”, “vou garantir sozinho” ou “entrego em determinada data” quando o resultado depender de outros Poderes e instituições.
 
 ### Formato dos conteúdos
 
@@ -168,14 +224,22 @@ O conteúdo **não é de autoridade médica clínica**. O foco é **político**,
 - Movimentos coletivos — foto com 20+ mães segurando placa de causa (ex: "licença maternidade precisa ser de 6 meses no mínimo")
 - Situações de empatia — o Dr. se coloca no lugar (referência: caminhada do bairro ao hospital — fazer mais desse tipo)
 - Diário de um pediatra — o que ele vê e sente no consultório, não conteúdo clínico técnico
-- Cidades do interior como exemplo — usar Mineiros como referência, **sem citar o nome da cidade nem de pessoas específicas**
+- Cidades do interior como exemplo — usar Mineiros e outras cidades quando houver material real e a menção fortalecer a pauta, sem expor pacientes nem pessoas sem autorização
 
-**O que não entra agora:**
-- Conteúdo de autoridade médica técnica (sobre saúde, pediatria clínica)
-- "Na prática" (movimentos de campo) — só na Fase 3, quando tiver volume
-- Referências explícitas ao interior — só quando tiver material real
+**O que não entra como eixo principal:**
+- Conteúdo clínico técnico desconectado da candidatura e da realidade das famílias
+- Conteúdo genérico sobre temas fora da saúde apenas para parecer especialista em tudo
+- Reclamação sem caminho de resolução
+- Ataque nominal a adversários
 
-### Setup provisório do perfil (semana 21/05/2026)
+**O que já está liberado e deve ganhar volume na campanha oficial:**
+- Movimentos de rua e escuta da população
+- Caminhadas e experiências práticas que revelem barreiras de acesso
+- Referências explícitas a Mineiros, ao Sudoeste e às cidades do interior quando sustentadas por material real
+- Pedido de voto, número **20777** e assinatura oficial da campanha
+- Conteúdo de saúde com utilidade pública, desde que preserve o posicionamento político e não transforme o perfil em página clínica genérica
+
+### Setup histórico do perfil (pré-campanha, semana de 21/05/2026)
 
 **Foto de perfil:** 2 versões criadas
 - Versão 1: rosto do Dr. + "Pré-candidato a Deputado Estadual"
@@ -194,7 +258,7 @@ O conteúdo **não é de autoridade médica clínica**. O foco é **político**,
 
 ---
 
-## 5. PÚBLICO — Perfil detalhado (do briefing)
+## 6. PÚBLICO — Perfil detalhado (do briefing)
 
 ### Público principal
 Mulheres de **20 a 35 anos**, mães, **classe média baixa**, 1 a 2 filhos, trabalha fora de casa.
@@ -216,7 +280,7 @@ Essa objeção **precisa ser respondida diretamente** no conteúdo — é o maio
 
 ---
 
-## 6. CONCORRENTES COMPLETOS
+## 7. CONCORRENTES COMPLETOS
 
 ### Concorrentes políticos
 *(já documentado na seção de cenário político — ver seção 4)*
@@ -229,17 +293,31 @@ O que os concorrentes fazem em comunicação: **fotos com outros políticos** co
 
 ---
 
-## 7. ESTRATÉGIA GERAL DO PROJETO
+## 8. ESTRATÉGIA GERAL DO PROJETO
 
 ### Objetivo eleitoral
 
-* Patamar atual: ~6.000 votos (2024, vice-prefeito)
+* Patamar de referência: aproximadamente 6.000 votos na candidatura a prefeito de Mineiros em 2024
 * Meta 2026: **12.000 votos** (Deputado Estadual)
 * A meta orienta intensidade, narrativa e tomada de decisão — não é garantia contratual, é bússola estratégica.
 
 ### Posicionamento de marca
 
 > **"O médico que escuta mães de verdade antes de qualquer política."**
+
+### Posicionamento eleitoral atual
+
+> **Dr. Lourival é o candidato da regionalização da saúde.** Sua missão é levar para a Assembleia a experiência de quem conhece a realidade das famílias pelo consultório e lutar para trazer a cidade-saúde de volta.
+
+### Mensagens que precisam permanecer consistentes
+
+1. **Bandeira:** regionalização da saúde.
+2. **Prova:** experiência real de médico pediatra e escuta cotidiana das famílias.
+3. **Território:** Mineiros, Sudoeste goiano e cidades do interior.
+4. **Método:** levantamento → conexão → resolução.
+5. **Promessa responsável:** trabalhar por recursos, articulação, fiscalização e transparência; nunca fingir que um deputado resolve tudo sozinho.
+6. **Número:** 20777.
+7. **Fechamento preferencial:** “Vamos trazer a cidade-saúde de volta.”
 
 O Dr. Lourival não é o candidato que promete. É o candidato que **vai até o problema**, literalmente. Essa autenticidade de quem conhece o sofrimento pelo consultório — e não por pesquisa de marketing — é o diferencial impossível de ser copiado pelas concorrentes.
 
@@ -257,13 +335,21 @@ O Dr. Lourival não é o candidato que promete. É o candidato que **vai até o 
 
 ---
 
-## 6. FASES DO PROJETO E CRONOGRAMA
+## 9. FASES DO PROJETO E CRONOGRAMA
 
 | Fase | Início | Fim Previsto | Escopo |
 |---|---|---|---|
 | Fase 1 — Criação de Marca | 25/04/2026 | ~09/06/2026 (45 dias) | Branding, identidade visual, identidade verbal, manual de marca, setup digital, templates, planejamento editorial inicial |
 | Fase 2 — Pré-Campanha | Após aprovação da Fase 1 | ~15/08/2026 | Ativação e gestão contínua Instagram + TikTok, construção de audiência orgânica, conteúdo de autoridade médica com direcionamento político |
 | Fase 3 — Campanha Oficial | 16/08/2026 | 04/10/2026 | Campanha intensiva, volume ampliado, materiais de rua, equipe de campo, monitoramento em tempo real |
+
+### Estado atual em 04/09/2026
+
+- **Fase vigente:** Fase 3 — Campanha Oficial.
+- **Número em uso:** 20777.
+- **Foco de setembro:** memorização do número, presença nas ruas, regionalização da saúde, transporte público ligado ao acesso, UTI Neonatal, atendimento pediátrico e mobilização de apoiadores.
+- **Ações recentes registradas:** adesivaço, materiais impressos, campanha em Santa Rita do Araguaia, entrevistas com a população na feira, caminhada sobre falta de transporte e conteúdos de contagem regressiva.
+- **Tom da reta final:** direto, popular, esperançoso e propositivo; aumentar clareza eleitoral sem perder a identidade de médico que cuida.
 
 **Convenções partidárias:** 20/07 a 05/08/2026
 **Pedido de registro de candidatura:** até 15/08/2026
@@ -272,12 +358,12 @@ O Dr. Lourival não é o candidato que promete. É o candidato que **vai até o 
 
 ---
 
-## 7. REGRAS OPERACIONAIS
+## 10. REGRAS OPERACIONAIS
 
 * **Aprovação de conteúdos planejados:** até 48h após envio
 * **Aprovação de conteúdos de oportunidade:** até 24h
 * **Edição de vídeos:** mínimo 2 dias úteis após recebimento do bruto
-* **Até 2 rodadas de ajuste por entrega formal** (Fase 1). Revisões extras por mudança de direção são cobradas à parte.
+* **Até 2 rodadas de ajuste por entrega formal da Fase 1.** Para peças atuais, confirmar a regra operacional aplicável no Vizantu Tarefas ou no contrato antes de responder ao cliente.
 * **Atraso do Dr. em aprovações/gravações** suspende proporcionalmente os prazos da agência — sem caracterizar inadimplemento.
 * **Comunicação operacional:** exclusivamente via grupo oficial de WhatsApp do projeto.
 * **Exclusividade:** O Dr. não pode contratar terceiros para exercer branding, gestão de marca política ou direção de comunicação de forma simultânea sem anuência da Vizantu.
@@ -287,12 +373,13 @@ O Dr. Lourival não é o candidato que promete. É o candidato que **vai até o 
 * **NUNCA publicar conteúdo que faça ataques diretos nominais às concorrentes** — a comunicação do Dr. é propositiva, não beligerante.
 * **NUNCA publicar conteúdo apenas de reclamação** — sempre deve existir o movimento de resolução.
 * **SEMPRE garantir gancho visual nos primeiros segundos** de qualquer vídeo — não começa com talking head estático.
-* **Respeitar rigorosamente o calendário eleitoral** — antes de 16/08/2026 nada pode ser classificado como propaganda eleitoral. A pré-campanha deve se manter nos limites legais.
-* Conteúdos da Fase 2 devem ser de autoridade médica com "direcionamento político compatível com a legislação vigente" — checar com o Dr. se houver dúvida sobre os limites.
+* **Respeitar rigorosamente o calendário eleitoral.** A campanha oficial está em curso desde 16/08/2026; toda peça deve seguir as exigências legais aplicáveis e as orientações do jurídico eleitoral.
+* Em caso de dúvida jurídica, não concluir por conta própria: submeter ao Dr. Lourival e/ou ao jurídico eleitoral.
+* O adesivo do Corcel precisou ser ajustado por questão legal para respeitar o limite indicado pela equipe de **até 0,5 m²**; não reutilizar a versão anterior.
 
 ---
 
-## 8. ITENS NÃO INCLUÍDOS NO CONTRATO
+## 11. ITENS NÃO INCLUÍDOS NO CONTRATO
 
 * Impulsionamento e tráfego pago
 * Impressão de materiais físicos
@@ -306,12 +393,14 @@ O Dr. Lourival não é o candidato que promete. É o candidato que **vai até o 
 
 ---
 
-## 9. IDENTIDADE VERBAL — Do briefing
+## 12. IDENTIDADE VERBAL — Do briefing
 
 ### Tom de voz (marcado pelo Dr.)
 **Direto · Acolhedor · Popular · Minimalista · Emocional**
 
 Não é: técnico, sofisticado, institucional, bem-humorado, provocativo.
+
+**Atualização de campanha:** humor e tendências podem aparecer pontualmente como formato de alcance, desde que não transformem o Dr. em personagem caricato, não produzam ataque pessoal e não enfraqueçam sua autoridade como médico. O tom central continua direto, acolhedor, popular, minimalista e emocional.
 
 ### Frases que a marca FALARIA
 > "Dias melhores virão."
@@ -334,7 +423,7 @@ Alto padrão · Sofisticado · Arrogante
 
 ---
 
-## 10. IDENTIDADE VISUAL — Direção do briefing
+## 13. IDENTIDADE VISUAL — Direção do briefing
 
 ### Percepção desejada (marcado pelo Dr.)
 Acessível · Especialista/técnica · Popular/próxima · Inovadora/moderna · Tradicional/legado · Institucional/séria · Autoridade/referência
@@ -364,16 +453,16 @@ Arma · Faca · Revólver · Qualquer apologia ao crime ou à violência
 
 ---
 
-## 11. APLICAÇÕES E METAS — Do briefing
+## 14. APLICAÇÕES E METAS — Do briefing
 
-### Onde a marca vai aparecer nos próximos 90 dias
+### Canais e aplicações previstos no briefing
 Instagram · WhatsApp · TikTok · Papelaria · Adesivos
 
-### Peças mais urgentes (na visão do Dr.)
+### Peças que eram mais urgentes na Fase 1 (registro histórico)
 1. TikTok (setup e primeiros vídeos)
 2. Adesivos
 
-### Meta principal de 90 dias
+### Meta original de 90 dias (registro histórico)
 Alcançar mais pessoas · Crescer seguidores
 
 ### Quem aprova
@@ -381,17 +470,39 @@ O próprio Dr. Lourival — ele aprova pessoalmente tudo.
 
 ---
 
-## 12. REFERÊNCIAS E FONTES EXTERNAS
+## 15. REFERÊNCIAS E FONTES EXTERNAS
 
-* Instagram do Dr.: [@lourivallobo_](https://www.instagram.com/lourivallobo_/)
+* Instagram historicamente registrado: [@lourivallobo_](https://www.instagram.com/lourivallobo_/) — ⚠️ confirmar se permanece oficial; roteiros recentes usam `@drlourivallobo`
 * Perfil Doctoralia: [Lourival De Assis Lobo Filho — Pediatra Mineiros](https://www.doctoralia.com.br/lourival-de-assis-lobo-filho/pediatra/mineiros)
 * Perfil Alego Rosângela Rezende: [portal.al.go.leg.br/deputados/perfil-biografico/822](https://portal.al.go.leg.br/deputados/perfil-biografico/822)
 * Jornal Opção — Ana Paula Rezende: [Primeira-dama de Mineiros defende participação das mulheres](https://www.jornalopcao.com.br/bastidores/primeira-dama-de-mineiros-ana-paula-rezende-defende-maior-participacao-das-mulheres-na-politica-819301/)
 * Folha Z — Rosângela Rezende e disputa em Mineiros: [Rosângela permanece no Agir](https://folhaz.com.br/politica/rosangela-rezende-permanece-no-agir-e-comenta-disputa-com-1a-dama-em-mineiros/)
 
+### Hierarquia de confiança das informações
+
+1. **Confirmado pela campanha:** número 20777, candidatura atual, Podemos 20, regionalização da saúde, assinatura e materiais efetivamente aprovados.
+2. **Confirmado pelo Dr. Lourival:** história pessoal, motivação, valores, rotina médica e compromissos que ele tenha aprovado diretamente.
+3. **Registro operacional:** status de peças, eventos, captações e direcionamentos presentes no Vizantu Tarefas.
+4. **Análise estratégica:** público, concorrência, potencial eleitoral e leitura do cenário; usar internamente e revalidar antes de transformar em afirmação pública.
+5. **Informação externa ou sensível ao tempo:** dados de saúde, legislação, filiação, alianças, cargos, percentuais e números públicos; verificar fonte oficial atual antes de publicar.
+
+Quando duas fontes divergirem, **não escolher silenciosamente uma delas**. Registrar a divergência e pedir confirmação ao responsável pelo projeto.
+
 ---
 
-## 13. REFERÊNCIA DE ROTEIRO — Padrão aprovado
+## 16. REFERÊNCIA DE ROTEIRO — Padrão aprovado
+
+### Entrevistas, debates e respostas públicas
+
+- Responder em primeira pessoa, com frases curtas e naturais para fala.
+- Começar pela resposta principal; explicar depois.
+- Manter saúde e regionalização como eixo, inclusive quando a pergunta tratar de outro tema.
+- Reconhecer a importância das demais áreas sem disputar autoridade com especialistas nelas.
+- Reforçar o trabalho coletivo da Assembleia: vários deputados, várias bandeiras, contribuição conjunta.
+- Não prometer valor exato de emenda sem orçamento conhecido, nem obra com prazo fechado quando depender de terceiros.
+- Quando falar de UTI, atendimento especializado ou transporte, diferenciar claramente **defesa política, destinação de recursos, articulação e fiscalização** de execução direta.
+- Encerrar, quando couber, com **Dr. Lourival 20777**, **regionalização da saúde** ou **“Vamos trazer a cidade-saúde de volta.”**
+- Não atacar nominalmente concorrentes e não transformar a resposta em confronto com o prefeito.
 
 ### Estrutura do roteiro de vídeo do Dr. Lourival
 
