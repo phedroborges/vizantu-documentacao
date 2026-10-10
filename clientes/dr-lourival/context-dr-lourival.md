@@ -1,3 +1,13 @@
+---
+slug: dr-lourival
+nome: "Dr. Lourival Lobo"
+segmento: "Política — candidato a Deputado Estadual GO 2026"
+cidade: "Mineiros/GO"
+status_doc: completo
+projeto_tarefas: "Campanha do Dr Lourival"
+atualizado_em: 2026-09-04
+---
+
 # 📋 CONTEXTO DO PROJETO: DR. LOURIVAL LOBO
 
 > **Última consolidação:** 04/09/2026

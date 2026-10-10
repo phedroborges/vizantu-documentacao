@@ -1,3 +1,13 @@
+---
+slug: laura-rayane
+nome: "Laura Rayane"
+segmento: "Política — vereadora"
+cidade: "Mineiros/GO"
+status_doc: completo
+projeto_tarefas: "Campanha Laura Rayane"
+atualizado_em: 2026-05-28
+---
+
 # Laura Rayane — Contexto do Cliente
 
 ## 1. Informações padrão e contato

@@ -1,3 +1,13 @@
+---
+slug: ena
+nome: "ENA"
+segmento: "Educação — escola particular"
+cidade: "Mineiros/GO"
+status_doc: completo
+projeto_tarefas: null
+atualizado_em: 2026-06-15
+---
+
 # ENA — Contexto do Cliente
 
 > Contexto gerado em 2026-05-26 com base na análise das tasks do ClickUp (lista ENA).

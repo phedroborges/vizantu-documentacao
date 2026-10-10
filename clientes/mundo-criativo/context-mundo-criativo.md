@@ -1,3 +1,13 @@
+---
+slug: mundo-criativo
+nome: "Mundo Criativo"
+segmento: null
+cidade: null
+status_doc: template
+projeto_tarefas: "Mundo Criativo"
+atualizado_em: 2026-05-28
+---
+
 # Mundo Criativo — Contexto do Cliente
 
 ## 1. Informações padrão e contato

@@ -1,3 +1,13 @@
+---
+slug: casa-caramelo
+nome: "Casa Caramelo"
+segmento: "Pet shop e clínica veterinária"
+cidade: "Mineiros/GO"
+status_doc: parcial
+projeto_tarefas: "Casa Caramelo"
+atualizado_em: 2026-06-14
+---
+
 # Casa Caramelo — Contexto do Cliente
 
 ## 1. Informações padrão e contato

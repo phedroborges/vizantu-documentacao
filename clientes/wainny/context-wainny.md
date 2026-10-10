@@ -1,3 +1,13 @@
+---
+slug: wainny
+nome: "Dra. Wainny"
+segmento: "Saúde feminina — ultrassom e morfológico"
+cidade: "Mineiros/GO"
+status_doc: completo
+projeto_tarefas: "Dra Wainny"
+atualizado_em: 2026-05-28
+---
+
 # Dra. Wainny — Contexto do Cliente
 
 ## 1. Informações padrão e contato

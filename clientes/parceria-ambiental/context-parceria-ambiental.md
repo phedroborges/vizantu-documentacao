@@ -1,3 +1,13 @@
+---
+slug: parceria-ambiental
+nome: "Parceria Ambiental"
+segmento: "Consultoria ambiental"
+cidade: "Mineiros/GO"
+status_doc: completo
+projeto_tarefas: "Parceria Ambiental"
+atualizado_em: 2026-06-11
+---
+
 # Parceria Ambiental — Contexto do Cliente
 
 > Contexto consolidado em 2026-06-01 com base no diagnóstico de marca, entrevistas do rebranding e nas tarefas de ativação em andamento no ClickUp.

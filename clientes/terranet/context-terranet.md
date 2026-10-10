@@ -1,3 +1,13 @@
+---
+slug: terranet
+nome: "TerraNet"
+segmento: "Provedor de internet rural"
+cidade: "Sudoeste de Goiás"
+status_doc: completo
+projeto_tarefas: "Terranet"
+atualizado_em: 2026-06-16
+---
+
 # TerraNet — Contexto do Cliente
 
 **Atualizado em:** 2026-05-22

@@ -1,3 +1,13 @@
+---
+slug: ohbra
+nome: "Ohbra Engenharia"
+segmento: "Construtora com foco em financiamento habitacional"
+cidade: "Mineiros/GO"
+status_doc: completo
+projeto_tarefas: null
+atualizado_em: 2026-05-28
+---
+
 # Ohbra Engenharia — Contexto do Cliente
 
 ## 1. Informações padrão e contato

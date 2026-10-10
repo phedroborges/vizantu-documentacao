@@ -1,3 +1,13 @@
+---
+slug: ecomodular
+nome: "Eco Modular"
+segmento: "Fabricante de tijolos ecológicos"
+cidade: "Mineiros/GO"
+status_doc: completo
+projeto_tarefas: null
+atualizado_em: 2026-06-09
+---
+
 # Eco Modular — Contexto do Cliente
 
 ## 1. Informações padrão e contato

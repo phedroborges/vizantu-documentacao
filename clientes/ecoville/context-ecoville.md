@@ -1,3 +1,13 @@
+---
+slug: ecoville
+nome: "Ecoville Confresa"
+segmento: "Franquia de produtos de limpeza"
+cidade: "Confresa/MT"
+status_doc: completo
+projeto_tarefas: null
+atualizado_em: 2026-05-28
+---
+
 # Ecoville Confresa — Contexto do Cliente
 
 ## 1. Informações básicas

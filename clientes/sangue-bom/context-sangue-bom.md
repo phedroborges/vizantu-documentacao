@@ -1,3 +1,13 @@
+---
+slug: sangue-bom
+nome: "Projeto Sangue Bom"
+segmento: "Projeto de extensão da UNIFIMES — banco de sangue canino"
+cidade: "Mineiros/GO"
+status_doc: completo
+projeto_tarefas: null
+atualizado_em: 2026-05-28
+---
+
 # Contexto — Projeto Sangue Bom
 
 **Atualizado em:** 2026-05-28

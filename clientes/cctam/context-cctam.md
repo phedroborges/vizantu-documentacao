@@ -1,3 +1,13 @@
+---
+slug: cctam
+nome: "CCTAM"
+segmento: "Clube de tiro esportivo"
+cidade: "Mineiros/GO"
+status_doc: completo
+projeto_tarefas: null
+atualizado_em: 2026-05-28
+---
+
 # CCTAM — Contexto do Cliente
 
 ## 1. Informações padrão e contato
