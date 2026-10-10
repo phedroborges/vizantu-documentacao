@@ -17,12 +17,23 @@ Conferido com o Vizantu Tarefas em 2026-10-10.
 | `ohbra` | Ohbra Engenharia | Construtora com foco em financiamento habitacional | Mineiros/GO | ✅ Completo | — | [context](ohbra/context-ohbra.md) |
 | `parceria-ambiental` | Parceria Ambiental | Consultoria ambiental | Mineiros/GO | ✅ Completo | Parceria Ambiental | [context](parceria-ambiental/context-parceria-ambiental.md) |
 | `sangue-bom` | Projeto Sangue Bom | Projeto de extensão da UNIFIMES — banco de sangue canino | Mineiros/GO | ✅ Completo | — | [context](sangue-bom/context-sangue-bom.md) |
+| `tawper` | Tawper | Importação e distribuição de mangueiras e conexões hidráulicas premium | Monte Aprazível/SP | 🟡 Parcial | Tawper | [context](tawper/context-tawper.md) |
 | `terranet` | TerraNet | Provedor de internet rural | Sudoeste de Goiás | ✅ Completo | Terranet | [context](terranet/context-terranet.md) |
+| `vizantu` | Vizantu | Gestão de marcas | Mineiros/GO | 🟡 Parcial | Vizantu | [context](vizantu/context-vizantu.md) |
 | `wainny` | Dra. Wainny | Saúde feminina — ultrassom e morfológico | Mineiros/GO | ✅ Completo | Dra Wainny | [context](wainny/context-wainny.md) |
 
-## Projetos do Vizantu Tarefas ainda sem pasta aqui
+## Projetos do Vizantu Tarefas sem pasta aqui
 
-Global Energia, House Flipping, LAF, Sanfér Produções, Target Informações, Tawper, VINT3 e Vizantu.
+| Projeto | Situação |
+|---------|----------|
+| Global Energia | Fica sem contexto (decisão do Phedro em 2026-10-10) |
+| House Flipping | Fica sem contexto (decisão do Phedro em 2026-10-10) |
+| VINT3 | Fica sem contexto por enquanto (decisão do Phedro em 2026-10-10) |
+| Sanfér Produções | Phedro está alinhando a história com o cliente; criar quando ele enviar |
+| LAF | A criar a partir do guia e das fontes do Vizantu Tarefas |
+| Target Informações | A criar a partir do guia e das fontes do Vizantu Tarefas |
+
+Mundo Criativo tem pasta, mas o contexto ainda é o modelo vazio: aguardando material do Phedro.
 
 ## Padrão de documentação do cliente
 
