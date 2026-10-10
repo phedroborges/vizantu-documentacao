@@ -10,7 +10,9 @@ atualizado_em: 2026-05-28
 
 # Laura Rayane — Contexto do Cliente
 
-## 1. Informações padrão e contato
+## 1. Ficha do cliente
+
+### Informações padrão e contato
 
 | Campo | Valor |
 |-------|-------|
@@ -25,7 +27,9 @@ atualizado_em: 2026-05-28
 
 ---
 
-## 2. Contexto do negócio e perfil da cliente
+## 2. Quem é e o que faz
+
+### Contexto do negócio e perfil da cliente
 
 Vereadora de Mineiros, Goiás. Primeira candidatura: ficou como primeira suplente e assumiu o cargo — foi a mulher mais jovem na vereança até então. Pessoa simples, de bom coração, focada na população mais vulnerável. Mais de 30 requerimentos aprovados até dez/2025.
 
@@ -42,9 +46,23 @@ Vereadora de Mineiros, Goiás. Primeira candidatura: ficou como primeira suplent
 
 ---
 
-## 3. Manual da marca
+## 3. O que o cliente quer
 
-### Tom de voz
+> A documentar.
+
+---
+
+## 4. Público
+
+> A documentar.
+
+---
+
+## 5. Marca e tom de voz
+
+### Manual da marca
+
+#### Tom de voz
 
 Institucional + próximo. Como se estivesse falando na rua, no mercado, na igreja.
 
@@ -64,7 +82,7 @@ Institucional + próximo. Como se estivesse falando na rua, no mercado, na igrej
 
 **Regra de ouro:** ler em voz alta antes de publicar. Se não soar como a Laura falando, reescrever.
 
-### Estratégia de contato
+#### Estratégia de contato
 
 Direct — sem link na bio.
 
@@ -75,7 +93,7 @@ CTAs padrão:
 
 **NUNCA usar:** "Link na bio", "Clique no link", "Acesse o formulário".
 
-### Arco narrativo padrão
+#### Arco narrativo padrão
 
 Escuta → Protocolo → Tramitação → Resultado
 
@@ -88,7 +106,7 @@ Escuta → Protocolo → Tramitação → Resultado
 
 **Hierarquia de informação:** O que aconteceu → Por quê importa → Como foi feito → Quando → Quem ajudou → Onde acompanhar
 
-### Nunca usar
+#### Nunca usar
 
 - Ataques pessoais
 - Promessas vagas
@@ -98,7 +116,9 @@ Escuta → Protocolo → Tramitação → Resultado
 
 ---
 
-## 4. Formatos de conteúdo
+## 6. Estratégia e conteúdo
+
+### Formatos de conteúdo
 
 | Formato | Estrutura |
 |---------|-----------|
@@ -106,29 +126,14 @@ Escuta → Protocolo → Tramitação → Resultado
 | **Carrosséis (4-6 cards)** | Máximo 6 cards, 1 ideia por card, CTA no último card incentivando direct. |
 | **Stories** | Bastidores, agenda, enquetes, caixa de perguntas. Tom mais espontâneo. |
 
----
-
-## 5. Cadência e padrões de publicação
+### Cadência e padrões de publicação
 
 - ~3 posts/semana
 - Série de motivacionais numerados fixos (#1, #2, #3...)
 - Segundas-feiras reservadas para motivacional
 - Datas comemorativas e eventos fixos não podem ser mudados
 
----
-
-## 6. Fluxo de produção no ClickUp
-
-```
-escrevendo a copy → revisado (tag) → pronto para criação → em criação → aprovado → entregue | publicado
-```
-
-Problemas: `rejeitado | problema`  
-Espera: `aguardando material`
-
----
-
-## 7. Eventos recorrentes
+### Eventos recorrentes
 
 **Varal Solidário** — bazar beneficente anual. 8ª edição confirmada (2026). Cada edição gera:
 1. Contagem regressiva 3 dias antes
@@ -138,8 +143,37 @@ Espera: `aguardando material`
 
 ---
 
-## 8. Observações operacionais
+## 7. Como lidar com o cliente
+
+> A documentar.
+
+---
+
+## 8. Operação
+
+### Fluxo de produção no ClickUp
+
+```
+escrevendo a copy → revisado (tag) → pronto para criação → em criação → aprovado → entregue | publicado
+```
+
+Problemas: `rejeitado | problema`  
+Espera: `aguardando material`
+
+### Observações operacionais
 
 - Conteúdo pessoal performa melhor do que político (mas a Laura resiste — trabalhar essa percepção com ela)
 - Não tem TikTok, LinkedIn, Google Meu Negócio ou outras redes além do Instagram
 - Aprovações via grupo de WhatsApp do projeto
+
+---
+
+## 9. Histórico e entregas
+
+> A documentar.
+
+---
+
+## 10. Referências e fontes
+
+> A documentar.

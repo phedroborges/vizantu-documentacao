@@ -10,7 +10,9 @@ atualizado_em: 2026-05-28
 
 # Mundo Criativo — Contexto do Cliente
 
-## 1. Informações padrão e contato
+## 1. Ficha do cliente
+
+### Informações padrão e contato
 
 | Campo | Valor |
 |-------|-------|
@@ -24,24 +26,62 @@ atualizado_em: 2026-05-28
 
 ---
 
-## 2. Contexto do negócio
+## 2. Quem é e o que faz
+
+### Contexto do negócio
 
 > **Contexto pendente de levantamento.** Preencher na próxima conversa sobre este cliente.
 
 ---
 
-## 3. Pilares de conteúdo
+## 3. O que o cliente quer
+
+> A documentar.
+
+---
+
+## 4. Público
+
+> A documentar.
+
+---
+
+## 5. Marca e tom de voz
+
+### Tom de voz
 
 > A definir.
 
 ---
 
-## 4. Tom de voz
+## 6. Estratégia e conteúdo
+
+### Pilares de conteúdo
 
 > A definir.
 
 ---
 
-## 5. Observações operacionais
+## 7. Como lidar com o cliente
+
+> A documentar.
+
+---
+
+## 8. Operação
+
+### Observações operacionais
 
 > A preencher.
+
+---
+
+## 9. Histórico e entregas
+
+> A documentar.
+
+---
+
+## 10. Referências e fontes
+
+> A documentar.

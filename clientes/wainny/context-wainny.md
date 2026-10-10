@@ -10,7 +10,9 @@ atualizado_em: 2026-05-28
 
 # Dra. Wainny — Contexto do Cliente
 
-## 1. Informações padrão e contato
+## 1. Ficha do cliente
+
+### Informações padrão e contato
 
 | Campo | Valor |
 |-------|-------|
@@ -25,7 +27,9 @@ atualizado_em: 2026-05-28
 
 ---
 
-## 2. Contexto do negócio
+## 2. Quem é e o que faz
+
+### Contexto do negócio
 
 Médica especialista em saúde feminina, ultrassom e morfológico, atuando em Mineiros-GO.
 
@@ -35,15 +39,33 @@ Médica especialista em saúde feminina, ultrassom e morfológico, atuando em Mi
 
 ---
 
-## 3. Os 3 pilares editoriais
+## 3. O que o cliente quer
+
+> A documentar.
+
+---
+
+## 4. Público
+
+> A documentar.
+
+---
+
+## 5. Marca e tom de voz
+
+> A documentar.
+
+---
+
+## 6. Estratégia e conteúdo
+
+### Os 3 pilares editoriais
 
 1. **Dor que tem causa** — normalizar que dor tem origem e merece investigação
 2. **Ultrassom sem mistério** — desmistificar exames de imagem
 3. **Morfológico / vínculo emocional com a gestação** — exame morfológico como momento de conexão
 
----
-
-## 4. Estratégia
+### Estratégia
 
 - **Plano de 3 meses:** arquivo em task `86aguk81f` no ClickUp (HTML: `plano-3-meses.html`)
 - **Canal principal:** Instagram
@@ -51,21 +73,25 @@ Médica especialista em saúde feminina, ultrassom e morfológico, atuando em Mi
 
 ---
 
-## 5. Referências de mercado analisadas
+## 7. Como lidar com o cliente
 
-| Perfil | O que aprender |
-|--------|----------------|
-| @draisadoramilhomem | Rotina clínica como conteúdo, lo-fi credível — **referência principal de formato** |
-| @andressaendocrinologista | Aproveitar pautas quentes sem virar refém delas |
-| @psipamela | Visão de ecossistema de marca (longo prazo) |
-| @sarahdaotica | Presença pessoal reconhecível mesmo sem ser influenciadora |
-| @dr.jhonescarneiro | Melhor referência tática: território claro + repetição + ganchos fortes |
-
-**Síntese:** naturalidade da Isadora + aproveitamento de pauta da Andressa + presença pessoal da Pamela/Sarah + clareza temática do Jhones.
+> A documentar.
 
 ---
 
-## 6. Status do conteúdo (referência mai/2026)
+## 8. Operação
+
+### Regras operacionais
+
+- Todo conteúdo deve reforçar os 3 pilares
+- Voz humana + técnica — nunca parecer propaganda ou conteúdo genérico de saúde
+- Não construir presença de influenciadora — construir autoridade local reconhecível
+
+---
+
+## 9. Histórico e entregas
+
+### Status do conteúdo (referência mai/2026)
 
 **Estratégia e pesquisa de mercado:** entregues.
 
@@ -84,8 +110,16 @@ Médica especialista em saúde feminina, ultrassom e morfológico, atuando em Mi
 
 ---
 
-## 7. Regras operacionais
+## 10. Referências e fontes
 
-- Todo conteúdo deve reforçar os 3 pilares
-- Voz humana + técnica — nunca parecer propaganda ou conteúdo genérico de saúde
-- Não construir presença de influenciadora — construir autoridade local reconhecível
+### Referências de mercado analisadas
+
+| Perfil | O que aprender |
+|--------|----------------|
+| @draisadoramilhomem | Rotina clínica como conteúdo, lo-fi credível — **referência principal de formato** |
+| @andressaendocrinologista | Aproveitar pautas quentes sem virar refém delas |
+| @psipamela | Visão de ecossistema de marca (longo prazo) |
+| @sarahdaotica | Presença pessoal reconhecível mesmo sem ser influenciadora |
+| @dr.jhonescarneiro | Melhor referência tática: território claro + repetição + ganchos fortes |
+
+**Síntese:** naturalidade da Isadora + aproveitamento de pauta da Andressa + presença pessoal da Pamela/Sarah + clareza temática do Jhones.

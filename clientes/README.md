@@ -24,9 +24,33 @@ Conferido com o Vizantu Tarefas em 2026-10-10.
 
 Global Energia, House Flipping, LAF, Sanfér Produções, Target Informações, Tawper, VINT3 e Vizantu.
 
-## Cabeçalho padrão do context
+## Padrão de documentação do cliente
 
-Todo `context-[slug].md` começa com este bloco, que é o que o Vizantu Tarefas usa para saber de qual projeto é o documento:
+Todo `context-[slug].md` segue o modelo [`_modelo-context.md`](_modelo-context.md): o cabeçalho abaixo e sempre as mesmas dez seções, na mesma ordem e com o mesmo nome.
+
+| # | Seção | O que entra | Bloco do guia no Vizantu Tarefas |
+|---|-------|-------------|----------------------------------|
+| 1 | Ficha do cliente | Cadastro, contatos, ClickUp, time | — |
+| 2 | Quem é e o que faz | Negócio, história, produtos, mercado, concorrentes | Quem é |
+| 3 | O que o cliente quer | Objetivos, metas, momento atual | O que ele quer |
+| 4 | Público | Perfis, dores, objeções | Como o trabalho é feito |
+| 5 | Marca e tom de voz | Posicionamento, valores, identidade verbal e visual | Como o trabalho é feito |
+| 6 | Estratégia e conteúdo | Estratégia, pilares, formatos, cadência, calendário | Como o trabalho é feito |
+| 7 | Como lidar com o cliente | Pessoas do cliente, quem aprova, pontos de atenção | Como lidar |
+| 8 | Operação | Regras operacionais, fluxo no ClickUp, contrato | Como o trabalho é feito |
+| 9 | Histórico e entregas | Fases, entregas aprovadas, status | — |
+| 10 | Referências e fontes | Referências de mercado e origem das informações | Como o trabalho é feito |
+
+Regras:
+
+- As dez seções existem em todo contexto. Seção sem informação fica com `> A documentar.`, nunca é apagada.
+- O conteúdo específico de cada cliente entra como subseção (`###`) dentro da seção certa. Não criar seção nova de nível `##`.
+- Informação nova que não parece caber em nenhuma seção vai para a mais próxima, como subseção.
+
+### Cabeçalho
+
+Este bloco abre o arquivo e é o que o Vizantu Tarefas usa para saber de qual projeto é o documento:
+
 
 ```yaml
 ---

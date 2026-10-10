@@ -65,7 +65,8 @@ Keep updates concrete, operational, and easy to reuse later.
 - For strategy or content work, stay faithful to the documented client context instead of producing generic marketing advice.
 - For operational recommendations, prefer existing POPs and approved decisions over new process invention.
 - For ambiguous or missing information, state the gap and propose the minimum next question or documentation update needed.
-- When creating new client folders, follow the existing pattern: `clientes/[slug]/context-[slug].md`.
+- When creating new client folders, copy `clientes/_modelo-context.md` to `clientes/[slug]/context-[slug].md` and add the client to `clientes/README.md`.
+- Every client context has the same ten `##` sections in the same order (see `clientes/README.md`). Add client-specific content as `###` subsections inside the right section; never add, rename, or remove a `##` section. Empty sections keep `> A documentar.`.
 
 ## Repository map
 

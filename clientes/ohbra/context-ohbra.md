@@ -10,7 +10,9 @@ atualizado_em: 2026-05-28
 
 # Ohbra Engenharia — Contexto do Cliente
 
-## 1. Informações padrão e contato
+## 1. Ficha do cliente
+
+### Informações padrão e contato
 
 | Campo | Valor |
 |-------|-------|
@@ -25,7 +27,9 @@ atualizado_em: 2026-05-28
 
 ---
 
-## 2. Contexto do negócio
+## 2. Quem é e o que faz
+
+### Contexto do negócio
 
 A Ohbra Engenharia é uma construtora em Mineiros, GO, especializada em financiamento habitacional. O nome é um trocadilho intencional com "obra" — e o posicionamento central é que a Ohbra não faz obra comum: faz **OHBRA**. A diferença está no método, no planejamento e na entrega.
 
@@ -42,9 +46,7 @@ A Ohbra existe para substituir o improviso pelo planejamento correto. Ela acompa
 - Pack de figurinhas para WhatsApp
 - Aviso de atendimento somente com agendamento
 
----
-
-## 3. Serviços
+### Serviços
 
 | Serviço | Descrição |
 |---------|-----------|
@@ -55,9 +57,7 @@ A Ohbra existe para substituir o improviso pelo planejamento correto. Ela acompa
 | **Terreno + construção** | Financiamento de terreno e construção no mesmo contrato |
 | **Kitnets como investimento** | Projeto de kitnets para aprovação na Caixa como renda de aluguel |
 
----
-
-## 4. Processo da Ohbra — Do primeiro contato à chave na mão
+### Processo da Ohbra — Do primeiro contato à chave na mão
 
 7 etapas do processo interno:
 
@@ -69,11 +69,9 @@ A Ohbra existe para substituir o improviso pelo planejamento correto. Ela acompa
 6. **Aprovação e contrato** — assinatura com acompanhamento total. "O cliente não fica sozinho."
 7. **Chave na mão** — imóvel registrado, financiamento ativo
 
----
+### Conhecimento técnico — Regras de financiamento
 
-## 5. Conhecimento técnico — Regras de financiamento
-
-### Faixas do MCMV 2026
+#### Faixas do MCMV 2026
 
 | Faixa | Renda familiar bruta | Juros ao ano | Valor máximo do imóvel |
 |-------|---------------------|-------------|----------------------|
@@ -82,7 +80,7 @@ A Ohbra existe para substituir o improviso pelo planejamento correto. Ela acompa
 | Faixa 3 | Até R$ 9.600 | Até 8,16% | Até R$ 400 mil |
 | Faixa 4 | Até R$ 13.000 | Até 10,5% | Até R$ 600 mil |
 
-### Regras críticas de financiamento
+#### Regras críticas de financiamento
 - **Caixa financia 80%** — cliente precisa ter 20% de entrada
 - **3 cenários de entrada:**
   1. Dinheiro na mão → melhor cenário
@@ -95,7 +93,7 @@ A Ohbra existe para substituir o improviso pelo planejamento correto. Ela acompa
 - **Terreno quitado pode ser usado como entrada** — muita gente não sabe disso
 - **Déficit habitacional em Goiás:** 232 mil famílias sem casa própria (dado de conteúdo)
 
-### Documentação por perfil
+#### Documentação por perfil
 - **CLT:** holerite, CTPS, declaração de IR
 - **Autônomo:** declaração de IR, extratos, comprovação de atividade
 - **MEI:** CNPJ, DAS, declaração de faturamento
@@ -103,9 +101,17 @@ A Ohbra existe para substituir o improviso pelo planejamento correto. Ela acompa
 
 ---
 
-## 6. Público-alvo
+## 3. O que o cliente quer
 
-### Perfis principais
+> A documentar.
+
+---
+
+## 4. Público
+
+### Público-alvo
+
+#### Perfis principais
 - Quem está pagando aluguel e quer sair — gatilho emocional: "a parcela pode custar menos que seu aluguel"
 - Quem tem terreno quitado e não sabe o que fazer com ele
 - Quem tem FGTS acumulado e não sabe que pode usar como entrada
@@ -114,7 +120,7 @@ A Ohbra existe para substituir o improviso pelo planejamento correto. Ela acompa
 - CLT, autônomo, MEI e informais — todos têm caminho
 - Quem quer investir em kitnets para renda de aluguel
 
-### Objeções e medos mais comuns
+#### Objeções e medos mais comuns
 - "Não sei se meu salário dá"
 - "Tenho medo de começar e não conseguir"
 - "Ouvi que é muito difícil"
@@ -124,20 +130,9 @@ A Ohbra existe para substituir o improviso pelo planejamento correto. Ela acompa
 
 ---
 
-## 7. Pilares de conteúdo
+## 5. Marca e tom de voz
 
-1. **MCMV educativo** — faixas, requisitos, o que mudou, como funciona
-2. **FGTS** — como usar como entrada, cuidado com saque aniversário
-3. **Terreno** — como entrada, como financiar junto à construção, não comprar a prazo
-4. **Aluguel vs Financiamento** — comparação emocional e financeira
-5. **Documentação** — por perfil (CLT, autônomo, MEI, informal)
-6. **Processo da Ohbra** — do contato à chave, sem mistério
-7. **Quebra de mitos** — medos que travam quem quer financiar
-8. **Local (Mineiros)** — bairros, preços de terrenos, oportunidades regionais
-
----
-
-## 8. Tom de voz e estilo
+### Tom de voz e estilo
 
 **Tom:** próximo, encorajador, direto e confiante. Simplifica o que é complexo sem ser condescendente. O público tem medo — a Ohbra tira o medo.
 
@@ -157,17 +152,30 @@ A Ohbra existe para substituir o improviso pelo planejamento correto. Ela acompa
 
 ---
 
-## 9. Próxima fase — Temas e públicos para os próximos conteúdos
+## 6. Estratégia e conteúdo
+
+### Pilares de conteúdo
+
+1. **MCMV educativo** — faixas, requisitos, o que mudou, como funciona
+2. **FGTS** — como usar como entrada, cuidado com saque aniversário
+3. **Terreno** — como entrada, como financiar junto à construção, não comprar a prazo
+4. **Aluguel vs Financiamento** — comparação emocional e financeira
+5. **Documentação** — por perfil (CLT, autônomo, MEI, informal)
+6. **Processo da Ohbra** — do contato à chave, sem mistério
+7. **Quebra de mitos** — medos que travam quem quer financiar
+8. **Local (Mineiros)** — bairros, preços de terrenos, oportunidades regionais
+
+### Próxima fase — Temas e públicos para os próximos conteúdos
 
 *Alinhado em reunião — Mai/2026*
 
-### Tema central: Término de obra e terreno parado
+#### Tema central: Término de obra e terreno parado
 
 A próxima fase de conteúdo foca em dois públicos que têm algo em comum: **estão presos**. Têm um ativo (terreno ou obra) que não avança e não sabem que existe saída.
 
 ---
 
-### Temas de conteúdo mapeados
+#### Temas de conteúdo mapeados
 
 **1. Término de obra via financiamento**
 - Quem tem uma obra parada pode financiar para terminar
@@ -202,7 +210,7 @@ A próxima fase de conteúdo foca em dois públicos que têm algo em comum: **es
 
 ---
 
-### Público novo: Investidores
+#### Público novo: Investidores
 
 **Perfil:** Pessoa que já tem imóvel próprio, já tem renda e quer investir para gerar renda passiva de aluguel.
 
@@ -224,7 +232,7 @@ A próxima fase de conteúdo foca em dois públicos que têm algo em comum: **es
 
 ---
 
-### Resumo dos públicos da próxima fase
+#### Resumo dos públicos da próxima fase
 
 | Público | Situação | O que a Ohbra resolve |
 |---------|----------|-----------------------|
@@ -237,7 +245,15 @@ A próxima fase de conteúdo foca em dois públicos que têm algo em comum: **es
 
 ---
 
-## 10. Regras operacionais
+## 7. Como lidar com o cliente
+
+> A documentar.
+
+---
+
+## 8. Operação
+
+### Regras operacionais
 
 - Atendimento **apenas com agendamento** — não atende walk-in
 - Todo conteúdo que descreve o processo interno precisa de **aprovação do cliente** antes de ir para criação
@@ -245,3 +261,15 @@ A próxima fase de conteúdo foca em dois públicos que têm algo em comum: **es
 - Nunca prometer aprovação de crédito — orientar e acompanhar, não garantir
 - Sempre reforçar que no interior o processo é mais simples — argumento competitivo regional
 - Saque aniversário do FGTS é uma armadilha — sempre alertar no conteúdo sobre FGTS
+
+---
+
+## 9. Histórico e entregas
+
+> A documentar.
+
+---
+
+## 10. Referências e fontes
+
+> A documentar.

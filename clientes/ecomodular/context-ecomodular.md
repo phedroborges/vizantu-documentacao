@@ -10,7 +10,9 @@ atualizado_em: 2026-06-09
 
 # Eco Modular — Contexto do Cliente
 
-## 1. Informações padrão e contato
+## 1. Ficha do cliente
+
+### Informações padrão e contato
 
 | Campo | Valor |
 |-------|-------|
@@ -26,7 +28,9 @@ atualizado_em: 2026-06-09
 
 ---
 
-## 2. Contexto do negócio
+## 2. Quem é e o que faz
+
+### Contexto do negócio
 
 A Eco Modular é uma fabricante de tijolos ecológicos com fábrica própria em Mineiros, GO. O processo é **industrial, não artesanal** — esse é um diferencial importante de posicionamento.
 
@@ -37,16 +41,14 @@ A Eco Modular é uma fabricante de tijolos ecológicos com fábrica própria em 
 
 **Oferta completa (posicionamento 360°):** a Eco Modular não vende só tijolo — vende tijolo + projeto de modulação + treinamento da mão de obra + acompanhamento da obra. Isso é o principal diferencial competitivo, especialmente em praças fora de Mineiros onde o cliente tem mais insegurança.
 
----
+### Produto — Tijolo Ecológico
 
-## 3. Produto — Tijolo Ecológico
-
-### Composição
+#### Composição
 - **Solo:** 60 a 80% areia + 20 a 40% argila (granulometria analisada em laboratório)
 - **Ligante:** Cimento CPV-ARI (alta resistência inicial)
 - **Dosagem:** calculada por laudo técnico, não empírica
 
-### Processo de fabricação
+#### Processo de fabricação
 1. **Seleção e análise do solo** — granulometria em laboratório
 2. **Dosagem** — proporção definida por laudo antes de entrar na máquina
 3. **Multiprocessador** — homogeneização + trituração + peneiramento simultâneos
@@ -54,13 +56,11 @@ A Eco Modular é uma fabricante de tijolos ecológicos com fábrica própria em 
 5. **Cura** — 14 dias em pallets cobertos com filme plástico
 6. **Embalagem** — sai da fábrica embalado em pallets
 
-### Certificação
+#### Certificação
 - Laudado conforme NBR
 - Ensaios: resistência à compressão, absorção e granulometria
 
----
-
-## 4. Diferenciais e benefícios
+### Diferenciais e benefícios
 
 | Benefício | Detalhe |
 |-----------|---------|
@@ -77,9 +77,17 @@ A Eco Modular é uma fabricante de tijolos ecológicos com fábrica própria em 
 
 ---
 
-## 5. Público-alvo e aprendizados de venda
+## 3. O que o cliente quer
 
-### Público ideal — Mês 2 em diante
+> A documentar.
+
+---
+
+## 4. Público
+
+### Público-alvo e aprendizados de venda
+
+#### Público ideal — Mês 2 em diante
 **Quem quer construir casa de campo** — esse é o nicho principal a partir da Fase 2.
 
 Características do cliente ideal:
@@ -92,43 +100,20 @@ Características do cliente ideal:
 - Para post estático, preferir uma estrutura visual enxuta: headline falável em tom de conversa/trend, um insight técnico curto e CTA simples. Evitar headline conceitual demais ou linguagem de campanha imobiliária; a peça precisa parecer natural no feed.
 - Em praças como Rio Verde e Jataí: precisa de confiança, treinamento e acompanhamento
 
-### Perfil a evitar
+#### Perfil a evitar
 **Quem busca economia como principal motivação** — embora o tijolo ecológico economize ~20% da obra, o cliente que chega com esse gancho geralmente não tem orçamento suficiente para a obra. Esse cliente não converte bem.
 
-### Serviço de referência fechado (Mês 1)
+#### Serviço de referência fechado (Mês 1)
 - Venda de **12 mil tijolos + projeto** — esse é o modelo de proposta a replicar
 
-### Pipeline atual
+#### Pipeline atual
 - **3 clientes quase fechados** em Mineiros
 
 ---
 
-## 6. Estratégia de praças
+## 5. Marca e tom de voz
 
-### Mineiros — Fase 2
-- Seguir normal: logística simples, mão de obra local disponível
-- Lançar **promoção no milheiro:**
-  - **R$ 1,70 por tijolo** (promoção)
-  - **Bônus 1:** projeto de modulação
-  - **Bônus 2:** desenho da casa em 3D
-- Usar cases de cidade + cases de campo juntos no conteúdo
-- Campanhas promocionais precisam ter um conceito guarda-chuva. Exemplo aprovado: **Barraca do Tijolo Ecológico** para junho, unindo vídeos temáticos de festa junina e vídeos de oferta direta sob a mesma mensagem: R$ 1,70, mínimo 5.000 tijolos, projeto de modulação + desenho 3D, Rio Verde/Jataí/Mineiros e foco em casa de campo.
-
-### Rio Verde — Prioridade máxima a partir de 20/mai/2026
-- **4 obras em Rio Verde** — 2 já em execução
-- Fazer cases das 4 obras (captações agendadas)
-- A partir de **20 de maio de 2026**, foco 100% em Rio Verde — não pode deixar passar
-- Venda focada em: tranquilizar o cliente, mostrar que existe treinamento, acompanhamento e suporte total
-- Esses clientes vão perguntar "e a mão de obra?" — a resposta é parte do posicionamento 360°
-
-### Jataí — Próxima fase (após Rio Verde)
-- Tem uma obra inacabada em Jataí — não é prioridade agora
-- Entrada em Jataí acontece depois do trabalho em Rio Verde estar consolidado
-- Mesma abordagem de Rio Verde: confiança + treinamento + acompanhamento
-
----
-
-## 7. Posicionamento — Mensagem central
+### Posicionamento — Mensagem central
 
 A Eco Modular não é uma tijolaria. É uma empresa que entrega a obra do começo ao fim:
 - O tijolo certo (industrial, laudado, resistente)
@@ -139,9 +124,7 @@ A Eco Modular não é uma tijolaria. É uma empresa que entrega a obra do começ
 **Para Mineiros:** o cliente já conhece, a logística é fácil, o foco é conversão direta.
 **Para Rio Verde / Jataí:** o cliente precisa de confiança — mostrar cases reais, mostrar que o suporte existe, mostrar que não vai ficar sozinho.
 
----
-
-## 8. Identidade visual e tom de voz
+### Identidade visual e tom de voz
 
 **Paleta:** Branco + verde Eco Modular + chumbo
 
@@ -159,7 +142,32 @@ A Eco Modular não é uma tijolaria. É uma empresa que entrega a obra do começ
 
 ---
 
-## 9. Canais e estratégia de conteúdo
+## 6. Estratégia e conteúdo
+
+### Estratégia de praças
+
+#### Mineiros — Fase 2
+- Seguir normal: logística simples, mão de obra local disponível
+- Lançar **promoção no milheiro:**
+  - **R$ 1,70 por tijolo** (promoção)
+  - **Bônus 1:** projeto de modulação
+  - **Bônus 2:** desenho da casa em 3D
+- Usar cases de cidade + cases de campo juntos no conteúdo
+- Campanhas promocionais precisam ter um conceito guarda-chuva. Exemplo aprovado: **Barraca do Tijolo Ecológico** para junho, unindo vídeos temáticos de festa junina e vídeos de oferta direta sob a mesma mensagem: R$ 1,70, mínimo 5.000 tijolos, projeto de modulação + desenho 3D, Rio Verde/Jataí/Mineiros e foco em casa de campo.
+
+#### Rio Verde — Prioridade máxima a partir de 20/mai/2026
+- **4 obras em Rio Verde** — 2 já em execução
+- Fazer cases das 4 obras (captações agendadas)
+- A partir de **20 de maio de 2026**, foco 100% em Rio Verde — não pode deixar passar
+- Venda focada em: tranquilizar o cliente, mostrar que existe treinamento, acompanhamento e suporte total
+- Esses clientes vão perguntar "e a mão de obra?" — a resposta é parte do posicionamento 360°
+
+#### Jataí — Próxima fase (após Rio Verde)
+- Tem uma obra inacabada em Jataí — não é prioridade agora
+- Entrada em Jataí acontece depois do trabalho em Rio Verde estar consolidado
+- Mesma abordagem de Rio Verde: confiança + treinamento + acompanhamento
+
+### Canais e estratégia de conteúdo
 
 **Objetivo principal:** Gerar orçamentos via WhatsApp
 
@@ -174,7 +182,15 @@ A Eco Modular não é uma tijolaria. É uma empresa que entrega a obra do começ
 
 ---
 
-## 10. Regras operacionais
+## 7. Como lidar com o cliente
+
+> A documentar.
+
+---
+
+## 8. Operação
+
+### Regras operacionais
 
 - Sempre mencionar o engenheiro civil (Brayan Youssef + CREA) em conteúdos técnicos
 - A NBR é um argumento de fechamento — "não é promessa, é documento"
@@ -187,9 +203,11 @@ A Eco Modular não é uma tijolaria. É uma empresa que entrega a obra do começ
 
 ---
 
-## 11. Histórico de fases
+## 9. Histórico e entregas
 
-### Mês 1 — Mineiros (Abr–Mai 2026)
+### Histórico de fases
+
+#### Mês 1 — Mineiros (Abr–Mai 2026)
 - Setup completo do Instagram (bio, 6 destaques, 3 fixados)
 - 4 vídeos produzidos (institucional, educativo, fábrica, depoimento)
 - 3 campanhas no Meta Ads: tráfego frio, reconhecimento, remarketing
@@ -197,8 +215,14 @@ A Eco Modular não é uma tijolaria. É uma empresa que entrega a obra do começ
 - Melhor criativo: "Por que construir com tijolo ecológico" (43 conversas, R$8,17/conversa)
 - Serviço fechado: 12 mil tijolos + projeto
 
-### Mês 2 — Rio Verde + Mineiros (Mai–Jun 2026)
+#### Mês 2 — Rio Verde + Mineiros (Mai–Jun 2026)
 - Foco principal: Rio Verde a partir de 20/05/2026
 - Cases das 4 obras de Rio Verde (2 já em execução)
 - Promoção no milheiro em Mineiros (R$1,70 + bônus projeto + bônus 3D)
 - Expansão do posicionamento para 360° (não só tijolo)
+
+---
+
+## 10. Referências e fontes
+
+> A documentar.

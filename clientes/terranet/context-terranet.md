@@ -10,12 +10,9 @@ atualizado_em: 2026-06-16
 
 # TerraNet — Contexto do Cliente
 
-**Atualizado em:** 2026-05-22
-**Fonte:** Leitura completa das 17 tasks do ClickUp (vídeos, carrosseis, campanha de chegada)
+## 1. Ficha do cliente
 
----
-
-## 1. Informações padrão e contato
+### Informações padrão e contato
 
 | Campo | Valor |
 |-------|-------|
@@ -31,19 +28,21 @@ atualizado_em: 2026-06-16
 
 ---
 
-## 2. Contexto do negócio
+## 2. Quem é e o que faz
 
-### O que é
+### Contexto do negócio
+
+#### O que é
 Provedor de internet com mais de 20 anos de atuação no sudoeste goiano. Especializado em conectividade rural e de cidades do interior. Trabalha com múltiplas tecnologias e faz análise técnica de viabilidade antes de cada instalação.
 
-### Produtos e serviços
+#### Produtos e serviços
 - Torre de telecomunicações
 - Internet fibra
 - Internet via rádio
 - 4G privado
 - **Multi-link:** tecnologia com 3 entradas de rede simultâneas — se uma apresentar instabilidade, as outras assumem. Diferencial central de estabilidade.
 
-### Área de atuação
+#### Área de atuação
 Cidades atendidas (presença estabelecida):
 - Jataí, Mineiros, Rio Verde, Caiapônia, Serranópolis, Doverlândia, Portelândia, Perolândia
 
@@ -51,10 +50,10 @@ Expansão recente (2026):
 - **Estância** e **Perolândia** — campanha de chegada executada com rádio, carro de som e digital
 - Participou da Feinagro 2026 em Mineiros/GO
 
-### Fase atual (maio/2026)
+#### Fase atual (maio/2026)
 A TerraNet já atende múltiplas cidades há anos. A campanha de chegada em Estância e Perolândia foi um movimento pontual de expansão. Agora o foco é **conteúdo educativo e consolidação de marca** — posicionando a TerraNet como referência técnica no sudoeste goiano como um todo, com foco em análise de viabilidade, diferenciais de estrutura e conectividade para o agro.
 
-### Campanha B2C Perolândia/Estância (a partir de 02/06/2026)
+#### Campanha B2C Perolândia/Estância (a partir de 02/06/2026)
 Reunião com Ianka, Wesley e Bruno identificou que o concorrente **TBM** está avançando agressivamente em Perolândia: vendedor/instalador presente na cidade, instalação na hora, chip a R$9,90 e placas espalhadas. Resposta da TerraNet, puxada pelo gancho da Copa do Mundo (jogos a partir de 13/06):
 
 - **Preço de entrada:** sem preço fixo nos roteiros — CTA é "consulte a promoção ativa para a sua cidade" (preço varia por cidade: Perolândia e Estância têm preços diferentes). Decisão tomada em reunião de 16/06/2026.
@@ -74,7 +73,21 @@ Reunião com Ianka, Wesley e Bruno identificou que o concorrente **TBM** está a
 
 ---
 
-## 3. Proposta de valor central
+## 3. O que o cliente quer
+
+> A documentar.
+
+---
+
+## 4. Público
+
+> A documentar.
+
+---
+
+## 5. Marca e tom de voz
+
+### Proposta de valor central
 
 **Conectividade, não só internet.**
 
@@ -84,9 +97,7 @@ Taglines genéricas a evitar: "Internet feita para você", "Conexão feita pra v
 
 **A análise vem antes da instalação** é o posicionamento operacional que sustenta a promessa: a TerraNet não improvisa. Cada área é lida antes de ser atendida — distância, relevo, vegetação, altura. Esse processo é o que torna a conectividade possível onde outros falham.
 
----
-
-## 4. Tom de voz
+### Tom de voz
 
 - Real, simples, direto
 - Técnico simplificado — transforma processo complexo em linguagem acessível
@@ -95,9 +106,21 @@ Taglines genéricas a evitar: "Internet feita para você", "Conexão feita pra v
 - Com "cara de bastidor verdadeiro" nos vídeos institucionais
 - Maduro e confiável — não vende, explica
 
+### Slogan / assinaturas de marca
+
+- **"TerraNet — conexão sem fronteiras"** (usado em VT de rádio)
+- **"TerraNet, conectando o que importa"** (usado em carro de som)
+
+### Linguagem — o que evitar
+
+- **"de verdade"** — é o lema de um concorrente na região. Nunca usar em nenhum material da TerraNet.
+- **CTA genérico de ligação** — o canal preferencial é WhatsApp. CTA padrão: "Fala comigo aqui no WhatsApp agora" (primeira pessoa, próximo, direto).
+
 ---
 
-## 5. Pilares de conteúdo identificados
+## 6. Estratégia e conteúdo
+
+### Pilares de conteúdo identificados
 
 | Pilar | Descrição |
 |-------|-----------|
@@ -107,30 +130,7 @@ Taglines genéricas a evitar: "Internet feita para você", "Conexão feita pra v
 | **Agro e conectividade** | Dados sobre o gap entre tecnologia agrícola e cobertura de internet |
 | **Institucional / datas** | Posts de relacionamento (Páscoa, Dia das Mães, feriados) |
 
----
-
-## 6. Pessoas do lado do cliente
-
-| Nome | Papel |
-|------|-------|
-| **Bruno** | Técnico/equipe de campo — porta-voz nos vídeos POV de rotina em campo |
-| **Ianka** | Porta-voz técnica forte — conduz vídeos de análise de viabilidade. Tem peso de autoridade na marca, não só suporte operacional |
-| **Wesley** | Mencionado na Feinagro — auxilia na logística de stand e material |
-
----
-
-## 7. Time Vizantu no cliente
-
-| Membro | Papel |
-|--------|-------|
-| **Phedro** | Estratégia e criação de copy |
-| **Josiano** | Diretor criativo principal — executa a maioria das tasks |
-| **Erika** | Envolvida em algumas tasks (Multi-link, estrutura) |
-| **Cyntthia** | Social media — cria tasks operacionais, publica |
-
----
-
-## 8. CTA padrão
+### CTA padrão
 
 > "Quer saber se a sua região tem viabilidade? Fale com a equipe da TerraNet e solicite sua análise."
 
@@ -144,24 +144,48 @@ Variações a usar:
 
 ---
 
-## 9. Slogan / assinaturas de marca
+## 7. Como lidar com o cliente
 
-- **"TerraNet — conexão sem fronteiras"** (usado em VT de rádio)
-- **"TerraNet, conectando o que importa"** (usado em carro de som)
+### Pessoas do lado do cliente
 
----
-
-## 10. Linguagem — o que evitar
-
-- **"de verdade"** — é o lema de um concorrente na região. Nunca usar em nenhum material da TerraNet.
-- **CTA genérico de ligação** — o canal preferencial é WhatsApp. CTA padrão: "Fala comigo aqui no WhatsApp agora" (primeira pessoa, próximo, direto).
+| Nome | Papel |
+|------|-------|
+| **Bruno** | Técnico/equipe de campo — porta-voz nos vídeos POV de rotina em campo |
+| **Ianka** | Porta-voz técnica forte — conduz vídeos de análise de viabilidade. Tem peso de autoridade na marca, não só suporte operacional |
+| **Wesley** | Mencionado na Feinagro — auxilia na logística de stand e material |
 
 ---
 
-## 11. Observações operacionais
+## 8. Operação
+
+### Time Vizantu no cliente
+
+| Membro | Papel |
+|--------|-------|
+| **Phedro** | Estratégia e criação de copy |
+| **Josiano** | Diretor criativo principal — executa a maioria das tasks |
+| **Erika** | Envolvida em algumas tasks (Multi-link, estrutura) |
+| **Cyntthia** | Social media — cria tasks operacionais, publica |
+
+### Observações operacionais
 
 - Tasks de vídeo têm **Bruno** (campo) e **Ianka** (análise técnica) como porta-vozes
 - Vídeos são estilo **lo-fi**: uma câmera, local fixo, fala natural — sem produção elaborada
 - Carrosseis usam **dados reais** de fontes como Anatel, Forbes Agro, Canal Rural, Ministério das Comunicações
 - A expansão para novas cidades segue um padrão: campanha de chegada (rádio + carro de som + digital) → conteúdo educativo → consolidação de marca
 - Suporte emergencial diferente do comercial: emergencial é 0800 641 234
+
+---
+
+## 9. Histórico e entregas
+
+> A documentar.
+
+---
+
+## 10. Referências e fontes
+
+### Sobre este documento
+
+**Atualizado em:** 2026-05-22
+**Fonte:** Leitura completa das 17 tasks do ClickUp (vídeos, carrosseis, campanha de chegada)

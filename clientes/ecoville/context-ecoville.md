@@ -10,7 +10,9 @@ atualizado_em: 2026-05-28
 
 # Ecoville Confresa — Contexto do Cliente
 
-## 1. Informações básicas
+## 1. Ficha do cliente
+
+### Informações básicas
 
 | Campo | Valor |
 |-------|-------|
@@ -25,15 +27,15 @@ atualizado_em: 2026-05-28
 
 ---
 
-## 2. O que é a Ecoville
+## 2. Quem é e o que faz
+
+### O que é a Ecoville
 
 A Ecoville é a maior rede de franquias de produtos de limpeza do Brasil, fundada em 2007 em Joinville/SC. A unidade de Confresa é gerida por **Vânia** (mãe — proprietária, forte perfil comercial externo) e **Cynthhia** (filha — responsável pelo marketing e operação).
 
 A proposta central da marca é vender **produtos de limpeza de alta concentração e alta performance** — o cliente compra menos e rende mais, levando vantagem real em comparação com o que encontra no supermercado. Não é uma loja de preço baixo; é uma loja de **resultado**.
 
----
-
-## 3. Produtos
+### Produtos
 
 Linha completa de limpeza doméstica e profissional. Os produtos são de alta concentração: rendem mais do que os equivalentes de mercado — esse é o diferencial central.
 
@@ -45,9 +47,24 @@ Linha completa de limpeza doméstica e profissional. Os produtos são de alta co
 
 **Ponto de atenção:** a venda exige orientação — o cliente precisa saber como diluir e aplicar corretamente. Usar errado compromete o resultado e o cliente não volta.
 
+### Contexto local — Confresa, MT
+
+- Cidade de interior no extremo norte do MT, forte presença do agronegócio
+- Muito pó e sujeira pesada no cotidiano — limpeza não é opcional, é necessidade constante
+- Cidade pequena: comunidade próxima, boca a boca tem peso enorme
+- O principal concorrente não é outra loja de limpeza — é o hábito de comprar tudo no supermercado
+
 ---
 
-## 4. Público-alvo
+## 3. O que o cliente quer
+
+> A documentar.
+
+---
+
+## 4. Público
+
+### Público-alvo
 
 **B2C — Consumidor final:**
 Moradoras de Confresa e região que buscam limpeza de qualidade, especialmente em contexto de muito pó e sujeira pesada (realidade do Agro e do interior de MT). Não são clientes que buscam o produto mais barato — buscam resultado e praticidade.
@@ -57,16 +74,9 @@ Mecânicas, transportadoras e empresas do agronegócio. Usam os produtos para li
 
 ---
 
-## 5. Contexto local — Confresa, MT
+## 5. Marca e tom de voz
 
-- Cidade de interior no extremo norte do MT, forte presença do agronegócio
-- Muito pó e sujeira pesada no cotidiano — limpeza não é opcional, é necessidade constante
-- Cidade pequena: comunidade próxima, boca a boca tem peso enorme
-- O principal concorrente não é outra loja de limpeza — é o hábito de comprar tudo no supermercado
-
----
-
-## 6. Tom de voz e comunicação
+### Tom de voz e comunicação
 
 **Como a marca fala:**
 - Educativo e próximo — ensina como usar os produtos de forma simples e acessível
@@ -79,9 +89,7 @@ Mecânicas, transportadoras e empresas do agronegócio. Usam os produtos para li
 - Usar "barato" ou "econômico" como gancho principal — o diferencial é rendimento, não preço
 - Humor, memes ou tom descontraído demais
 
----
-
-## 7. Identidade visual (franquia)
+### Identidade visual (franquia)
 
 | Elemento | Detalhe |
 |----------|---------|
@@ -91,7 +99,9 @@ Mecânicas, transportadoras e empresas do agronegócio. Usam os produtos para li
 
 ---
 
-## 8. Pilares de conteúdo
+## 6. Estratégia e conteúdo
+
+### Pilares de conteúdo
 
 1. **Educativo** — como usar, como diluir, o que cada produto resolve
 2. **Rendimento** — comparações reais mostrando que 1 Ecoville = vários do mercado
@@ -99,9 +109,7 @@ Mecânicas, transportadoras e empresas do agronegócio. Usam os produtos para li
 4. **Produto em ação** — demonstrações práticas de resultado
 5. **Promoções e ofertas** — grupo de WhatsApp e loja física
 
----
-
-## 9. Situação atual e direção estratégica — Estratégia Ressurreição (Mai 2026)
+### Situação atual e direção estratégica — Estratégia Ressurreição (Mai 2026)
 
 A loja enfrenta volume de vendas abaixo do esperado para o tamanho da cidade. O plano atual tem três frentes:
 
@@ -115,10 +123,30 @@ A loja enfrenta volume de vendas abaixo do esperado para o tamanho da cidade. O 
 
 ---
 
-## 10. Regras operacionais
+## 7. Como lidar com o cliente
+
+> A documentar.
+
+---
+
+## 8. Operação
+
+### Regras operacionais
 
 - Rendimento é sempre o argumento central
 - Sempre orientar sobre como usar/diluir corretamente — protege o resultado e a reputação
 - Conteúdo deve ser adaptado para a realidade de Confresa — pó, agro, interior do MT
 - CTA padrão: WhatsApp + visita à loja
 - Conteúdo de serviços: antes e depois é o formato mais eficiente — o resultado vende sozinho
+
+---
+
+## 9. Histórico e entregas
+
+> A documentar.
+
+---
+
+## 10. Referências e fontes
+
+> A documentar.

@@ -10,7 +10,9 @@ atualizado_em: 2026-06-14
 
 # Casa Caramelo — Contexto do Cliente
 
-## 1. Informações padrão e contato
+## 1. Ficha do cliente
+
+### Informações padrão e contato
 
 | Campo | Valor |
 |-------|-------|
@@ -24,21 +26,29 @@ atualizado_em: 2026-06-14
 
 ---
 
-## 2. Contexto do negócio
+## 2. Quem é e o que faz
+
+### Contexto do negócio
 
 > **Contexto pendente de levantamento.** Preencher na próxima conversa sobre este cliente.
 
 ---
 
-## 3. Pilares de conteúdo
+## 3. O que o cliente quer
 
-- Conteúdos educativos de cuidado pet, com foco em prevenção, saúde e orientação ao tutor.
-- Conteúdos de vitrine/loja, mostrando produtos disponíveis de forma leve e dinâmica.
-- Conteúdos de experiência de compra, usando humor de reconhecimento quando fizer sentido.
+> A documentar.
 
 ---
 
-## 4. Tom de voz
+## 4. Público
+
+> A documentar.
+
+---
+
+## 5. Marca e tom de voz
+
+### Tom de voz
 
 - Próximo, simples e direto.
 - Pode usar linguagem afetiva do universo pet, como "aumigo", quando soar natural.
@@ -46,10 +56,40 @@ atualizado_em: 2026-06-14
 
 ---
 
-## 5. Observações operacionais
+## 6. Estratégia e conteúdo
+
+### Pilares de conteúdo
+
+- Conteúdos educativos de cuidado pet, com foco em prevenção, saúde e orientação ao tutor.
+- Conteúdos de vitrine/loja, mostrando produtos disponíveis de forma leve e dinâmica.
+- Conteúdos de experiência de compra, usando humor de reconhecimento quando fizer sentido.
+
+---
+
+## 7. Como lidar com o cliente
+
+> A documentar.
+
+---
+
+## 8. Operação
+
+### Observações operacionais
 
 - Em demandas de captação orgânica, o nome da task pode indicar o pacote da leva, como `NOVOS VÍDEO ORGÂNICOS | CASA CARAMELO`.
 - Quando uma demanda tiver pendência variável, como definir produtos para uma trend, registrar em comentário operacional no ClickUp em vez de manter como pendência fixa na descrição.
 - Para vídeos de produtos/trends, a social media precisa buscar/confirmar quais produtos serão destacados antes de fechar legenda e captação.
 - Evitar construir roteiros da Casa Caramelo em cima de promoção quando isso não for prática comum do cliente ou não houver histórico/postagens suficientes sobre promoções.
 - Para skits de experiência de compra, priorizar variedade, atendimento e descoberta de produtos em vez de promessa promocional.
+
+---
+
+## 9. Histórico e entregas
+
+> A documentar.
+
+---
+
+## 10. Referências e fontes
+
+> A documentar.

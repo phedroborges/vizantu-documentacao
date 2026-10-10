@@ -8,7 +8,9 @@ projeto_tarefas: null
 atualizado_em: 2026-05-28
 ---
 
-# Contexto — Projeto Sangue Bom
+# Projeto Sangue Bom — Contexto do Cliente
+
+## 1. Ficha do cliente
 
 **Atualizado em:** 2026-05-28
 **Slug:** `sangue-bom`
@@ -16,7 +18,9 @@ atualizado_em: 2026-05-28
 
 ---
 
-## O que é o Projeto Sangue Bom
+## 2. Quem é e o que faz
+
+### O que é o Projeto Sangue Bom
 
 **Projeto de extensão universitária da UNIFIMES** (Centro Universitário de Mineiros) vinculado ao curso de **Medicina Veterinária**, focado em **banco de sangue canino** — tipagem sanguínea, compatibilidade e criação de uma rede de doadores cadastrados em Mineiros/GO.
 
@@ -24,9 +28,7 @@ atualizado_em: 2026-05-28
 
 **Tagline da marca:** *Seja a gota que falta.*
 
----
-
-## O problema que originou o projeto
+### O problema que originou o projeto
 
 Em emergências veterinárias (traumas graves, cirurgias de grande porte, intoxicações, doenças hemolíticas, complicações obstétricas), cada minuto conta. O problema em Mineiros:
 
@@ -34,25 +36,9 @@ Em emergências veterinárias (traumas graves, cirurgias de grande porte, intoxi
 - As bolsas de sangue mais próximas ficam em **Jataí (100km)** — alto custo e tempo de deslocamento
 - **Atrasos podem custar vidas**
 
----
+### As 4 etapas do projeto
 
-## Parceiros e contatos
-
-| Parceiro | Papel |
-|----------|-------|
-| **UNIFIMES** | Instituição coordenadora (extensão universitária) |
-| **Bio Diagnóstico Veterinário (BiolabVet)** | Laboratório parceiro; mantém o cadastro digital dos doadores |
-| **Karla** | Coordenadora do projeto na UNIFIMES |
-
-- **Email projeto:** projetosanguebom@unifimes.edu.br
-- **Email coordenadora:** karla@unifimes.edu.br
-- **Instagram:** @sanguebom.mineiros
-
----
-
-## As 4 etapas do projeto
-
-### 1. Conscientização
+#### 1. Conscientização
 Informar a população sobre a importância da doação de sangue canino.
 
 **Ações previstas:**
@@ -60,7 +46,7 @@ Informar a população sobre a importância da doação de sangue canino.
 - Feiras de animais
 - Palestras em escolas
 
-### 2. Cadastro e triagem
+#### 2. Cadastro e triagem
 - Registro do animal em formulário com dados clínicos e do tutor
 - Avaliação clínica completa realizada por veterinário
 - Coleta de amostras para exames laboratoriais:
@@ -68,7 +54,7 @@ Informar a população sobre a importância da doação de sangue canino.
   - Exame de fezes
   - Exame de urina
 
-### 3. Tipagem sanguínea (sistema DEA — Dog Erythrocyte Antigen)
+#### 3. Tipagem sanguínea (sistema DEA — Dog Erythrocyte Antigen)
 Objetivo: classificar corretamente os cães doadores, evitar reações transfusionais e estabelecer base de dados com doadores confiáveis e compatíveis.
 
 **Grupos sanguíneos caninos relevantes:**
@@ -87,15 +73,13 @@ Objetivo: classificar corretamente os cães doadores, evitar reações transfusi
 
 **Kit utilizado:** RapidVet-H (para tipagem DEA 1.1 positivo ou negativo)
 
-### 4. Salvar vidas — banco de dados
+#### 4. Salvar vidas — banco de dados
 - Cadastro mantido digitalmente pelo **BiolabVet**
 - Clínicas veterinárias podem solicitar acesso
 - Dados compartilhados mediante solicitação por e-mail ou celular
 - BiolabVet organiza e fornece dados, mas **não se responsabiliza pelo processo de transfusão**
 
----
-
-## Critérios para o cão ser doador
+### Critérios para o cão ser doador
 
 O cão precisa:
 - Ter entre **1 e 8 anos**
@@ -110,9 +94,7 @@ O cão precisa:
 
 > O projeto é **colaborativo** — cães de clientes de qualquer clínica de Mineiros podem participar. Não é vinculado a uma clínica específica.
 
----
-
-## Processo seletivo para alunos de Med. Vet.
+### Processo seletivo para alunos de Med. Vet.
 
 O projeto seleciona alunos do curso de Medicina Veterinária da UNIFIMES para compor a equipe.
 
@@ -138,7 +120,9 @@ O projeto seleciona alunos do curso de Medicina Veterinária da UNIFIMES para co
 
 ---
 
-## Desafios do projeto
+## 3. O que o cliente quer
+
+### Desafios do projeto
 
 - Conscientização da população sobre doação de sangue canino (algo novo para a maioria das pessoas)
 - Limitação de recursos financeiros e custos altos
@@ -146,45 +130,55 @@ O projeto seleciona alunos do curso de Medicina Veterinária da UNIFIMES para co
 
 ---
 
-## Identidade de marca (desenvolvida pela Vizantu)
+## 4. Público
 
-### Mascote
+> A documentar.
+
+---
+
+## 5. Marca e tom de voz
+
+### Identidade de marca (desenvolvida pela Vizantu)
+
+#### Mascote
 **Pastor Alemão** — personagem 3D estilo cartoon/super-herói.
 - Capa vermelha
 - Coleira amarela com pingente em formato de gota de sangue vermelho
 - Expressivo: aparece em poses variadas (voando, saudando, apontando, pensativo, dando "paz e amor")
 - **Nota:** inicialmente foi considerado um Pitbull como mascote, mas o **Pastor Alemão** foi escolhido por representar melhor a identidade da marca — transmite confiança, força, seriedade e lealdade.
 
-### Logotipo
+#### Logotipo
 - Nome: **SANGUE BOM**
 - O "A" de "SANGUE" é substituído por uma gota de sangue estilizada
 - Badge complementar: **"SEJA A GOTA QUE FALTA"**
 
-### Identidade visual — 2 versões
+#### Identidade visual — 2 versões
 | Versão | Uso | Cores |
 |--------|-----|-------|
 | **Marca principal** | Redes sociais, comunicação ao público geral | Vermelho dominante + creme/off-white |
 | **Versão acadêmica (UNIFIMES)** | Apresentações universitárias, material técnico | Azul marinho escuro + creme + vermelho como acento |
 
-### Cores
+#### Cores
 - **Vermelho:** cor principal, urgência e sangue
 - **Creme/off-white:** contraste elegante
 - **Azul marinho:** versão institucional/acadêmica
 
-### Tom de voz
+#### Tom de voz
 - Sério, mas humano — não corporativo, não apelativo
 - Propósito claro: salvar vidas
 - Emotivo sem ser sensacionalista
 
 ---
 
-## O que a Vizantu faz para o Sangue Bom
+## 6. Estratégia e conteúdo
+
+### O que a Vizantu faz para o Sangue Bom
 
 - **Desenvolvimento de marca** (identidade visual completa, mascote, logo)
 - **Gestão do Instagram** (@sanguebom.mineiros)
 - **Criação de conteúdo:** carrosseis educativos, legendas, roteiros
 
-### Tarefas no ClickUp (lista VIZANTU)
+#### Tarefas no ClickUp (lista VIZANTU)
 
 | Tarefa | Status | Link |
 |--------|--------|------|
@@ -195,8 +189,38 @@ O projeto seleciona alunos do curso de Medicina Veterinária da UNIFIMES para co
 
 ---
 
-## Observações operacionais
+## 7. Como lidar com o cliente
+
+### Parceiros e contatos
+
+| Parceiro | Papel |
+|----------|-------|
+| **UNIFIMES** | Instituição coordenadora (extensão universitária) |
+| **Bio Diagnóstico Veterinário (BiolabVet)** | Laboratório parceiro; mantém o cadastro digital dos doadores |
+| **Karla** | Coordenadora do projeto na UNIFIMES |
+
+- **Email projeto:** projetosanguebom@unifimes.edu.br
+- **Email coordenadora:** karla@unifimes.edu.br
+- **Instagram:** @sanguebom.mineiros
+
+---
+
+## 8. Operação
+
+### Observações operacionais
 
 - **Credencial Instagram:** @sanguebom.mineiros / Sanguebom@2025 *(remover das tasks do ClickUp por segurança)*
 - O cadastro digital dos doadores é gerido pelo BiolabVet, não pela Vizantu
 - O projeto ainda está em fase de conscientização e captação de doadores
+
+---
+
+## 9. Histórico e entregas
+
+> A documentar.
+
+---
+
+## 10. Referências e fontes
+
+> A documentar.

@@ -10,7 +10,9 @@ atualizado_em: 2026-05-28
 
 # CCTAM — Contexto do Cliente
 
-## 1. Informações padrão e contato
+## 1. Ficha do cliente
+
+### Informações padrão e contato
 
 | Campo | Valor |
 |-------|-------|
@@ -24,7 +26,9 @@ atualizado_em: 2026-05-28
 
 ---
 
-## 2. Contexto do negócio
+## 2. Quem é e o que faz
+
+### Contexto do negócio
 
 O CCTAM é um clube de tiro esportivo localizado em Mineiros, Goiás, na Chácara Coqueiros — propriedade próxima ao Rancho SH, sentido Morro do Pudim, depois do Riozinho na direita.
 
@@ -42,35 +46,31 @@ O CCTAM é um clube de tiro esportivo localizado em Mineiros, Goiás, na Chácar
 
 **Público-alvo:** CACs (Colecionadores, Atiradores e Caçadores) — desde iniciantes até competidores de nível nacional
 
----
-
-## 3. Modalidades de competição
+### Modalidades de competição
 
 > As modalidades abaixo são do **Open Alvorada** (competição própria do CCTAM).
 > Para a Copa Brasil / LINADE, as categorias seguem o regulamento oficial da LINADE.
 
 ---
 
-### Carabina | Alvo 2 centros | 25m | Mira aberta
+#### Carabina | Alvo 2 centros | 25m | Mira aberta
 - **Leve:** .22LR, .22 Mag (WMR), .17 HMR
 - **Maior:** .38SPL, .357 Mag
 
 ---
 
-### Pistola / Revólver | Alvo 2 centros | 10m | Mira aberta
+#### Pistola / Revólver | Alvo 2 centros | 10m | Mira aberta
 - Categoria única para **todos os calibres**
 - Abrange uso permitido e uso restrito na mesma categoria
 
 ---
 
-### Fuzil / Rifle | Alvo 1 centro | 25m
+#### Fuzil / Rifle | Alvo 1 centro | 25m
 - Rifles, fuzis e carabinas 9mm ou .40 S&W
 - **Mira:** aberta ou óptica com aumento máximo de **6x**
 - Disponível apenas no Open Alvorada — não está na Copa Brasil
 
----
-
-## 4. Documentação obrigatória para competir
+### Documentação obrigatória para competir
 
 Todo atirador precisa ter os 4 itens em dia para se inscrever em qualquer competição:
 
@@ -81,7 +81,33 @@ Todo atirador precisa ter os 4 itens em dia para se inscrever em qualquer compet
 
 ---
 
-## 5. Estratégia e direcionamento de conteúdo
+## 3. O que o cliente quer
+
+> A documentar.
+
+---
+
+## 4. Público
+
+> A documentar.
+
+---
+
+## 5. Marca e tom de voz
+
+### Tom de voz
+
+- Direto e orientado à ação
+- Próximo do universo do atirador (usa terminologia técnica sem explicar o óbvio)
+- Educativo mas sem ser burocrático
+- Urgência real nas campanhas de competição ("não deixa para a última hora")
+- Fala com quem já é do meio — não precisa explicar o que é um CAC
+
+---
+
+## 6. Estratégia e conteúdo
+
+### Estratégia e direcionamento de conteúdo
 
 **Objetivos do conteúdo:**
 - Educar atiradores sobre documentação, modalidades e regulamentos
@@ -97,19 +123,7 @@ Todo atirador precisa ter os 4 itens em dia para se inscrever em qualquer compet
 
 **Formatos mais usados:** Feed/Story (carrossel e post estático), WhatsApp
 
----
-
-## 6. Tom de voz
-
-- Direto e orientado à ação
-- Próximo do universo do atirador (usa terminologia técnica sem explicar o óbvio)
-- Educativo mas sem ser burocrático
-- Urgência real nas campanhas de competição ("não deixa para a última hora")
-- Fala com quem já é do meio — não precisa explicar o que é um CAC
-
----
-
-## 7. Calendário de competições (referência 2026)
+### Calendário de competições (referência 2026)
 
 | Data | Evento | Horário |
 |------|--------|---------|
@@ -121,9 +135,29 @@ Todo atirador precisa ter os 4 itens em dia para se inscrever em qualquer compet
 
 ---
 
-## 8. Regras operacionais
+## 7. Como lidar com o cliente
+
+> A documentar.
+
+---
+
+## 8. Operação
+
+### Regras operacionais
 
 - Posts de competição seguem trilha padrão: Save the Date → Inscrições abertas → Faltam X dias → É amanhã → É hoje → Resumo pós-evento
 - Conteúdo de documentação deve sempre incluir CTA para a secretaria do CCTAM
 - Não usar linguagem que pressuponha que o público não sabe o que é tiro esportivo
 - Aprovação de conteúdo: verificar com o cliente antes de publicar novos formatos ou campanhas fora do calendário
+
+---
+
+## 9. Histórico e entregas
+
+> A documentar.
+
+---
+
+## 10. Referências e fontes
+
+> A documentar.
